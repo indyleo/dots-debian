@@ -1,4 +1,3 @@
-# dotfiles
-My dotfiles
+# My Dotfiles
 
-My Congidgs For programs I use With a Script to install the programs
+My Configs For programs I use With a Script to install the programs
