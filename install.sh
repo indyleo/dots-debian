@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/sh
 
 ### Aliases and Varibels ###
 username=$(id -u -n 1000)
