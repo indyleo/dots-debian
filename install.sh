@@ -77,5 +77,5 @@ curl -sS https://starship.rs/install.sh | sh
 # Changing Back To The Home Directory
 cd ~
 ### Nala ###
-echo "Do You Want To Run (sudo nala fetch) To Get Faster Speeds?"
+echo "Run (sudo nala fetch) To Get Faster Speeds?"
 
