@@ -72,6 +72,11 @@ cd envycontrol
 sudo pip install .
 # Changing Back To The Github Directory
 cd ~/Github
+# Yt-dlp
+wget https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp
+sudo mv yt-dlp /usr/bin
+# Changing Back To The Github Directory
+cd ~/Github
 # StarShip Prompt
 curl -sS https://starship.rs/install.sh | sh
 # Changing Back To The Home Directory
