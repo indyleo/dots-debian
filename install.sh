@@ -46,7 +46,8 @@ rm ./FiraCode.zip ./Meslo.zip
 ### Compiling Programs ###
 cd ~/Github
 # Headsetcontrol
-git clone https://github.com/Sapd/HeadsetControl cd HeadsetControl
+git clone https://github.com/Sapd/HeadsetControl 
+cd HeadsetControl
 mkdir build
 cd build
 cmake ..
