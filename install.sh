@@ -9,7 +9,7 @@ apt upgrade -y
 # Installing Nala
 apt install nala 
 # Installing Programs
-nala install neofetch ranger sl rofi neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix gnome-tweaks dconf-editor hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock alacritty solaar npm cargo virt-manager gnome-tweaks gnome-extensions ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
+nala install neofetch ranger sl rofi neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix gnome-tweaks dconf-editor hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock alacritty solaar npm cargo virt-manager gnome-tweaks gnome-extensions ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre timeshift -y
 
 ### Setting Up UFW ###
 sudo ufw limit 22/tcp
