@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env bash
 
 ### Aliases and Varibels
 username=$(id -u -n 1000)
@@ -77,5 +77,5 @@ curl -sS https://starship.rs/install.sh | sh
 # Changing Back To The Home Directory
 cd ~
 ### Nala ###
-sleep 1
-echo "do sudo nala fetch to get faster speeds"
+echo "Do You Want To Run (sudo nala fetch) To Get Faster Speeds?"
+
