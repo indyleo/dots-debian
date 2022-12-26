@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-### Aliases and Varibels
+### Aliases and Varibels ###
 username=$(id -u -n 1000)
 
 ### Updating System & Installing Programns###
