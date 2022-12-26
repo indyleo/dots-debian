@@ -8,8 +8,16 @@ apt update -y
 apt upgrade -y
 # Installing Nala
 apt install nala 
-# Installing Programs
-nala install neofetch ranger sl rofi neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix gnome-tweaks dconf-editor hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock alacritty solaar npm cargo virt-manager gnome-tweaks gnome-extensions ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre timeshift -y
+# Installing CLI Programs
+nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
+# Installing GUI Programs
+nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift -y
+# Installing Brave Browser
+sudo nala install apt-transport-https curl -y
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo nala update
+sudo nala install brave-browser -y
 
 ### Setting Up UFW ###
 sudo ufw limit 22/tcp
