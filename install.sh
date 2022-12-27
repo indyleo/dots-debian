@@ -44,7 +44,7 @@ fc-cache -vf
 rm ./FiraCode.zip ./Meslo.zip
 
 ### Compiling Programs ###
-cd ~/Github
+cd ~/github
 # Headsetcontrol
 git clone https://github.com/Sapd/HeadsetControl 
 cd HeadsetControl
@@ -56,36 +56,36 @@ sudo make install
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # Shell Color Script
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # Fetch-Master-6000
 wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
 chmod +x fm6000
 sudo mv fm6000 /usr/bin/
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
 chmod +x pfetch
 sudo mv pfetch /usr/bin/
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # Envycontrol
 git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # Yt-dlp
 wget https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp
 sudo mv yt-dlp /usr/bin
 # Changing Back To The Github Directory
-cd ~/Github
+cd ~/github
 # StarShip Prompt
 curl -sS https://starship.rs/install.sh | sh
 # Changing Back To The Home Directory
