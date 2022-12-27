@@ -28,7 +28,7 @@ sudo ufw default allow outgoing
 sudo ufw enable
 
 ### Making Directories & Files ###
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
+mkdir -p ~/github ~/img ~/Applications ~/scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
 touch .cache/zsh/history
 
 ### Setting Up Fonts ###
