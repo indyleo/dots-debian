@@ -9,9 +9,9 @@ apt upgrade -y
 # Installing Nala
 apt install nala 
 # Installing CLI Programs
-nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
+nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre curl -y
 # Installing GUI Programs
-nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager-y
+nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
 # Installing Brave Browser
 sudo nala install apt-transport-https curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
