@@ -1,4 +1,5 @@
 # Exports
+export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR="nvim" 
 export VISUAL="nvim"
 
@@ -18,7 +19,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)	
 
-# vim mode
+# Vim mode
 bindkey -v
 export KEYTIMEOUT=1
 
