@@ -93,8 +93,6 @@ alias mkdir='mkdir -p'
 alias rm='rm -i'
 alias cp='cp -iv'
 alias mv='mv -iv'
-
-# Debian Based Aliales
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
 alias aptud='sudo apt update'
@@ -102,8 +100,6 @@ alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
 alias aptcl='sudo apt clean'
-alias aptatrm='sudo apt autoremove'
-alias aptaupu='sudo apt autopurge'
 alias hw='hollywood'
 
 # Convert APT to Nala
