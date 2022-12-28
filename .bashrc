@@ -143,5 +143,5 @@ eval "$(starship init bash)"
 # fm
 # pf
 
-# Staring Autojump
-/usr/share/autojump/autojump.sh
+# Starting Autojump
+source /usr/share/autojump/autojump.sh 2>/dev/null
