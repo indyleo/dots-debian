@@ -118,11 +118,13 @@ sudo() {
  eval "$(starship init zsh)"
 
 # Startup Stuff
-
 # cr
  nf
 # fm
 # pf
+
+# Starting Autojump
+/usr/share/autojump/autojump.sh
 
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
