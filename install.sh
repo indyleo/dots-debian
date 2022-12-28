@@ -24,10 +24,10 @@ nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-auto
 nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
 
 ### Installing Flatpack ###
-nala install flatpak gnome-software-plugin-flatpak 
+nala install flatpak gnome-software-plugin-flatpak -y
 
 ### Installing Drivers ###
-nala install nvida-driver firmware-misc-nonfree
+nala install nvida-driver firmware-misc-nonfree -y
 
 ### Installing Brave Browser ###
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -103,7 +103,7 @@ cd ~/github
 
 # Yt-dlp
 wget https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp
-sudo mv yt-dlp /usr/bin
+sudo mv yt-dlp /usr/bin/
 
 # Changing Back To The Github Directory
 cd ~/github
