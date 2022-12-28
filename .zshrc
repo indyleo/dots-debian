@@ -101,7 +101,6 @@ alias aptaupu='sudo apt autopurge'
 alias hw='hollywood'
 
 # Convert APT to Nala
-
 apt() { 
   command nala "$@"
 }
