@@ -23,6 +23,9 @@ nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-auto
 ### Installing GUI Programs ###
 nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
 
+### Installing Flatpack ###
+nala install flatpak gnome-software-plugin-flatpak 
+
 ### Installing Drivers ###
 nala install nvida-driver firmware-misc-nonfree
 
@@ -121,4 +124,7 @@ sudo ufw enable
 
 ### Nala ###
 printf " \n Run (sudo nala fetch) To Get Faster Speeds"
+
+### Adding Flathub Repo ###
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
