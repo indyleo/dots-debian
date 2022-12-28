@@ -139,9 +139,10 @@ sudo() {
 eval "$(starship init bash)"
 
 # Startup Stuff
-
 # cr
  nf
 # fm
 # pf
 
+# Staring Autojump
+/usr/share/autojump/autojump.sh
