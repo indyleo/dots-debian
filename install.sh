@@ -20,6 +20,9 @@ apt install nala
 ### Installing CLI Programs ###
 nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl -y
 
+### Installing LSD ###
+cargo install lsd
+
 ### Installing GUI Programs ###
 nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
 
@@ -44,7 +47,6 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
-mv dotfonts/fontawesome/otfs/*.otf /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 
 # Reloading Font
@@ -102,7 +104,7 @@ sudo pip install .
 cd ~/github
 
 # Yt-dlp
-wget https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 sudo mv yt-dlp /usr/bin/
 
 # Changing Back To The Github Directory
