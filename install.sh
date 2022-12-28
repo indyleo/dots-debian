@@ -23,6 +23,9 @@ nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-auto
 ### Installing GUI Programs ###
 nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
 
+### Installing Drivers ###
+nala install nvida-driver firmware-misc-nonfree
+
 ### Installing Brave Browser ###
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
