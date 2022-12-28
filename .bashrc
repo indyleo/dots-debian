@@ -88,8 +88,17 @@ fi
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/var/lib/flatpak/exports/bin/:$PATH"
+export PATH="$HOME/Applications:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="gedit"
+export MANPAGER="nvim -c 'set ft=man' -"
+
+# ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
 
 # User Aliases
 alias ls='lsd -alFh'
@@ -106,10 +115,8 @@ alias vim='nvim'
 alias rn='ranger'
 alias mkdir='mkdir -p'
 alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# Debian Based Aliales
+alias cp='cp -iv'
+alias mv='mv -iv'
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
 alias aptud='sudo apt update'
@@ -117,8 +124,6 @@ alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
 alias aptcl='sudo apt clean'
-alias aptatrm='sudo apt autoremove'
-alias aptaupu='sudo apt autopurge'
 alias hw='hollywood'
 
 # Convert APT to Nala
