@@ -1,7 +1,8 @@
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim" 
-export VISUAL="nvim"
+export VISUAL="gedit"
 
 # Enable colors
 autoload -U colors && colors
