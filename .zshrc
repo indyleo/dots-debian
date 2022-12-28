@@ -123,7 +123,7 @@ sudo() {
 # pf
 
 # Starting Autojump
-/usr/share/autojump/autojump.sh
+source /usr/share/autojump/autojump.sh 2>/dev/null
 
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
