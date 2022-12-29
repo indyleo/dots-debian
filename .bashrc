@@ -94,7 +94,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
-export VISUAL="gedit"
+export VISUAL="nvim"
 export MANPAGER="nvim -c 'set ft=man' -"
 
 # ignore upper and lowercase when TAB completion
