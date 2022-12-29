@@ -124,9 +124,6 @@ sudo() {
 # fm
 # pf
 
-# Starting Autojump
-source /usr/share/autojump/autojump.sh 2>/dev/null
-
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
