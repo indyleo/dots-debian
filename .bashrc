@@ -88,7 +88,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="nvim"
-export MANPAGER="nvim -c 'set ft=man' -"
 
 # ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -106,8 +105,9 @@ alias lc='lolcat'
 alias cm='cmatrix'
 alias vim='nvim'
 alias rn='ranger'
-alias mkdir='mkdir -p'
-alias rm='rm -i'
+alias mkdir='mkdir -pv'
+alias trash='trash -iv'
+alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias aptup='sudo apt update && sudo apt upgrade'
