@@ -140,6 +140,3 @@ eval "$(starship init bash)"
  nf
 # fm
 # pf
-
-# Starting Autojump
-source /usr/share/autojump/autojump.sh 2>/dev/null
