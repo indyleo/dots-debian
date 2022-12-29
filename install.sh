@@ -10,6 +10,9 @@ fi
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
+### Enabling 32-bit Architecture For Packages ###
+dpkg --add-architecture i386
+
 ### Updating System ###
 apt update 
 apt upgrade -y
@@ -18,13 +21,16 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting autojump lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl -y
+nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting autojump lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing LSD ###
 cargo install lsd
 
+### Installing Protontrix & Protonup ###
+pipx install protontricks
+
 ### Installing GUI Programs ###
-nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager -y
+nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager steam -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software-plugin-flatpak -y
