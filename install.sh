@@ -21,7 +21,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting autojump lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
+nala install apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing LSD ###
 cargo install lsd
