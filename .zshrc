@@ -1,3 +1,5 @@
+# My .Zshrc Config
+
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -77,22 +79,36 @@ bindkey '^e' edit-command-line
 
 # User Aliases
 alias ls='lsd -alFh'
-alias nf='neofetch'
-alias pf='pfetch'
-alias fm='fm6000'
 alias wq='exit'
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
+alias vim='nvim'
+alias rn='ranger'
+
+# Fun Aliases
+alias nf='neofetch'
+alias pf='pfetch'
+alias fm='fm6000'
 alias cr='colorscript -r'
 alias lc='lolcat'
 alias cm='cmatrix'
-alias vim='nvim'
-alias rn='ranger'
-alias mkdir='mkdir -pv'
+alias hw='hollywood'
+
+# Trash Aliases
 alias trash='trash -iv'
+alias trashl='trash-list'
+alias trashr='trash-restore'
+alias trashr='trash-restore'
+alias trashm='trash-rm'
+alias trashe='trash-empty'
+
+# Nice Ones To Have
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+
+# Making APT Better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
 alias aptud='sudo apt update'
@@ -100,7 +116,6 @@ alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
 alias aptcl='sudo apt clean'
-alias hw='hollywood'
 
 # Convert APT to Nala
 apt() { 
