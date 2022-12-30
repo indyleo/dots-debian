@@ -20,7 +20,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
+nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing LSD ###
 cargo install lsd
@@ -29,7 +29,10 @@ cargo install lsd
 pipx install protontricks
 
 ### Installing GUI Programs ###
-nala install thunar rofi transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
+
+### Installing Stuff For Window Managers ###
+nala install thunar rofi picom feh nitrogen lxpolkit acpi volumeicon-alsa polybar -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
@@ -116,8 +119,12 @@ sudo mv yt-dlp /usr/bin/
 # Changing Back To The Github Directory
 cd ~/github
 
-# StarShip Prompt
+# Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
+
+# Bash insulter
+git clone https://github.com/hkbakke/bash-insulter.git bash-insulter
+sudo cp bash-insulter/src/bash.command-not-found /etc/
 
 # Changing Back To The Home Directory
 cd ~
