@@ -25,7 +25,7 @@ nala install trash-cli neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh
 ### Installing LSD ###
 cargo install lsd
 
-### Installing Protontrix & Protonup ###
+### Installing Protontrix ###
 pipx install protontricks
 
 ### Installing GUI Programs ###
