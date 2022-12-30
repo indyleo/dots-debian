@@ -153,3 +153,9 @@ eval "$(starship init bash)"
  nf
 # fm
 # pf
+
+# Bash Insulter
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
