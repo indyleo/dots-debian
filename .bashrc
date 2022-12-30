@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# My .Bashrc Config
 
 # If not running interactively, don't do anything
 case $- in
