@@ -15,12 +15,12 @@ export VISUAL="nvim"
 autoload -U colors && colors
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# History in cache directory
+# Histroy
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
-# Basic auto/tab complete:
+# Basic auto/tab complete
 autoload -U compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zmodload zsh/complist
@@ -38,7 +38,23 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# Change cursor shape for different vi modes.
+# Better way to get around in the file system with "ctrl-o"
+rangercd () {
+    tmp="$(mktemp)"
+    ranger --choosedir="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ --datadir "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'ranger\n'
+
+# Edit line in vim with "ctrl-e"
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# CHANGE CURSOR SHAPE FOR DIFFERENT VIM MODES
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -59,29 +75,28 @@ zle -N zle-line-init
 echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
+# Changing ls To lsd
+alias ls='lsd -alFh' # <-- My Favourite
+alias la='lsd -a' # <-- Show Hidden Files
+alias ll='lsa -lhF' # <-- Show In Listing Form 
+alias l.='lsd -a | egrep "^\."'
 
+# Colorize Grep Output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
-# Better way to get around in the file system
-rangercd () {
-    tmp="$(mktemp)"
-    ranger --choosedir="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ --datadir "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'ranger\n'
-
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
-
-# User Aliases
-alias ls='lsd -alFh'
-alias wq='exit'
+# HeadsetControl Aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
+alias hc='headsetcontrol'
+
+# Nice Aliases To Have
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias wq='exit'
 alias vim='nvim'
 alias rn='ranger'
 
@@ -101,12 +116,6 @@ alias trashr='trash-restore'
 alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
-
-# Nice Ones To Have
-alias rm='rm -iv'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias mkdir='mkdir -pv'
 
 # Making APT Better
 alias aptup='sudo apt update && sudo apt upgrade'
@@ -130,10 +139,10 @@ sudo() {
   fi
 }
 
-# Settingup Starship prompt
- eval "$(starship init zsh)"
+# Starship prompt
+eval "$(starship init zsh)"
 
-# Startup Stuff
+# Startup itmes
 # cr
  nf
 # fm
