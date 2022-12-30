@@ -20,7 +20,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
+nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks xdotool -y
 
 ### Installing LSD ###
 cargo install lsd
@@ -29,10 +29,7 @@ cargo install lsd
 pipx install protontricks
 
 ### Installing GUI Programs ###
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
-
-### Installing Stuff For Window Managers ###
-nala install thunar rofi picom feh nitrogen lxpolkit acpi volumeicon-alsa polybar -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam thunar rofi -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
@@ -48,8 +45,8 @@ sudo nala update
 sudo nala install brave-browser -y
 
 ### Making Directories & Files ###
-mkdir -p ~/github ~/img ~/Applications ~/scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
-touch .cache/zsh/history
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
+touch ~/.cache/zsh/history
 
 ### Setting Up Fonts ###
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
@@ -88,22 +85,6 @@ sudo make install
 # Changing Back To The Github Directory
 cd ~/github
 
-# Fetch-Master-6000
-wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
-chmod +x fm6000
-sudo mv fm6000 /usr/bin/
-
-# Changing Back To The Github Directory
-cd ~/github
-
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
-chmod +x pfetch
-sudo mv pfetch /usr/bin/
-
-# Changing Back To The Github Directory
-cd ~/github
-
 # Envycontrol
 git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
@@ -112,15 +93,27 @@ sudo pip install .
 # Changing Back To The Github Directory
 cd ~/github
 
+# Fetch-Master-6000
+wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
+chmod +x fm6000
+sudo mv fm6000 /usr/bin/
+
+# Pfetch
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
+chmod +x pfetch
+sudo mv pfetch /usr/bin/
+
 # Yt-dlp
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 sudo mv yt-dlp /usr/bin/
 
-# Changing Back To The Github Directory
-cd ~/github
-
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
+
+# Wallpapers
+git clone https://gitlab.com/dwt1/wallpapers
+mv -v wallpapers/ ~/.config/Backrounds
+
 
 # Changing Back To The Home Directory
 cd ~
@@ -138,4 +131,3 @@ printf " \n Run (sudo nala fetch) To Get Faster Speeds"
 
 ### Adding Flathub Repo ###
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
