@@ -139,6 +139,9 @@ sudo() {
 # fm
 # pf
 
+# Ignore Upper And Lowercase When TAB Completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
