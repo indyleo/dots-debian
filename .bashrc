@@ -21,15 +21,15 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
+# Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
+# Set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+# Set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
@@ -58,18 +58,10 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # Add an "alert" alias for long running commands
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# enable programmable completion features
+# Enable programmable completion features
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -77,6 +69,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Ignore Upper And Lowercase When TAB Completion
+bind "set completion-ignore-case on"
 
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -89,14 +84,28 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="nvim"
 
-# Ignore Upper And Lowercase When TAB Completion
-bind "set completion-ignore-case on"
+# Changing ls To lsd
+alias ls='lsd -alFh' # <-- My Favourite
+alias la='lsd -a' # <-- Show Hidden Files
+alias ll='lsa -lhF' # <-- Show In Listing Form 
+alias l.='lsd -a | egrep "^\."'
 
-# User Aliases
-alias ls='lsd -alFh'
-alias wq='exit'
+# Colorize Grep Output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# HeadsetControl Aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
+alias hc='headsetcontrol'
+
+# Nice Aliases To Have
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'
+alias wq='exit'
 alias vim='nvim'
 alias rn='ranger'
 
@@ -116,12 +125,6 @@ alias trashr='trash-restore'
 alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
-
-# Nice Ones To Have
-alias rm='rm -iv'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias mkdir='mkdir -pv'
 
 # Making APT Better
 alias aptup='sudo apt update && sudo apt upgrade'
@@ -145,10 +148,10 @@ sudo() {
   fi
 }
 
-# Settingup Starship prompt
+# Starship prompt
 eval "$(starship init bash)"
 
-# Startup Stuff
+# Startup itmes
 # cr
  nf
 # fm
