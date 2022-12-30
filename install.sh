@@ -6,9 +6,8 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-### Aliases and Varibels ###
+### Varibels ###
 username=$(id -u -n 1000)
-builddir=$(pwd)
 
 ### Enabling 32-bit Architecture For Packages ###
 dpkg --add-architecture i386
@@ -21,7 +20,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli apt-transport-https curl neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
+nala install trash-cli neofetch ranger sl neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cowsay cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing LSD ###
 cargo install lsd
@@ -33,12 +32,13 @@ pipx install protontricks
 nala install rofi gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager steam -y
 
 ### Installing Flatpack ###
-nala install flatpak gnome-software-plugin-flatpak -y
+nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 
 ### Installing Drivers ###
 nala install nvida-driver firmware-misc-nonfree -y
 
 ### Installing Brave Browser ###
+sudo nala install apt-transport-https curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
