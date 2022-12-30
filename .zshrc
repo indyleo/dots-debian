@@ -22,7 +22,7 @@ HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete:
 autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)	
@@ -138,9 +138,6 @@ sudo() {
  nf
 # fm
 # pf
-
-# Ignore Upper And Lowercase When TAB Completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
