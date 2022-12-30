@@ -139,6 +139,11 @@ sudo() {
 # fm
 # pf
 
+# Zsh Insulter
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
 # Turning on Autocompletions & Syntax-Highlighting
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
