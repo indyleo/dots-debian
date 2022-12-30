@@ -29,7 +29,7 @@ cargo install lsd
 pipx install protontricks
 
 ### Installing GUI Programs ###
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
+nala install thunar rofi transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
