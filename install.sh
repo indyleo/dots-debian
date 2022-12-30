@@ -122,10 +122,6 @@ cd ~/github
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# Bash insulter
-git clone https://github.com/hkbakke/bash-insulter.git bash-insulter
-sudo cp bash-insulter/src/bash.command-not-found /etc/
-
 # Changing Back To The Home Directory
 cd ~
 
