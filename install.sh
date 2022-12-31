@@ -20,7 +20,10 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix build-essential git cmake libhidapi-dev gcc pip mesa-utils cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl wget python3-pip python3-setuptools python3-venv pipx winetricks xdotool -y
+nala install trash-cli neofetch ranger neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw bash cargo grep sed awk qemu python3-setuptools python3-venv pipx winetricks -y
+
+### Installing Zsh ###
+nala install zsh zsh-autosuggestions zsh-syntax-highlighting -y
 
 ### Installing LSD ###
 cargo install lsd
@@ -28,14 +31,17 @@ cargo install lsd
 ### Installing Protontrix ###
 pipx install protontricks
 
-### Installing GUI Programs ###
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
+### Installing Java ###
+nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 
 ### Installing Drivers ###
-nala install nvida-driver firmware-misc-nonfree -y
+nala install nvida-driver firmware-misc-nonfree mesa-utils -y
+
+### Installing GUI Programs ###
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions timeshift rpi-imager virt-manager gnome-boxes steam -y
 
 ### Installing Brave Browser ###
 sudo nala install apt-transport-https curl -y
