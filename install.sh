@@ -20,7 +20,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix hollywood build-essential git cmake libhidapi-dev gcc pip mesa-utils cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl python3-pip python3-setuptools python3-venv pipx winetricks xdotool -y
+nala install trash-cli neofetch ranger neovim vim zsh zsh-autosuggestions zsh-syntax-highlighting lolcat cmatrix build-essential git cmake libhidapi-dev gcc pip mesa-utils cava tty-clock npm cargo ufw fonts-font-awesome openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre apt-transport-https curl wget python3-pip python3-setuptools python3-venv pipx winetricks xdotool -y
 
 ### Installing LSD ###
 cargo install lsd
@@ -29,7 +29,7 @@ cargo install lsd
 pipx install protontricks
 
 ### Installing GUI Programs ###
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam thunar rofi -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar virt-manager gnome-extensions timeshift rpi-imager pavucontrol steam -y
 
 ### Installing Flatpack ###
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
@@ -113,7 +113,8 @@ curl -sS https://starship.rs/install.sh | sh
 # Wallpapers
 git clone https://gitlab.com/dwt1/wallpapers
 mv -v wallpapers/ ~/.config/Backrounds
-
+mv -v ~/.config/Backrounds/*.jpg ~/.config/Backrounds/*.png
+mv -v ~/dotfiles/*.png ~.config/Backrounds
 
 # Changing Back To The Home Directory
 cd ~
