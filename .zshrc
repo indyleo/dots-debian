@@ -17,7 +17,7 @@ autoload -U colors && colors
 # Histroy
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history # <-- Where the history is stored
+HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete
 autoload -U compinit
@@ -25,7 +25,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # <-- Auto complete with cas
 zstyle ':completion:*' menu select # <-- Highlighting in tab complete menu
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots) # <-- Include hidden files
+_comp_options+=(globdots)
 
 # Vim mode
 bindkey -v
