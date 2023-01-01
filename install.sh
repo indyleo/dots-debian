@@ -23,7 +23,7 @@ apt install nala
 nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw bash cargo grep sed awk qemu python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing Zsh ###
-nala install zsh zsh-autosuggestions zsh-syntax-highlighting -y
+nala install zsh zsh-syntax-highlighting -y
 
 ### Installing LSD ###
 cargo install lsd
