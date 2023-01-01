@@ -115,7 +115,6 @@ alias fm='fm6000'
 alias cr='colorscript -r'
 alias lc='lolcat'
 alias cm='cmatrix'
-alias hw='hollywood'
 
 # Trash Aliases
 alias trash='trash -iv'
