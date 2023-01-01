@@ -107,7 +107,6 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
 alias vim='nvim'
-alias rn='ranger'
 
 # Fun Aliases
 alias nf='neofetch'
