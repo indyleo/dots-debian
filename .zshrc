@@ -21,28 +21,36 @@ HISTFILE=~/.cache/zsh/history
 
 # Basic auto/tab complete
 autoload -U compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # <-- Auto complete with case insenstivity
-zstyle ':completion:*' menu select # <-- Highlighting in tab complete menu
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 
+zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
-# Vim mode
+# Vi mode
 bindkey -v
 export KEYTIMEOUT=1
+
+# Enable searching through history
+bindkey '^R' history-incremental-pattern-search-backward
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'left' vi-backward-char
+bindkey -M menuselect 'down' vi-down-line-or-history
+bindkey -M menuselect 'up' vi-up-line-or-history
+bindkey -M menuselect 'right' vi-forward-char
+# Fix backspace bug when switching modes
 bindkey -v '^?' backward-delete-char
 
 # Edit line in vim with "ctrl-e"
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Change Cursor Shape For Different Vim Modes
+# Change cursor shape for different vi modes
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -69,17 +77,17 @@ alias la='lsd -a' # <-- Show Hidden Files
 alias ll='lsa -lhF' # <-- Show In Listing Form 
 alias l.='lsd -a | egrep "^\."'
 
-# Colorize Grep Output (good for log files)
+# Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# HeadsetControl Aliases
+# HeadsetControl aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
 alias hc='headsetcontrol'
 
-# Nice Aliases To Have
+# Nice aliases To have
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
