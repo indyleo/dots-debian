@@ -31,9 +31,6 @@ _comp_options+=(globdots)
 bindkey -v
 export KEYTIMEOUT=1
 
-# Enable searching through history
-bindkey '^R' history-incremental-pattern-search-backward
-
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
