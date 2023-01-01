@@ -20,7 +20,7 @@ apt upgrade -y
 apt install nala 
 
 ### Installing CLI Programs ###
-nala install trash-cli neofetch ranger neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw bash cargo grep sed awk qemu python3-setuptools python3-venv pipx winetricks -y
+nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw bash cargo grep sed awk qemu python3-setuptools python3-venv pipx winetricks -y
 
 ### Installing Zsh ###
 nala install zsh zsh-autosuggestions zsh-syntax-highlighting -y
