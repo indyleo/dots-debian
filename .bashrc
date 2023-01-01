@@ -7,7 +7,6 @@ case $- in
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -17,8 +16,7 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# check the window size after each command.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
@@ -90,17 +88,17 @@ alias la='lsd -a' # <-- Show Hidden Files
 alias ll='lsa -lhF' # <-- Show In Listing Form 
 alias l.='lsd -a | egrep "^\."'
 
-# Colorize Grep Output (good for log files)
+# Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# HeadsetControl Aliases
+# Headsetcontrol aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
 alias hc='headsetcontrol'
 
-# Nice Aliases To Have
+# Nice aliases to have
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -108,7 +106,7 @@ alias mkdir='mkdir -pv'
 alias wq='exit'
 alias vim='nvim'
 
-# Fun Aliases
+# Fun aliases
 alias nf='neofetch'
 alias pf='pfetch'
 alias fm='fm6000'
@@ -116,7 +114,7 @@ alias cr='colorscript -r'
 alias lc='lolcat'
 alias cm='cmatrix'
 
-# Trash Aliases
+# Trash aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
 alias trashr='trash-restore'
@@ -124,7 +122,7 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Making APT Better
+# Making APT better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
 alias aptud='sudo apt update'
@@ -133,7 +131,7 @@ alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
 alias aptcl='sudo apt clean'
 
-# Convert APT to Nala
+# Convert APT to nala
 apt() { 
   command nala "$@"
 }
