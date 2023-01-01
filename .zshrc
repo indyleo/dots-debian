@@ -13,7 +13,6 @@ export VISUAL="nvim"
 
 # Enable colors
 autoload -U colors && colors
-# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Histroy
 HISTSIZE=10000
@@ -23,9 +22,10 @@ HISTFILE=~/.cache/zsh/history
 # Basic auto/tab complete
 autoload -U compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)	
+_comp_options+=(globdots)
 
 # Vim mode
 bindkey -v
@@ -38,23 +38,11 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# Better way to get around in the file system with "ctrl-o"
-rangercd () {
-    tmp="$(mktemp)"
-    ranger --choosedir="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ --datadir "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'ranger\n'
-
 # Edit line in vim with "ctrl-e"
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# CHANGE CURSOR SHAPE FOR DIFFERENT VIM MODES
+# Change Cursor Shape For Different Vim Modes
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -98,7 +86,6 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
 alias vim='nvim'
-alias rn='ranger'
 
 # Fun Aliases
 alias nf='neofetch'
