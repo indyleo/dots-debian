@@ -17,15 +17,15 @@ autoload -U colors && colors
 # Histroy
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.cache/zsh/history # <-- Where the history is stored
 
 # Basic auto/tab complete
 autoload -U compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # <-- Auto complete with case insenstivity
+zstyle ':completion:*' menu select # <-- Highlighting in tab complete menu
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)
+_comp_options+=(globdots) # <-- Include hidden files
 
 # Vim mode
 bindkey -v
@@ -134,6 +134,5 @@ eval "$(starship init zsh)"
 # fm
 # pf
 
-# Turning on Autocompletions & Syntax-Highlighting
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# Turning on Syntax-Highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
