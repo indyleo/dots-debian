@@ -24,7 +24,10 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw cargo grep sed awk python3-setuptools python3-venv pipx winetricks -y
+nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip ufw python3-setuptools python3-venv -y
+
+# Installing other pkg managers
+nala install python3-pip pipx cargo npm -y
 
 # Installing zsh
 nala install zsh zsh-syntax-highlighting -y
@@ -45,7 +48,7 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions gnome-shell-extensions-manager timeshift rpi-imager virt-manager gnome-boxes steam -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions gnome-shell-extensions-manager timeshift rpi-imager virt-manager gnome-boxes steam:i386 winetricks -y
 
 # Installing brave browser 
 sudo nala install apt-transport-https curl -y
@@ -54,11 +57,9 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo nala update
 sudo nala install brave-browser -y
 
-# Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
-touch ~/.cache/zsh/history
-
 # Setting up fonts 
+nala install fonts-font-awesome -y
+mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
