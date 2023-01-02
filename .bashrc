@@ -122,11 +122,6 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Cd aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
 # Making APT better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
