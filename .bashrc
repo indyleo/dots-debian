@@ -6,17 +6,17 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
+# Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
+# Append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command.
+# Check the window size after each command.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
@@ -68,7 +68,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Ignore Upper And Lowercase When TAB Completion
+# Ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
 # Exports
