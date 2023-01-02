@@ -57,7 +57,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo nala update
 sudo nala install brave-browser -y
 
-# Setting up fonts 
+# Installing fonts 
 nala install fonts-font-awesome -y
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
@@ -66,7 +66,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/*
 
-# Reloading font
+# Reloading cache
 fc-cache -vf
 # Removing zip files
 rm ./FiraCode.zip ./Meslo.zip
@@ -81,4 +81,4 @@ sudo ufw default allow outgoing
 sudo ufw enable
 
 # nala 
-printf " \n Run (sudo nala fetch) To Get Faster Speeds \n"
+printf " \n Run (sudo nala fetch) To Get Faster Speeds \n \n"
