@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-### Checking If Script Is Run With Sudo Privalages ###
+# Checking if script is run with root
 if [[ $EUID -ne 0 ]]; then
   echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
   exit 1
@@ -24,7 +24,7 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw cargo grep sed awk python3-setuptools python3-venv pipx winetricks -y
+nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw cargo grep sed awk python3-setuptools python3-venv pipx winetricks -y
 
 # Installing zsh
 nala install zsh zsh-syntax-highlighting -y
