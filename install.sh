@@ -82,6 +82,3 @@ sudo ufw enable
 
 # nala 
 printf " \n Run (sudo nala fetch) To Get Faster Speeds \n"
-
-# Adding flathub repo 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
