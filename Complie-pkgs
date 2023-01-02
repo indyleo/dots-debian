@@ -23,27 +23,6 @@ git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Headsetcontrol
-git clone https://github.com/Sapd/HeadsetControl 
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-
-# Shell Color Script
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-
-# Envycontrol
-git clone https://github.com/geminis3/envycontrol.git
-cd envycontrol
-sudo pip install .
-
 # Fetch-Master-6000
 wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
 chmod +x fm6000
