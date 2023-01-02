@@ -80,4 +80,9 @@ mv -v ~/dotfiles-main/*.png ~/.config/Backrounds
 
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    
+
+# Installing lsd
+cargo install lsd
+
+# Installing protontrix
+pipx install protontricks
