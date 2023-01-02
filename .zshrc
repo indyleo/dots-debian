@@ -108,9 +108,6 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Cd function
-.{1..9} (){ local d=.; repeat ${0:1} d+=/..; cd $d;}
-
 # Making APT Better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
