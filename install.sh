@@ -32,12 +32,6 @@ nala install python3-pip pipx cargo npm -y
 # Installing zsh
 nala install zsh zsh-syntax-highlighting -y
 
-# Installing lsd
-cargo install lsd
-
-# Installing protontrix
-pipx install protontricks
-
 # Installing java 
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
