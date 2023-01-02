@@ -108,6 +108,9 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
+# Cd function
+.{1..9} (){ local d=.; repeat ${0:1} d+=/..; cd $d;}
+
 # Making APT Better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
@@ -139,5 +142,6 @@ eval "$(starship init zsh)"
 # fm
 # pf
 
-# Turning on Syntax-Highlighting
+# Turning on Autojump & Syntax-Highlighting
+source /usr/share/autojump/autojump.sh 2>/dev/null
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
