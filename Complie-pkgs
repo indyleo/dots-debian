@@ -38,7 +38,7 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 sudo mv yt-dlp /usr/bin/
 
 # Wallpapers
-mv -v ~/dotfiles-main/*.png ~/.config/Backrounds
+mv -v ~/Downloads/dotfiles-main/*.png ~/.config/Backrounds
 
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
