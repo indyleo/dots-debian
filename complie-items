@@ -1,5 +1,5 @@
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.config/Backrounds ~/.cache/zsh
 touch ~/.cache/zsh/history
 
 # Headsetcontrol
@@ -60,13 +60,6 @@ sudo mv yt-dlp /usr/bin/
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
-
-# Wallpapers
-mv -v ~/.config/Backrounds/*.jpg ~/.config/Backrounds/*.png
-mv -v ~/dotfiles-main/*.png ~.config/Backrounds
-
-# Changing back to ~
-cd ~/Github
 
 # Fetch-Master-6000
 wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
