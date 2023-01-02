@@ -80,5 +80,8 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
+# Starship Prompt
+curl -sS https://starship.rs/install.sh | sh
+
 # nala 
 printf " \n Run (sudo nala fetch) To Get Faster Speeds \n \n"
