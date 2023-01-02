@@ -10,8 +10,8 @@ fi
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list
 
-
 username=$(id -u -n 1000)
+builddir=$(pwd)
 
 # Enabling 32-bit packages
 dpkg --add-architecture i386
@@ -23,7 +23,7 @@ apt upgrade -y
 # Install nala
 apt install nala 
 
-### Installing CLI programs ###
+# Installing CLI programs
 nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw cargo grep sed awk python3-setuptools python3-venv pipx winetricks -y
 
 # Installing zsh
