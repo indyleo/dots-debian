@@ -6,55 +6,59 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-### Varibels ###
+# Change Debian to SID Branch
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+cp sources.list /etc/apt/sources.list
+
+
 username=$(id -u -n 1000)
 
-### Enabling 32-bit Architecture For Packages ###
+# Enabling 32-bit packages
 dpkg --add-architecture i386
 
-### Updating System ###
+# Update packages list and update system
 apt update 
 apt upgrade -y
 
-### Installing Nala ###
+# Install nala
 apt install nala 
 
-### Installing CLI Programs ###
-nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw bash cargo grep sed awk qemu python3-setuptools python3-venv pipx winetricks -y
+### Installing CLI programs ###
+nala install trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock npm fonts-font-awesome wget python3 python3-pip xdotool unzip ufw cargo grep sed awk python3-setuptools python3-venv pipx winetricks -y
 
-### Installing Zsh ###
+# Installing zsh
 nala install zsh zsh-syntax-highlighting -y
 
-### Installing LSD ###
+# Installing lsd
 cargo install lsd
 
-### Installing Protontrix ###
+# Installing protontrix
 pipx install protontricks
 
-### Installing Java ###
+# Installing java 
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
-### Installing Flatpack ###
+# Installing flatpack 
 nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 
-### Installing Drivers ###
-nala install nvida-driver firmware-misc-nonfree mesa-utils -y
+# Installing drivers 
+nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
-### Installing GUI Programs ###
+# Installing GUI programs 
 nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions gnome-shell-extensions-manager timeshift rpi-imager virt-manager gnome-boxes steam -y
 
-### Installing Brave Browser ###
+# Installing Brave Browser 
 sudo nala install apt-transport-https curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
 sudo nala install brave-browser -y
 
-### Making Directories & Files ###
+# Making Directories & Files 
 mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
 touch ~/.cache/zsh/history
 
-### Setting Up Fonts ###
+# Setting Up Fonts 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
@@ -120,12 +124,12 @@ curl -sS https://starship.rs/install.sh | sh
 git clone https://gitlab.com/dwt1/wallpapers
 mv -v wallpapers/ ~/.config/Backrounds
 mv -v ~/.config/Backrounds/*.jpg ~/.config/Backrounds/*.png
-mv -v ~/dotfiles/*.png ~.config/Backrounds
+mv -v ~/dotfiles-main/*.png ~.config/Backrounds
 
-# Changing Back To The Home Directory
+# Changing Back To ~
 cd ~
 
-### Setting Up UFW ###
+# Setting up ufw 
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
@@ -133,8 +137,8 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
-### Nala ###
+# nala 
 printf " \n Run (sudo nala fetch) To Get Faster Speeds"
 
-### Adding Flathub Repo ###
+# Adding flathub repo 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
