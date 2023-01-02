@@ -24,7 +24,7 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip ufw python3-setuptools python3-venv -y
+nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools python3-venv -y
 
 # Installing other pkg managers
 nala install python3-pip pipx cargo npm -y
@@ -48,7 +48,7 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions gnome-shell-extensions-manager timeshift rpi-imager virt-manager gnome-boxes steam:i386 winetricks -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager gnome-boxes steam:i386 winetricks -y
 
 # Installing brave browser 
 sudo nala install apt-transport-https curl -y
@@ -71,66 +71,8 @@ fc-cache -vf
 # Removing zip files
 rm ./FiraCode.zip ./Meslo.zip
 
-# Compiling programs
-cd ~/github
-
-# Headsetcontrol
-git clone https://github.com/Sapd/HeadsetControl 
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-
-# Changing back to the build dir
-cd ~/github
-
-# Shell Color Script
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-
-# Changing back to the build dir
-cd ~/github
-
-# Envycontrol
-git clone https://github.com/geminis3/envycontrol.git
-cd envycontrol
-sudo pip install .
-
-# Changing back to the build dir
-cd ~/github
-
-# Fetch-Master-6000
-wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
-chmod +x fm6000
-sudo mv fm6000 /usr/bin/
-
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
-chmod +x pfetch
-sudo mv pfetch /usr/bin/
-
-# Yt-dlp
-wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-sudo mv yt-dlp /usr/bin/
-
-# Starship Prompt
-curl -sS https://starship.rs/install.sh | sh
-
-# Wallpapers
-git clone https://gitlab.com/dwt1/wallpapers
-mv -v wallpapers/ ~/.config/Backrounds
-mv -v ~/.config/Backrounds/*.jpg ~/.config/Backrounds/*.png
-mv -v ~/dotfiles-main/*.png ~.config/Backrounds
-
-# Changing back to ~
-cd ~
-
 # Setting up ufw 
+nala install ufw -y
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
