@@ -6,17 +6,17 @@ case $- in
       *) return;;
 esac
 
-# Don't put duplicate lines or lines starting with space in the history.
+# don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
-# Append to the history file, don't overwrite it
+# append to the history file, don't overwrite it
 shopt -s histappend
 
-# For setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# Check the window size after each command.
+# check the window size after each command.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
@@ -68,7 +68,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Ignore upper and lowercase when TAB completion
+# Ignore Upper And Lowercase When TAB Completion
 bind "set completion-ignore-case on"
 
 # Exports
@@ -122,6 +122,11 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
+# Cd aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 # Making APT better
 alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
@@ -152,3 +157,6 @@ eval "$(starship init bash)"
  nf
 # fm
 # pf
+
+# Turning on Autojump
+source /usr/share/autojump/autojump.sh 2>/dev/null
