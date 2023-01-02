@@ -47,30 +47,30 @@ nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 # Installing GUI programs 
 nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar gnome-extensions gnome-shell-extensions-manager timeshift rpi-imager virt-manager gnome-boxes steam -y
 
-# Installing Brave Browser 
+# Installing brave browser 
 sudo nala install apt-transport-https curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
 sudo nala install brave-browser -y
 
-# Making Directories & Files 
+# Making directories & files 
 mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.fonts ~/.themes ~/.cache/zsh
 touch ~/.cache/zsh/history
 
-# Setting Up Fonts 
+# Setting up fonts 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/*
 
-# Reloading Font
+# Reloading font
 fc-cache -vf
-# Removing zip Files
+# Removing zip files
 rm ./FiraCode.zip ./Meslo.zip
 
-### Compiling Programs ###
+# Compiling programs
 cd ~/github
 
 # Headsetcontrol
@@ -84,7 +84,7 @@ sudo make install
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-# Changing Back To The Github Directory
+# Changing back to the build dir
 cd ~/github
 
 # Shell Color Script
@@ -92,7 +92,7 @@ git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 
-# Changing Back To The Github Directory
+# Changing back to the build dir
 cd ~/github
 
 # Envycontrol
@@ -100,7 +100,7 @@ git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Changing Back To The Github Directory
+# Changing back to the build dir
 cd ~/github
 
 # Fetch-Master-6000
@@ -126,7 +126,7 @@ mv -v wallpapers/ ~/.config/Backrounds
 mv -v ~/.config/Backrounds/*.jpg ~/.config/Backrounds/*.png
 mv -v ~/dotfiles-main/*.png ~.config/Backrounds
 
-# Changing Back To ~
+# Changing back to ~
 cd ~
 
 # Setting up ufw 
@@ -138,7 +138,7 @@ sudo ufw default allow outgoing
 sudo ufw enable
 
 # nala 
-printf " \n Run (sudo nala fetch) To Get Faster Speeds"
+printf " \n Run (sudo nala fetch) To Get Faster Speeds \n"
 
 # Adding flathub repo 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
