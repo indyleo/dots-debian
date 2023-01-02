@@ -37,23 +37,6 @@ sudo mv pfetch /usr/bin/
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
 sudo mv yt-dlp /usr/bin/
 
-# Starship Prompt
-curl -sS https://starship.rs/install.sh | sh
-
-# Fetch-Master-6000
-wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
-chmod +x fm6000
-sudo mv fm6000 /usr/bin/
-
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
-chmod +x pfetch
-sudo mv pfetch /usr/bin/
-
-# Yt-dlp
-wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
-sudo mv yt-dlp /usr/bin/
-
 # Wallpapers
 mv -v ~/dotfiles-main/*.png ~/.config/Backrounds
 
