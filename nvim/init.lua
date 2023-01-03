@@ -12,8 +12,9 @@ vim.opt.autoindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- cursor line
+-- cursor line & cursor column
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 -- appearance
 vim.opt.termguicolors = true
