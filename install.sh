@@ -42,7 +42,7 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager -y
+nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit rofi steam:i386 -y
 
 # Installing brave browser 
 sudo nala install apt-transport-https curl -y
