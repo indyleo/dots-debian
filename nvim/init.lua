@@ -1,4 +1,4 @@
-- line numbers
+-- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -19,9 +19,17 @@ vim.opt.cursorline = true
 
 -- appearance
 vim.opt.termguicolors = true
+vim.opt.background = "dark"
+vim.opt.signcolumn = "yes"
 
 -- wrap text
 vim.opt.wrap = false
 
 -- swap file
 vim.opt.swapfile = false
+
+-- clipboard
+vim.opt.clipboard:append("unnamedplus")
+
+-- words
+vim.opt.iskeyword:append("-")
