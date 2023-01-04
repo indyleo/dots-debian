@@ -45,8 +45,8 @@ nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit rofi steam:i386 -y
 
 # Installing firefox
-nala purge firefox-esr
-nala install firefox
+nala purge firefox-esr -y
+nala install firefox -y
 
 # Installing fonts 
 nala install fonts-font-awesome -y
