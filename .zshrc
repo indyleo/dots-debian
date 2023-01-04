@@ -91,8 +91,13 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
+
+# Vim aliases
 alias vim='nvim'
 alias nvm='bob'
+alias zconf='nvim $HOME/.zshrc'
+alias bconf='nvim $HOME/.bashrc'
+alias vconf='nvim $HOME/.config/nvim/init.lua'
 
 # Fun Aliases
 alias nf='neofetch'
