@@ -52,8 +52,5 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Installing lsd
 cargo install lsd
 
-# Installing bob-nvim
-cargo install bob-nvim
-
 # Installing protontrix
 pipx install protontricks
