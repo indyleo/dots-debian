@@ -44,12 +44,9 @@ nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 # Installing GUI programs 
 nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit rofi steam:i386 -y
 
-# Installing brave browser 
-sudo nala install apt-transport-https curl -y
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo nala update
-sudo nala install brave-browser -y
+# Installing firefox
+nala purge firefox-esr
+nal install firefox
 
 # Installing fonts 
 nala install fonts-font-awesome -y
