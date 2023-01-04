@@ -105,8 +105,13 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
+
+# Vim aliases
 alias vim='nvim'
 alias nvm='bob'
+alias zconf='nvim $HOME/.zshrc'
+alias bconf='nvim $HOME/.bashrc'
+alias vconf='nvim $HOME/.config/nvim/init.lua'
 
 # Fun aliases
 alias nf='neofetch'
@@ -157,6 +162,3 @@ eval "$(starship init bash)"
 
 # Turning on Autojump
 source /usr/share/autojump/autojump.sh 2>/dev/null
-
-# No idea what this is for
-. "$HOME/.cargo/env"
