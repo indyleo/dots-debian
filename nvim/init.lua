@@ -3,10 +3,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- tabs & indentation
-vim.opt.tabstop = 2
 vim.opt.shiftwidth = 4
-vim.opt.listchars:append("tab:> ")
-vim.opt.list = true
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
@@ -14,8 +11,9 @@ vim.opt.autoindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- cursor line
+-- cursor line & cursor column
 vim.opt.cursorline = true
+-- vim.opt.cursorcolumn = true
 
 -- appearance
 vim.opt.termguicolors = true
@@ -33,3 +31,5 @@ vim.opt.clipboard:append("unnamedplus")
 
 -- words
 vim.opt.iskeyword:append("-")
+vim.opt.list = true
+vim.opt.listchars:append("tab:> ")
