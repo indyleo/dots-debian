@@ -46,7 +46,7 @@ nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshi
 
 # Installing firefox
 nala purge firefox-esr
-nal install firefox
+nala install firefox
 
 # Installing fonts 
 nala install fonts-font-awesome -y
