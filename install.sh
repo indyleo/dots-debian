@@ -24,7 +24,7 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools python3-venv -y
+nala install apt-transport-https curl autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools python3-venv -y
 
 # Installing other pkg managers
 nala install python3-pip pipx cargo npm -y
