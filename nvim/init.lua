@@ -62,14 +62,6 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup()
 
---Pretty Status bar
-require('lualine').setup {
-	options = {
-		icons_enabled = true,
-		theme = 'nord',
-	},
-}
-
 -- Add Ctrl + X and initialize toggle term 
 require("toggleterm").setup {
 	open_mapping = [[<c-x>]],
