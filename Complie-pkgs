@@ -42,6 +42,12 @@ git clone https://gitlab.com/dwt1/wallpapers.git
 mv ~/Downloads/dotfiles-main/Backrounds ~/.config/
 mv ~/Github/wallpapers/ ~/.config/Wallpapers
 
+# Bashrc and zshrc
+rm ~/.bashrc
+rm ~/.zshrc
+mv ~/Downloads/dotfiles-main/.bashrc ~/
+mv ~/Downloads/dotfiles-main/.zshrc ~/ 
+
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
