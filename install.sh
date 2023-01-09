@@ -36,7 +36,7 @@ nala install zsh zsh-syntax-highlighting -y
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing flatpack 
-nala install flatpak gnome-software gnome-software-plugin-flatpak -y
+nala install flatpak plasma-discover-backend-flatpak -y
 
 # Installing drivers 
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
@@ -45,7 +45,7 @@ nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 nala install transmission-qt dconf-editor alacritty solaar timeshift virt-manager winetricks steam:i386-y
 
 # KDE
-nala install kde-plasma-desktop plasma-nm ark kate kcalc kde-spectacle okular
+nala install kde-plasma-desktop plasma-nm ark kate kcalc kde-spectacle okular -y
 
 # Installing firefox
 nala purge firefox-esr -y
