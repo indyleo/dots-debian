@@ -50,7 +50,10 @@ mv ~/Downloads/dotfiles-main/.zshrc ~/
 
 # Alacritty
 rm -rf ~/.config/alacritty/
-mv ~/Downloads/dotfiles-main/alacritty/alacritty.yml ~/.config/
+mv ~/Downloads/dotfiles-main/alacritty/ ~/.config/
+
+# Awesome
+mv ~/Downloads/dotfiles-main/awesome/ ~/.config/
 
 # Rofi
 rofi -modi drun,window,run
