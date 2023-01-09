@@ -55,9 +55,6 @@ mv ~/Downloads/dotfiles-main/alacritty/ ~/.config/
 # Rofi
 rofi -modi drun,window,run
 
-# KDE
-nala install kde-plasma-desktop plasma-nm ark kate kcalc kde-spectacle okular
-
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
