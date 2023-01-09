@@ -48,6 +48,12 @@ rm ~/.zshrc
 mv ~/Downloads/dotfiles-main/.bashrc ~/
 mv ~/Downloads/dotfiles-main/.zshrc ~/ 
 
+# Alacritty
+rm -rf ~/.config/alacritty/
+mv ~/Downloads/dotfiles-main/alacritty/alacritty.yml ~/.config/
+
+# Awesome
+
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
