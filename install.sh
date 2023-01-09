@@ -49,7 +49,7 @@ nala purge firefox-esr -y
 nala install firefox -y
 
 # Setting up awesomewm
-nala install awesome feh nitrogen picom rofi pcmanfm
+nala install awesome feh nitrogen picom rofi pcmanfm arandr
 
 # Installing fonts 
 nala install fonts-font-awesome -y
