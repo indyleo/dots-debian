@@ -42,7 +42,10 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam:i386-y
+nala install transmission-qt dconf-editor alacritty solaar timeshift virt-manager winetricks steam:i386-y
+
+# KDE
+nala install kde-plasma-desktop plasma-nm ark kate kcalc kde-spectacle okular
 
 # Installing firefox
 nala purge firefox-esr -y
@@ -75,5 +78,5 @@ sudo ufw enable
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# nala 
+# Nala 
 printf " \n Run (sudo nala fetch) To Get Faster Speeds \n \n"
