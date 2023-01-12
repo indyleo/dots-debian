@@ -99,14 +99,12 @@ alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias vconf='cd $HOME/.config/nvim/'
 alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
-alias wconf='nvim $HOME/.config/awesome/rc.lua'
 
 # Gedit aliases
 alias gd='gedit'
 alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
 alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
-alias wconfv='gedit $HOME/.config/awesome/rc.lua'
 
 # Fun Aliases
 alias nf='neofetch'
