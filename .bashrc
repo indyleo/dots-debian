@@ -105,6 +105,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
+alias psa='ps aux'
 
 # Vim aliases
 alias vim='nvim'
