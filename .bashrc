@@ -86,7 +86,7 @@ export VISUAL="nvim"
 # Changing ls To lsd
 alias ls='lsd -alFh' # <-- My Favourite
 alias la='lsd -a' # <-- Show Hidden Files
-alias ll='lsa -lhF' # <-- Show In Listing Form 
+alias ll='lsd -lhF' # <-- Show In Listing Form 
 alias l.='lsd -a | egrep "^\."'
 
 # Colorize grep output (good for log files)
