@@ -24,7 +24,7 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install bruteforce-salted-openssl gpgtldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck -y
+nala install gpg tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck -y
 
 # Installing other pkg managers
 nala install python3-pip pipx cargo npm -y
