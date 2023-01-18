@@ -133,7 +133,6 @@ alias cm='cmatrix'
 alias trash='trash -iv'
 alias trashl='trash-list'
 alias trashr='trash-restore'
-alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
