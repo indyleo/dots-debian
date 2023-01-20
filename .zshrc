@@ -11,6 +11,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="nvim"
+export PAGER="moar"
 
 # Enable colors
 autoload -U colors && colors
