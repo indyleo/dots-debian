@@ -66,3 +66,8 @@ cargo install bob-nvim
 
 # Installing protontrix
 pipx install protontricks
+
+# Installing moar (PAGER)
+https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
+chmod a+x moar-*-*-*
+mv moar-*-*-* ~/.local/bin/moar
