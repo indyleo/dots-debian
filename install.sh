@@ -42,7 +42,7 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install peek transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam:i386-y
+nala install peek transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam:i386 rhythmbox -y
 
 # Installing firefox
 nala purge firefox-esr -y
