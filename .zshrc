@@ -93,6 +93,8 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
 alias psa='ps aux'
+alias rezsh='reset && zsh'
+alias rebash='reset && bash'
 
 # Vim aliases
 alias vim='nvim'
