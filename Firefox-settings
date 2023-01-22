@@ -13,3 +13,4 @@ toolkit.telemetry.updateping.enabled = false
 toolkit.telemetry.shutdownpingsender.enabled = false
 privacy.firstparty.isolate = true 
 security.ssl.enable_false_start = false
+webgl.disabled = true
