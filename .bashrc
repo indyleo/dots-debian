@@ -121,6 +121,7 @@ alias gd='gedit'
 alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
 alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
+alias vconfv='nautilus ~/.config/nvim/'
 
 # Fun aliases
 alias nf='neofetch'
