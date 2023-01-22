@@ -1,0 +1,15 @@
+media.peerconnection.enabled = false
+privacy.resistfingerprinting = true
+security.ssl.require_safe_negotiation = true
+security.tls.version.min = 3
+security.tls.version.max = 4
+security.tls.enable_0rtt_data = false
+toolkit.telemetry.archive.enabled = false
+toolkit.telemetry.bhrping.enabled = false
+toolkit.telemetry.firstshutdownping.enabled = false
+toolkit.telemetry.newprofileping.enabled = false
+toolkit.telemetry.unified = false
+toolkit.telemetry.updateping.enabled = false
+toolkit.telemetry.shutdownpingsender.enabled = false
+privacy.firstparty.isolate = true 
+security.ssl.enable_false_start = false
