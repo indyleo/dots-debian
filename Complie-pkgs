@@ -48,6 +48,10 @@ mv ~/Downloads/dotfiles-main/.zshrc ~/
 rm -rf ~/.config/alacritty/
 mv ~/Downloads/dotfiles-main/alacritty/ ~/.config/
 
+# Neofetch
+rm -rf ~/.config/neofetch/
+mv ~/Downloads/dotfiles-main/neofetch ~/.config/
+
 # Rofi
 rofi -modi drun,window,run
 
