@@ -45,7 +45,7 @@ nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 nala install peek transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gedit steam:i386  -y
 
 # Installing a music player
-nala install rhythmbox rhythmbox-plugins rhythmbox-plugin-alternative-toolbar rhythmbox-plugin-cdrecorder -y
+nala install rhythmbox rhythmbox-plugins rhythmbox-plugin-cdrecorder -y
 
 # Installing firefox
 nala purge firefox-esr -y
