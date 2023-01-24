@@ -42,7 +42,7 @@ nala install flatpak gnome-software gnome-software-plugin-flatpak -y
 nala install nvidia-driver firmware-misc-nonfree mesa-utils -y
 
 # Installing GUI programs 
-nala install peek transmission-gtk gnome-tweaks dconf-editor alacritty solaar timeshift virt-manager winetricks gnome-shell-extensions gedit steam:i386  -y
+nala install peek transmission-gtk gnome-tweaks dconf-editor solaar timeshift virt-manager winetricks gnome-shell-extensions gedit steam:i386  -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins rhythmbox-plugin-cdrecorder -y
