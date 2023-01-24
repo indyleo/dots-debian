@@ -102,13 +102,11 @@ alias nvm='bob'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias vconf='cd $HOME/.config/nvim/'
-alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
 
 # Gedit aliases
 alias gd='gedit'
 alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
-alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
 alias vconfv='nautilus ~/.config/nvim/'
 
 # Fun Aliases
