@@ -44,10 +44,6 @@ rm ~/.zshrc
 mv ~/Downloads/dotfiles-main/.bashrc ~/
 mv ~/Downloads/dotfiles-main/.zshrc ~/ 
 
-# Alacritty
-rm -rf ~/.config/alacritty/
-mv ~/Downloads/dotfiles-main/alacritty/ ~/.config/
-
 # Neofetch
 rm -rf ~/.config/neofetch/
 mv ~/Downloads/dotfiles-main/neofetch ~/.config/
