@@ -14,3 +14,5 @@ toolkit.telemetry.shutdownpingsender.enabled = false
 privacy.firstparty.isolate = true 
 security.ssl.enable_false_start = false
 webgl.disabled = true
+
+Enable "OpenH264 Video Codec provided by Cisco Systems, Inc." In The Plugins area in Firefox
