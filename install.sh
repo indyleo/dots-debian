@@ -27,7 +27,8 @@ apt install nala
 nala install gpg openssl tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential git cmake libhidapi-dev gcc cava tty-clock wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck node-typescript -y
 
 # Installing other pkg managers
-nala install python3-pip pipx cargo npm -y
+nala install python3-pip pipx npm -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Installing zsh
 nala install zsh zsh-syntax-highlighting -y
