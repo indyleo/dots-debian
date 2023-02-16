@@ -8,7 +8,7 @@ fi
 
 # Change Debian to SID Branch
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
-cp /home/$username/Downloads/sources.list /etc/apt/sources.list
+cp /home/$username/Downloads/dotfiles-main/sources.list /etc/apt/sources.list
 
 username=$(id -u -n 1000)
 builddir=$(pwd)
