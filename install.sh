@@ -1,8 +1,5 @@
 #!/bin/bash
 
-username=$(id -u -n 1000)
-builddir=$(pwd)
-
 # Checking if script is run with root
 if [[ $EUID -ne 0 ]]; then
   echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
@@ -11,7 +8,10 @@ fi
 
 # Change Debian to SID Branch
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
-cp /home/$username/Downloads/dotfiles-main/sources.list /etc/apt/sources.list
+cp sources.list /etc/apt/sources.list
+
+username=$(id -u -n 1000)
+builddir=$(pwd)
 
 # Enabling 32-bit packages
 dpkg --add-architecture i386
