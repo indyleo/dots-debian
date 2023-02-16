@@ -33,16 +33,13 @@ wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
 chmod +x pfetch
 sudo mv pfetch /usr/bin/
 
-# Wallpapers
-git clone https://gitlab.com/dwt1/wallpapers.git
-mv ~/Downloads/dotfiles-main/Backrounds ~/.config/
-mv ~/Github/wallpapers/ ~/.config/Wallpapers
-
-# Bashrc and zshrc
+# Bashrc and zshrc and profile
 rm ~/.bashrc
 rm ~/.zshrc
+rm ~/.profile
 mv ~/Downloads/dotfiles-main/.bashrc ~/
 mv ~/Downloads/dotfiles-main/.zshrc ~/ 
+mv ~/Downloads/dotfiles-main/.profile ~/ 
 
 # Neofetch
 rm -rf ~/.config/neofetch/
