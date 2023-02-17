@@ -14,7 +14,7 @@ sudo dnf install zsh zsh-syntax-highlighting -y
 sudo dnf install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing GUI programs 
-sudo dnf install peek transmission-gtk gnome-tweaks dconf-editor solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam:i386  -y
+sudo dnf install peek transmission-gtk gnome-tweaks dconf-editor solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam  -y
 
 # Installing a music player
 sudo dnf install rhythmbox rhythmbox-plugins -y
