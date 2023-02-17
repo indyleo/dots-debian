@@ -1,4 +1,1 @@
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
-
-Icons set:
-https://www.pling.com/s/Gnome/p/1166289 (regular papirus)
