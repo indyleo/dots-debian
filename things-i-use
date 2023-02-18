@@ -9,7 +9,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo dnf install zsh zsh-syntax-highlighting -y
 
 # Installing GUI programs 
-sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar timeshift virt-manager steam  -y
+sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
 
 # Installing fonts 
 mkdir -p ~/.fonts
