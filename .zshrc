@@ -133,6 +133,6 @@ eval "$(starship init zsh)"
 
 # Startup itmes
  nf
-
-# Turning on Syntax-Highlighting
+# Turning on Syntax Highlighting & Auto Suggestions
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
