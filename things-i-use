@@ -1,5 +1,5 @@
 # Installing CLI programs
-sudo dnf install gpg openssl tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck -y
+sudo dnf install gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck -y
 
 # Installing other pkg managers
 sudo dnf install python3-pip npm -y
@@ -64,4 +64,5 @@ cargo install lsd bob-nvim
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
 chmod a+x moar-*-*-*
+mkdir ~/.local/bin
 mv moar-*-*-* ~/.local/bin/moar
