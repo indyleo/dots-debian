@@ -2,7 +2,7 @@
 sudo dnf install gpg openssl tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential cmake hidapi-devel g++ cava tty-clock wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck node-typescript -y
 
 # Installing other pkg managers
-sudo dnf install python3-pip pipx npm -y
+sudo dnf install python3-pip npm -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Installing zsh
