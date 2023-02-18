@@ -1,5 +1,5 @@
 # Installing CLI programs
-sudo dnf install gpg openssl tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix build-essential cmake hidapi-devel g++ cava tty-clock wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck node-typescript -y
+sudo dnf install gpg openssl tldr htop autojump trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find python3-venv luarocks golang-go shellcheck -y
 
 # Installing other pkg managers
 sudo dnf install python3-pip npm -y
