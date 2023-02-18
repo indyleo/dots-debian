@@ -103,17 +103,14 @@ alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias vconf='cd $HOME/.config/nvim/'
 
-# Gedit aliases
-alias gd='gedit'
-alias zconfv='gedit $HOME/.zshrc'
-alias bconfv='gedit $HOME/.bashrc'
+# Gnome Text Editor aliases
+alias gt='gnome-text-editor'
+alias zconfv='gnome-text-editor $HOME/.zshrc'
+alias bconfv='gnome-text-editor $HOME/.bashrc'
 alias vconfv='nautilus ~/.config/nvim/'
 
 # Fun Aliases
 alias nf='neofetch'
-alias pf='pfetch'
-alias fm='fm6000'
-alias cr='colorscript -r'
 alias lc='lolcat'
 alias cm='cmatrix'
 
@@ -124,37 +121,18 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Making APT Better
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptug='sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptin='sudo apt install'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
-alias aptcl='sudo apt clean'
-
-# Convert APT to Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+# Making DNF Better
+alias dnfup='sudo dnf update && sudo dnf upgrade'
+alias dnfug='sudo dnf upgrade'
+alias dnfud='sudo dnf update'
+alias dnfin='sudo dnf install'
+alias dnfrm='sudo dnf remove'
 
 # Starship prompt
 eval "$(starship init zsh)"
 
 # Startup itmes
-# cr
  nf
-# fm
-# pf
 
-# Turning on Autojump & Syntax-Highlighting
-source /usr/share/autojump/autojump.sh 2>/dev/null
+# Turning on Syntax-Highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
