@@ -12,12 +12,11 @@ sudo dnf install zsh zsh-syntax-highlighting -y
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar timeshift virt-manager steam  -y
 
 # Installing fonts 
-sudo dnf install fonts-font-awesome -y
-mkdir -p /home/$username/.fonts
+mkdir -p ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.fonts
+unzip FiraCode.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-unzip Meslo.zip -d /home/$username/.fonts
+unzip Meslo.zip -d ~/.fonts
 
 # Reloading cache
 fc-cache -vf
