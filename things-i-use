@@ -6,7 +6,7 @@ sudo dnf install python3-pip npm -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Installing zsh
-sudo dnf install zsh zsh-syntax-highlighting -y
+sudo dnf install zsh zsh-syntax-highlighting zsh-syntax-highlighting -y
 
 # Installing GUI programs 
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
