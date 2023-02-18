@@ -8,9 +8,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Installing zsh
 sudo dnf install zsh zsh-syntax-highlighting -y
 
-# Installing java 
-sudo dnf install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
-
 # Installing GUI programs 
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar timeshift virt-manager steam  -y
 
@@ -21,8 +18,6 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
-chown $username:$username /home/$username/.fonts/
-chown $username:$username /home/$username/.fonts/*
 
 # Reloading cache
 fc-cache -vf
