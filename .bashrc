@@ -27,12 +27,12 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Headsetcontrol aliases
+# HeadsetControl aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
 alias hc='headsetcontrol'
 
-# Nice aliases to have
+# Nice aliases To have
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -49,58 +49,33 @@ alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias vconf='cd $HOME/.config/nvim/'
 
-# Gedit aliases
-alias gd='gedit'
-alias zconfv='gedit $HOME/.zshrc'
-alias bconfv='gedit $HOME/.bashrc'
+# Gnome Text Editor aliases
+alias gt='gnome-text-editor'
+alias zconfv='gnome-text-editor $HOME/.zshrc'
+alias bconfv='gnome-text-editor $HOME/.bashrc'
 alias vconfv='nautilus ~/.config/nvim/'
 
-# Fun aliases
+# Fun Aliases
 alias nf='neofetch'
-alias pf='pfetch'
-alias fm='fm6000'
-alias cr='colorscript -r'
 alias lc='lolcat'
 alias cm='cmatrix'
 
-# Trash aliases
+# Trash Aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
 alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Making APT better
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptug='sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptin='sudo apt install'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
-alias aptcl='sudo apt clean'
-
-# Convert APT to nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+# Making DNF Better
+alias dnfup='sudo dnf update && sudo dnf upgrade'
+alias dnfug='sudo dnf upgrade'
+alias dnfud='sudo dnf update'
+alias dnfin='sudo dnf install'
+alias dnfrm='sudo dnf remove'
 
 # Starship prompt
-eval "$(starship init bash)"
+eval "$(starship init zsh)"
 
 # Startup itmes
-# cr
  nf
-# fm
-# pf
-
-# Turning on Autojump
-source /usr/share/autojump/autojump.sh 2>/dev/null
-
