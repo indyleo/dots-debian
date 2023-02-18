@@ -12,14 +12,7 @@ sudo dnf install zsh zsh-syntax-highlighting -y
 sudo dnf install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing GUI programs 
-sudo dnf install peek transmission-gtk gnome-tweaks dconf-editor solaar timeshift virt-manager winetricks gnome-shell-extensions gnome-shell-extension-manager gedit steam  -y
-
-# Installing a music player
-sudo dnf install rhythmbox rhythmbox-plugins -y
-
-# Installing firefox
-sudo dnf purge firefox-esr -y
-sudo dnf install firefox -y
+sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar timeshift virt-manager winetricks steam  -y
 
 # Installing fonts 
 sudo dnf install fonts-font-awesome -y
@@ -63,40 +56,20 @@ sudo make install
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-# Shell Color Script
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-
 # Envycontrol
 git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Fetch-Master-6000
-wget https://raw.githubusercontent.com/anhsirk0/fetch-master-6000/master/fm6000.pl -O fm6000
-chmod +x fm6000
-sudo mv fm6000 /usr/bin/
-
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch#
-chmod +x pfetch
-sudo mv pfetch /usr/bin/
-
-# Bashrc and zshrc and profile
+# Bashrc and zshrc
 rm ~/.bashrc
 rm ~/.zshrc
-rm ~/.profile
 mv ~/Downloads/dotfiles-main/.bashrc ~/
 mv ~/Downloads/dotfiles-main/.zshrc ~/ 
-mv ~/Downloads/dotfiles-main/.profile ~/ 
 
 # Neofetch
 rm -rf ~/.config/neofetch/
 mv ~/Downloads/dotfiles-main/neofetch ~/.config/
-
-# Rofi
-rofi -modi drun,window,run
 
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -106,9 +79,6 @@ cargo install lsd
 
 # Installing bob-nvim
 cargo install bob-nvim
-
-# Installing protontrix
-pipx install protontricks
 
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
