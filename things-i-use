@@ -55,24 +55,11 @@ git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Bashrc and zshrc
-rm ~/.bashrc
-rm ~/.zshrc
-mv ~/Downloads/dotfiles-main/.bashrc ~/
-mv ~/Downloads/dotfiles-main/.zshrc ~/ 
-
-# Neofetch
-rm -rf ~/.config/neofetch/
-mv ~/Downloads/dotfiles-main/neofetch ~/.config/
-
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Installing lsd
-cargo install lsd
-
-# Installing bob-nvim
-cargo install bob-nvim
+# Installing lsd & bob-nvim
+cargo install lsd bob-nvim
 
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
