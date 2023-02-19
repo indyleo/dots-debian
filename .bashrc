@@ -76,6 +76,3 @@ alias dnfrm='sudo dnf remove'
 
 # Starship prompt
 eval "$(starship init bash)"
-
-# Startup itmes
- nf
