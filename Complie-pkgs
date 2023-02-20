@@ -1,0 +1,31 @@
+# Making directories & files 
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh
+touch ~/.cache/zsh/history
+
+# Headsetcontrol
+git clone https://github.com/Sapd/HeadsetControl 
+cd HeadsetControl
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+# Envycontrol
+git clone https://github.com/geminis3/envycontrol.git
+cd envycontrol
+sudo pip install .
+
+# Adding flathub repo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Installing lsd & bob-nvim
+cargo install lsd bob-nvim
+
+# Installing moar (PAGER)
+https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
+chmod a+x moar-*-*-*
+mkdir ~/.local/bin
+mv moar-*-*-* ~/.local/bin/moar
