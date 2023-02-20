@@ -1,9 +1,13 @@
+#!/bin/bash
+
+username=$(id -u -n 1000)
+
 # Installing CLI programs
 sudo dnf install gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck -y
 
 # Installing other pkg managers
 sudo dnf install python3-pip npm -y
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 
 # Installing zsh
 sudo dnf install zsh zsh-syntax-highlighting zsh-syntax-highlighting -y
@@ -17,6 +21,8 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.z
 unzip FiraCode.zip -d ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
 unzip Meslo.zip -d ~/.fonts
+chown $username:$username /home/$username/.fonts/*
+chown $username:$username /home/$username/.fonts/
 
 # Reloading cache
 fc-cache -vf
@@ -35,34 +41,5 @@ sudo ufw enable
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh
-touch ~/.cache/zsh/history
-
-# Headsetcontrol
-git clone https://github.com/Sapd/HeadsetControl 
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-
-# Envycontrol
-git clone https://github.com/geminis3/envycontrol.git
-cd envycontrol
-sudo pip install .
-
-# Adding flathub repo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Installing lsd & bob-nvim
-cargo install lsd bob-nvim
-
-# Installing moar (PAGER)
-https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
-chmod a+x moar-*-*-*
-mkdir ~/.local/bin
-mv moar-*-*-* ~/.local/bin/moar
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
