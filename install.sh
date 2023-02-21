@@ -41,5 +41,3 @@ sudo ufw enable
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
