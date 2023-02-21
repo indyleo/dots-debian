@@ -29,3 +29,6 @@ https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 
 chmod a+x moar-*-*-*
 mkdir ~/.local/bin
 mv moar-*-*-* ~/.local/bin/moar
+
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
