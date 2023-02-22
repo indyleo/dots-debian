@@ -20,7 +20,7 @@ sudo dnf install gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmat
 sudo dnf install python3-pip npm -y
 
 # Installing zsh
-sudo dnf install zsh zsh-syntax-highlighting zsh-syntax-highlighting -y
+sudo dnf install zsh zsh-syntax-highlighting -y
 
 # Installing GUI programs 
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
@@ -28,9 +28,9 @@ sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar ste
 # Installing fonts 
 mkdir -p ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-unzip FiraCode.zip -d ~/.fonts
+unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
-unzip Meslo.zip -d ~/.fonts
+unzip Meslo.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/*
 chown $username:$username /home/$username/.fonts/
 
