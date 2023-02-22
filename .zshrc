@@ -132,6 +132,7 @@ alias dnfrm='sudo dnf remove'
 eval "$(starship init zsh)"
 
 # Startup itmes
- nf
+ neofetch 
+
 # Turning on Syntax Highlighting 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
