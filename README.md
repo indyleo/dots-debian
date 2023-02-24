@@ -1,7 +1,7 @@
 # My Dotfiles
 
-Distros i use are
-Fedora
-Ubuntu
-Pop-os
-Debian sid
+Distros I Use Are
+Fedora, 
+Ubuntu, 
+Pop-os, And
+Debian SID
