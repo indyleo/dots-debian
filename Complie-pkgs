@@ -18,6 +18,10 @@ git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
+# Ranger Dev Icons
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
+
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
