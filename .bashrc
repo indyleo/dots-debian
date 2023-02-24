@@ -17,7 +17,7 @@ export VISUAL="nvim"
 export PAGER="moar"
 
 # Aliases
-source $HOME/.aliasrc
+source $HOME/.aliasrc 2>/dev/null
 
 # Starship prompt
 eval "$(starship init bash)"
