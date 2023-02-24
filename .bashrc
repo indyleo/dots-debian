@@ -23,4 +23,4 @@ source $HOME/.aliasrc
 eval "$(starship init bash)"
 
 # Rustup
-. "$HOME/.cargo/env"
+
