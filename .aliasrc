@@ -36,11 +36,6 @@ alias bconfv='gnome-text-editor $HOME/.bashrc'
 alias aconfv='gnome-text-editor $HOME/.aliasrc'
 alias vconfv='nautilus ~/.config/nvim/'
 
-# Fun Aliases
-alias nf='neofetch'
-alias lc='lolcat'
-alias cm='cmatrix'
-
 # Trash Aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
