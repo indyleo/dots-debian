@@ -26,7 +26,7 @@ sudo dnf install zsh zsh-syntax-highlighting -y
 sudo dnf install java-1.8.0-openjdk java-11-openjdk java-17-openjdk -y
 
 # Installing GUI programs 
-sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
+sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam virt-manager timeshift -y
 
 # Installing fonts 
 mkdir -p /home/$username/.fonts
