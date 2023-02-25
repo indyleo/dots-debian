@@ -19,6 +19,10 @@ export PAGER="moar"
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
 
+# Startup Stuff
+# neofetch
+# pfetch
+
 # Starship prompt
 eval "$(starship init bash)"
 
