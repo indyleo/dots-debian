@@ -55,6 +55,9 @@ alias dnfud='sudo dnf update'
 alias dnfin='sudo dnf install'
 alias dnfrm='sudo dnf remove'
 
+# Quota Error Fix Alias
+alias quota-fix='sudo systemctl stop nvidia-powerd.service && sudo systemctl start nvidia-powerd.service && systemctl status nvidia-powerd.service'
+
 # Nala To APT
 apt() { 
   command nala "$@"
