@@ -53,6 +53,19 @@ alias dnfud='sudo dnf update'
 alias dnfin='sudo dnf install'
 alias dnfrm='sudo dnf remove'
 
+# Nala To APT
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
+
 # Making APT Better
 alias aptup='sudo apt update && sudo dnf upgrade'
 alias aptug='sudo apt upgrade'
