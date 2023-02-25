@@ -26,12 +26,14 @@ alias psa='ps aux'
 alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
+alias aconf='nvim $HOME/.aliasrc'
 alias vconf='cd $HOME/.config/nvim/'
 
 # Gnome Text Editor aliases
 alias gt='gnome-text-editor'
 alias zconfv='gnome-text-editor $HOME/.zshrc'
 alias bconfv='gnome-text-editor $HOME/.bashrc'
+alias aconfv='gnome-text-editor $HOME/.aliasrc'
 alias vconfv='nautilus ~/.config/nvim/'
 
 # Fun Aliases
