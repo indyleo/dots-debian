@@ -25,6 +25,9 @@ echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
@@ -33,10 +36,10 @@ https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
 sudo mv pfetch /usr/bin/
+
+# Nvidia Setting
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
