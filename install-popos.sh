@@ -29,7 +29,7 @@ nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 nala install mesa-utils peek transmission-gtk gnome-tweaks dconf-editor solaar timeshift virt-manager winetricks gnome-shell-extension-manager steam:i386  -y
 
 # Installing A Music Player
-nal install rhythmbox rhythmbox-plugins -y 
+nala install rhythmbox rhythmbox-plugins -y 
 
 # Installing firefox
 nala purge firefox-esr -y
