@@ -1,5 +1,5 @@
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin
 touch ~/.cache/zsh/history
 
 # Headsetcontrol
@@ -31,7 +31,6 @@ cargo install lsd bob-nvim
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
 chmod a+x moar-*-*-*
-mkdir ~/.local/bin
 mv moar-*-*-* ~/.local/bin/moar
 
 # Rustup
