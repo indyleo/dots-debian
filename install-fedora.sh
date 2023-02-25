@@ -16,7 +16,6 @@ username=$(id -u -n 1000)
 # Installing CLI programs
 sudo dnf install gpg openssl tldr htop trash-cli ranger neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck -y
 
-
 # Installing other pkg managers
 sudo dnf install python3-pip npm -y
 
@@ -30,7 +29,7 @@ sudo dnf install java-1.8.0-openjdk java-11-openjdk java-17-openjdk -y
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
 
 # Installing fonts 
-mkdir -p ~/.fonts
+mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
