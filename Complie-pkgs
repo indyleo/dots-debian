@@ -36,3 +36,6 @@ mv moar-*-*-* ~/.local/bin/moar
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# For Nvidia Drives
+sudo dnf install xorg-x11-drv-nvidia-cuda
