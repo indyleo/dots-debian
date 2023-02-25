@@ -1,6 +1,5 @@
 # My .Bashrc Config
 
-
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -28,4 +27,3 @@ source $HOME/.aliasrc 2>/dev/null
 eval "$(starship init bash)"
 
 # Rustup
-
