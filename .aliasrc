@@ -36,6 +36,13 @@ alias bconfv='gnome-text-editor $HOME/.bashrc'
 alias aconfv='gnome-text-editor $HOME/.aliasrc'
 alias vconfv='nautilus ~/.config/nvim/'
 
+# Gedit Aliases
+alias ge='gedit'
+alias zconfv='gedit $HOME/.zshrc'
+alias bconfv='gedit $HOME/.bashrc'
+alias aconfv='gedit $HOME/.aliasrc'
+alias vconfv='nautilus ~/.config/nvim/'
+
 # Trash Aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
