@@ -80,5 +80,3 @@ alias aptud='sudo apt update'
 alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
-
-# Startup Stuff
