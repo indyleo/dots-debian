@@ -16,11 +16,15 @@ username=$(id -u -n 1000)
 # Installing CLI programs
 sudo dnf install gpg openssl tldr htop trash-cli ranger neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck -y
 
+
 # Installing other pkg managers
 sudo dnf install python3-pip npm -y
 
 # Installing zsh
 sudo dnf install zsh zsh-syntax-highlighting -y
+
+# Installing openjdk
+sudo dnf install java-1.8.0-openjdk java-11-openjdk java-17-openjdk -y
 
 # Installing GUI programs 
 sudo dnf install peek transmission-gtk gnome-tweaks-tool dconf-editor solaar steam  -y
