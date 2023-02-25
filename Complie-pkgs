@@ -41,3 +41,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
 sudo mv pfetch /usr/bin/
+
+# Nerdfetch
+wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch
+chmod a+x nerdfetch
+sudo mv nerdfetch /usr/bin/
+
+# Nitch
+wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh && sh setup.sh
