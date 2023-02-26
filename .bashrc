@@ -23,7 +23,7 @@ shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 shopt -s checkwinsize # checks term size when bash regains control
 
- # Startup Stuff
+# Startup Stuff
  # neofetch
  # pfetch
 
