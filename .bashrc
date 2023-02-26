@@ -1,5 +1,8 @@
 # My .Bashrc Config
 
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -13,15 +16,12 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="moar"
 
-# Ignore Upper And Lowercase When TAB Completion
-bind "set completion-ignore-case on"
+ # Startup Stuff
+ # neofetch
+ # pfetch
 
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
-
-# Startup Stuff
-# neofetch
-# pfetch
 
 # Starship prompt
 eval "$(starship init bash)"
