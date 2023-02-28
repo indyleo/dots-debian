@@ -14,7 +14,7 @@ apt upgrade -y
 apt install nala 
 
 # Installing CLI programs
-nala install libhidapi-dev gpg openssl tldr htop trash-cli ranger neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck python3-venv ranger -y
+nala install libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli ranger neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck python3-venv ranger -y
 
 # Installing other pkg managers
 nala install python3-pip npm -y
