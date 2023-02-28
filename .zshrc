@@ -13,6 +13,9 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="moar"
 
+# Zsh completions
+fpath=($HOME/Github/zsh-completions/src $fpath)
+
 # Enable colors
 autoload -U colors && colors
 
@@ -92,9 +95,5 @@ source $HOME/.aliasrc 2>/dev/null
 # Starship prompt
 eval "$(starship init zsh)"
 
-# Zsh completions
-fpath=($HOME/Github/zsh-completions/src $fpath)
-
 # Turning on Syntax Highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
