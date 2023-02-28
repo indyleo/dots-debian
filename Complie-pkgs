@@ -39,6 +39,19 @@ https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
 
+# Mutter-Rounded
+cd ~/Github
+git clone https://github.com/yilozt/mutter-rounded
+cd ./mutter-rounded/ubuntu
+./package.sh
+sudo dpkg -i libmutter-10-0*.deb mutter-common*.deb
+
+# Mutter-Rounded-Settings
+cd ~/Github
+git clone https://github.com/yilozt/mutter-rounded-setting
+cd ./mutter-rounded-setting
+./install
+
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
