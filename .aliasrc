@@ -74,7 +74,7 @@ sudo() {
 }
 
 # Making APT Better
-alias aptup='sudo apt update && sudo dnf upgrade'
+alias aptup='sudo apt update && sudo apt upgrade'
 alias aptug='sudo apt upgrade'
 alias aptud='sudo apt update'
 alias aptin='sudo apt install'
