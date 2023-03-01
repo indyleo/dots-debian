@@ -50,16 +50,6 @@ alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
 
-# Making DNF Better
-alias dnfup='sudo dnf update && sudo dnf upgrade'
-alias dnfug='sudo dnf upgrade'
-alias dnfud='sudo dnf update'
-alias dnfin='sudo dnf install'
-alias dnfrm='sudo dnf remove'
-
-# Quota Error Fix Alias
-alias quota-fix='sudo systemctl stop nvidia-powerd.service && sudo systemctl start nvidia-powerd.service && systemctl status nvidia-powerd.service'
-
 # Nala To APT
 apt() { 
   command nala "$@"
