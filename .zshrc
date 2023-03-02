@@ -13,9 +13,6 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="moar"
 
-# Zsh completions
-fpath=($HOME/Github/zsh-completions/src $fpath)
-
 # Enable colors
 autoload -U colors && colors
 
@@ -59,7 +56,7 @@ rangercd () {
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp"
-        [ --datadir "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"                                               
+        [ "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"                                               
     fi
 }
 bindkey -s '^o' 'rangercd\n'
