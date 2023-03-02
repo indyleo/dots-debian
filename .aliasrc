@@ -70,6 +70,3 @@ alias aptud='sudo apt update'
 alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
-
-# Mutter-Rounded-Settings
-alias mutter-rounded-settings='gjs $HOME/Github/mutter-rounded-setting/dist/mutter_settings.js'
