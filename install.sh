@@ -35,9 +35,6 @@ nala install rhythmbox rhythmbox-plugins -y
 nala purge firefox-esr -y
 nala install firefox -y
 
-# Window Manager Stuff
-nala install pcmanfm picom arandr nitrogen feh
-
 # Script Variables
 username=$(id -u -n 1000)
 
