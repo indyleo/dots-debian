@@ -31,26 +31,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
-# Installing zsh-compleations
-cd ~/Github && git clone https://github.com/zsh-users/zsh-completions.git
-
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
-
-# Mutter-Rounded
-cd ~/Github
-git clone https://github.com/yilozt/mutter-rounded
-cd ./mutter-rounded/ubuntu
-./package.sh
-sudo dpkg -i libmutter-10-0*.deb mutter-common*.deb
-
-# Mutter-Rounded-Settings
-cd ~/Github
-git clone https://github.com/yilozt/mutter-rounded-setting
-cd ./mutter-rounded-setting
-./install
 
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
