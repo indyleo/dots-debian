@@ -36,7 +36,7 @@ nala purge firefox-esr -y
 nala install firefox -y
 
 # Window Manager Stuff
-nala install nitrogen picom arandr pcmanfm lightdm
+nala install nitrogen picom arandr pcmanfm
 
 # Script Variables
 username=$(id -u -n 1000)
