@@ -13,8 +13,8 @@ local dpi = require("beautiful.xresources").apply_dpi
 theme                                           = {}
 
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome"
-theme.wallpaper                                 = theme.dir .."/background.jpg"
-theme.font                                      = "SNFS Display UltraLight 8"
+theme.wallpaper                                 = theme.dir .."/wallpaper.png"
+theme.font                                      = "Sans 8"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_focus                                  = "#ffffff"
 theme.bg_normal                                 = "#373c4e"
