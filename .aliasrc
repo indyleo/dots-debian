@@ -27,6 +27,7 @@ alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
+alias wmconf='cd $HOME/.config/awesome'
 alias vconf='cd $HOME/.config/nvim/'
 
 # Gedit Aliases
@@ -34,7 +35,8 @@ alias gd='gedit'
 alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
 alias aconfv='gedit $HOME/.aliasrc'
-alias vconfv='nautilus ~/.config/nvim/'
+alias vconfv='pcmanfm $HOME/.config/nvim/'
+alias wmconf='pcmanfm $HOME/.config/awesome'
 
 # Trash Aliases
 alias trash='trash -iv'
