@@ -36,7 +36,7 @@ alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
 alias aconfv='gedit $HOME/.aliasrc'
 alias vconfv='pcmanfm $HOME/.config/nvim/'
-alias wmconf='pcmanfm $HOME/.config/awesome'
+alias wmconfv='pcmanfm $HOME/.config/awesome'
 
 # Trash Aliases
 alias trash='trash -iv'
