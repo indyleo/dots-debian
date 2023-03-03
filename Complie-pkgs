@@ -1,5 +1,5 @@
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/.config/qtile
 touch ~/.cache/zsh/history
 
 # Headsetcontrol
