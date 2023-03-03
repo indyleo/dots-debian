@@ -35,6 +35,9 @@ nala install rhythmbox rhythmbox-plugins -y
 nala purge firefox-esr -y
 nala install firefox -y
 
+# Installing awesomewm
+nala install awesome pcmanfm lxappearance lxsession arandr picom nitrogen rofi feh
+
 # Script Variables
 username=$(id -u -n 1000)
 
