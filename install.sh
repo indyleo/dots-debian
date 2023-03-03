@@ -36,7 +36,7 @@ nala purge firefox-esr -y
 nala install firefox -y
 
 # Installing awesomewm
-nala install awesome pcmanfm lxappearance lxsession arandr picom nitrogen rofi feh volumeicon-alsa pavucontrol flameshot -y
+nala install awesome pcmanfm lxappearance lxsession arandr picom nitrogen rofi feh volumeicon-alsa pavucontrol flameshot xbacklight -y
 
 # Script Variables
 username=$(id -u -n 1000)
