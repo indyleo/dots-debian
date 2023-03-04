@@ -317,12 +317,12 @@ globalkeys = gears.table.join(
 
     -- Rofi Drun Prompt
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn('rofi -show run') end,
+    awful.util.spawn('rofi -show drun') end,
               {description = "launch rofi -show drun", group = "Custom"}),
 
     -- Rofi Run Prompt
     awful.key({ modkey },            "d",     function () 
-    awful.util.spawn('rofi -show drun') end,
+    awful.util.spawn('rofi -show run') end,
               {description = "launch rofi -show run", group = "Custom"}),
 
     -- Firefox
@@ -339,11 +339,6 @@ globalkeys = gears.table.join(
      awful.key({ modkey },            "x",     function () 
     awful.util.spawn('alacritty -e ranger') end,
               {description = "launch ranger", group = "Terminal"}),
-              
-    -- Neovim
-     awful.key({ modkey },            "v",     function () 
-    awful.util.spawn('alacritty -e nvim') end,
-              {description = "launch neovim", group = "Terminal"}),
 
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
