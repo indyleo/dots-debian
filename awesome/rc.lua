@@ -74,11 +74,11 @@ awful.layout.layouts = {
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
+   { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { "Manual", terminal .. " -e man awesome" },
+   { "Edit Config", editor_cmd .. " " .. awesome.conffile },
+   { "Restart", awesome.restart },
+   { "Quit", function() awesome.quit() end },
 }
 
 local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
