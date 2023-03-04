@@ -539,18 +539,6 @@ beautiful.useless_gap = 5
 beautiful.notification_opacity = '95'
 beautiful.notification_icon_size = 80
 
--- Windows Rounding
-client.connect_signal("manage", function(c)
-    c.shape = function(cr, w, h)
-        gears.shape.rounded_rect(cr, w, h, 10)
-    end
-end)
-
--- Notifications Rounding
-beautiful.notification_shape = function(cr, w, h)
-    gears.shape.rounded_rect(cr, w, h, 10)
-end
-
 -- Startup Programs
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("nm-applet")
