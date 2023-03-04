@@ -84,18 +84,4 @@ theme.layout_fullscreen                         = theme.dir .. "/icons/fullscree
 theme.layout_magnifier                          = theme.dir .. "/icons/magnifier.png"
 theme.layout_floating                           = theme.dir .. "/icons/floating.png"
 
--- lain related
-theme.useless_gap_width                         = 15
-theme.layout_centerfair                         = theme.dir .. "/icons/centerfair.png"
-theme.layout_termfair                           = theme.dir .. "/icons/termfair.png"
-theme.layout_centerwork                         = theme.dir .. "/icons/centerwork.png"
-theme.layout_uselessfair                        = theme.dir .. "/icons/fairv.png"
-theme.layout_uselessfairh                       = theme.dir .. "/icons/fairh.png"
-theme.layout_uselessdwindle                     = theme.dir .. "/icons/dwindle.png"
-theme.layout_uselesstile                        = theme.dir .. "/icons/tile.png"
-theme.layout_uselesstiletop                     = theme.dir .. "/icons/tiletop.png"
-theme.layout_uselesstileleft                    = theme.dir .. "/icons/tileleft.png"
-theme.layout_uselesstilebottom                  = theme.dir .. "/icons/tilebottom.png"
-theme.layout_uselesspiral                       = theme.dir .. "/icons/spiral.png"
-
 return theme
