@@ -340,9 +340,11 @@ globalkeys = gears.table.join(
     awful.util.spawn('alacritty -e ranger') end,
               {description = "launch ranger", group = "Terminal"}),
 
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+  -- I3lock
+     awful.key({ modkey },            "p",     function () 
+    awful.util.spawn('alacritty -e i3lock-fancy -g') end,
+              {description = "launch lockscreen", group = "Terminal"})
+
 )
 
 clientkeys = gears.table.join(
