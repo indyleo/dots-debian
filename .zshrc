@@ -2,6 +2,7 @@
 
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Applications:$PATH"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
