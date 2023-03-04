@@ -53,7 +53,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/them
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("nvim") or "nano"
+editor = os.getenv("gedit") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -234,7 +234,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,  "Shift"  }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -280,7 +280,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
+              {description = "open alacritty", group = "Terminal"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -315,15 +315,15 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Rofi Run Prompt
+    -- Rofi Drun Prompt
     awful.key({ modkey },            "r",     function () 
     awful.util.spawn('rofi -show run') end,
-              {description = "launch rofi -show run", group = "Custom"}),
+              {description = "launch rofi -show drun", group = "Custom"}),
 
-    -- Rofi Drun Prompt
+    -- Rofi Run Prompt
     awful.key({ modkey },            "d",     function () 
     awful.util.spawn('rofi -show drun') end,
-              {description = "launch rofi -show drun", group = "Custom"}),
+              {description = "launch rofi -show run", group = "Custom"}),
 
     -- Firefox
     awful.key({ modkey },            "b",     function () 
@@ -334,6 +334,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey },            "f",     function () 
     awful.util.spawn('pcmanfm') end,
               {description = "launch pcmanfm", group = "Custom"}),
+
+    -- Ranger
+     awful.key({ modkey },            "x",     function () 
+    awful.util.spawn('alacritty -e ranger') end,
+              {description = "launch ranger", group = "Terminal"}),
+              
+    -- Neovim
+     awful.key({ modkey },            "v",     function () 
+    awful.util.spawn('alacritty -e nvim') end,
+              {description = "launch neovim", group = "Terminal"}),
 
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -539,4 +549,3 @@ awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("solaar -w hide")
