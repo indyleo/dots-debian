@@ -49,12 +49,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
--- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nvim"
+editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -68,6 +67,7 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
+    awful.layout.suit.max.fullscreen,
 }
 -- }}}
 
@@ -81,7 +81,7 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
-local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
+local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
 local menu_terminal = { "Open Alacritty", terminal }
 
 if has_fdo then
@@ -315,20 +315,26 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Rofi
-    awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show drun") end,
-       {description = "run rofi's drun prompt", group = "Custom"}),
+    -- Rofi Run Prompt
+    awful.key({ modkey },            "r",     function () 
+    awful.util.spawn('rofi -show run') end,
+              {description = "launch rofi -show run", group = "Custom"}),
 
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
+    -- Rofi Drun Prompt
+    awful.key({ modkey },            "d",     function () 
+    awful.util.spawn('rofi -show drun') end,
+              {description = "launch rofi -show drun", group = "Custom"}),
+
+    -- Firefox
+    awful.key({ modkey },            "b",     function () 
+    awful.util.spawn('firefox') end,
+              {description = "launch firefox", group = "Custom"}),
+
+    -- Pcmanfm
+    awful.key({ modkey },            "f",     function () 
+    awful.util.spawn('pcmanfm') end,
+              {description = "launch pcmanfm", group = "Custom"}),
+
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
