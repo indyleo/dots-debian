@@ -53,7 +53,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/them
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("gedit") or "nano"
+editor = os.getenv("vim") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
