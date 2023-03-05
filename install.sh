@@ -26,7 +26,7 @@ nala install zsh zsh-syntax-highlighting -y
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing GUI programs 
-nala install alacritty mesa-utils peek transmission-gtk dconf-editor gnome-tweaks gnome-shell-extension-manager solaar timeshift virt-manager steam:i386  -y
+nala install mesa-utils peek transmission-gtk dconf-editor gnome-tweaks gnome-shell-extension-manager solaar timeshift virt-manager steam:i386  -y
 
 # Installing A Music Player
 nala install rhythmbox rhythmbox-plugins -y 
@@ -34,9 +34,6 @@ nala install rhythmbox rhythmbox-plugins -y
 # Installing firefox
 nala purge firefox-esr -y
 nala install firefox -y
-
-# Installing awesomewm
-nala install awesome pcmanfm lxappearance lxsession arandr picom rofi feh volumeicon-alsa pavucontrol flameshot xbacklight i3lock-fancy -y
 
 # Script Variables
 username=$(id -u -n 1000)
