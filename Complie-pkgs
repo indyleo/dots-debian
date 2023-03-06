@@ -45,6 +45,3 @@ go install github.com/cjbassi/gotop@latest
 
 # Nvidia Setting
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
-
-# Rofi Settings
-rofi -modi drun,window,run
