@@ -18,17 +18,11 @@ git clone https://github.com/geminis3/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Ranger Dev Icons
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-
 # Adding flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# Installing lsd & bob-nvim
-cargo install lsd bob-nvim
+# Installing lsd
+cargo install lsd
 
 # Installing moar (PAGER)
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
