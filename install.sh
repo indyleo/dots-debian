@@ -10,7 +10,7 @@ fi
 pacman -Syu
 
 # Installing CLI programs
-pacman -S tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks go shellcheck python3-venv --noconfirm
+pacman -S tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks go shellcheck git python3-venv --noconfirm
 
 # Installing other pkg managers
 pacman -S install python-pip npm cargo --noconfirm
