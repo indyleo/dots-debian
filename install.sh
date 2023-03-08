@@ -7,39 +7,31 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Update packages list and update system
-apt update 
-apt upgrade -y
-
-# Install nala
-apt install nala 
+pacman -Syu
 
 # Installing CLI programs
-nala install tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck python3-venv ranger -y
+pacman -S tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake hidapi-devel g++ cava wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks go shellcheck python3-venv --noconfirm
 
 # Installing other pkg managers
-nala install python3-pip npm -y
+pacman -S install python-pip npm cargo --noconfirm
 
 # Installing zsh
-nala install zsh zsh-syntax-highlighting -y
+pacman -S zsh zsh-syntax-highlighting --noconfirm
 
-# Installing java 
-nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
+# Installindg openjdk
+pacman -S jdk-openjdk	jre-openjdk jdk11-openjdk jre11-openjdk jdk17-openjdk jre17-openjdk jdk8-openjdk jre8-openjdk
 
 # Installing GUI programs 
-nala install mesa-utils peek transmission-gtk dconf-editor gnome-tweaks solaar timeshift virt-manager steam:i386 gnome-extensions-app -y
+pacman -S mesa-utils peek transmission-gtk solaar virt-manager steam --noconfirm
 
 # Installing A Music Player
-nala install rhythmbox rhythmbox-plugins -y 
-
-# Installing firefox
-nala purge firefox-esr -y
-nala install firefox -y
+pacman -S elisa --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
 
 # Installing fonts 
-nala install fonts-font-awesome -y
+pacman -S otf-font-awesome ttf-font-awesome --noconfirm
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
@@ -54,7 +46,7 @@ fc-cache -vf
 rm ./FiraCode.zip ./Meslo.zip
 
 # Setting up ufw 
-nala install ufw -y
+pacman -S ufw --noconfirm
 sleep 2.5
 sudo ufw limit 22/tcp
 sudo ufw allow 80/tcp
@@ -65,6 +57,3 @@ sudo ufw enable
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
-
-# Nala 
-printf " \n Run (sudo nala fetch) To Get Faster Speeds \n \n"
