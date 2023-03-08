@@ -24,8 +24,8 @@ pacman -S jdk-openjdk	jre-openjdk jdk11-openjdk jre11-openjdk jdk17-openjdk jre1
 # Installing GUI programs 
 pacman -S mesa-utils peek transmission-gtk solaar virt-manager steam --noconfirm
 
-# Installing A Music Player
-pacman -S elisa --noconfirm
+# Installing basic stuff
+pacman -S elisa gwenview kcalc kaffeien juk --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
