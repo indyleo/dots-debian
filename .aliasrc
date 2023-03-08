@@ -27,18 +27,14 @@ alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
-alias pconf='nvim $HOME/.config/picom/picom.conf'
-alias wconf='cd $HOME/.config/awesome'
 alias vconf='cd $HOME/.config/nvim/'
 
-# Gedit Aliases
-alias gd='gedit'
-alias zconfv='gedit $HOME/.zshrc'
-alias bconfv='gedit $HOME/.bashrc'
-alias aconfv='gedit $HOME/.aliasrc'
-alias pconfv='gedit $HOME/.config/picom/picom.conf'
-alias vconfv='pcmanfm $HOME/.config/nvim/'
-alias wconfv='pcmanfm $HOME/.config/awesome'
+# Kate Aliases
+alias ka='kate'
+alias zconfv='kate $HOME/.zshrc'
+alias bconfv='kate $HOME/.bashrc'
+alias aconfv='kate $HOME/.aliasrc'
+alias vconfv='dolphin $HOME/.config/nvim/'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -46,24 +42,3 @@ alias trashl='trash-list'
 alias trashr='trash-restore'
 alias trashm='trash-rm'
 alias trashe='trash-empty'
-
-# Nala To APT
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
-
-# Making APT Better
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptug='sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptin='sudo apt install'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
