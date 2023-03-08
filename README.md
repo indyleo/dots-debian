@@ -1,3 +1,3 @@
 # My Dotfiles
 
-Distro I Use Is Pop-os But Recompiled
+Distro I Use Is Arch
