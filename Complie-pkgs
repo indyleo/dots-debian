@@ -35,4 +35,5 @@ sudo mv pfetch /usr/bin/
 go install github.com/cjbassi/gotop@latest
 
 # Nvidia Setting
+sudo pacman -S nvidia-settings
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
