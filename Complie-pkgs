@@ -34,6 +34,9 @@ sudo mv pfetch /usr/bin/
 # Gotop
 go install github.com/cjbassi/gotop@latest
 
+# KDE Bismuth
+yay -S kwin-bismuth 
+
 # Nvidia Setting
 sudo pacman -S nvidia-settings
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
