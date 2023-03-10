@@ -1,6 +1,6 @@
 # My .Bashrc Config
 
-#ignore upper and lowercase when TAB completion
+# Ignore case during TAB completion
 bind "set completion-ignore-case on"
 
 # Exports
