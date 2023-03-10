@@ -1,8 +1,5 @@
 # My .Bashrc Config
 
-# ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
@@ -14,7 +11,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
-export VISUAL="nvim"
+export VISUAL="gedit"
 export PAGER="moar"
 
 # Startup Stuff
