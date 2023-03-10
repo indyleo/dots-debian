@@ -1,0 +1,36 @@
+# Making directories & files 
+mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin
+touch ~/.cache/zsh/history 
+
+# Headsetcontrol
+git clone https://github.com/Sapd/HeadsetControl 
+cd HeadsetControl
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Installing lsd & bob-nvim
+cargo install lsd bob-nvim
+
+# Installing moar (PAGER)
+https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
+chmod a+x moar-*-*-*
+mv moar-*-*-* ~/.local/bin/moar
+
+# Pfetch
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+chmod a+x pfetch
+sudo mv pfetch ~/.local/bin/pfetch
+
+# Gotop
+go install github.com/cjbassi/gotop@latest
+
+# Nvidia Setting
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
