@@ -2,7 +2,7 @@
 
 Distro I Use Is Pop-os
 
-# Preview: ![image](https://user-images.githubusercontent.com/100316787/224464667-ebb9c005-59bc-4b3d-b912-34d97ed60ee4.png)
+# Preview: ![image](https://user-images.githubusercontent.com/100316787/224509759-7a2754eb-256a-462c-a3cd-6c5f898d4df8.png)
 
 
 # Extensions:
