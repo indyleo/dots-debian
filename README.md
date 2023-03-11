@@ -12,10 +12,6 @@ Distro I Use Is Pop-os
 <br>
 <a href='https://extensions.gnome.org/extension/1460/vitals/'> Vitals </a>
 <br>
-<a href='https://extensions.gnome.org/extension/1514/rounded-corners/'> Rounded Coners </a>
-<br>
-<a href='https://extensions.gnome.org/extension/4805/panel-corners/'> Panel Coners </a>
-<br>
 <a href='https://extensions.gnome.org/extension/19/user-themes/'> User Themes </a>
 <br>
 <a href='https://extensions.gnome.org/extension/4684/useless-gaps/'> Useless Gaps </a>
