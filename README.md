@@ -6,8 +6,6 @@ Distro I Use Is Pop-os
 
 
 # Extensions:
-<a href='https://extensions.gnome.org/extension/1446/transparent-window-moving/'> Transparent Window Moving </a>
-<br>
 <a href='https://extensions.gnome.org/extension/4451/logo-menu/'> Logo Menu </a>
 <br>
 <a href='https://extensions.gnome.org/extension/5237/rounded-window-corners/'> Rounded Window Corners </a>
