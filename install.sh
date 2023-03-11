@@ -14,7 +14,7 @@ apt upgrade -y
 apt install nala
 
 # Installing CLI programs
-nala install tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake g++ wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck python3-venv git build-essential -y
+nala install tree tty-clock libhidapi-dev yarn webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake g++ wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks golang-go shellcheck python3-venv git build-essential -y
 
 # Installing other pkg managers
 nala install python3-pip npm -y
