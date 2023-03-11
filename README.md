@@ -19,7 +19,7 @@ Distro I Use Is Pop-os
 <br>
 <a href='https://extensions.gnome.org/extension/19/user-themes/'> User Themes </a>
 <br>
-<a href='https://extensions.gnome.org/extension/5177/vertical-workspaces/'> V-Shell </a>
+<a href='https://extensions.gnome.org/extension/4684/useless-gaps/'> Useless Gaps </a>
 <br>
 <a href='https://extensions.gnome.org/extension/4033/x11-gestures/'> X11 Gestures </a>
 <br>
@@ -43,6 +43,8 @@ Distro I Use Is Pop-os
 <br>
 <a href='https://extensions.gnome.org/extension/906/sound-output-device-chooser/'> Sound Input & Output Device Chooser </a>
 <br>
-<a href='https://github.com/pop-os/shell'> Pop Shell </a>
+<a href='https://extensions.gnome.org/extension/307/dash-to-dock/'> Dash To Dock </a>
+<br>
+<a href='https://extensions.gnome.org/extension/3733/tiling-assistant/'> Tiling Assistant </a>
 <br>
 <a href='https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/'> Desktop Icons NG (DING) </a>
