@@ -13,6 +13,23 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="gedit"
 export PAGER="moar"
+export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
+
+# SHOPT
+shopt -s cdspell # autocorrects cd misspellings
+shopt -s cmdhist # save multi-line commands in history as single line
+shopt -s dotglob
+shopt -s histappend # do not overwrite history
+shopt -s expand_aliases # expand aliases
+shopt -s checkwinsize # checks term size when bash regains control
+
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
+# Set keyslayout to vi
+set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 
 # Startup Stuff
  # neofetch
