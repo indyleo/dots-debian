@@ -26,7 +26,7 @@ nala install zsh zsh-syntax-highlighting -y
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing GUI programs 
-nala install mesa-utils peek transmission-gtk dconf-editor gnome-tweaks solaar virt-manager steam:i386 gnome-extensions-app gnome-shell-extension-manager -y
+nala install alacritty mesa-utils peek transmission-gtk dconf-editor gnome-tweaks solaar virt-manager steam:i386 gnome-extensions-app gnome-shell-extension-manager -y
 
 # Installing A Music Player
 nala install rhythmbox rhythmbox-plugins -y 
