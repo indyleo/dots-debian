@@ -2,8 +2,7 @@
 
 Distro I Use Is Pop-os
 
-# Preview: ![image](https://user-images.githubusercontent.com/100316787/224509759-7a2754eb-256a-462c-a3cd-6c5f898d4df8.png)
-
+# Preview: ![image](https://user-images.githubusercontent.com/100316787/224523619-3b3261bf-f45a-4579-b83c-50e2b1ca4b61.png)
 
 # Extensions:
 <a href='https://extensions.gnome.org/extension/4451/logo-menu/'> Logo Menu </a>
