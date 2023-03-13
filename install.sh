@@ -67,6 +67,3 @@ sudo ufw enable;
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh;
-
-# Nala 
-printf " \n Run (sudo nala fetch) To Get Faster Speeds \n \n"
