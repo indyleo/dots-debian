@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Distro I Use Is Pop-os
+Distro I Use Is Pop-os or Debian SID
 
 # Preview: ![image](https://user-images.githubusercontent.com/100316787/224523619-3b3261bf-f45a-4579-b83c-50e2b1ca4b61.png)
 
