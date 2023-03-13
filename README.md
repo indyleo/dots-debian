@@ -13,8 +13,6 @@ Distro I Use Is Pop-os or Debian SID
 <br>
 <a href='https://extensions.gnome.org/extension/4684/useless-gaps/'> Useless Gaps </a>
 <br>
-<a href='https://extensions.gnome.org/extension/4033/x11-gestures/'> X11 Gestures </a>
-<br>
 <a href='https://extensions.gnome.org/extension/615/appindicator-support/'> AppIndicator and KStatusNotifierItem Support </a>
 <br>
 <a href='https://extensions.gnome.org/extension/3193/blur-my-shell/'> Blur My Shell </a>
