@@ -37,5 +37,10 @@ sudo mv pfetch ~/.local/bin/pfetch
 # Gotop
 go install github.com/cjbassi/gotop@latest
 
-# Nvidia Setting
+# Nvidia setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+
+# Stuff for neovim
+pip install pynvim
+npm i -g neovim tree-sitter-cli
+cargo install fd-find ripgrep
