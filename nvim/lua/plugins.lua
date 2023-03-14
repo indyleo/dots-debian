@@ -114,7 +114,8 @@ use { "ahmedkhalf/project.nvim"}
 
   -- Git
   use { "lewis6991/gitsigns.nvim"}
-
+  use { "kdheepak/lazygit.nvim"}
+		
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
