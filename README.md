@@ -29,8 +29,6 @@ Distro I Use Is Pop-os
 <br>
 <a href='https://extensions.gnome.org/extension/3843/just-perfection/'> Just Perfection </a>
 <br>
-<a href='https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/'> Gnome 4x UI Improvements </a>
-<br>
 <a href='https://extensions.gnome.org/extension/750/openweather/'> OpenWeather </a>
 <br>
 <a href='https://extensions.gnome.org/extension/1112/screenshot-tool/'> Screenshot Tool </a>
