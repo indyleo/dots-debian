@@ -43,4 +43,3 @@ sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFul
 # Stuff for neovim
 pip install pynvim
 npm i -g neovim tree-sitter-cli
-cargo install fd-find ripgrep
