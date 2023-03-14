@@ -42,12 +42,6 @@ keymap("n", "<C-a>", ":Alpha<CR>", opts)
 -- ToggleTerm
 keymap("n", "<C-x>", ":ToggleTerm<CR>", opts)
 
--- Tabs
-keymap("n", "<geader>tf", ":tabnew<CR>", opts)
-keymap("n", "<geader>tc", ":tabclose<CR>", opts)
-keymap("n", "<geader>tn", ":tabn<CR>", opts)
-keymap("n", "<geader>tp", ":tabp<CR>", opts)
-
 -- Bufferline
 keymap("n", "<geader>bn", ":BuffergineCycleNext<CR>", opts)
 keymap("n", "<geader>bp", ":BuffergineCyclePrev<CR>", opts)
