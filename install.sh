@@ -58,6 +58,7 @@ rm ./FiraCode.zip ./Meslo.zip;
 
 # Setting up ufw 
 nala install ufw -y;
+sleep 2.5;
 sudo ufw limit 22/tcp;
 sudo ufw allow 80/tcp;
 sudo ufw allow 443/tcp;
