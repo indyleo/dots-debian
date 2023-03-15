@@ -17,8 +17,6 @@ Distro I Use Is Pop-os
 <br>
 <a href='https://extensions.gnome.org/extension/3193/blur-my-shell/'> Blur My Shell </a>
 <br>
-<a href='https://extensions.gnome.org/extension/1446/transparent-window-moving/'> Transparent Window Moving </a>
-<br>
 <a href='https://extensions.gnome.org/extension/4679/burn-my-windows/'> Burn My Windows </a>
 <br>
 <a href='https://extensions.gnome.org/extension/779/clipboard-indicator/'> Clipboard Indicator </a>
