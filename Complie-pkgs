@@ -28,11 +28,6 @@ https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
 
-# Installing nord gedit theme
-https://github.com/arcticicestudio/nord-gedit/releases/latest ( Download zip and then extract the archive )
-open terminal in the directory
-then do ./install.sh
-
 # Gotop
 go install github.com/cjbassi/gotop@latest
 
