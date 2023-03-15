@@ -26,13 +26,16 @@ nala install zsh zsh-syntax-highlighting -y;
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y;
 
 # Installing GUI programs 
-nala install timeshift alacritty mesa-utils transmission-gtk dconf-editor gnome-tweaks solaar virt-manager steam:i386 gnome-extensions-app -y;
+nala install timeshift mesa-utils transmission-gtk dconf-editor gnome-tweaks solaar virt-manager steam:i386 gnome-extensions-app -y;
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y;
 
 # Installing media stuff
 nala install peek obs-studio kdenlive audacity -y;
+
+# Installing AwesomeWM Stuff
+nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance  -y;
 
 # Installing firefox
 nala purge firefox-esr -y;
