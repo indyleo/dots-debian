@@ -53,7 +53,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/them
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "gedit"
+editor = os.getenv("vim") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -63,7 +63,6 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
--- Table of layouts to cover with awful.layout.inc, order matters.
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
@@ -75,15 +74,15 @@ awful.layout.layouts = {
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
+   { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { "Manual", terminal .. " -e man awesome" },
+   { "Edit Config", editor_cmd .. " " .. awesome.conffile },
+   { "Restart", awesome.restart },
+   { "Quit", function() awesome.quit() end },
 }
 
 local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { Open Terminal", terminal }
+local menu_terminal = { "Open Alacritty", terminal }
 
 if has_fdo then
     mymainmenu = freedesktop.menu.build({
@@ -174,9 +173,9 @@ awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
 
-   -- Each screen has its own tag table.
+    -- Each screen has its own tag table.
     awful.tag({ "WWW", "MSG", "GAME", "DEV", "VIRT", "SYS", "REC", }, s, awful.layout.layouts[1])
-    
+
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -235,7 +234,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,  "Shift"  }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -279,7 +278,7 @@ globalkeys = gears.table.join(
         end,
         {description = "go back", group = "client"}),
 
-  -- Standard program
+    -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open alacritty", group = "Terminal"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
@@ -316,7 +315,7 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-        -- Rofi Drun Prompt
+    -- Rofi Drun Prompt
     awful.key({ modkey },            "r",     function () 
     awful.util.spawn('rofi -show drun') end,
               {description = "launch rofi -show drun", group = "Custom"}),
@@ -340,7 +339,7 @@ globalkeys = gears.table.join(
      awful.key({ modkey },            "x",     function () 
     awful.util.spawn('alacritty -e ranger') end,
               {description = "launch ranger", group = "Terminal"}),
-             
+
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
@@ -353,7 +352,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-      awful.key({ modkey,   }, "q",      function (c) c:kill()                         end,
+    awful.key({ modkey,   }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
@@ -504,11 +503,6 @@ awful.rules.rules = {
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
       }, properties = { floating = true }},
-
-    -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
-    },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
