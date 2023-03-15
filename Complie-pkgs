@@ -3,6 +3,7 @@ mkdir -p ~/Github ~/Img ~/Applications ~/Scripts ~/.icons ~/.themes ~/.cache/zsh
 touch ~/.cache/zsh/history 
 
 # Headsetcontrol
+cd ~/Github
 git clone https://github.com/Sapd/HeadsetControl 
 cd HeadsetControl
 mkdir build
@@ -13,8 +14,11 @@ sudo make install
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Envycontrol
+cd ~/Github
+git clone https://github.com/bayasdev/envycontrol.git
+cd envycontrol
+sudo pip install .
 
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
@@ -29,11 +33,6 @@ https://github.com/arcticicestudio/nord-gedit/releases/latest ( Download zip and
 open terminal in the directory
 then do ./install.sh
 
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-chmod a+x pfetch
-sudo mv pfetch ~/.local/bin/pfetch
-
 # Gotop
 go install github.com/cjbassi/gotop@latest
 
@@ -43,4 +42,6 @@ sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFul
 # Stuff for neovim
 pip install pynvim
 npm i -g neovim tree-sitter-cli
+
+# LazyGit
 go install github.com/jesseduffield/lazygit@latest
