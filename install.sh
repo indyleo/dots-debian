@@ -35,7 +35,7 @@ nala install rhythmbox rhythmbox-plugins -y;
 nala install peek obs-studio kdenlive audacity -y;
 
 # Installing AwesomeWM Stuff
-nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip -y;
+nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xbacklight flameshot network-manager-gnome volumeicon-alsa  -y;
 
 # Installing firefox
 nala purge firefox-esr -y;
@@ -68,6 +68,14 @@ sudo ufw allow 443/tcp;
 sudo ufw default deny incoming;
 sudo ufw default allow outgoing;
 sudo ufw enable;
+
+# Pfetch
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+chmod a+x pfetch
+mv pfetch /usr/bin/pfetch
+
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh;
