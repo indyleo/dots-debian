@@ -40,3 +40,6 @@ npm i -g neovim tree-sitter-cli
 
 # LazyGit
 go install github.com/jesseduffield/lazygit@latest
+
+# Rofi Settings
+rofi -modi drun,window,run
