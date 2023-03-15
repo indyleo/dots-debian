@@ -28,6 +28,8 @@ alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
+alias wconf='nvim $HOME/.config/awesome/rc.lua'
+alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias vconf='cd $HOME/.config/nvim/'
 
 # Gedit Aliases
@@ -35,7 +37,9 @@ alias gd='gedit'
 alias zconfv='gedit $HOME/.zshrc'
 alias bconfv='gedit $HOME/.bashrc'
 alias aconfv='gedit $HOME/.aliasrc'
-alias vconfv='nautilus $HOME/.config/nvim/'
+alias wconfv='gedit $HOME/.config/awesome/rc.lua'
+alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
+alias vconfv='pcmanfm $HOME/.config/nvim/'
 
 # Trash Aliases
 alias trash='trash -iv'
