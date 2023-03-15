@@ -21,6 +21,7 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias wq='exit'
 alias psa='ps aux'
+alias rn='ranger'
 
 # Vim aliases
 alias vim='nvim'
