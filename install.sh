@@ -35,7 +35,7 @@ nala install rhythmbox rhythmbox-plugins -y;
 nala install peek obs-studio kdenlive audacity -y;
 
 # Installing AwesomeWM Stuff
-nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xbacklight flameshot network-manager-gnome volumeicon-alsa ranger -y;
+nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xbacklight flameshot network-manager-gnome volumeicon-alsa pavucontrol ranger -y;
 
 # Installing firefox
 nala purge firefox-esr -y;
