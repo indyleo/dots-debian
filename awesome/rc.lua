@@ -340,6 +340,11 @@ globalkeys = gears.table.join(
     awful.util.spawn('alacritty -e ranger') end,
               {description = "launch ranger", group = "Terminal"}),
 
+    -- I3lock-Fancy
+     awful.key({ modkey },            "x",     function () 
+    awful.util.spawn('i3lock-fancy -g') end,
+              {description = "lock your computer", group = "Custom"}),
+
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
@@ -544,4 +549,6 @@ awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("~/.fehbg")
+awful.spawn.with_shell("/usr/libexec/polkitd -r")
 awful.spawn.with_shell("solaar -w hide")
