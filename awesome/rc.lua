@@ -325,6 +325,11 @@ globalkeys = gears.table.join(
     awful.util.spawn('rofi -show run') end,
               {description = "launch rofi -show run", group = "Custom"}),
 
+    -- Rofi Window
+    awful.key({ modkey },            "p",     function () 
+    awful.util.spawn('rofi -show window') end,
+              {description = "change focous of window", group = "Launcher"}),
+    
     -- Firefox
     awful.key({ modkey },            "b",     function () 
     awful.util.spawn('firefox') end,
@@ -343,11 +348,7 @@ globalkeys = gears.table.join(
     -- I3lock-Fancy
      awful.key({ modkey },            "s",     function () 
     awful.util.spawn('i3lock-fancy -g') end,
-              {description = "lock your computer", group = "Custom"}),
-
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "lock your computer", group = "Custom"})
 )
 
 clientkeys = gears.table.join(
