@@ -341,7 +341,7 @@ globalkeys = gears.table.join(
               {description = "launch ranger", group = "Terminal"}),
 
     -- I3lock-Fancy
-     awful.key({ modkey },            "l",     function () 
+     awful.key({ modkey },            "s",     function () 
     awful.util.spawn('i3lock-fancy -g') end,
               {description = "lock your computer", group = "Custom"}),
 
