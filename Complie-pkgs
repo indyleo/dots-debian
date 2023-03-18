@@ -47,7 +47,7 @@ git clone https://github.com/jluttine/rofi-power-menu.git
 cd rofi-power-menu
 cp rofi-power-menu ~/.local/bin/
 
-# Rofi Scripts (You Add Your Own Keybindings)
+# Rofi Scripts (You Add Your Own Keybindings To Awesome Config)
 https://github.com/Mange/rofi-emoji
 https://github.com/cdown/clipmenu
 https://github.com/svenstaro/rofi-calc
