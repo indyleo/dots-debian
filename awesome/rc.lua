@@ -546,10 +546,10 @@ beautiful.notification_opacity = '95'
 beautiful.notification_icon_size = 80
 
 -- Startup Programs
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("~/.fehbg")
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("solaar -w hide")
+awful.spawn.with_shell("~/.fehbg")
