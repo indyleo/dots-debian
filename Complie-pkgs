@@ -41,5 +41,17 @@ npm i -g neovim tree-sitter-cli
 # LazyGit
 go install github.com/jesseduffield/lazygit@latest
 
+# Rofi PowerMenu
+cd ~/Github
+git clone https://github.com/jluttine/rofi-power-menu.git
+cd rofi-power-menu
+cp rofi-power-menu ~/.local/bin/
+
+# Rofi Scripts (You Add Your Own Keybindings)
+https://github.com/Mange/rofi-emoji
+https://github.com/cdown/clipmenu
+https://github.com/svenstaro/rofi-calc
+
 # Rofi Settings
 rofi -modi drun,window,run
+rofi -modi p:rofi-power-menu
