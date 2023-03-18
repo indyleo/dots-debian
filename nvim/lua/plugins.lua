@@ -46,32 +46,34 @@ use { "JoosepAlviste/nvim-ts-context-commentstring"}
 use { "ahmedkhalf/project.nvim"}
 use { "frazrepo/vim-rainbow"}
 use { "nvim-orgmode/orgmode"}
+use { "lewis6991/impatient.nvim"} -- faster startup
+use { "lukas-reineke/indent-blankline.nvim"} -- smarter indent
 
   -- Comment Plugin use gc or gb in visual mode
 	use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup {} end
 	}
+	
   -- Terminal Toggle
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
 		end
 	}
+	
   -- Essential plugins
   use { "tpope/vim-surround"} -- add, delete, change surroundings (it's awesome)
   use { "inkarkat/vim-ReplaceWithRegister"} -- replace with register contents using motion (gr + motion)
 
-  -- File Explorer in Vim Ctrl+f
+  -- File Explorer Stuff
   use { "kyazdani42/nvim-web-devicons"}
   use { "kyazdani42/nvim-tree.lua"}
   use { "moll/vim-bbye"}
+  
         -- Pretty status bar
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-
-  use { "lewis6991/impatient.nvim"} -- faster startup
-  use { "lukas-reineke/indent-blankline.nvim"} -- smarter indent
 
   -- alpha dashboard
   use {
