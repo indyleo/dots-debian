@@ -44,6 +44,8 @@ use { "nvim-lua/plenary.nvim"} -- useful lua functions used by lots of plugins
 use { "folke/which-key.nvim"}
 use { "JoosepAlviste/nvim-ts-context-commentstring"}
 use { "ahmedkhalf/project.nvim"}
+use { "frazrepo/vim-rainbow"}
+use { "nvim-orgmode/orgmode"}
 
   -- Comment Plugin use gc or gb in visual mode
 	use {
