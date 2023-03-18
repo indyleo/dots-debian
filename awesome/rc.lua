@@ -318,37 +318,37 @@ globalkeys = gears.table.join(
     -- Rofi Drun Prompt
     awful.key({ modkey },            "r",     function () 
     awful.util.spawn('rofi -show drun') end,
-              {description = "launch rofi -show drun", group = "Custom"}),
+              {description = "launch rofi -show drun", group = "Launcher"}),
 
     -- Rofi Run Prompt
     awful.key({ modkey },            "d",     function () 
     awful.util.spawn('rofi -show run') end,
-              {description = "launch rofi -show run", group = "Custom"}),
+              {description = "launch rofi -show run", group = "Launcher"}),
 
-    -- Rofi Window
-    awful.key({ modkey },            "p",     function () 
+  -- Rofi Window
+     awful.key({ modkey },            "p",     function () 
     awful.util.spawn('rofi -show window') end,
               {description = "change focous of window", group = "Launcher"}),
-    
+
     -- Firefox
     awful.key({ modkey },            "b",     function () 
     awful.util.spawn('firefox') end,
-              {description = "launch firefox", group = "Custom"}),
+              {description = "launch firefox", group = "Launcher"}),
 
     -- Pcmanfm
     awful.key({ modkey },            "f",     function () 
     awful.util.spawn('pcmanfm') end,
-              {description = "launch pcmanfm", group = "Custom"}),
+              {description = "launch pcmanfm", group = "Launcher"}),
 
     -- Ranger
      awful.key({ modkey },            "x",     function () 
     awful.util.spawn('alacritty -e ranger') end,
               {description = "launch ranger", group = "Terminal"}),
 
-    -- I3lock-Fancy
+  -- I3lock-Fancy
      awful.key({ modkey },            "s",     function () 
     awful.util.spawn('i3lock-fancy -g') end,
-              {description = "lock your computer", group = "Custom"})
+              {description = "lock your computer", group = "Launcher"})
 )
 
 clientkeys = gears.table.join(
@@ -542,11 +542,11 @@ awful.key({}, "XF86MonBrightnessUp", function() os.execute("xbacklight -inc 15")
 
 -- Appearance Stuff
 beautiful.useless_gap = 5
-beautiful.notification_opacity = '95'
+beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
 -- Startup Programs
-awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
