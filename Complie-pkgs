@@ -51,6 +51,7 @@ cp rofi-power-menu ~/.local/bin/
 https://github.com/Mange/rofi-emoji
 https://github.com/cdown/clipmenu
 https://github.com/svenstaro/rofi-calc
+https://github.com/windwp/rofi-color-picker
 
 # Rofi Settings
 rofi -modi drun,window,run
