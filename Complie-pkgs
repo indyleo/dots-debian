@@ -54,4 +54,3 @@ https://github.com/svenstaro/rofi-calc
 
 # Rofi Settings
 rofi -modi drun,window,run
-rofi -modi p:rofi-power-menu
