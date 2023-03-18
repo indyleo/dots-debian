@@ -37,6 +37,9 @@ nala install peek obs-studio kdenlive audacity -y;
 # Installing AwesomeWM Stuff
 nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol ranger -y;
 
+# Rofi-Calc Script Depeninces
+nala install rofi-dev qalc libtool -y;
+
 # Installing firefox
 nala purge firefox-esr -y;
 nala install firefox -y;
