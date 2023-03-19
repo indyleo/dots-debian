@@ -1,577 +1,283 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
-pcall(require, "luarocks.loader")
+###########################
+#     My Picom Config     #
+###########################
 
--- Standard awesome library
-local gears = require("gears")
-local awful = require("awful")
-require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
--- Theme handling library
-local beautiful = require("beautiful")
--- Notification library
-local naughty = require("naughty")
-local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
+# Shadows
+shadow = true;
+shadow-radius = 7;
+shadow-opacity = 0.75
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-color = "#000000"
+shadow-exclude = [
+  "name = 'Notification'",
+  "class_g = 'Conky'",
+  "class_g = 'Notify-osd'",
+  "class_g = 'Cairo-clock'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
+clip-shadow-above = [];
+shadow-exclude-reg = ""
+xinerama-shadow-crop = false;
 
--- Load Debian menu entries
-local debian = require("debian.menu")
-local has_fdo, freedesktop = pcall(require, "freedesktop")
+# Fading
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-delta = 10;
+fade-exclude = [];
+no-fading-openclose = false;
+no-fading-destroyed-argb = false;
 
--- {{{ Error handling
--- Check if awesome encountered an error during startup and fell back to
--- another config (This code will only ever execute for the fallback config)
-if awesome.startup_errors then
-    naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
-                     text = awesome.startup_errors })
-end
+# Transparentness
+inactive-opacity = 1.0;
+frame-opacity = 0.7;
+inactive-opacity-override = false;
+active-opacity = 1.0;
+inactive-dim = 0.0;
+detect-client-opacity = true;
+inactive-dim-fixed = 1.0;
+opacity-rule = ["100:class_g = 'firefox'"];
+# transparent-clipping = false;
 
--- Handle runtime errors after startup
-do
-    local in_error = false
-    awesome.connect_signal("debug::error", function (err)
-        -- Make sure we don't go into an endless error loop
-        if in_error then return end
-        in_error = true
+# Rounded Corners
+corner-radius = 0;
+detect-rounded-corners = true;
+rounded-corners-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'"
+];
 
-        naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
-                         text = tostring(err) })
-        in_error = false
-    end)
-end
--- }}}
+# Bluring
+blur-method = "dual_kawase";
+blur-size = 8;
+# blur-deviation = true;
+blur-strength = 2;
+blur-background = true;
+# blur-background-frame = false;
+# blur-background-fixed = false;
+blur-kern = "3x3box";
+blur-background-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
 
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/theme.lua")
+# General
+# daemon = false;
+# dbus = false;
+# force-win-blend = false;
+# no-ewmh-fullscreen = false;
+# max-brightness = 1.0;
+# invert-color-include = [];
+# use-ewmh-active-win = false;
+# unredir-if-possible = false;
+# unredir-if-possible-delay = 0;
+# unredir-if-possible-exclude = [];
+# detect-client-leader = false;
 
--- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("vim") or "vi"
-editor_cmd = terminal .. " -e " .. editor
+# GLX Backend
+backend = "glx";
+glx-no-stencil = true;
+xrender-sync-fence = true;
+use-damage = true;
+glx-no-rebind-pixmap = false;
+vsync = true;
+# resize-damage = 1;
+# glx-fshader-win = "";
 
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+# Focus
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+focus-exclude = [ "class_g = 'Cairo-clock'"];
+detect-transient = true;
 
--- Table of layouts to cover with awful.layout.inc, order matters.
-awful.layout.layouts = {
-    awful.layout.suit.tile,
-    awful.layout.suit.floating,
-    awful.layout.suit.max.fullscreen,
-}
--- }}}
+# Debug
+log-level = "warn";
+# log-file = "/path/to/your/log/file"
+# show-all-xerrors = false
+# write-pid-path = "/path/to/your/log/file"
 
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "Manual", terminal .. " -e man awesome" },
-   { "Edit Config", editor_cmd .. " " .. awesome.conffile },
-   { "Restart", awesome.restart },
-   { "Quit", function() awesome.quit() end },
-}
-
-local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { "Open Alacritty", terminal }
-
-if has_fdo then
-    mymainmenu = freedesktop.menu.build({
-        before = { menu_awesome },
-        after =  { menu_terminal }
-    })
-else
-    mymainmenu = awful.menu({
-        items = {
-                  menu_awesome,
-                  { "Debian", debian.menu.Debian_menu.Debian },
-                  menu_terminal,
-                }
-    })
-end
-
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
--- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock(" %b %d, %I:%M %p ")
-
--- Create a wibox for each screen and add it
-local taglist_buttons = gears.table.join(
-                    awful.button({ }, 1, function(t) t:view_only() end),
-                    awful.button({ modkey }, 1, function(t)
-                                              if client.focus then
-                                                  client.focus:move_to_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 3, awful.tag.viewtoggle),
-                    awful.button({ modkey }, 3, function(t)
-                                              if client.focus then
-                                                  client.focus:toggle_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
-                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
-                )
-
-local tasklist_buttons = gears.table.join(
-                     awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  c:emit_signal(
-                                                      "request::activate",
-                                                      "tasklist",
-                                                      {raise = true}
-                                                  )
-                                              end
-                                          end),
-                     awful.button({ }, 3, function()
-                                              awful.menu.client_list({ theme = { width = 250 } })
-                                          end),
-                     awful.button({ }, 4, function ()
-                                              awful.client.focus.byidx(1)
-                                          end),
-                     awful.button({ }, 5, function ()
-                                              awful.client.focus.byidx(-1)
-                                          end))
-
-local function set_wallpaper(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
-end
-
--- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", set_wallpaper)
-
-awful.screen.connect_for_each_screen(function(s)
-    -- Wallpaper
-    set_wallpaper(s)
-
-    -- Each screen has its own tag table.
-    awful.tag({ "WWW", "MSG", "GAME", "DEV", "VIRT", "SYS", "REC", }, s, awful.layout.layouts[1])
-
-    -- Create a promptbox for each screen
-    s.mypromptbox = awful.widget.prompt()
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox(s)
-    s.mylayoutbox:buttons(gears.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
-    -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
-    }
-
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
-    }
-
-    -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
-
-    -- Add widgets to the wibox
-    s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
-        { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            mylauncher,
-            s.mytaglist,
-            s.mypromptbox,
-        },
-        s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
-        },
-    }
-end)
--- }}}
-
--- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
--- }}}
-
--- {{{ Key bindings
-globalkeys = gears.table.join(
-    awful.key({ modkey,  "Shift"  }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
-
-    awful.key({ modkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ modkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-    
-              {description = "show main menu", group = "awesome"}),
-
-    -- Layout manipulation
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
-              {description = "swap with next client by index", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
-              {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
-    awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
-              {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey,           }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
-
-    -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open alacritty", group = "Terminal"}),
-    awful.key({ modkey, "Shift" }, "r", awesome.restart,
-              {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
-
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-              {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-              {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-              {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
-
-    awful.key({ modkey, "Control" }, "n",
-              function ()
-                  local c = awful.client.restore()
-                  -- Focus restored client
-                  if c then
-                    c:emit_signal(
-                        "request::activate", "key.unminimize", {raise = true}
-                    )
-                  end
-              end,
-              {description = "restore minimized", group = "client"}),
-
-    -- Rofi Drun Prompt
-    awful.key({ modkey },            "r",     function () 
-    awful.util.spawn('rofi -show drun') end,
-              {description = "launch rofi -show drun", group = "Launcher"}),
-
-    -- Rofi Run Prompt
-    awful.key({ modkey },            "d",     function () 
-    awful.util.spawn('rofi -show run') end,
-              {description = "launch rofi -show run", group = "Launcher"}),
-
-  -- Rofi Window
-     awful.key({ modkey },            "p",     function () 
-    awful.util.spawn('rofi -show window') end,
-              {description = "change focous of window", group = "Launcher"}),
-
-  -- Rofi Power-menu
-     awful.key({ modkey },            "o",     function () 
-    awful.util.spawn('rofi -show p -modi p:rofi-power-menu \
-  -theme nord \
-  -font "FiraCode Nerd Font 16" ') end,
-              {description = "change focous of window", group = "Launcher"}),
-
-    -- Firefox
-    awful.key({ modkey },            "b",     function () 
-    awful.util.spawn('firefox') end,
-              {description = "launch firefox", group = "Launcher"}),
-
-    -- Pcmanfm
-    awful.key({ modkey },            "f",     function () 
-    awful.util.spawn('pcmanfm') end,
-              {description = "launch pcmanfm", group = "Launcher"}),
-
-    -- Ranger
-     awful.key({ modkey },            "x",     function () 
-    awful.util.spawn('alacritty -e ranger') end,
-              {description = "launch ranger", group = "Terminal"}),
-
-  -- I3lock-Fancy
-     awful.key({ modkey },            "s",     function () 
-    awful.util.spawn('i3lock-fancy -g') end,
-              {description = "lock your computer", group = "Launcher"})
-)
-
-clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
-        function (c)
-            c.fullscreen = not c.fullscreen
-            c:raise()
-        end,
-        {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey,   }, "q",      function (c) c:kill()                         end,
-              {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"}),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
-              {description = "move to master", group = "client"}),
-    awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
-              {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
-    awful.key({ modkey,           }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end ,
-        {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Control" }, "m",
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"}),
-
-    -- -- Brightness Keys
-    -- awful.key({ }, "XF86MonBrightnessDown", function ()
-    --   awful.util.spawn("xbacklight -dec 15") end),
-    -- awful.key({ }, "XF86MonBrightnessUp", function ()
-    --   awful.util.spawn("xbacklight -inc 15") end),
-
-    -- Media Keys
-    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
-    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
-    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end)
-)
-
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
-    globalkeys = gears.table.join(globalkeys,
-        -- View tag only.
-        awful.key({ modkey }, "#" .. i + 9,
-                  function ()
-                        local screen = awful.screen.focused()
-                        local tag = screen.tags[i]
-                        if tag then
-                           tag:view_only()
-                        end
-                  end,
-                  {description = "view tag #"..i, group = "tag"}),
-        -- Toggle tag display.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
-                  function ()
-                      local screen = awful.screen.focused()
-                      local tag = screen.tags[i]
-                      if tag then
-                         awful.tag.viewtoggle(tag)
-                      end
-                  end,
-                  {description = "toggle tag #" .. i, group = "tag"}),
-        -- Move client to tag.
-        awful.key({ modkey, "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:move_to_tag(tag)
-                          end
-                     end
-                  end,
-                  {description = "move focused client to tag #"..i, group = "tag"}),
-        -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
-                  function ()
-                      if client.focus then
-                          local tag = client.focus.screen.tags[i]
-                          if tag then
-                              client.focus:toggle_tag(tag)
-                          end
-                      end
-                  end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
-    )
-end
-
-clientbuttons = gears.table.join(
-    awful.button({ }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-    end),
-    awful.button({ modkey }, 1, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.move(c)
-    end),
-    awful.button({ modkey }, 3, function (c)
-        c:emit_signal("request::activate", "mouse_click", {raise = true})
-        awful.mouse.client.resize(c)
-    end)
-)
-
--- Set keys
-root.keys(globalkeys)
--- }}}
-
--- {{{ Rules
--- Rules to apply to new clients (through the "manage" signal).
-awful.rules.rules = {
-    -- All clients will match this rule.
-    { rule = { },
-      properties = { border_width = beautiful.border_width,
-                     border_color = beautiful.border_normal,
-                     focus = awful.client.focus.filter,
-                     raise = true,
-                     keys = clientkeys,
-                     buttons = clientbuttons,
-                     screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
-     }
-    },
-
-    -- Floating clients.
-    { rule_any = {
-        instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
-          "pinentry",
-        },
-        class = {
-          "Arandr",
-          "Blueman-manager",
-          "Gpick",
-          "Kruler",
-          "MessageWin",  -- kalarm.
-          "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-          "Wpa_gui",
-          "veromix",
-          "xtightvncviewer"},
-
-        -- Note that the name property shown in xprop might be set slightly after creation of the client
-        -- and the name shown there might not match defined rules here.
-        name = {
-          "Event Tester",  -- xev.
-        },
-        role = {
-          "AlarmWindow",  -- Thunderbird's calendar.
-          "ConfigManager",  -- Thunderbird's about:config.
-          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
-        }
-      }, properties = { floating = true }},
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
-}
--- }}}
-
--- {{{ Signals
--- Signal function to execute when a new client appears.
-client.connect_signal("manage", function (c)
-    -- Set the windows at the slave,
-    -- i.e. put it at the end of others instead of setting it master.
-    -- if not awesome.startup then awful.client.setslave(c) end
-
-    if awesome.startup
-      and not c.size_hints.user_position
-      and not c.size_hints.program_position then
-        -- Prevent clients from being unreachable after screen count changes.
-        awful.placement.no_offscreen(c)
-    end
-end)
-
--- Appearance Stuff
-beautiful.useless_gap = 5
-beautiful.notification_opacity = '100'
-beautiful.notification_icon_size = 80
-
--- -- Autorun Programs At Startup
-autorun = true
-autorunApps =
+# Window type settings
+#
+# 'WINDOW_TYPE' is one of the 15 window types defined in EWMH standard:
+#     "unknown", "desktop", "dock", "toolbar", "menu", "utility",
+#     "splash", "dialog", "normal", "dropdown_menu", "popup_menu",
+#     "tooltip", "notification", "combo", and "dnd".
+#
+# Following per window-type options are available: ::
+#
+#   fade, shadow:::
+#     Controls window-type-specific shadow and fade settings.
+#
+#   opacity:::
+#     Controls default opacity of the window type.
+#
+#   focus:::
+#     Controls whether the window of this type is to be always considered focused.
+#     (By default, all window types except "normal" and "dialog" has this on.)
+#
+#   full-shadow:::
+#     Controls whether shadow is drawn under the parts of the window that you
+#     normally won't be able to see. Useful when the window has parts of it
+#     transparent, and you want shadows in those areas.
+#
+#   clip-shadow-above:::
+#     Controls wether shadows that would have been drawn above the window should
+#     be clipped. Useful for dock windows that should have no shadow painted on top.
+#
+#   redir-ignore:::
+#     Controls whether this type of windows should cause screen to become
+#     redirected again after been unredirected. If you have unredir-if-possible
+#     set, and doesn't want certain window to cause unnecessary screen redirection,
+#     you can set this to `true`.
+#
+wintypes:
 {
-   "xfce4-power-manager"
-}
-if autorun then
-   for app = 1, #autorunApps do
-       awful.util.spawn(autorunApps[app])
-   end
-end
+  tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; full-shadow = false; };
+  dock = { shadow = false; clip-shadow-above = true; }
+  dnd = { shadow = false; focus = false; full-shadow = true; }
+  popup_menu = { opacity = 0.95; shadow = false; }
+  dropdown_menu = { opacity = 0.95; shadow = false; }
+};###########################
+#     My Picom Config     #
+###########################
 
--- Startup Programs
-awful.spawn.with_shell("picom --experimental-backends")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("lxpolkit")
-awful.spawn.with_shell("solaar -w hide")
-awful.spawn.with_shell("~/.fehbg")
+# Shadows
+shadow = true;
+shadow-radius = 7;
+shadow-opacity = 0.75
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-color = "#000000"
+shadow-exclude = [
+  "name = 'Notification'",
+  "class_g = 'Conky'",
+  "class_g = 'Notify-osd'",
+  "class_g = 'Cairo-clock'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
+clip-shadow-above = [];
+shadow-exclude-reg = ""
+xinerama-shadow-crop = false;
+
+# Fading
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-delta = 10;
+fade-exclude = [];
+no-fading-openclose = false;
+no-fading-destroyed-argb = false;
+
+# Transparentness
+inactive-opacity = 1.0;
+frame-opacity = 0.7;
+inactive-opacity-override = false;
+active-opacity = 1.0;
+inactive-dim = 0.0;
+detect-client-opacity = true;
+inactive-dim-fixed = 1.0;
+opacity-rule = ["100:class_g = 'firefox'"];
+# transparent-clipping = false;
+
+# Rounded Corners
+corner-radius = 0;
+detect-rounded-corners = true;
+rounded-corners-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'"
+];
+
+# Bluring
+blur-method = "dual_kawase";
+blur-size = 8;
+# blur-deviation = true;
+blur-strength = 2;
+blur-background = true;
+# blur-background-frame = false;
+# blur-background-fixed = false;
+blur-kern = "3x3box";
+blur-background-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
+
+# General
+# daemon = false;
+# dbus = false;
+# force-win-blend = false;
+# no-ewmh-fullscreen = false;
+# max-brightness = 1.0;
+# invert-color-include = [];
+# use-ewmh-active-win = false;
+# unredir-if-possible = false;
+# unredir-if-possible-delay = 0;
+# unredir-if-possible-exclude = [];
+# detect-client-leader = false;
+
+# GLX Backend
+backend = "glx";
+glx-no-stencil = true;
+xrender-sync-fence = true;
+use-damage = true;
+glx-no-rebind-pixmap = false;
+vsync = true;
+# resize-damage = 1;
+# glx-fshader-win = "";
+
+# Focus
+mark-wmwin-focused = true;
+mark-ovredir-focused = true;
+focus-exclude = [ "class_g = 'Cairo-clock'"];
+detect-transient = true;
+
+# Debug
+log-level = "warn";
+# log-file = "/path/to/your/log/file"
+# show-all-xerrors = false
+# write-pid-path = "/path/to/your/log/file"
+
+# Window type settings
+#
+# 'WINDOW_TYPE' is one of the 15 window types defined in EWMH standard:
+#     "unknown", "desktop", "dock", "toolbar", "menu", "utility",
+#     "splash", "dialog", "normal", "dropdown_menu", "popup_menu",
+#     "tooltip", "notification", "combo", and "dnd".
+#
+# Following per window-type options are available: ::
+#
+#   fade, shadow:::
+#     Controls window-type-specific shadow and fade settings.
+#
+#   opacity:::
+#     Controls default opacity of the window type.
+#
+#   focus:::
+#     Controls whether the window of this type is to be always considered focused.
+#     (By default, all window types except "normal" and "dialog" has this on.)
+#
+#   full-shadow:::
+#     Controls whether shadow is drawn under the parts of the window that you
+#     normally won't be able to see. Useful when the window has parts of it
+#     transparent, and you want shadows in those areas.
+#
+#   clip-shadow-above:::
+#     Controls wether shadows that would have been drawn above the window should
+#     be clipped. Useful for dock windows that should have no shadow painted on top.
+#
+#   redir-ignore:::
+#     Controls whether this type of windows should cause screen to become
+#     redirected again after been unredirected. If you have unredir-if-possible
+#     set, and doesn't want certain window to cause unnecessary screen redirection,
+#     you can set this to `true`.
+#
+wintypes:
+{
+  tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; full-shadow = false; };
+  dock = { shadow = false; clip-shadow-above = true; }
+  dnd = { shadow = false; focus = false; full-shadow = true; }
+  popup_menu = { opacity = 0.95; shadow = false; }
+  dropdown_menu = { opacity = 0.95; shadow = false; }
+};
