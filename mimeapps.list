@@ -1,0 +1,14 @@
+[Default Applications]
+image/png=feh.desktop
+image/jpg=feh.desktop
+image/jpeg=feh.desktop
+image/gif=feh.desktop
+inode/directory=pcmanfm.desktop
+x-directory/normal=pcmanfm.desktop
+inode/directory=com.alacritty.Alacritty.desktop.desktop
+x-directory/normal=com.alacritty.Alacritty.desktop.desktop
+
+[Added Associations]
+
+
+[Removed Associations]
