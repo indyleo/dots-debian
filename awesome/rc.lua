@@ -569,7 +569,7 @@ if autorun then
 end
 
 -- Startup Programs
-awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
