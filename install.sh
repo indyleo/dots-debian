@@ -35,7 +35,7 @@ nala install rhythmbox rhythmbox-plugins -y;
 nala install peek obs-studio kdenlive audacity -y;
 
 # Installing AwesomeWM Stuff
-nala install awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol ranger -y;
+nala install xfce4-clipman awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol ranger -y;
 
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y;
