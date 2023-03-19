@@ -343,10 +343,10 @@ globalkeys = gears.table.join(
     awful.util.spawn('firefox') end,
               {description = "launch firefox", group = "Launcher"}),
 
-    -- Nautilus
+     -- Pcmanfm
     awful.key({ modkey },            "f",     function () 
-    awful.util.spawn('nautilus') end,
-              {description = "launch nautilus", group = "Launcher"}),
+    awful.util.spawn('pcmanfm') end,
+              {description = "launch pcmanfm", group = "Launcher"}),
 
     -- Ranger
      awful.key({ modkey },            "x",     function () 
