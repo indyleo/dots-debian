@@ -402,16 +402,16 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"}),
 
-    -- -- Brightness Keys
-    -- awful.key({ }, "XF86MonBrightnessDown", function ()
-    --   awful.util.spawn("xbacklight -dec 15") end),
-    -- awful.key({ }, "XF86MonBrightnessUp", function ()
-    --   awful.util.spawn("xbacklight -inc 15") end),
-
     -- Media Keys
     awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
     awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
-    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end)
+    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end),
+    awful.key({ }, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end),
+    awful.key({ }, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end),
+    awful.key({ }, "XF86AudioPlay", function ()
+      awful.util.spawn("rhythmbox-client --play-pause") end),
+    awful.key({ }, "XF86AudioStop", function ()
+      awful.util.spawn("rhythmbox-client --play-pause") end)
 )
 
 -- Bind all key numbers to tags.
