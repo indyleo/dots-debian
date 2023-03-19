@@ -327,12 +327,12 @@ globalkeys = gears.table.join(
               {description = "launch rofi -show run", group = "Launcher"}),
 
   -- Rofi Window
-     awful.key({ modkey },            "p",     function () 
+     awful.key({ modkey },            "o",     function () 
     awful.util.spawn('rofi -show window') end,
               {description = "change focous of window", group = "Launcher"}),
 
   -- Rofi Power-menu
-     awful.key({ modkey },            "o",     function () 
+     awful.key({ modkey },            "p",     function () 
     awful.util.spawn('rofi -show p -modi p:rofi-power-menu \
   -theme nord \
   -font "FiraCode Nerd Font 16" ') end,
@@ -343,10 +343,10 @@ globalkeys = gears.table.join(
     awful.util.spawn('firefox') end,
               {description = "launch firefox", group = "Launcher"}),
 
-    -- Pcmanfm
+    -- Nautilus
     awful.key({ modkey },            "f",     function () 
-    awful.util.spawn('pcmanfm') end,
-              {description = "launch pcmanfm", group = "Launcher"}),
+    awful.util.spawn('nautilus') end,
+              {description = "launch nautilus", group = "Launcher"}),
 
     -- Ranger
      awful.key({ modkey },            "x",     function () 
