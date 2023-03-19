@@ -559,7 +559,8 @@ beautiful.notification_icon_size = 80
 autorun = true
 autorunApps =
 {
-   "xfce4-power-manager"
+   "xfce4-power-manager",
+   "xfce4-clipman"
 }
 if autorun then
    for app = 1, #autorunApps do
