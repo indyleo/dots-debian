@@ -256,6 +256,7 @@ globalkeys = gears.table.join(
         {description = "focus previous by index", group = "client"}
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -399,7 +400,18 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+
+    -- -- Brightness Keys
+    -- awful.key({ }, "XF86MonBrightnessDown", function ()
+    --   awful.util.spawn("xbacklight -dec 15") end),
+    -- awful.key({ }, "XF86MonBrightnessUp", function ()
+    --   awful.util.spawn("xbacklight -inc 15") end),
+
+    -- Media Keys
+    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
+    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
+    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end)
 )
 
 -- Bind all key numbers to tags.
@@ -538,19 +550,22 @@ client.connect_signal("manage", function (c)
     end
 end)
 
--- Media Keybinds
-awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end)
-awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end)
-awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end)
-
--- Brightness Keybinds
-awful.key({}, "XF86MonBrightnessDown", function() os.execute("xbacklight -dec 15") end)
-awful.key({}, "XF86MonBrightnessUp", function() os.execute("xbacklight -inc 15") end)
-
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
+
+-- -- Autorun Programs At Startup
+autorun = true
+autorunApps =
+{
+   "xfce4-power-manager"
+}
+if autorun then
+   for app = 1, #autorunApps do
+       awful.util.spawn(autorunApps[app])
+   end
+end
 
 -- Startup Programs
 awful.spawn.with_shell("picom --experimental-backends")
