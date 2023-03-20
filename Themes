@@ -2,7 +2,3 @@ Themes:
 Theme: https://www.pling.com/s/Gnome/p/1267246 # Nordic-Darker
 Icons: https://www.pling.com/s/Gnome/p/1166289 # Nordic-Folders
 Cursor: https://www.pling.com/p/1662218/ 
-Gedit: https://github.com/arcticicestudio/nord-gedit/releases/latest ( Download zip and then extract the archive )
-open terminal
-cd ~/Downloads/nord-gedit-0.1.0/
-./install.sh
