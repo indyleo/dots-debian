@@ -5,10 +5,27 @@ image/jpeg=feh.desktop
 image/gif=feh.desktop
 inode/directory=pcmanfm.desktop
 x-directory/normal=pcmanfm.desktop
-inode/directory=com.alacritty.Alacritty.desktop.desktop
-x-directory/normal=com.alacritty.Alacritty.desktop.desktop
+x-scheme-handler/http=userapp-Firefox-N4DJ11.desktop
+x-scheme-handler/https=userapp-Firefox-N4DJ11.desktop
+x-scheme-handler/chrome=userapp-Firefox-N4DJ11.desktop
+text/html=userapp-Firefox-N4DJ11.desktop
+application/x-extension-htm=userapp-Firefox-N4DJ11.desktop
+application/x-extension-html=userapp-Firefox-N4DJ11.desktop
+application/x-extension-shtml=userapp-Firefox-N4DJ11.desktop
+application/xhtml+xml=userapp-Firefox-N4DJ11.desktop
+application/x-extension-xhtml=userapp-Firefox-N4DJ11.desktop
+application/x-extension-xht=userapp-Firefox-N4DJ11.desktop
 
 [Added Associations]
-
+x-scheme-handler/http=userapp-Firefox-N4DJ11.desktop;
+x-scheme-handler/https=userapp-Firefox-N4DJ11.desktop;
+x-scheme-handler/chrome=userapp-Firefox-N4DJ11.desktop;
+text/html=userapp-Firefox-N4DJ11.desktop;
+application/x-extension-htm=userapp-Firefox-N4DJ11.desktop;
+application/x-extension-html=userapp-Firefox-N4DJ11.desktop;
+application/x-extension-shtml=userapp-Firefox-N4DJ11.desktop;
+application/xhtml+xml=userapp-Firefox-N4DJ11.desktop;
+application/x-extension-xhtml=userapp-Firefox-N4DJ11.desktop;
+application/x-extension-xht=userapp-Firefox-N4DJ11.desktop;
 
 [Removed Associations]
