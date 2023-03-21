@@ -343,7 +343,7 @@ globalkeys = gears.table.join(
     awful.util.spawn('firefox') end,
               {description = "launch firefox", group = "Launcher"}),
 
-     -- Pcmanfm
+    -- Pcmanfm
     awful.key({ modkey },            "f",     function () 
     awful.util.spawn('pcmanfm') end,
               {description = "launch pcmanfm", group = "Launcher"}),
@@ -569,7 +569,7 @@ if autorun then
 end
 
 -- Startup Programs
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("flameshot")
