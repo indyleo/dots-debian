@@ -22,7 +22,6 @@ alias mkdir='mkdir -pv'
 alias wq='exit'
 alias psa='ps aux'
 alias rn='ranger'
-alias fzk='ps aux | fzf --prompt="Applicaton> " | awk "{print $2}" | xargs kill'
 
 # Vim aliases
 alias vim='nvim'
@@ -33,7 +32,6 @@ alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias pconf='nvim $HOME/.config/picom/picom.conf'
 alias wconf='nvim $HOME/.config/awesome/rc.lua'
 alias vconf='cd $HOME/.config/nvim/'
-alias fzv='command ls -A | fzf --prompt="File> " | xargs nvim'
 
 # Gedit Aliases
 alias gd='gedit'
