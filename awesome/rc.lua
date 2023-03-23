@@ -417,11 +417,9 @@ clientkeys = gears.table.join(
     awful.key({  }, "Print", function ()
       awful.util.spawn("flameshot gui") end),
     awful.key({ modkey, }, "Print", function ()
-      awful.util.spawn("flameshot screen -p ~/Pictures/Screenshots/") end),
+      awful.util.spawn("flameshot screen") end),
     awful.key({ modkey, "Shift" }, "Print", function ()
-      awful.util.spawn("flameshot launcher ") end),
-    awful.key({ modkey, "Control" }, "Print", function ()
-      awful.util.spawn("flameshot full -p ~/Pictures/Screenshots/") end)
+      awful.util.spawn("flameshot launcher") end)
 )
 
 -- Bind all key numbers to tags.
