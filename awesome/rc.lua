@@ -411,7 +411,17 @@ clientkeys = gears.table.join(
     awful.key({ }, "XF86AudioPlay", function ()
       awful.util.spawn("rhythmbox-client --play-pause") end),
     awful.key({ }, "XF86AudioStop", function ()
-      awful.util.spawn("rhythmbox-client --play-pause") end)
+      awful.util.spawn("rhythmbox-client --play-pause") end),
+
+    -- Screenshot Keys
+    awful.key({  }, "Print", function ()
+      awful.util.spawn("flameshot gui") end),
+    awful.key({ modkey, }, "Print", function ()
+      awful.util.spawn("flameshot screen -p ~/Pictures/Screenshots/") end),
+    awful.key({ modkey, "Shift" }, "Print", function ()
+      awful.util.spawn("flameshot launcher ") end),
+    awful.key({ modkey, "Control" }, "Print", function ()
+      awful.util.spawn("flameshot full -p ~/Pictures/Screenshots/") end)
 )
 
 -- Bind all key numbers to tags.
