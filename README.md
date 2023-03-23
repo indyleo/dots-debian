@@ -6,6 +6,6 @@ Distro I Use Is Pop-os
 
 # QT & GTK Theme
 ```
-QT_QPA_PLATFORMTHEME=gtk2
+QT_QPA_PLATFORMTHEME=qt5ct
 ```
 Add this to your bottom of '/etc/environment' file with any text editor
