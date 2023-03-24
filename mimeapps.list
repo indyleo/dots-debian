@@ -27,5 +27,8 @@ application/x-extension-shtml=userapp-Firefox-N4DJ11.desktop;
 application/xhtml+xml=userapp-Firefox-N4DJ11.desktop;
 application/x-extension-xhtml=userapp-Firefox-N4DJ11.desktop;
 application/x-extension-xht=userapp-Firefox-N4DJ11.desktop;
+x-scheme-handler/magnet=transmission-gtk.desktop;
+application/x.bittorrent=transmission-gtk.desktop;
+image/svg+xml=gimp.desktop;firefox.desktop;inkscape.desktop;
 
 [Removed Associations]
