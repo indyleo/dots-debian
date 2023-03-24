@@ -45,7 +45,7 @@ nala purge firefox-esr -y;
 nala install firefox -y;
 
 # Script Variables
-username=$(id -u -n 1000)
+username=$(id -u -n 1000);
 
 # Installing fonts 
 nala install fonts-font-awesome -y;
@@ -76,9 +76,9 @@ sudo ufw enable;
 sudo npm i -g neovim tree-sitter-cli;
 
 # Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-chmod a+x pfetch
-mv pfetch /usr/bin/pfetch
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch;
+chmod a+x pfetch;
+mv pfetch /usr/bin/pfetch;
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
