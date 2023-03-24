@@ -36,7 +36,6 @@ sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFul
 
 # Stuff for neovim
 pip install pynvim
-sudo npm i -g neovim tree-sitter-cli
 
 # LazyGit
 go install github.com/jesseduffield/lazygit@latest
