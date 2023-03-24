@@ -72,6 +72,9 @@ sudo ufw default deny incoming;
 sudo ufw default allow outgoing;
 sudo ufw enable;
 
+# Neovim Stuff
+sudo npm i -g neovim tree-sitter-cli;
+
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
