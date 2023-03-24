@@ -54,3 +54,6 @@ https://github.com/windwp/rofi-color-picker
 
 # Rofi Settings
 rofi -modi drun,window,run
+
+# Reload X11 Colors
+xrdb -load ~/.Xresources
