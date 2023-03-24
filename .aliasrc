@@ -23,7 +23,7 @@ alias wq='exit'
 alias psa='ps aux'
 alias rn='ranger'
 
-# Vim aliases
+# Neovim aliases
 alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
@@ -31,7 +31,7 @@ alias aconf='nvim $HOME/.aliasrc'
 alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias pconf='nvim $HOME/.config/picom/picom.conf'
 alias wconf='nvim $HOME/.config/awesome/rc.lua'
-alias vconf='cd $HOME/.config/nvim/'
+alias vconf='nvim $HOME/.config/nvim/init.lua'
 
 # Gedit Aliases
 alias gd='gedit'
@@ -41,7 +41,7 @@ alias aconfv='gedit $HOME/.aliasrc'
 alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
 alias pconfv='gedit $HOME/.config/picom/picom.conf'
 alias wconfv='gedit $HOME/.config/awesome/rc.lua'
-alias vconfv='pcmanfm $HOME/.config/nvim/'
+alias vconfv='gedit $HOME/.config/nvim/init.lua'
 
 # Trash Aliases
 alias trash='trash -iv'
