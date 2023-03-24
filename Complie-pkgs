@@ -57,3 +57,6 @@ rofi -modi drun,window,run
 
 # Reload X11 Colors
 xrdb -load ~/.Xresources
+
+# Ventoy
+https://github.com/ventoy/Ventoy/releases/latest (ventoy-1.0.89-linux.tar.gz is the one you want)
