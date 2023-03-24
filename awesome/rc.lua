@@ -568,7 +568,8 @@ autorun = true
 autorunApps =
 {
    "xfce4-power-manager",
-   "killall xfce4-clipman && xfce4-clipman"
+   "killall xfce4-clipman", 
+   "xfce4-clipman"
 }
 if autorun then
    for app = 1, #autorunApps do
