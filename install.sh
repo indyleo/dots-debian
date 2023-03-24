@@ -40,9 +40,9 @@ nala install qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacrit
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y;
 
-# Installing firefox
+# Installing Browsers
 nala purge firefox-esr -y;
-nala install firefox -y;
+nala install firefox qutebrowser libjs-pdf -y;
 
 # Script Variables
 username=$(id -u -n 1000);
