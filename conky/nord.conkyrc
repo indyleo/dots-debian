@@ -120,5 +120,6 @@ ${color1}[C]+[S]+Space${alignr}${color2}Toggle Flaoting Mode For Windows${color}
 ${color1}[S]+[SHIFT]+Space${alignr}${color2}Change Tile Layout${color}
 ${color1}[S]+Space${alignr}${color2}Change Tile Layout${color}
 ${color1}[S]+[SHIFT]+S${alignr}${color2}Shows Keybindings${color}
+${color1}[S]+S${alignr}${color2}Lock Screen${color}
 ${color1}${hr}${color}
 ]];
