@@ -116,10 +116,9 @@ ${color1}[S]+o${alignr}${color2}window prompt${color}
 ${color1}[S]+p${alignr}${color2}power-menu prompt${color}
 ${color1}${hr}${color}
 ${voffset 18}${color1}${alignc}${font4}Useful Keybidings${font}${color}
-${color1}[C]+[S]+Space${alignr}${color2}Toggle Flaoting Mode For Windows${color}
-${color1}[S]+[SHIFT]+Space${alignr}${color2}Change Tile Layout${color}
-${color1}[S]+Space${alignr}${color2}Change Tile Layout${color}
-${color1}[S]+[SHIFT]+S${alignr}${color2}Shows Keybindings${color}
-${color1}[S]+s${alignr}${color2}Lock Screen${color}
+${color1}[C]+[S]+Space${alignr}${color2}toggle floating${color}
+${color1}[S]+[SHIFT]+space${alignr}${color2}change tile layout${color}
+${color1}[S]+[SHIFT]+s${alignr}${color2}shows keybindings${color}
+${color1}[S]+s${alignr}${color2}lock screen${color}
 ${color1}${hr}${color}
 ]];
