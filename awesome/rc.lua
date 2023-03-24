@@ -568,7 +568,7 @@ autorun = true
 autorunApps =
 {
    "xfce4-power-manager",
-   "xfce4-clipman"
+   "killall xfce4-clipman && xfce4-clipman"
 }
 if autorun then
    for app = 1, #autorunApps do
@@ -579,8 +579,9 @@ end
 -- Startup Programs
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("volumeicon")
+awful.spawn.with_shell("killall volumeicon && volumeicon")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("lxpolkit")
-awful.spawn.with_shell("solaar -w hide")
-awful.spawn.with_shell("~/.fehbg")
+awful.spawn.with_shell("killall conky && conky -c ~/.config/conky/nord.conkyrc")
+awful.spawn.with_shell("killall solaar && solaar -w hide")
+awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
