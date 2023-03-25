@@ -32,7 +32,7 @@ nala install sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt
 nala install rhythmbox rhythmbox-plugins -y;
 
 # Installing media stuff
-nala install peek obs-studio kdenlive audacity gimp inkscape -y;
+nala install peek obs-studio kdenlive audacity gimp inkscape vlc -y;
 
 # Installing AwesomeWM Stuff
 nala install qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol ranger -y;
