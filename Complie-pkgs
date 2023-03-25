@@ -60,3 +60,7 @@ xrdb -load ~/.Xresources
 
 # Ventoy
 https://github.com/ventoy/Ventoy/releases/latest (ventoy-1.0.89-linux.tar.gz is the one you want)
+
+# SDDM Theme
+sudo mkdir ‑p /usr/share/sddm/themes
+sudo tar -xzvf ~/Downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes
