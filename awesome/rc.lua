@@ -588,10 +588,10 @@ end
 -- Startup Programs
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("picom --experimental-backends")
-awful.spawn.with_shell("killall volumeicon && volumeicon")
+awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("killall solaar && solaar -w hide")
+awful.spawn.with_shell("solaar -w hide")
 awful.spawn.with_shell("killall conky && conky -c ~/.config/conky/awesome/conky-01.conkyrc")
 awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
 -- awful.spawn.with_shell("~/.fehbg")
