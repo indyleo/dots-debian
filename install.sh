@@ -87,6 +87,10 @@ mv pfetch /usr/bin/pfetch;
 systemctl enable sddm
 systemctl set-default graphical.target
 
+# Autologin Group
+groupadd autologin
+usermod -aG autologin $username
+
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
 
