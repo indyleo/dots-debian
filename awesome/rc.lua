@@ -51,17 +51,24 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/theme.lua")
 
--- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("vim") or "vi"
-editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+-- Local stuff
+local modkey      = "Mod4"
+local altkey      = "Mod1"
+local ctrlkey     = "Control"
+local terminal    = "alacritty"
+local browser     = "qutebrowser"
+local editor      = os.getenv("EDITOR") or "vim"
+local mediaplayer = "vlc"
+local drun_propmt = "rofi -show drun"
+local run_prompt = "rofi -show run"
+local window_switch = "rofi -show window"
+local guifile= "pcmanfm"
+local tuifile= terminal .. " -e ranger"
+local lock = "i3lock-fancy -g"
+local powermenu = "rofi -show p -modi p:rofi-power-menu \
+  -theme nord \
+  -font 'FiraCode Nerd Font 16'"
+local editor_cmd = terminal .. " -e " .. editor
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -82,7 +89,7 @@ myawesomemenu = {
 }
 
 local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { "Open Alacritty", terminal }
+local menu_terminal = { "Open Terminal", terminal }
 
 if has_fdo then
     mymainmenu = freedesktop.menu.build({
@@ -281,7 +288,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open alacritty", group = "Terminal"}),
+              {description = "open terminal", group = "Terminal"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -316,47 +323,45 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Rofi Drun Prompt
+    -- Drun Prompt
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn('rofi -show drun') end,
-              {description = "launch rofi -show drun", group = "Launcher"}),
+     awful.spawn(drun_propmt) end,
+      {description = "Launch drun prompt", group = "Launcher"}),
 
-    -- Rofi Run Prompt
+    -- Run Prompt
     awful.key({ modkey },            "d",     function () 
-    awful.util.spawn('rofi -show run') end,
-              {description = "launch rofi -show run", group = "Launcher"}),
+     awful.spawn(run_prompt) end,
+      {description = "Launch run prompt", group = "Launcher"}),
 
-  -- Rofi Window
-     awful.key({ modkey },            "o",     function () 
-    awful.util.spawn('rofi -show window') end,
-              {description = "change focous of window", group = "Launcher"}),
+    -- Window Switch
+    awful.key({ modkey },            "o",     function () 
+     awful.spawn(window_switch) end,
+      {description = "Change focous of window", group = "Launcher"}),
 
-  -- Rofi Power-menu
-     awful.key({ modkey },            "p",     function () 
-    awful.util.spawn('rofi -show p -modi p:rofi-power-menu \
-  -theme nord \
-  -font "FiraCode Nerd Font 16" ') end,
-              {description = "change focous of window", group = "Launcher"}),
+    -- Power Menu
+    awful.key({ modkey },            "p",     function () 
+     awful.spawn(powermenu) end,
+      {description = "Launch power menu", group = "Launcher"}),
 
-    -- Firefox
-    awful.key({ modkey },            "b",     function () 
-    awful.util.spawn('firefox') end,
-              {description = "launch firefox", group = "Launcher"}),
+    -- Browser
+    awful.key({ modkey,         }, "b", function () 
+     awful.spawn(browser) end,
+      {description = "Launch browser", group = "Launcher"}),
 
-    -- Pcmanfm
+    -- GUI File Manager
     awful.key({ modkey },            "f",     function () 
-    awful.util.spawn('pcmanfm') end,
-              {description = "launch pcmanfm", group = "Launcher"}),
+     awful.spawn(guifile) end,
+       {description = "Launch gui file manager", group = "Launcher"}),
 
-    -- Ranger
-     awful.key({ modkey },            "x",     function () 
-    awful.util.spawn('alacritty -e ranger') end,
-              {description = "launch ranger", group = "Terminal"}),
+    -- Tui File Manager
+    awful.key({ modkey },            "x",     function () 
+     awful.spawn(tuifile) end,
+      {description = "Launch tui file manager", group = "Terminal"}),
 
-  -- I3lock-Fancy
+    -- Locking Computer
      awful.key({ modkey },            "s",     function () 
-    awful.util.spawn('i3lock-fancy -g') end,
-              {description = "lock your computer", group = "Launcher"})
+      awful.spawn(lock) end,
+        {description = "Lock your computer", group = "Launcher"})
 )
 
 clientkeys = gears.table.join(
