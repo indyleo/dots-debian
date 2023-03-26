@@ -91,8 +91,5 @@ systemctl set-default graphical.target
 groupadd autologin
 usermod -aG autologin $username
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
