@@ -20,3 +20,6 @@ User=your user
 Session=awesome
 ```
 Add this into your '/etc/sddm.conf'
+
+# Awesome loading ~/.xsession
+In /usr/share/xsessions/awesome.desktop change the exec line to 'Exec=/etx/X11/Xsession'
