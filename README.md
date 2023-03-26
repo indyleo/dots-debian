@@ -9,3 +9,14 @@ Distro I Use Is Pop-os
 QT_QPA_PLATFORMTHEME=qt5ct
 ```
 Add this to your bottom of '/etc/environment' file with any text editor
+
+# Sddm
+```
+[Theme]
+Current=sugar-candy
+
+[Autologin]
+User=your user
+Session=awesome
+```
+Add this into your '/etc/sddm.conf'
