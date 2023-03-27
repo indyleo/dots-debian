@@ -142,16 +142,16 @@ export AUTO_NOTIFY_TITLE="Hey! %command has just finished"
 export AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
 
 # Set Threshold For Zsh Auto Notify
-export AUTO_NOTIFY_THRESHOLD=20
+export AUTO_NOTIFY_THRESHOLD=15
 
 # Add More Apps To The Ignored List
-AUTO_NOTIFY_IGNORE+=("docker")
+AUTO_NOTIFY_IGNORE+=("moar" "sleep" "apt-get" "apt" "nala" )
 
 # Redefine The List Of What Is Being Ignored
 # export AUTO_NOTIFY_IGNORE=("docker" "man" "sleep")
 
 # Add Whitelist To Certain Commands
-# export AUTO_NOTIFY_WHITELIST=("apt-get" "docker")
+# export AUTO_NOTIFY_WHITELIST=("apt-get" "apt" "nala")
 
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
