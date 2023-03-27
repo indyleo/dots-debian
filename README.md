@@ -14,10 +14,6 @@ Add this to your bottom of '/etc/environment' file with any text editor
 ```
 [Theme]
 Current=sugar-candy
-
-[Autologin]
-User=your user
-Session=awesome
 ```
 Add this into your '/etc/sddm.conf'
 
