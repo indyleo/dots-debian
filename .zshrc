@@ -137,6 +137,22 @@ rangercd () {
 
 bindkey -s '^z' 'rangercd\n'
 
+# Notifation From Zsh Auto Notify
+export AUTO_NOTIFY_TITLE="Hey! %command has just finished"
+export AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
+
+# Set Threshold For Zsh Auto Notify
+export AUTO_NOTIFY_THRESHOLD=20
+
+# Add More Apps To The Ignored List
+AUTO_NOTIFY_IGNORE+=("docker")
+
+# Redefine The List Of What Is Being Ignored
+# export AUTO_NOTIFY_IGNORE=("docker" "man" "sleep")
+
+# Add Whitelist To Certain Commands
+# export AUTO_NOTIFY_WHITELIST=("apt-get" "docker")
+
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
 
@@ -153,7 +169,9 @@ source /usr/share/autojump/autojump.zsh 2>/dev/null
 # Starship prompt
 eval "$(starship init zsh)"
 
-# Turning On Syntax Highlighting
+# Turning On Some Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source ~/Zsh/Plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
+source ~/Zsh/Plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
+source ~/Zsh/Plugins/zsh-auto-notify/auto-notify.plugin.zsh 2>/dev/null
