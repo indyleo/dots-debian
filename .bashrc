@@ -72,5 +72,8 @@ source $HOME/.aliasrc 2>/dev/null
 # Starship prompt
 eval "$(starship init bash)"
 
+# Autojump
+source /usr/share/autojump/autojump.bash 2>/dev/null
+
 # Rustup
 . "$HOME/.cargo/env"
