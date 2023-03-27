@@ -10,3 +10,8 @@ https://github.com/arcticicestudio/nord-gedit.git
 cd nord-gedit
 ./install.sh
 cd ~
+
+Activation
+ 1. Open the preferences
+ 2. Switch to the Font & Colors tab
+ 3. Select Nord from the Color Scheme list
