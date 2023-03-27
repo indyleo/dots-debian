@@ -70,3 +70,4 @@ sudo tar -xzvf ~/Downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes
 
 # Zsh-Completions
 git clone https://github.com/zsh-users/zsh-completions.git ~/Zsh/Plugins/
+rm -f ~/.zcompdump; compinit
