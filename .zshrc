@@ -74,6 +74,9 @@ preexec() { echo -ne '\e[5 q' ;}
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
 
+# Adding Extra Completions To Zsh
+fpath=(~/Zsh/Plugins/zsh-completions/src $fpath)
+
 # Startup Stuff
 # neofetch
  pfetch
