@@ -156,7 +156,5 @@ eval "$(starship init zsh)"
 # Turning On Syntax Highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source ~/Zsh/Plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
-source ~/Zsh/Plugins/zsh-auto-notify/auto-notify.plugin.zsh 2>/dev/null
 source ~/Zsh/Plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
 # source ~/Zsh/Plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh 2>/dev/null
