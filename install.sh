@@ -87,9 +87,5 @@ mv pfetch /usr/bin/pfetch
 systemctl enable sddm
 systemctl set-default graphical.target
 
-# Autologin Group
-groupadd autologin
-usermod -aG autologin $username
-
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
