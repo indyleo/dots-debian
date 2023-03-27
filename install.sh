@@ -14,13 +14,13 @@ apt upgrade -y
 apt install nala -y
 
 # Installing CLI programs
-nala install nano yad fzf locate gh tree xsel tty-clock libhidapi-dev cmdtest webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake g++ wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential -y
+nala install autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev cmdtest webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake g++ wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential -y
 
 # Installing other pkg managers
 nala install python3-pip npm -y
 
 # Installing zsh
-nala install zsh zsh-syntax-highlighting -y
+nala install zsh zsh-syntax-highlighting zsh-autosuggestions -y
 
 # Installing java 
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
