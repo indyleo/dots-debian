@@ -20,7 +20,7 @@ nala install autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev c
 nala install python3-pip npm -y
 
 # Installing zsh
-nala install zsh zsh-syntax-highlighting zsh-autosuggestions -y
+nala install zsh zsh-syntax-highlighting -y
 
 # Installing java 
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
