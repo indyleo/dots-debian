@@ -50,12 +50,6 @@ bindkey -M menuselect 'right' vi-forward-char
 # Fix backspace bug when switching modes
 bindkey -v '^?' backward-delete-char
 
-# History Substring Search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-
 # Edit line in vim with "ctrl-e"
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
