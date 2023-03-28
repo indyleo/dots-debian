@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 # Making directories & files 
 mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin/ ~/Zsh/Plugins/
 touch ~/.cache/zsh/history 
@@ -20,22 +22,11 @@ git clone https://github.com/bayasdev/envycontrol.git
 cd envycontrol
 sudo pip install .
 
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
-# Installing moar (PAGER)
-https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
-chmod a+x moar-*-*-*
-mv moar-*-*-* ~/.local/bin/moar
-
 # Gotop
 go install github.com/cjbassi/gotop@latest
-
-# Nvidia setting
-sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # Stuff for neovim
 pip install pynvim
@@ -49,20 +40,11 @@ git clone https://github.com/jluttine/rofi-power-menu.git
 cd rofi-power-menu
 cp rofi-power-menu ~/.local/bin/
 
-# Rofi Scripts (You Add Your Own Keybindings To Awesome Config)
-https://github.com/Mange/rofi-emoji
-https://github.com/cdown/clipmenu
-https://github.com/svenstaro/rofi-calc
-https://github.com/windwp/rofi-color-picker
-
 # Rofi Settings
 rofi -modi drun,window,run
 
 # Reload X11 Colors
 xrdb -load ~/.Xresources
-
-# Ventoy
-https://github.com/ventoy/Ventoy/releases/latest (ventoy-1.0.89-linux.tar.gz is the one you want)
 
 # SDDM Theme
 sudo mkdir ‑p /usr/share/sddm/themes
@@ -71,3 +53,9 @@ sudo tar -xzvf ~/Downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes
 # Zsh-Completions
 git clone https://github.com/zsh-users/zsh-completions.git ~/Zsh/Plugins/
 rm -f ~/.zcompdump; compinit
+
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Nvidia setting
+sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
