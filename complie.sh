@@ -44,6 +44,7 @@ cp rofi-power-menu ~/.local/bin/
 rofi -modi drun,window,run
 
 # Reload X11 Colors
+mv -v .Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 
 # SDDM Theme
@@ -64,8 +65,11 @@ sudo cp completions/_colorscript /usr/share/zsh/site-functions
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Nvidia setting
+# Nvidia Setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
-# Nala
-sudo nala fetch
+# Moving Files And Deletig Stuff
+mv -v Wallpapers ~/Pictures/
+mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
+rm -v ~/.bashrc
+mv -v .zshrc .xsessions .bashrc .aliasrc
