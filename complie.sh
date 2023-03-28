@@ -22,6 +22,9 @@ git clone https://github.com/bayasdev/envycontrol.git
 cd envycontrol
 sudo pip install .
 
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
@@ -61,9 +64,6 @@ git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
-
-# Rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Nvidia Setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
