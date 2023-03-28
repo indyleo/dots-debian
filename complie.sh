@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir/ ~/.local/bin/ ~/Zsh/Plugins/
+mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir ~/.local/bin ~/Zsh/Plugins ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
 # Headsetcontrol
@@ -68,8 +68,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Nvidia Setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
-# Moving Files And Deletig Stuff
+# Moving And Deletig And Adding Files
 mv -v Wallpapers ~/Pictures/
 mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
 rm -v ~/.bashrc
 mv -v .zshrc .xsessions .bashrc .aliasrc
+sudo touch /etc/sddm.conf
+
+# Adding Stuff To Files
+sudo echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
+sudo echo "[Theme]
+Current=sugar-candy" > /etc/sddm.conf
