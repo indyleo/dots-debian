@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin/ ~/Zsh/Plugins/
+mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir/ ~/.local/bin/ ~/Zsh/Plugins/
 touch ~/.cache/zsh/history 
 
 # Headsetcontrol
