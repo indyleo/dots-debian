@@ -54,6 +54,13 @@ sudo tar -xzvf ~/Downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes
 git clone https://github.com/zsh-users/zsh-completions.git ~/Zsh/Plugins/
 rm -f ~/.zcompdump; compinit
 
+# Random Color Script
+cd ~/Github
+git clone https://gitlab.com/dwt1/shell-color-scripts.git
+cd shell-color-scripts
+sudo make install
+sudo cp completions/_colorscript /usr/share/zsh/site-functions
+
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
