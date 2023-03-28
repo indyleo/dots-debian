@@ -15,12 +15,14 @@ make
 sudo make install
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+cd ~
 
 # Envycontrol
 cd ~/Github
 git clone https://github.com/bayasdev/envycontrol.git
 cd envycontrol
 sudo pip install .
+cd ~
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
@@ -42,6 +44,7 @@ cd ~/Github
 git clone https://github.com/jluttine/rofi-power-menu.git
 cd rofi-power-menu
 cp rofi-power-menu ~/.local/bin/
+cd ~
 
 # Rofi Settings
 rofi -modi drun,window,run
@@ -50,9 +53,12 @@ rofi -modi drun,window,run
 mv -v .Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 
-# SDDM Theme
-sudo mkdir ‑p /usr/share/sddm/themes
-sudo tar -xzvf ~/Downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes
+# Gedit Nord Theme
+cd ~/Github
+git clone https://github.com/arcticicestudio/nord-gedit.git
+cd nord-gedit
+./install.sh
+cd ~
 
 # Zsh-Completions
 git clone https://github.com/zsh-users/zsh-completions.git ~/Zsh/Plugins/
@@ -64,6 +70,7 @@ git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
+cd ~
 
 # Nvidia Setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
@@ -72,10 +79,6 @@ sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFul
 mv -v Wallpapers ~/Pictures/
 mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
 rm -v ~/.bashrc
-mv -v .zshrc .xsessions .bashrc .aliasrc
-sudo touch /etc/sddm.conf
 
 # Adding Stuff To Files
 sudo echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
-sudo echo "[Theme]
-Current=sugar-candy" > /etc/sddm.conf
