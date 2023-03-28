@@ -20,10 +20,6 @@ config.load_autoconfig(False)
 # Type: Dict
 c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save'}
 
-# Setting dark mode
-#config.set("colors.webpage.darkmode.enabled", True)
-
-
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
 # including IndexedDB, DOM storage, filesystem API, service workers, and
