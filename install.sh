@@ -37,9 +37,6 @@ nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 # Installing AwesomeWM Stuff
 nala install sddm awesome-doc awesome-extra qt5ct qt5-style-plugins xwallpaper nitrogen xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
-# Installing Sugar-candy Dependencies
-nala install libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
-
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y
 
@@ -82,10 +79,6 @@ sudo npm i -g neovim tree-sitter-cli
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
 mv pfetch /usr/bin/pfetch
-
-# Sddm
-systemctl enable sddm
-systemctl set-default graphical.target
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
