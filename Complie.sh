@@ -66,3 +66,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Nvidia setting
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+
+# Nala
+sudo nala fetch
