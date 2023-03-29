@@ -9,3 +9,9 @@ In /usr/share/xsessions/awesome.desktop change the exec line to
 ```
 Exec=/etx/X11/Xsession
 ```
+
+# Qt And GTK Themes
+```
+QT_QPA_PLATFORMTHEME=qt5ct 
+```
+Put this into your '/etc/environment' file
