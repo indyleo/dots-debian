@@ -14,7 +14,7 @@ apt upgrade -y
 apt install nala -y
 
 # Installing CLI programs
-nala install autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev cmdtest webpack gpg openssl tldr htop trash-cli neofetch neovim vim lolcat cmatrix cmake g++ wget python3 xdotool unzip python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential -y
+nala install autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev gpg openssl tldr htop trash-cli neofetch neovim lolcat cmatrix cmake g++ wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential -y
 
 # Installing other pkg managers
 nala install python3-pip npm flatpak -y
@@ -35,13 +35,14 @@ nala install rhythmbox rhythmbox-plugins -y
 nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing AwesomeWM Stuff
-nala install awesome-doc awesome-extra qt5ct qt5-style-plugins xwallpaper nitrogen xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
+nala install awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y
 
 # Installing Browsers
-nala install qutebrowser libjs-pdf -y
+nala purge firefox-esr
+nala install firefox qutebrowser libjs-pdf -y
 
 # Script Variables
 username=$(id -u -n 1000)
