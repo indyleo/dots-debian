@@ -85,3 +85,6 @@ mv -v Wallpapers ~/Pictures/
 mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
 rm -v ~/.bashrc
 mv -v .bashrc .zshrc .aliasrc .xsession
+
+# Flatpak Install
+flatpak install com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice
