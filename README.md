@@ -7,7 +7,7 @@ Distro I Use Is Pop-os
 # Awesome loading ~/.xsession
 In /usr/share/xsessions/awesome.desktop change the exec line to
 ```
-Exec=/etx/X11/Xsession
+Exec=/etc/X11/Xsession
 ```
 
 # Qt And GTK Themes
