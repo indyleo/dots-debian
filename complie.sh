@@ -24,6 +24,9 @@ cd envycontrol
 sudo pip install .
 cd ~
 
+# Rustup
+ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+ 
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
