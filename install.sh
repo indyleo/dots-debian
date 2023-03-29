@@ -35,14 +35,13 @@ nala install rhythmbox rhythmbox-plugins -y
 nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing AwesomeWM Stuff
-nala install sddm awesome-doc awesome-extra qt5ct qt5-style-plugins xwallpaper nitrogen xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
+nala install awesome-doc awesome-extra qt5ct qt5-style-plugins xwallpaper nitrogen xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y
 
 # Installing Browsers
-nala purge firefox-esr -y
-nala install firefox qutebrowser libjs-pdf -y
+nala install qutebrowser libjs-pdf -y
 
 # Script Variables
 username=$(id -u -n 1000)
