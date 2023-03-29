@@ -50,8 +50,10 @@ cd ~
 rofi -modi drun,window,run
 
 # Reload X11 Colors
+cd ~/dotfiles
 mv -v .Xresources ~/.Xresources
 xrdb -load ~/.Xresources
+cd ~
 
 # Gedit Nord Theme
 cd ~/Github
@@ -61,8 +63,10 @@ cd nord-gedit
 cd ~
 
 # Zsh-Completions
-git clone https://github.com/zsh-users/zsh-completions.git ~/Zsh/Plugins/
+cd ~/Zsh/Plugins
+git clone https://github.com/zsh-users/zsh-completions.git
 rm -f ~/.zcompdump; compinit
+cd ~
 
 # Random Color Script
 cd ~/Github
@@ -76,9 +80,8 @@ cd ~
 sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
 # Moving And Deletig And Adding Files
+cd ~/dotfiles
 mv -v Wallpapers ~/Pictures/
 mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
 rm -v ~/.bashrc
-
-# Adding Stuff To Files
-sudo echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
+mv -v .bashrc .zshrc .aliasrc .xsession
