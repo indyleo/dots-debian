@@ -109,7 +109,7 @@ ${color1}${hr}${color}
 ${voffset 18}${color1}${alignc}${font4}Opening Applications${font}${color}
 ${color1}${hr}${color}
 ${color1}[S]+[RET]${alignr}${color2}open terminal${color}
-${color1}[S]+b${alignr}${color2}open qutebrowser${color}
+${color1}[S]+b${alignr}${color2}open browser${color}
 ${color1}[S]+r${alignr}${color2}drun prompt${color}
 ${color1}[S]+d${alignr}${color2}run prompt${color}
 ${color1}[S]+o${alignr}${color2}window prompt${color}
