@@ -23,8 +23,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 -- Custom libraries
-local lain          = require("lain")
-local freedesktop   = require("freedesktop")
+local lain = require("lain")
+local freedesktop = require("freedesktop")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
