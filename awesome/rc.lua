@@ -22,9 +22,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- Load Debian menu entries
-local debian = require("debian.menu")
-
 -- Custom libraries
 local lain          = require("lain")
 local freedesktop   = require("freedesktop")
