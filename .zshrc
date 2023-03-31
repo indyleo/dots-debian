@@ -147,5 +147,8 @@ source /usr/share/autojump/autojump.zsh 2>/dev/null
 # Starship prompt
 eval "$(starship init zsh)"
 
-# Turning On Syntax Highlighting
+# Turning On Some Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source ~/Zsh/Plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
+source ~/Zsh/Plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
