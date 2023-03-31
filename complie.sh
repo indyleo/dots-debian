@@ -62,10 +62,20 @@ cd nord-gedit
 ./install.sh
 cd ~
 
-# Zsh-Completions
+# Zsh Completions
 cd ~/Zsh/Plugins
 git clone https://github.com/zsh-users/zsh-completions.git
 rm -f ~/.zcompdump; compinit
+cd ~
+
+# Zsh You Should Use
+cd ~/Zsh/Plugins
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
+cd ~
+
+# Zsh History Substring Search
+cd ~/Zsh/Plugins
+it clone https://github.com/zsh-users/zsh-history-substring-search.git
 cd ~
 
 # Random Color Script
