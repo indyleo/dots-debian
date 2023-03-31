@@ -97,4 +97,4 @@ rm -v ~/.bashrc
 mv -v .bashrc .zshrc .aliasrc .xsession
 
 # Flatpak Install
-flatpak install com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
+flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
