@@ -65,8 +65,8 @@ ex ()
   fi
 }
 
-
 # Aliases
+alias srcb='source ~/.bashrc'
 source $HOME/.aliasrc 2>/dev/null
 
 # Starship prompt
