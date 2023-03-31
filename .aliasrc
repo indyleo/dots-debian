@@ -1,27 +1,64 @@
 # Changing ls To lsd
-alias ls='lsd -AlFh' # <-- My Favourite
-alias la='lsd -A' # <-- Show Hidden Files
-alias ll='lsd -lhF' # <-- Show In Listing Form 
-alias l.='lsd -A | egrep "^\."'
+alias ls='lsd -AlFh' # My Favourite
+alias la='lsd -A' # Show Hidden Files
+alias ll='lsd -lhF' # Show In Listing Form 
+alias lt='lsd -aT' # Shows In Tree Listing
+alias l.='lsd -A | egrep "^\."' # Show Only Hidden Files
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# HeadsetControl aliases
+# HeadsetControl Aliases
 alias h1='headsetcontrol -l 0'
 alias hb='headsetcontrol -b'
 alias hc='headsetcontrol'
 
-# Nice aliases To have
+# PS Aliases
+alias psa="ps auxf"
+alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# Confirm Before Doing Something And The Output Being Verbose
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias rmdir='rmdir -v'
 alias mkdir='mkdir -pv'
+
+# Nice Aliases To Have
 alias wq='exit'
-alias psa='ps aux'
 alias rn='ranger'
+alias src='source'
+alias df='df -h'
+
+# Get Error Messages From Journalctl
+alias jctl='journalctl -p 3 -xb'
+
+# Yt-dlp Aliases
+alias yta-aac='yt-dlp --extract-audio --audio-format aac '
+alias yta-best='yt-dlp --extract-audio --audio-format best '
+alias yta-flac='yt-dlp --extract-audio --audio-format flac '
+alias yta-m4a='yt-dlp --extract-audio --audio-format m4a '
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
+alias yta-opus='yt-dlp --extract-audio --audio-format opus '
+alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
+alias yta-wav='yt-dlp --extract-audio --audio-format wav '
+alias ytv-best='yt-dlp -f bestvideo+bestaudio '
+
+# Bare Git Repo Alias For Dotfiles
+alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+# The Terminal Rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+# Load Xresources
+alias load='xrdb -load ~/.Xresources'
+
+# Merge Xresources
+alias merge='xrdb -merge ~/.Xresources'
 
 # Easier Navigation
 up () {
@@ -43,7 +80,7 @@ up () {
   fi
 }
 
-# Neovim aliases
+# Neovim Aliases
 alias vim='nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
@@ -67,8 +104,26 @@ alias vconfv='gedit $HOME/.config/nvim/init.lua'
 alias trash='trash -iv'
 alias trashl='trash-list'
 alias trashr='trash-restore'
-alias trashm='trash-rm'
+alias trashrm='trash-rm'
 alias trashe='trash-empty'
+
+# GPG encryption
+alias gpg-check='gpg --keyserver-options auto-key-retrieve --verify'
+alias gpg-retrieve='gpg --keyserver-options auto-key-retrieve --receive-keys'
+
+# Git Aliases
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias tag='git tag'
+alias newtag='git tag -a'
 
 # Nala To APT
 apt() { 
