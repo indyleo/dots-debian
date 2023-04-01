@@ -1,6 +1,0 @@
-configuration { 
-    show-icons: true; 
-    line-margin: 10;
-}
-
-@theme "nord"
