@@ -124,6 +124,14 @@ alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
 
+# Shell Aliases
+alias srcz='source ~/.zshrc'
+alias srcb='source ~/.bashrc'
+alias rebash='reset && bash'
+alias rezsh='reset && zsh'
+alias rs='reset'
+alias cl='clear'
+
 # Nala To APT
 apt() { 
   command nala "$@"
