@@ -159,6 +159,7 @@ source /usr/share/autojump/autojump.zsh 2>/dev/null
 # Startup Stuff
 # neofetch
  pfetch
+# colorscript -r
 
 # Starship prompt
 eval "$(starship init zsh)"
