@@ -2,7 +2,6 @@
 alias ls='lsd -AlFh' # My Favourite
 alias la='lsd -A' # Show Hidden Files
 alias ll='lsd -lhF' # Show In Listing Form 
-alias lt='lsd -aT' # Shows In Tree Listing
 alias l.='lsd -A | egrep "^\."' # Show Only Hidden Files
 
 # Colorize grep output (good for log files)
