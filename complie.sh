@@ -30,14 +30,11 @@ cd ~
 # Installing lsd & bob-nvim
 cargo install lsd bob-nvim
 
-# Gotop
-go install github.com/cjbassi/gotop@latest
+# Gotop & Lazygit
+go install github.com/cjbassi/gotop@latest github.com/jesseduffield/lazygit@latest
 
-# Stuff for neovim
+# Pynvim
 pip install pynvim
-
-# LazyGit
-go install github.com/jesseduffield/lazygit@latest
 
 # Rofi PowerMenu
 cd ~/Github
