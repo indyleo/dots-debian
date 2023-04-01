@@ -71,7 +71,6 @@ local tuifile= terminal .. " -e ranger"
 local lock = "i3lock-fancy -g"
 local powermenu = "rofi -show p -modi p:rofi-power-menu \
   -theme nord \
-  -font 'FiraCode Nerd Font 16'"
 local editor_cmd = terminal .. " -e " .. editor
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
