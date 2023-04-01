@@ -16,4 +16,3 @@ vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.list = true
-vim.opt.undodir = vim.fn.expand('~/.cache/vim/undodir/')
