@@ -51,7 +51,7 @@ rofi -modi drun,window,run
 
 # Reload X11 Colors
 cd ~/dotfiles
-mv -v .Xresources ~/.Xresources
+mv .Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 cd ~
 
@@ -91,10 +91,10 @@ sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFul
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
-mv -v Wallpapers ~/Pictures/
-mv -v alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
-rm -v ~/.bashrc
-mv -v .bashrc .zshrc .aliasrc .xsession
+mv Wallpapers ~/Pictures/
+mv alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
+rm ~/.bashrc
+mv .bashrc .zshrc .aliasrc .xsession
 
 # Flatpak Install
 flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
