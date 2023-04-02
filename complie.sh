@@ -72,7 +72,7 @@ cd ~
 
 # Zsh History Substring Search
 cd ~/Zsh/Plugins
-it clone https://github.com/zsh-users/zsh-history-substring-search.git
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
 cd ~
 
 # Random Color Script
