@@ -13,7 +13,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim" 
 export VISUAL="nvim"
 export PAGER="moar"
-export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
 export TERM="xterm-256color" # getting proper colors
 
 # If not running interactively, don't do anything
