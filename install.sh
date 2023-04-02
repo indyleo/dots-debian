@@ -65,15 +65,15 @@ rm ./FiraCode.zip ./Meslo.zip
 # Setting up ufw 
 nala install ufw -y
 sleep 2.5
-sudo ufw limit 22/tcp
-sudo ufw allow 80/tcp
-sudo ufw allow 443/tcp
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw enable
+ufw limit 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw default deny incoming
+ufw default allow outgoing
+ufw enable
 
 # Neovim Stuff
-sudo npm i -g neovim tree-sitter-cli
+npm i -g neovim tree-sitter-cli
 
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
