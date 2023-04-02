@@ -5,5 +5,4 @@ solaar -w hide &
 variety &
 xfce4-clipman &
 xrandr --auto &
-steam -silent $
 exec awesome
