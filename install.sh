@@ -54,13 +54,17 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.z
 unzip FiraCode.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
+unzip Ubuntu.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
+unzip SourceCodePro.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 
 # Reloading cache
 fc-cache -vf
 # Removing zip files
-rm ./FiraCode.zip ./Meslo.zip
+rm ./FiraCode.zip ./Meslo.zip ./Ubuntu.zip ./SourceCodePro.zip
 
 # Setting up ufw 
 nala install ufw -y
