@@ -1,7 +1,7 @@
 # Changing ls To lsd
-alias ls='lsd -AlFh' # My Favourite
-alias la='lsd -A' # Show Hidden Files
-alias ll='lsd -lhF' # Show In Listing Form 
+alias ls='lsd -AlFh --group-directories-first --color auto' # My Favourite
+alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
+alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
 alias l.='lsd -A | egrep "^\."' # Show Only Hidden Files
 
 # Colorize grep output (good for log files)
