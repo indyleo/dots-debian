@@ -20,4 +20,4 @@ Put this into your '/etc/environment' file
 https://wiki.hyprland.org/, 
 https://awesomewm.org/, 
 https://github.com/ChrisTitusTech/titus-awesome/, 
-https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome/, 
+https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome/, https://swaywm.org/
