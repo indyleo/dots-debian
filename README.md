@@ -15,3 +15,9 @@ Exec=/etc/X11/Xsession
 QT_QPA_PLATFORMTHEME=qt5ct 
 ```
 Put this into your '/etc/environment' file
+
+# Resources
+https://wiki.hyprland.org/
+https://awesomewm.org/
+https://github.com/ChrisTitusTech/titus-awesome/
+https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome/
