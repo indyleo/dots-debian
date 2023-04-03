@@ -7,30 +7,10 @@ image/svg=sxiv.desktop
 image/webp=sxiv.desktop
 inode/directory=pcmanfm.desktop
 x-directory/normal=pcmanfm.desktop
-x-scheme-handler/http=userapp-Firefox-N4DJ11.desktop
-x-scheme-handler/https=userapp-Firefox-N4DJ11.desktop
-x-scheme-handler/chrome=userapp-Firefox-N4DJ11.desktop
-text/html=userapp-Firefox-N4DJ11.desktop
-application/x-extension-htm=userapp-Firefox-N4DJ11.desktop
-application/x-extension-html=userapp-Firefox-N4DJ11.desktop
-application/x-extension-shtml=userapp-Firefox-N4DJ11.desktop
-application/xhtml+xml=userapp-Firefox-N4DJ11.desktop
-application/x-extension-xhtml=userapp-Firefox-N4DJ11.desktop
-application/x-extension-xht=userapp-Firefox-N4DJ11.desktop
 
 [Added Associations]
-x-scheme-handler/http=userapp-Firefox-N4DJ11.desktop;
-x-scheme-handler/https=userapp-Firefox-N4DJ11.desktop;
-x-scheme-handler/chrome=userapp-Firefox-N4DJ11.desktop;
-text/html=userapp-Firefox-N4DJ11.desktop;
-application/x-extension-htm=userapp-Firefox-N4DJ11.desktop;
-application/x-extension-html=userapp-Firefox-N4DJ11.desktop;
-application/x-extension-shtml=userapp-Firefox-N4DJ11.desktop;
-application/xhtml+xml=userapp-Firefox-N4DJ11.desktop;
-application/x-extension-xhtml=userapp-Firefox-N4DJ11.desktop;
-application/x-extension-xht=userapp-Firefox-N4DJ11.desktop;
 x-scheme-handler/magnet=transmission-gtk.desktop;
 application/x.bittorrent=transmission-gtk.desktop;
-image/svg+xml=gimp.desktop;firefox.desktop;inkscape.desktop;
+application/xml=gedit.desktop;firefox.desktop;
 
 [Removed Associations]
