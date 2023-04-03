@@ -50,9 +50,9 @@ username=$(id -u -n 1000)
 # Installing fonts 
 nala install fonts-font-awesome -y
 mkdir -p /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
