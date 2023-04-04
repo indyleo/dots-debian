@@ -91,7 +91,7 @@ cd ~/dotfiles
 mv Wallpapers ~/Pictures/
 mv alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list ~/.config/
 rm ~/.bashrc
-mv .bashrc .zshrc .aliasrc .xsession
+mv .bashrc .zshrc .aliasrc .xsession ~/
 
 # Flatpak Install
 flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
