@@ -35,7 +35,7 @@ nala install rhythmbox rhythmbox-plugins -y
 nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing AwesomeWM Stuff
-nala install variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxapperance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
+nala install variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxappearance arandr xclip xfce4-power-manager xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y
