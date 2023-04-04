@@ -429,16 +429,20 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"}),
 
+    -- Brightness
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
+      {description = "+10% In Brightness", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
+      {description = "-10% In Brightness", group = "hotkeys"}),
+        
     -- Media Keys
     awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end),
     awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end),
     awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end),
-    awful.key({ }, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end),
-    awful.key({ }, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end),
-    awful.key({ }, "XF86AudioPlay", function ()
-      awful.util.spawn("rhythmbox-client --play-pause") end),
-    awful.key({ }, "XF86AudioStop", function ()
-      awful.util.spawn("rhythmbox-client --play-pause") end),
+    awful.key({}, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end),
+    awful.key({}, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end),
+    awful.key({}, "XF86AudioPlay", function () os.execute("rhythmbox-client --play-pause") end),
+    awful.key({}, "XF86AudioStop", function () os.execute("rhythmbox-client --play-pause") end),
 
     -- Screenshot Keys
     awful.key({  }, "Print", function ()
@@ -446,7 +450,15 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "Print", function ()
       awful.util.spawn("flameshot screen") end),
     awful.key({ modkey, "Shift" }, "Print", function ()
-      awful.util.spawn("flameshot launcher") end)
+      awful.util.spawn("flameshot launcher") end),
+
+    -- Copy primary to clipboard (terminals to gtk)
+    awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
+      {description = "copy terminal to gtk", group = "hotkeys"}),
+    -- Copy clipboard to primary (gtk to terminals)
+    awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
+      {description = "copy gtk to terminal", group = "hotkeys"})
+
 )
 
 -- Bind all key numbers to tags.
@@ -594,21 +606,12 @@ beautiful.notification_icon_size = 80
 client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
 client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 
--- -- Autorun Programs At Startup
-autorun = true
-autorunApps =
-{
-   "xfce4-power-manager"
-}
-if autorun then
-   for app = 1, #autorunApps do
-       awful.util.spawn(autorunApps[app])
-   end
-end
-
 -- Startup Programs
-awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("lxpolkit")
+awful.spawn.with_shell("killall conky")
+awful.spawn.with_shell("sleep 3 && conky -c ~/.config/conky/conky-01.conkyrc")
+af
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
