@@ -60,7 +60,7 @@ local modkey      = "Mod4"
 local altkey      = "Mod1"
 local ctrlkey     = "Control"
 local terminal    = "alacritty"
-local browser     = "qutebrowser"
+local browser     = "firefox"
 local editor      = os.getenv("EDITOR") or "vim"
 local mediaplayer = "vlc"
 local drun_propmt = "rofi -show drun"
@@ -450,14 +450,7 @@ clientkeys = gears.table.join(
     awful.key({ modkey, }, "Print", function ()
       awful.util.spawn("flameshot screen") end),
     awful.key({ modkey, "Shift" }, "Print", function ()
-      awful.util.spawn("flameshot launcher") end),
-
-    -- Copy primary to clipboard (terminals to gtk)
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
-      {description = "copy terminal to gtk", group = "hotkeys"}),
-    -- Copy clipboard to primary (gtk to terminals)
-    awful.key({ modkey }, "v", function () awful.spawn.with_shell("xsel -b | xsel") end,
-      {description = "copy gtk to terminal", group = "hotkeys"})
+      awful.util.spawn("flameshot launcher") end)
 
 )
 
@@ -606,7 +599,6 @@ beautiful.notification_icon_size = 80
 client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
 client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 
--- Startup Programs
 -- Startup Programs
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("lxpolkit")
