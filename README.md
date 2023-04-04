@@ -20,3 +20,5 @@ Put this into your '/etc/environment' file
 https://awesomewm.org/, 
 https://github.com/ChrisTitusTech/titus-awesome/, 
 https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome/
+
+Thanks To These People Who Inspired Me To Use A Tilling Window Manager
