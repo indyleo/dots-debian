@@ -95,8 +95,7 @@ ${color2}${goto 12}${membar 8,254}${color}
 ${goto 12}${voffset 5}${color1}${top_mem name 1}$alignr$color${top_mem mem_res 1}
 ${goto 12}${color1}${top_mem name 2}$alignr$color${top_mem mem_res 2}
 ${goto 12}${color1}${top_mem name 3}$alignr$color${top_mem mem_res 3}
-${voffset 18}${color1}${alignc}${font4}
-Window Manager Keybindings${font}${color}
+${voffset 18}${color1}${alignc}${font4}Awesomewm Keybindings${font}${color}
 ${color1}${hr}${color}
 ${color1}[S]+q${alignr}${color2}close window${color}
 ${color1}[S]+j/k${alignr}${color2}move win focus${color}
