@@ -103,8 +103,8 @@ ${color1}[S]+[SHIFT]+hjkl${alignr}${color2}move window${color}
 ${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
 ${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
 ${color1}[S]+h/l${alignr}${color2}shrink/expand${color}
-${color1}[S]+[SHIFT]+r${alignr}${color2}restart${color}
-${color1}[S]+[SHIFT]+q${alignr}${color2}quit${color}
+${color1}[S]+[SHIFT]+r${alignr}${color2}awesome restart${color}
+${color1}[S]+[SHIFT]+q${alignr}${color2}awesome quit${color}
 ${color1}${hr}${color}
 ${voffset 18}${color1}${alignc}${font4}Opening Applications${font}${color}
 ${color1}${hr}${color}
