@@ -11,9 +11,6 @@ cd envycontrol
 sudo pip install .
 cd ~
 
-# Gotop & Lazygit
-go install github.com/cjbassi/gotop@latest github.com/jesseduffield/lazygit@latest
-
 # Pynvim
 pip install pynvim
 
