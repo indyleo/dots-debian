@@ -72,5 +72,10 @@ mv alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc .xsession ~/
 
+# Nitch
+wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
+chmod a+x setup.sh
+./setup.sh
+
 # Flatpak Install
 flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher

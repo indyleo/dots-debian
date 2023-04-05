@@ -10,10 +10,13 @@ fi
 pacman -Syu
 
 # Installing CLI programs
-pacman -S starship lsd autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev gpg openssl tldr htop trash-cli neofetch neovim lolcat cmatrix cmake g++ wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
+pacman -S starship lsd autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev gpg openssl tldr htop trash-cli neovim cmake g++ wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
 
 # Installing other pkg managers
 pacman -S cargo python3-pip npm flatpak --noconfirm
+
+# Installing Fun Stuff
+pacman -S neofetch cmatrix tty- --noconfirm
 
 # Installing zsh
 pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
@@ -76,3 +79,8 @@ npm i -g neovim tree-sitter-cli
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
 mv pfetch /usr/bin/pfetch
+
+# Nerd Fetch
+wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
+chmod a+x nerdfetch
+mv nerdfetch /usr/bin/nerdfetch

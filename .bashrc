@@ -36,8 +36,11 @@ bind -m vi-insert 'Control-l: clear-screen'
 bind "set completion-ignore-case on"
 
 # Startup Stuff
- # neofetch
- # pfetch
+# neofetch
+# pfetch
+# colorscript -r
+# nerdfetch
+# nitch
 
 # Archive Extraction
 ex ()
