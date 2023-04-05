@@ -40,7 +40,7 @@ pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --nocon
 pacman -S variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm rofi feh picom i3lock-fancy lxappearance arandr xclip xorg-xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol --noconfirm
 
 # Installing Hyprland and Walyand Stuff
-pacman -S xfce4-settings hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
+pacman -S grim xfce4-settings slurp polkit-gnome hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
 
 # Installing File Stuff 
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
