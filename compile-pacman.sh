@@ -46,7 +46,7 @@ mv .Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 cd ~
 
-# Installing yay AUR Helper
+# Installing yay AUR Helper (Needed)
 sudo pacman -S --needed git base-devel --noconfirm
 cd ~/Github
 git clone https://aur.archlinux.org/yay-bin.git
