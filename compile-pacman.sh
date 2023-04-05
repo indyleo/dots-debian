@@ -39,15 +39,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol --noconfirm
-
-# Random Color Script
-cd ~/Github
-git clone https://gitlab.com/dwt1/shell-color-scripts.git
-cd shell-color-scripts
-sudo make install
-sudo cp completions/_colorscript /usr/share/zsh/site-functions
-cd ~
+yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol shell-color-scripts--noconfirm
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
