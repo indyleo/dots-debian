@@ -37,7 +37,7 @@ yay -S tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetc
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
 mv Wallpapers ~/Pictures/
-mv alacritty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv alacritty kitty awesome conky neofetch nvim picom qutebrowser ranger rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc .xsession ~/
 
