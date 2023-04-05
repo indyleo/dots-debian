@@ -76,6 +76,3 @@ npm i -g neovim tree-sitter-cli
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 chmod a+x pfetch
 mv pfetch /usr/bin/pfetch
-
-# Starship Prompt
-curl -sS https://starship.rs/install.sh | sh
