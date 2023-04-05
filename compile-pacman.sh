@@ -65,9 +65,6 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
-# Nvidia Setting
-sudo nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
-
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
 mv Wallpapers ~/Pictures/
