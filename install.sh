@@ -26,7 +26,7 @@ nala install zsh zsh-syntax-highlighting -y
 nala install openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre -y
 
 # Installing GUI programs 
-nala install rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+nala install alacritty kitty rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y
@@ -35,7 +35,7 @@ nala install rhythmbox rhythmbox-plugins -y
 nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing AwesomeWM Stuff
-nala install variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxappearance arandr xclip xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
+nala install variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm rofi feh picom i3lock-fancy lxappearance arandr xclip xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
 # Installing vscodium
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg 
