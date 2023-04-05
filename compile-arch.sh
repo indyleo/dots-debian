@@ -4,13 +4,6 @@
 mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir ~/.local/bin ~/Zsh/Plugins ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-# Envycontrol
-cd ~/Github
-git clone https://github.com/bayasdev/envycontrol.git
-cd envycontrol
-sudo pip install .
-cd ~
-
 # Pynvim
 pip install pynvim
 
@@ -39,7 +32,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
+yay -S zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
