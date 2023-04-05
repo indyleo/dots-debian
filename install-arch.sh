@@ -46,7 +46,7 @@ pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
 username=$(id -u -n 1000)
 
 # Installing fonts 
-pacman -S fonts-font-awesome --noconfirm
+pacman -S noto-fonts-extra noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-ubuntu-font-family ttf-font-awesome awesome-terminal-fonts adobe-source-code-pro-fonts adobe-source-sans-fonts --noconfirm
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
