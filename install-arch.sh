@@ -45,8 +45,6 @@ pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
 # Installing Drivers
 pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
 
-
-
 # Script Variables
 username=$(id -u -n 1000)
 
