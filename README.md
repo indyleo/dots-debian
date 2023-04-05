@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Distro I Use Is Pop-os, My Switch To Hyprland On Arch Or Gentoo Probaly Arch
+Distro I Use Is Pop-os, My Switch To Hyprland On Arch
 
 # Preview: ![2023-03-16_16-22](https://user-images.githubusercontent.com/100316787/225743983-6698f8d1-9d04-40cc-9ee0-f5a69ee4510e.png)
 
@@ -19,6 +19,7 @@ Put this into your '/etc/environment' file
 # Resources
 https://awesomewm.org/, 
 https://github.com/ChrisTitusTech/titus-awesome/, 
-https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome/
+https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome,
+https://github.com/BrodieRobertson/dotfiles
 
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
