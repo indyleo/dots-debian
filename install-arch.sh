@@ -22,7 +22,7 @@ pacman -S neofetch cmatrix tty- --noconfirm
 pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
 
 # Installing java 
-pacman -S openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre --noconfirm
+pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
 
 # Installing GUI programs 
 pacman -S rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam:i386 --noconfirm
@@ -41,6 +41,9 @@ pacman -S rofi-dev qalc libtool --noconfirm
 
 # Installing Browsers
 pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
+
+# Installing Drivers
+pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
