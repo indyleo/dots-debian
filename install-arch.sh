@@ -45,10 +45,7 @@ pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
 # Installing Drivers
 pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
 
-# Installing SDDM & Theme
-pacman -S sddm
-systemctl set-defalut graphical.target
-systemctl enable sddm
+
 
 # Script Variables
 username=$(id -u -n 1000)
@@ -79,6 +76,13 @@ ufw allow 443/tcp
 ufw default deny incoming
 ufw default allow outgoing
 ufw enable
+
+# Installing SDDM & Theme
+pacman -S sddm
+systemctl set-defalut graphical.target
+systemctl enable sddm
+tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+mv /home/$username/dotfiles/sddm.conf /etc/sddm.conf
 
 # Neovim Stuff
 npm i -g neovim tree-sitter-cli
