@@ -16,7 +16,7 @@ pacman -S lazygit starship lsd autojump yad fzf locate gh tree xsel base-devel h
 pacman -S cargo python3-pip npm flatpak --noconfirm
 
 # Installing Fun Stuff
-pacman -S neofetch cmatrix tty- --noconfirm
+pacman -S neofetch cmatrix --noconfirm
 
 # Installing zsh
 pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
