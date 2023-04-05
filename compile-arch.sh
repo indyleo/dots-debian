@@ -39,7 +39,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol shell-color-scripts--noconfirm
+yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol shell-color-scripts pacseek --noconfirm
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles

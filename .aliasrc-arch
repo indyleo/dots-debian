@@ -124,23 +124,17 @@ alias rezsh='reset && zsh'
 alias rs='reset'
 alias cl='clear'
 
-# Nala To APT
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+# Making pacman & yay better
+alias pac='pacman'
+alias spac='sudo pacman'
+alias Syup='sudo pacman -Syu'
+alias Syuy='yay -Syu'
+alias Sp='sudo pacman -S'
+alias Syy='yay -S'
+alias Ssp='pacman -Ss'
+alias Ssy='yay -Ss'
 
-# Making APT Better
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptug='sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptin='sudo apt install'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
+
+
+
+
