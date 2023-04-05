@@ -10,13 +10,16 @@ fi
 pacman -Syu
 
 # Installing CLI programs
-pacman -S lazygit starship lsd autojump yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr htop trash-cli neovim cmake g++ gcc wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
+pacman -S blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd autojump yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
 
 # Installing other pkg managers
-pacman -S cargo python3-pip npm flatpak --noconfirm
+pacman -S cargo python3-pip npm flatpak pacman-contrib --noconfirm
 
 # Installing Fun Stuff
 pacman -S neofetch cmatrix --noconfirm
+
+# Resoureces Monitors
+pacman -S btop htop bashtop --noconfirm
 
 # Installing zsh
 pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
@@ -34,13 +37,19 @@ pacman -S rhythmbox rhythmbox-plugins --noconfirm
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
 
 # Installing AwesomeWM Stuff
-pacman -S variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm rofi feh picom i3lock-fancy lxappearance arandr xclip xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol --noconfirm
+pacman -S variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm rofi feh picom i3lock-fancy lxappearance arandr xclip xorg-xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol --noconfirm
+
+# Installing Hyprland and Walyand Stuff
+pacman -S xfce4-settings hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
+
+# Installing File Stuff 
+pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
 
 # Rofi-Calc Script Depeninces
 pacman -S rofi-dev qalc libtool --noconfirm
 
 # Installing Browsers
-pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
+pacman -S firefox qutebrowser libjs-pdf --noconfirm
 
 # Installing Drivers
 pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
