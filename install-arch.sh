@@ -45,6 +45,11 @@ pacman -S firefox chromium qutebrowser libjs-pdf --noconfirm
 # Installing Drivers
 pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
 
+# Installing SDDM & Theme
+pacman -S sddm
+systemctl set-defalut graphical.target
+systemctl enable sddm
+
 # Script Variables
 username=$(id -u -n 1000)
 
