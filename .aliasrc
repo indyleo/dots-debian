@@ -89,16 +89,6 @@ alias pconf='nvim $HOME/.config/picom/picom.conf'
 alias wconf='nvim $HOME/.config/awesome/rc.lua'
 alias vconf='nvim $HOME/.config/nvim/init.lua'
 
-# Gedit Aliases
-alias gd='gedit'
-alias zconfv='gedit $HOME/.zshrc'
-alias bconfv='gedit $HOME/.bashrc'
-alias aconfv='gedit $HOME/.aliasrc'
-alias tconfv='gedit $HOME/.config/alacritty/alacritty.yml'
-alias pconfv='gedit $HOME/.config/picom/picom.conf'
-alias wconfv='gedit $HOME/.config/awesome/rc.lua'
-alias vconfv='gedit $HOME/.config/nvim/init.lua'
-
 # Trash Aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
@@ -120,9 +110,10 @@ alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
+alias lg='lazygit'
 
 # Shell Aliases
 alias srcz='source ~/.zshrc'

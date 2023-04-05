@@ -54,6 +54,9 @@ cd yay-bin
 makepkg -si
 cd ~
 
+# AUR Installing Some Programs
+yay -Syu zsh-you-should-use moar gotop-bin 
+
 # Random Color Script
 cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git

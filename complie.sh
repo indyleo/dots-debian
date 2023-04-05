@@ -31,7 +31,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install lsd bob-nvim
 
 # Gotop & Lazygit
-go install github.com/cjbassi/gotop@latest github.com/jesseduffield/lazygit@latest
+go install github.com/xxxserxxx/gotop/v4/cmd/gotop@latest github.com/jesseduffield/lazygit@latest
 
 # Pynvim
 pip install pynvim
