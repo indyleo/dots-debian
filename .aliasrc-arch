@@ -124,7 +124,7 @@ alias rezsh='reset && zsh'
 alias rs='reset'
 alias cl='clear'
 
-# Making pacman & yay better
+# Making PACMAN & YAY Better
 alias pac='pacman'
 alias spac='sudo pacman'
 alias Syup='sudo pacman -Syu'
