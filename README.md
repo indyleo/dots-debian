@@ -16,10 +16,12 @@ QT_QPA_PLATFORMTHEME=qt5ct
 ```
 Put this into your '/etc/environment' file
 
-# Resources
-https://awesomewm.org/, 
+# Resources (Dotfiles)
 https://github.com/ChrisTitusTech/titus-awesome/, 
 https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome,
 https://github.com/BrodieRobertson/dotfiles
 
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
+
+# Resources (Websites)
+https://wiki.hyprland.org/, https://wiki.hyprland.org/

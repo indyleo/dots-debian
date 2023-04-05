@@ -1,4 +1,5 @@
 #!/bin/env bash
+pacman -S hyprland
 
 # Making directories & files 
 mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir ~/.local/bin ~/Zsh/Plugins ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
@@ -6,6 +7,9 @@ touch ~/.cache/zsh/history
 
 # Pynvim
 pip install pynvim
+
+# Installing Cliphist (For Walyand)
+go install go.senan.xyz/cliphist@latest
 
 # Rofi PowerMenu
 cd ~/Github
@@ -45,6 +49,7 @@ mv .bashrc .zshrc .aliasrc .xsession ~/
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
 chmod a+x setup.sh
 ./setup.sh
+rm setup.sh
 
 # Flatpak Install
 flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
