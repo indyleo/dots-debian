@@ -10,7 +10,7 @@ fi
 pacman -Syu
 
 # Installing CLI programs
-pacman -S lazygit starship lsd autojump nano yad fzf locate gh tree xsel tty-clock libhidapi-dev gpg openssl tldr htop trash-cli neovim cmake g++ wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
+pacman -S lazygit starship lsd autojump yad fzf locate gh tree xsel base-devel libhidapi-dev gpg openssl tldr htop trash-cli neovim cmake g++ wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
 
 # Installing other pkg managers
 pacman -S cargo python3-pip npm flatpak --noconfirm

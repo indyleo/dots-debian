@@ -47,7 +47,6 @@ xrdb -load ~/.Xresources
 cd ~
 
 # Installing yay AUR Helper (Needed)
-sudo pacman -S --needed git base-devel --noconfirm
 cd ~/Github
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
@@ -55,7 +54,7 @@ makepkg -si
 cd ~
 
 # AUR Installing Some Programs
-yay -Syu zsh-you-should-use moar gotop-bin 
+yay -Syu zsh-you-should-use moar gotop-bin autojump
 
 # Random Color Script
 cd ~/Github
