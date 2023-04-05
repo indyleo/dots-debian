@@ -11,6 +11,6 @@ x-directory/normal=pcmanfm.desktop
 [Added Associations]
 x-scheme-handler/magnet=transmission-gtk.desktop;
 application/x.bittorrent=transmission-gtk.desktop;
-application/xml=gedit.desktop;firefox.desktop;
+application/xml=firefox.desktop;
 
 [Removed Associations]
