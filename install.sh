@@ -37,6 +37,15 @@ nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 # Installing AwesomeWM Stuff
 nala install variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm alacritty rofi feh picom i3lock-fancy lxappearance arandr xclip xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol -y
 
+# Installing vscodium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg 
+    | gpg --dearmor 
+    | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | tee /etc/apt/sources.list.d/vscodium.list
+nala update
+nala install codium
+
 # Rofi-Calc Script Depeninces
 nala install rofi-dev qalc libtool -y
 
