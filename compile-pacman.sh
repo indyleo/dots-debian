@@ -54,7 +54,8 @@ makepkg -si
 cd ~
 
 # AUR Installing Some Programs
-yay -Syu zsh-you-should-use moar gotop-bin autojump
+yay -Syu --noconfirm
+yay -S zsh-you-should-use moar gotop-bin autojump headsetcontrol --noconfirm
 
 # Random Color Script
 cd ~/Github
@@ -80,4 +81,4 @@ chmod a+x setup.sh
 ./setup.sh
 
 # Flatpak Install
-flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop xyz.xclicker.xclicker com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
+flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop com.github.unrud.VideoDownloader net.brinkervii.grapejuice org.prismlauncher.PrismLauncher
