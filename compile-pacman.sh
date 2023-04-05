@@ -4,19 +4,6 @@
 mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir ~/.local/bin ~/Zsh/Plugins ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-# Headsetcontrol
-cd ~/Github
-git clone https://github.com/Sapd/HeadsetControl 
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-cd ~
-
 # Envycontrol
 cd ~/Github
 git clone https://github.com/bayasdev/envycontrol.git
