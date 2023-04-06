@@ -28,7 +28,7 @@ pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completio
 pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
 
 # Installing GUI programs 
-pacman -S alacritty kitty rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam lxappearance --noconfirm
+pacman -S alacritty kitty bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam lxappearance --noconfirm
 
 # Installing a music player
 pacman -S rhythmbox rhythmbox-plugins --noconfirm
