@@ -35,7 +35,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
+yay -S rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
