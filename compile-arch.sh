@@ -27,7 +27,6 @@ yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland 
 # Themes
 yay -S nordic-theme papirus-icon-theme --noconfirm
 
-
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
 mv Wallpapers ~/Pictures/
