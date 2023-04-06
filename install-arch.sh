@@ -28,7 +28,7 @@ pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completio
 pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
 
 # Installing GUI programs 
-pacman -S alacritty kitty rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam:i386 --noconfirm
+pacman -S alacritty kitty rpi-imager bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam lxappearance --noconfirm
 
 # Installing a music player
 pacman -S rhythmbox rhythmbox-plugins --noconfirm
@@ -36,11 +36,11 @@ pacman -S rhythmbox rhythmbox-plugins --noconfirm
 # Installing media stuff
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
 
-# Installing AwesomeWM Stuff
-pacman -S variety awesome-doc awesome-extra qt5ct qt5-style-plugins xfce4-clipman xterm awesome pcmanfm rofi feh picom i3lock-fancy lxappearance arandr xclip xorg-xbacklight flameshot network-manager-gnome lxpolkit volumeicon-alsa pavucontrol --noconfirm
-
 # Installing Hyprland and Walyand Stuff
-pacman -S grim xfce4-settings slurp polkit-gnome hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
+pacman -S grim slurp polkit-gnome hyprland lxappearance dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
+
+# Theme stuff
+pacman -S xfce4-settings qt5ct qt5-style-plugins
 
 # Installing File Stuff 
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
