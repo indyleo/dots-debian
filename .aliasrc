@@ -85,9 +85,8 @@ alias svim='sudo nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
-alias tconf='nvim $HOME/.config/alacritty/alacritty.yml'
-alias pconf='nvim $HOME/.config/picom/picom.conf'
-alias wconf='nvim $HOME/.config/awesome/rc.lua'
+alias tconf='nvim $HOME/.config/kitty/kitty.conf'
+alias wconf='nvim $HOME/.config/hypr/hyprland.conf'
 alias vconf='nvim $HOME/.config/nvim/init.lua'
 
 # Trash Aliases
