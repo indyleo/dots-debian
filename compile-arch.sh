@@ -10,22 +10,6 @@ pip install pynvim
 # Installing Cliphist (For Walyand)
 go install go.senan.xyz/cliphist@latest
 
-# Rofi PowerMenu
-cd ~/Github
-git clone https://github.com/jluttine/rofi-power-menu.git
-cd rofi-power-menu
-cp rofi-power-menu ~/.local/bin/
-cd ~
-
-# Rofi Settings
-rofi -modi drun,window,run
-
-# Reload X11 Colors
-cd ~/dotfiles
-mv .Xresources ~/.Xresources
-xrdb -load ~/.Xresources
-cd ~
-
 # Installing yay AUR Helper (Needed)
 cd ~/Github
 git clone https://aur.archlinux.org/yay-bin.git
@@ -36,6 +20,13 @@ cd ~
 # AUR Installing Some Programs
 yay -Syu --noconfirm
 yay -S rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
+
+# Hyprland Stuff
+yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland --noconfirm
+
+# Themes
+yay -S nordic-theme papirus-icon-theme --noconfirm
+
 
 # Moving And Deletig And Adding Files
 cd ~/dotfiles

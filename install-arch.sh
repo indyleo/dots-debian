@@ -28,7 +28,7 @@ pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completio
 pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
 
 # Installing GUI programs 
-pacman -S alacritty kitty bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam lxappearance --noconfirm
+pacman -S alacritty kitty bleachbit sxiv timeshift mesa-utils transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
 
 # Installing a music player
 pacman -S rhythmbox rhythmbox-plugins --noconfirm
@@ -37,16 +37,13 @@ pacman -S rhythmbox rhythmbox-plugins --noconfirm
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
 
 # Installing Hyprland and Walyand Stuff
-pacman -S grim slurp polkit-gnome hyprland lxappearance dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock hyprpaper wofi network-manager-applet clipman --noconfirm
+pacman -S grim wofi slurp polkit-gnome hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock network-manager-applet clipman --noconfirm
 
 # Theme stuff
-pacman -S xfce4-settings qt5ct qt5-style-plugins
+pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
 
 # Installing File Stuff 
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
-
-# Rofi-Calc Script Depeninces
-pacman -S rofi-dev qalc libtool --noconfirm
 
 # Installing Browsers
 pacman -S firefox qutebrowser libjs-pdf --noconfirm
