@@ -19,7 +19,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
+yay -S wlr-randr rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
 
 # Hyprland Stuff
 yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland --noconfirm
@@ -30,7 +30,7 @@ yay -S nordic-theme papirus-icon-theme --noconfirm
 # Moving And Deletig And Adding Files
 cd ~/dotfiles
 mv Wallpapers ~/Pictures/
-mv alacritty kitty neofetch nvim qutebrowser ranger starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv kitty neofetch nvim qutebrowser ranger starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc ~/
 
