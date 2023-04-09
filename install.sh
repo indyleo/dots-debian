@@ -31,7 +31,7 @@ pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completio
 pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
 
 # Installing GUI programs 
-pacman -S kitty bleachbit sxiv timeshift transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
+pacman -S kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
 
 # Installing a music player
 pacman -S rhythmbox rhythmbox-plugins --noconfirm
@@ -39,20 +39,23 @@ pacman -S rhythmbox rhythmbox-plugins --noconfirm
 # Installing media stuff
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
 
-# Installing Hyprland and Walyand Stuff
-pacman -S grim wofi slurp polkit-gnome hyprland dunst qt5-wayland pamixer brightnessctl qt6-wayland swaybg swaylock network-manager-applet clipman --noconfirm
+# Installing Hyprland and Walyand stuff
+pacman -S xorg-xwayland grim wofi slurp polkit-gnome hyprland dunst qt5-wayland pamixer qt6-wayland swaybg swaylock network-manager-applet clipman --noconfirm
+
+# Installing image viewer
+pacman -S viewnior --noconfirm
 
 # Theme stuff
 pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
 
-# Installing File Stuff 
+# Installing file stuff 
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
 
-# Installing Browsers
-pacman -S firefox qutebrowser libjs-pdf --noconfirm
+# Installing browser
+pacman -S firefox --noconfirm
 
-# Installing Drivers
-pacman -S nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
+# Installing drivers
+pacman -S linux-headers nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
