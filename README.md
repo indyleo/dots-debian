@@ -3,7 +3,7 @@
 Distro I Use Is Arch Linux With Hyprland
 
 # Disclamer 
-I Distro hop a ton and I Switch To Gentoo/Redcore or Void Linux
+I Distro Hop A Ton And I May Switch To Gentoo/Redcore or Void Linux
 
 # Qt And GTK Themes
 ```
