@@ -55,7 +55,10 @@ pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
 pacman -S firefox --noconfirm
 
 # Installing drivers
-pacman -S linux-headers nvidia-settings mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
+pacman -S libva linux-headers ×f86-video-amdgpu mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
+
+# Installing nvidia stuff
+pacman -S nvidia-settings nvidia-dkms nvidia-utils --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
