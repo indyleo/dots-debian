@@ -2,6 +2,9 @@
 
 Distro I Use Is Arch Linux With Hyprland
 
+# Disclamer 
+I Distro hop a ton and I Switch To Gentoo/Redcore or Void Linux
+
 # Qt And GTK Themes
 ```
 QT_QPA_PLATFORMTHEME=qt5ct 
