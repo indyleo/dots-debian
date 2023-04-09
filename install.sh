@@ -15,11 +15,14 @@ pacman -S blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starsh
 # Installing other pkg managers
 pacman -S cargo python3-pip npm flatpak pacman-contrib --noconfirm
 
-# Installing Fun Stuff
+# Installing fun stuff
 pacman -S neofetch cmatrix --noconfirm
 
-# Resoureces Monitors
+# Resoureces monitors
 pacman -S btop htop bashtop --noconfirm
+
+# XDG portals
+pacman -S xdg-user-dirs xdg-user-dirs-gtk --noconfirm
 
 # Installing zsh
 pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
