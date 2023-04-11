@@ -1,8 +1,9 @@
 # Changing ls To lsd
-alias ls='lsd -AlFh --group-directories-first --color auto' # My Favourite
+alias ls='lsd --group-directories-first --color auto' # My Favourite
 alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
 alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
-alias l.='lsd -A | egrep "^\."' # Show Only Hidden Files
+alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
+alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -113,6 +114,7 @@ alias lg='lazygit'
 # Shell Aliases
 alias srcz='source ~/.zshrc'
 alias srcb='source ~/.bashrc'
+alias srca='source ~/.aliasrc'
 alias rebash='reset && bash'
 alias rezsh='reset && zsh'
 alias rs='reset'
