@@ -120,16 +120,23 @@ alias cl='clear'
 
 # Making PACMAN & YAY Better
 alias pac='pacman'
-alias spac='doas pacman'
-alias Syup='doas pacman -Syu'
-alias Syuy='yay -Syu'
-alias Sp='doas pacman -S'
-alias Syy='yay -S'
-alias Ssp='pacman -Ss'
-alias Ssy='yay -Ss'
+alias spac='doas -- pacman'
+alias psyu='doas -- pacman -Syu'
+alias pS='doas -- pacman -S'
+alias psy='doas -- pacman -Sy'
+alias pss='pacman -Ss'
+alias ysyu='yay -Syu'
+alias ysyyu='yay -Syyu'
+alias ysua='yay -Sua'
+alias ysy='yay -Sy'
+alias yss='yay -Ss'
+alias ys='yay -S'
+alias unlock='doas -- rm /var/lib/pacman/db.lck'
+alias cleanup='doas -- pacman -Rns $(pacman -Qtdq)'
 alias pacsk='pacseek'
 
-
-
-
-
+# Get Fastest Mirrors
+alias mirror="doas -- reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="doas -- reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="doas -- reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="doas -- reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
