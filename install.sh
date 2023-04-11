@@ -65,6 +65,7 @@ pacman -S nvidia-settings nvidia-dkms nvidia-utils --noconfirm
 
 # Script Variables
 username=$(id -u -n 1000)
+builddir=$(pwd)
 
 # Installing fonts 
 pacman -S noto-fonts-extra noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-ubuntu-font-family ttf-font-awesome awesome-terminal-fonts adobe-source-code-pro-fonts adobe-source-sans-fonts --noconfirm
