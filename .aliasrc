@@ -120,13 +120,14 @@ alias cl='clear'
 
 # Making PACMAN & YAY Better
 alias pac='pacman'
-alias spac='sudo pacman'
-alias Syup='sudo pacman -Syu'
+alias spac='doas pacman'
+alias Syup='doas pacman -Syu'
 alias Syuy='yay -Syu'
-alias Sp='sudo pacman -S'
+alias Sp='doas pacman -S'
 alias Syy='yay -S'
 alias Ssp='pacman -Ss'
 alias Ssy='yay -Ss'
+alias pacsk='pacseek'
 
 
 
