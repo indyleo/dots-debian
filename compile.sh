@@ -4,7 +4,7 @@
 builddir=$(pwd)
 
 # Making directories & files 
-mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.cache/vim/undodir ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
+mkdir -p ~/Github ~/Img ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
 # Pynvim
@@ -33,7 +33,7 @@ yay -S nordic-theme papirus-icon-theme nordzy-cursors --noconfirm
 # Moving And Deletig And Adding Files
 cd $builddir
 mv Wallpapers ~/Pictures/
-mv kitty neofetch nvim qutebrowser ranger starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv kitty neofetch nvim ranger starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc ~/
 
