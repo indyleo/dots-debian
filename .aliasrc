@@ -32,6 +32,7 @@ alias wq='exit'
 alias rn='ranger'
 alias src='source'
 alias df='df -h'
+alias doas='doas --'
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
