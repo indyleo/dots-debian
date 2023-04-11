@@ -53,12 +53,6 @@ alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 # The Terminal Rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
-# Load Xresources
-alias load='xrdb -load ~/.Xresources'
-
-# Merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
-
 # Easier Navigation
 up () {
   local d=""
