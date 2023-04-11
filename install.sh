@@ -78,6 +78,9 @@ unzip SourceCodePro.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 
+# Moving doas.conf
+mv ./doas.conf /etc/doas.conf
+
 # Reloading cache
 fc-cache -vf
 # Removing zip files
