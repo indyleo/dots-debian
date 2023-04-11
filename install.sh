@@ -12,6 +12,9 @@ pacman -Syu
 # Installing CLI programs
 pacman -S blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd autojump yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
 
+# Installing doas
+pacman -S doas --noconfirm
+
 # Installing other pkg managers
 pacman -S cargo python3-pip npm flatpak pacman-contrib --noconfirm
 
