@@ -42,11 +42,17 @@ pacman -S rhythmbox rhythmbox-plugins --noconfirm
 # Installing media stuff
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
 
-# Installing Hyprland and Walyand stuff
-pacman -S xorg-xwayland grim wofi slurp polkit-gnome hyprland dunst qt5-wayland pamixer qt6-wayland swaybg swaylock network-manager-applet clipman --noconfirm
+# Installing walyand stuff
+pacman -S xorg-xwayland grim wofi slurp polkit-gnome dunst qt5-wayland pamixer qt6-wayland network-manager-applet clipman --noconfirm
+
+# Installing hyprland
+pacman -S hyprpaper hyprland swaylock swaybg --noconfirm
+
+# Installing audio stuff
+pacman -S wireplumber pipewire slurp --noconfirm
 
 # Installing image viewer
-pacman -S viewnior --noconfirm
+pacman -S viewnior swayimg --noconfirm
 
 # Theme stuff
 pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
