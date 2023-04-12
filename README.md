@@ -1,11 +1,11 @@
 # My Dotfiles
 
-Distro I Use Is Arch Linux With Hyprland
+Distro I Use Is Arch Linux With Hyprland And AwesomWM
 
 # Disclamer 
 I Distro Hop A Ton And I May Switch To Gentoo/Redcore or Void Linux
 
-# Preview (For Awesome): (https://user-images.githubusercontent.com/100316787/225743983-6698f8d1-9d04-40cc-9ee0-f5a69ee4510e.png
+# Preview (For Awesome): 
 
 # Awesome loading ~/.xsession
 In /usr/share/xsessions/awesome.desktop change the exec line to
