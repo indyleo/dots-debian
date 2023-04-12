@@ -33,7 +33,7 @@ yay -S nordic-theme papirus-icon-theme nordzy-cursors --noconfirm
 # Moving And Deletig And Adding Files
 cd $builddir
 mv Wallpapers ~/Pictures/
-mv kitty neofetch nvim ranger starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv kitty neofetch nvim ranger picom awesome conky starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc ~/
 
