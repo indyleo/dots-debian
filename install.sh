@@ -52,13 +52,16 @@ pacman -S hyprpaper hyprland swaylock swaybg --noconfirm
 pacman -S wireplumber pipewire slurp --noconfirm
 
 # Installing image viewer
-pacman -S viewnior swayimg --noconfirm
+pacman -S viewnior swayimg sxiv --noconfirm
 
 # Theme stuff
 pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
 
 # Installing file stuff 
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
+
+# Installing Awesome WM
+pacman -S awesome feh picom flameshot lxsession arandr xfce4-clipman xterm rofi i3lock-fancy xclip xbacklight volumeicon-alsa --noconfirm
 
 # Installing browser
 pacman -S firefox --noconfirm
