@@ -82,14 +82,10 @@ builddir=$(pwd)
 # Installing fonts 
 pacman -S noto-fonts-extra noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-ubuntu-font-family ttf-font-awesome awesome-terminal-fonts adobe-source-code-pro-fonts adobe-source-sans-fonts --noconfirm
 mkdir -p /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
-unzip Meslo.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
-unzip SourceCodePro.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
-chown $username:$username /home/$username/.fonts/*
+
+# Installing nerd fonts
+pacman -S otf-firamono-nerd ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-meslo-nerd ttf-sourcecodepro-nerd ttf-firacode-nerd ttf-nerd-fonts-symbols-common --noconfirm
 
 # Moving doas.conf
 mv ./doas.conf /etc/doas.conf
