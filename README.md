@@ -28,4 +28,4 @@ Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
 # Resources (Websites)
 - [Hyprland](https://wiki.hyprland.org/) My Choice Of A Wayland Window Manager And Compositer
-- [AwesomeWM](https://awesomewm.org/)
+- [AwesomeWM](https://awesomewm.org/) My Choice Of X11 Window Manager And Picom As My Compositer
