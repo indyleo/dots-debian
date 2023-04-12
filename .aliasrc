@@ -34,6 +34,7 @@ alias rn='ranger'
 alias src='source'
 alias df='df -h'
 alias doas='doas --'
+alias wal='xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png'
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
