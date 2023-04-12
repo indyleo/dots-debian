@@ -57,6 +57,12 @@ alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 # The Terminal Rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
+# Load Xresources
+alias load='xrdb -load ~/.Xresources'
+
+# Merge Xresources
+alias merge='xrdb -merge ~/.Xresources'
+
 # Easier Navigation
 up () {
   local d=""
@@ -84,7 +90,8 @@ alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
 alias tconf='nvim $HOME/.config/kitty/kitty.conf'
-alias wconf='nvim $HOME/.config/hypr/hyprland.conf'
+alias hyconf='nvim $HOME/.config/hypr/hyprland.conf'
+alias awconf='nvim $HOME/.config/awesome/rc.lua'
 alias vconf='nvim $HOME/.config/nvim/init.lua'
 
 # Trash Aliases
