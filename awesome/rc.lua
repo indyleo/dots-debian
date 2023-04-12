@@ -69,7 +69,7 @@ local window_switch = "rofi -show window"
 local guifile= "thunar"
 local tuifile= terminal .. " -e ranger"
 local lock = "i3lock-fancy -g"
-local powermenu = "rofi -show p -modi p:rofi-power-menu \
+local powermenu = "rofi -show power-menu -modi power-menu:rofi-power-menu \
   -theme 'nord' \
   -font 'FiraCode Nerd Font 16'"
 local editor_cmd = terminal .. " -e " .. editor
