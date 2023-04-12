@@ -61,10 +61,10 @@ pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
 pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
 
 # Installing Awesome WM
-pacman -S conky awesome xwallpaper picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa --noconfirm
+pacman -S conky awesome picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa --noconfirm
 
 # Installing X11 stuff
-pacman -S arandr xterm xclip xbacklight --noconfirm
+pacman -S arandr xterm xclip xbacklight xwallpaper feh variety nitrogen --noconfirm
 
 # Installing browser
 pacman -S firefox --noconfirm
