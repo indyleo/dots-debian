@@ -41,7 +41,7 @@ cd $builddir
 mv Wallpapers ~/Pictures/
 mv kitty neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
-mv .bashrc .zshrc .aliasrc .xsessions ~/
+mv .bashrc .zshrc .aliasrc .xsession ~/
 
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
