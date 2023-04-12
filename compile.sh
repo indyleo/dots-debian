@@ -38,7 +38,7 @@ cd ~
 
 # Moving And Deletig And Adding Files
 cd $builddir
-mv Wallpapers ~/Pictures/
+git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/
 mv kitty neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc .xsession ~/
