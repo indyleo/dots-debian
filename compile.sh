@@ -30,12 +30,18 @@ yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland 
 # Themes
 yay -S nordic-theme papirus-icon-theme nordzy-cursors --noconfirm
 
+# Reload X11 Colors
+cd $builddir
+mv .Xresources ~/.Xresources
+xrdb -load ~/.Xresources
+cd ~
+
 # Moving And Deletig And Adding Files
 cd $builddir
 mv Wallpapers ~/Pictures/
-mv kitty neofetch nvim ranger picom awesome conky alacritty starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv kitty neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
-mv .bashrc .zshrc .aliasrc ~/
+mv .bashrc .zshrc .aliasrc .xsessions ~/
 
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
