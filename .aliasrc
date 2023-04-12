@@ -37,7 +37,7 @@ alias doas='doas --'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Wallpaper Aliases
-alias wal='xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png'
+alias xwal='xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png'
 alias fwal='~/.fehbg'
 alias fehw='feh --randomize --bg-fill ~/Pictures/Wallpapers/'
 alias nitr='nitrogen --restore'
