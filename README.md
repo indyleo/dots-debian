@@ -27,5 +27,5 @@ https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
 # Resources (Websites)
-[Hyprland](https://wiki.hyprland.org/)
+[Hyprland](https://wiki.hyprland.org/) My Choice Of A Wayland Window Manager And Compositer
 [AwesomeWM](https://awesomewm.org/)
