@@ -1,5 +1,5 @@
 # Changing ls To lsd
-alias ls='lsd --group-directories-first --color auto' # My Favourite
+alias ls='lsd --group-directories-first --color auto' # Basic Lsd But with Some Nice Flags
 alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
 alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
 alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
