@@ -108,6 +108,7 @@ ufw allow 443/tcp
 ufw default deny incoming
 ufw default allow outgoing
 ufw enable
+systemctl enable ufw
 
 # Installing SDDM & Theme
 pacman -S sddm
