@@ -27,8 +27,8 @@ pacman -S btop htop bashtop --noconfirm
 # XDG portals
 pacman -S xdg-user-dirs xdg-user-dirs-gtk --noconfirm
 
-# Installing zsh
-pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions --noconfirm
+# Installing shell stuff
+pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions bash-completion --noconfirm
 
 # Installing java 
 pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
