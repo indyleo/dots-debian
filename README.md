@@ -20,9 +20,9 @@ QT_QPA_PLATFORMTHEME=qt5ct
 Put this into your '/etc/environment' file
 
 # Resources (Dotfiles)
-- [Titus-Hyprland]https://github.com/ChrisTitusTech/hyprland-titus
-- [Titus-Awesome]https://github.com/ChrisTitusTech/titus-awesome
-- [DTW1-Awesome]https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome
+- [Titus-Hyprland](https://github.com/ChrisTitusTech/hyprland-titus)
+- [Titus-Awesome](https://github.com/ChrisTitusTech/titus-awesome)
+- [DTW1-Awesome](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome)
 
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
