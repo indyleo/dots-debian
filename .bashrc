@@ -41,7 +41,6 @@ if [ -z "$XDG_CACHE_HOME" ] ; then
     export XDG_CACHE_HOME="$HOME/.cache"
 fi
 
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
