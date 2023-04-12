@@ -13,8 +13,11 @@ Put this into your '/etc/environment' file
 
 # Resources (Dotfiles)
 https://github.com/ChrisTitusTech/hyprland-titus
+https://github.com/ChrisTitusTech/titus-awesome
+https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome
 
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
 # Resources (Websites)
 https://wiki.hyprland.org/
+https://awesomewm.org/
