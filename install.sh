@@ -61,7 +61,7 @@ pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
 pacman -S conky awesome picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa --noconfirm
 
 # Installing X11 stuff
-pacman -S arandr xterm xclip xbacklight xwallpaper feh variety nitrogen --noconfirm
+pacman -S arandr xterm xclip xbacklight xwallpaper feh nitrogen --noconfirm
 
 # Installing browser
 pacman -S firefox --noconfirm
