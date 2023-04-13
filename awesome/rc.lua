@@ -448,8 +448,6 @@ clientkeys = gears.table.join(
     {description = "Go To Previous Song", group = "Music"}),
     awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("rhythmbox-client --play-pause") end,
     {description = "Start/Stop Music", group = "Music"}),
-    -- awful.key({ }, "XF86AudioStop", function () awful.util.spawn("rhythmbox-client --play-pause") end,
-    -- {description = "Start/Stop Music", group = "Music"}),
 
     -- Screenshot Keys
     awful.key({  }, "Print", function ()
@@ -618,8 +616,8 @@ awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png")
--- awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
+-- awful.spawn.with_shell("xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png")
+awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
 -- awful.spawn.with_shell("~/.fehbg")
 -- awful.spawn.with_shell("nitrogen --random ~/Pictures/Wallpapers/")
 -- awful.spawn.with_shell("nitrogen --restore")
