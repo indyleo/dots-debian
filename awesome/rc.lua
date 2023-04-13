@@ -59,7 +59,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/them
 local modkey      = "Mod4"
 local altkey      = "Mod1"
 local ctrlkey     = "Control"
-local terminal    = "kitty"
+local terminal    = "alacrrity"
 local browser     = "firefox"
 local editor      = os.getenv("EDITOR") or "vim"
 local mediaplayer = "vlc"
