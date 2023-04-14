@@ -87,6 +87,16 @@ up () {
   fi
 }
 
+# Audio Aliases
+alias playwav='deadbeef *.wav'
+alias playogg='deadbeef *.ogg'
+alias playmp3='deadbeef *.mp3'
+
+# Video Aliases
+alias playavi='vlc *.avi'
+alias playmov='vlc *.mov'
+alias playmp4='vlc *.mp4'
+
 # Neovim Aliases
 alias vim='nvim'
 alias svim='sudo nvim'
