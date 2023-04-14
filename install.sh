@@ -34,7 +34,7 @@ pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jd
 pacman -S kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
 
 # Installing a music player
-pacman -S rhythmbox rhythmbox-plugins --noconfirm
+pacman -S rhythmbox --noconfirm
 
 # Installing media stuff
 pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
