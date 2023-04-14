@@ -88,9 +88,9 @@ up () {
 }
 
 # Audio Aliases
-alias playwav='deadbeef *.wav'
-alias playogg='deadbeef *.ogg'
-alias playmp3='deadbeef *.mp3'
+alias playwav='rythmbox *.wav'
+alias playogg='rythmbox *.ogg'
+alias playmp3='rythmbox *.mp3'
 
 # Video Aliases
 alias playavi='vlc *.avi'
