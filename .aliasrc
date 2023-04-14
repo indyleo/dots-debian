@@ -58,9 +58,6 @@ alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
-# Bare Git Repo Alias For Dotfiles
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-
 # The Terminal Rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
@@ -127,6 +124,9 @@ alias stat='git status'
 alias tag='git tag'
 alias newtag='git tag -a'
 alias lg='lazygit'
+
+# Bare Git Repo Alias For Dotfiles
+alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
 # Shell Aliases
 alias srcz='source ~/.zshrc'
