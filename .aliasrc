@@ -147,10 +147,10 @@ alias 777='chmod -R 777'
 
 # Making PACMAN & YAY Better
 alias pac='pacman'
-alias spac='sudo -- pacman'
-alias psyu='sudo -- pacman -Syu'
-alias pS='sudo -- pacman -S'
-alias psy='sudo -- pacman -Sy'
+alias spac='sudo pacman'
+alias psyu='sudo pacman -Syu'
+alias pS='sudo pacman -S'
+alias psy='sudo pacman -Sy'
 alias pss='pacman -Ss'
 alias ysyu='yay -Syu'
 alias ysyyu='yay -Syyu'
@@ -158,12 +158,12 @@ alias ysua='yay -Sua'
 alias ysy='yay -Sy'
 alias yss='yay -Ss'
 alias ys='yay -S'
-alias unlock='sudo -- rm /var/lib/pacman/db.lck'
-alias cleanup='sudo -- pacman -Rns $(pacman -Qtdq)'
+alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacsk='pacseek'
 
 # Get Fastest Mirrors
-alias mirror="sudo -- reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo -- reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo -- reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo -- reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
