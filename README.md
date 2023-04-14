@@ -23,7 +23,7 @@ Put this into your '/etc/environment' file
 # Resources (Dotfiles)
 - [Titus-Hyprland](https://github.com/ChrisTitusTech/hyprland-titus) Hosted On Github
 - [Titus-Awesome](https://github.com/ChrisTitusTech/titus-awesome) Hosted On Github
-- [DTW1-Awesome](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome) Hosted On Gitlab
+- [DWT1-Awesome](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome) Hosted On Gitlab
 
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
