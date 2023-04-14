@@ -21,10 +21,11 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
-# Confirm Before Doing Something And The Output Being Verbose
+# Confirm Before Doing Something Or The Output Being Verbose Or Both
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias ln='ln -i'
 alias rmdir='rmdir -v'
 alias mkdir='mkdir -pv'
 
