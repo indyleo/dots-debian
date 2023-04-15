@@ -14,6 +14,9 @@ mv dnf.conf /etc/dnf/dnf.conf
 dnf update -y
 dnf upgrade -y
 
+# Making Sure Chache Is Gone
+dnf clean all
+
 # Installing CLI programs
 dnf install perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 yad fzf locate gh tree xsel base-devel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git build-essential -y
 
