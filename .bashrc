@@ -25,7 +25,7 @@ if [ -d "$HOME/.local/share/bob/nvim-bin" ] ;
   then PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 fi
 
-# Othor Exports
+# Other Exports
 export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="moar"
