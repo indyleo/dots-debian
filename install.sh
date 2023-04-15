@@ -57,7 +57,7 @@ dnf install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 dnf install sxiv -y
 
 # Theme stuff
-dnf install xfce4-settings qt5ct qt5-style-plugins lxappearance -y
+dnf install xfce4-settings qt5ct lxappearance -y
 
 # Installing file stuff 
 dnf install gvfs thunar-archive-plugin thunar file-roller -y
