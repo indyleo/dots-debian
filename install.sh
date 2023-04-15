@@ -129,3 +129,6 @@ mv nerdfetch /usr/bin/nerdfetch
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
+
+# Screen Tearing Fix
+nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
