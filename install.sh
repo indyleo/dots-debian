@@ -33,6 +33,9 @@ pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jd
 # Installing GUI programs 
 pacman -S kitty alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
 
+# Installing libreoffice
+pacman -S libreoffice-fresh --noconfirm
+
 # Installing a music player
 pacman -S rhythmbox --noconfirm
 
