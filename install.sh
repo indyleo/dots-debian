@@ -18,7 +18,7 @@ dnf upgrade -y
 dnf clean all
 
 # Installing CLI programs
-dnf install perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 yad fzf locate gh tree xsel base-devel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git build-essential -y
+dnf install blueman bluez-utils yad fzf locate gh tree xsel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-pytest-venv git -y
 
 # Nvim Stuff
 dnf install ripgrep fd-find -y
