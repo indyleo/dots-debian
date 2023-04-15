@@ -63,7 +63,7 @@ dnf install xfce4-settings qt5ct lxappearance -y
 dnf install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome WM
-dnf install conky awesome picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
+dnf install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
 # Installing X11 stuff
 dnf install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
