@@ -21,7 +21,7 @@ dnf clean all
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Installing CLI programs
-dnf install blueman bluez-utils yad fzf locate gh tree xsel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-pytest-venv git -y
+dnf install lsd blueman bluez-utils yad fzf locate gh tree xsel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-pytest-venv git -y
 
 # Nvim Stuff
 dnf install ripgrep fd-find -y
