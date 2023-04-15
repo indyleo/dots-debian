@@ -17,6 +17,9 @@ dnf upgrade -y
 # Making Sure Chache Is Gone
 dnf clean all
 
+# Installing Rmpfusion repos
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # Installing CLI programs
 dnf install blueman bluez-utils yad fzf locate gh tree xsel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-pytest-venv git -y
 
@@ -30,7 +33,7 @@ dnf install cargo python-pip npm flatpak go -y
 dnf install neofetch cmatrix tty-clock -y
 
 # Resoureces monitors
-dnf install btop htop bashtop -y
+dnf install btop htop -y
 
 # XDG portals
 dnf install xdg-user-dirs xdg-user-dirs-gtk -y
