@@ -22,7 +22,7 @@ cd ~
 
 # AUR Installing Some Programs
 yay -Syu --noconfirm
-yay -S xdg-ninja rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
+yay -S xdg-ninja rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin pfetch nerdfetch autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
 
 # Hyprland Stuff
 yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland wlr-randr --noconfirm
