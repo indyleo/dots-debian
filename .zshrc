@@ -194,3 +194,4 @@ eval "$(starship init zsh)"
 source /usr/share/zsh/plugin/ 2>/dev/null
 source /usr/share/zsh/plugin/ 2>/dev/null
 source /usr/share/zsh/plugin/ 2>/dev/null
+source ~/Zsh/Plugins/zsh-autopair/autopair.zsh 2>/dev/null
