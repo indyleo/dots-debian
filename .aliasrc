@@ -103,7 +103,6 @@ alias svim='sudo nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
-alias ktconf='nvim $HOME/.config/kitty/kitty.conf'
 alias atconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias piconf='nvim $HOME/.config/picom/picom.conf'
 alias wconf='nvim $HOME/.config/awesome/rc.lua'
@@ -155,25 +154,9 @@ alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
-# Making PACMAN & YAY Better
-alias pac='pacman'
-alias spac='sudo pacman'
-alias psyu='sudo pacman -Syu'
-alias pS='sudo pacman -S'
-alias psy='sudo pacman -Sy'
-alias pss='pacman -Ss'
-alias ysyu='yay -Syu'
-alias ysyyu='yay -Syyu'
-alias ysua='yay -Sua'
-alias ysy='yay -Sy'
-alias yss='yay -Ss'
-alias ys='yay -S'
-alias unlock='sudo rm /var/lib/pacman/db.lck'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-alias pacsk='pacseek'
-
-# Get Fastest Mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+# Making DNF Better
+alias dnfin='sudo dnf install'
+alias dnfup='sudo dnf update && sudo dnf upgrade'
+alias dnfud='sudo dnf update'
+alias dnfug='sudo dnf upgrade'
+alias dnfrm='sudo dnf remove'
