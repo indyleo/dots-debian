@@ -41,8 +41,6 @@ pip install pynvim
 # Installing go stuff
 go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
-  moar 
-
 # Reload X11 Colors
 cd $builddir
 mv .Xresources ~/.Xresources
