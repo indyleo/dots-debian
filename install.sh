@@ -6,6 +6,10 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+# Changing Out Dnf.conf
+mv /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
+mv dnf.conf /etc/dnf/dnf.conf
+
 # Update packages list and update system
 dnf update -y
 dnf upgrade -y
