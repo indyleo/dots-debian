@@ -7,28 +7,41 @@ builddir=$(pwd)
 mkdir -p ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
+# Headsetcontrol
+cd ~/Github
+git clone https://github.com/Sapd/HeadsetControl
+cd HeadsetControl
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+cd ~
+
+# Enveycontrol
+cd ~/Github
+git clone https://github.com/bayasdev/envycontrol.git
+cd envycontrol
+sudo pip install .
+cd ~
+
+# Shell Color Scripts
+cd ~/Github
+git clone https://gitlab.com/dwt1/shell-color-scripts.git
+cd shell-color-scripts
+sudo make install
+sudo cp completions/_colorscript /usr/share/zsh/site-functions
+cd ~
+
 # Pynvim
 pip install pynvim
 
-# Installing Cliphist
-go install go.senan.xyz/cliphist@latest
+# Installing go stuff
+go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
-# Installing yay AUR Helper
-cd ~/Github
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-cd ~
-
-# AUR Installing Some Programs
-yay -Syu --noconfirm
-yay -S xdg-ninja rpi-imager-bin tty-clock zsh-you-should-use moar gotop-bin pfetch nerdfetch autojump envycontrol headsetcontrol shell-color-scripts pacseek vscodium-bin --noconfirm
-
-# Hyprland Stuff
-yay -S xdg-desktop-portal-hyprland-git wlogout swaylock-effects waybar-hyprland wlr-randr --noconfirm
-
-# Themes
-yay -S nordic-theme papirus-icon-theme nordzy-cursors --noconfirm
+  moar 
 
 # Reload X11 Colors
 cd $builddir
@@ -39,14 +52,42 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv kitty neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc .xsession ~/
 
 # Zsh Autopairs
 cd ~/Zsh/Plugins
 git clone https://github.com/hlissner/zsh-autopair.git
-cd $builddir
+cd ~ 
+
+# Zsh You Should Use
+cd ~/Zsh/Plugins
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
+cd ~ 
+
+# Zsh Completions
+cd ~/Zsh/Plugins
+git clone https://github.com/zsh-users/zsh-completions.git
+cd ~
+
+# Zsh History Substring Search
+cd ~/Zsh/Plugins
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
+cd ~
+
+# Nordzy Cursors
+cd ~/Github
+git clone https://github.com/alvatip/Nordzy-cursors.git
+cd Nordzy-cursors
+./install.sh
+
+# Papirus Icon Theme
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+
+# Nordic Theme
+cd ~/.themes
+git clone https://github.com/EliverLara/Nordic.git
 
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
