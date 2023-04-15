@@ -110,13 +110,3 @@ mv /home/$username/dotfiles/sddm.conf /etc/sddm.conf
 
 # Neovim Stuff
 npm i -g neovim tree-sitter-cli
-
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-chmod a+x pfetch
-mv pfetch /usr/bin/pfetch
-
-# Nerd Fetch
-wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod a+x nerdfetch
-mv nerdfetch /usr/bin/nerdfetch
