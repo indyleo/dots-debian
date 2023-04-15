@@ -43,6 +43,11 @@ mv kitty neofetch nvim ranger picom awesome conky alacritty rofi starship.toml m
 rm ~/.bashrc
 mv .bashrc .zshrc .aliasrc .xsession ~/
 
+# Zsh Autopairs
+cd ~/Zsh/Plugins
+git clone https://github.com/hlissner/zsh-autopair.git
+cd $builddir
+
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
 chmod a+x setup.sh
