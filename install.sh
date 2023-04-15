@@ -7,91 +7,86 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Update packages list and update system
-pacman -Syu
+dnf update -y
+dnf upgrade -y
 
 # Installing CLI programs
-pacman -S perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python xdotool unzip tar python-setuptools ripgrep fd-find luarocks ranger shellcheck python-venv git build-essential --noconfirm
+dnf install perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd yad fzf locate gh tree xsel base-devel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git build-essential -y
+
+# Nvim Stuff
+dnf install ripgrep fd-find -y
 
 # Installing other pkg managers
-pacman -S cargo python-pip npm flatpak pacman-contrib go --noconfirm
+dnf install cargo python-pip npm flatpak go -y
 
 # Installing fun stuff
-pacman -S neofetch cmatrix --noconfirm
+dnf install neofetch cmatrix tty-clock -y
 
 # Resoureces monitors
-pacman -S btop htop bashtop --noconfirm
+dnf install btop htop bashtop -y
 
 # XDG portals
-pacman -S xdg-user-dirs xdg-user-dirs-gtk --noconfirm
+dnf install xdg-user-dirs xdg-user-dirs-gtk -y
 
 # Installing shell stuff
-pacman -S zsh zsh-syntax-highlighting zsh-history-substring-search zsh-completions bash-completion --noconfirm
+dnf install zsh zsh-syntax-highlighting bash-completion -y
 
 # Installing java 
-pacman -S jre11-openjdk jre17-openjdk jre8-openjdk jdk11-openjdk jdk8-openjdk jdk17-openjdk --noconfirm
+dnf install java-11-openjdk java-17-openjdk java-1.8.0-openjdk -y
 
 # Installing GUI programs 
-pacman -S kitty alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam --noconfirm
-
-# Installing libreoffice
-pacman -S libreoffice-fresh --noconfirm
+dnf install rpi-imager glava alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam -y
 
 # Installing a music player
-pacman -S rhythmbox --noconfirm
+dnf install rhythmbox -y
 
 # Installing media stuff
-pacman -S yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc --noconfirm
-
-# Installing walyand stuff
-pacman -S xorg-xwayland grim wofi slurp polkit-gnome dunst qt5-wayland pamixer qt6-wayland network-manager-applet clipman --noconfirm
-
-# Installing hyprland
-pacman -S hyprpaper hyprland swaylock swaybg --noconfirm
-
-# Installing audio stuff
-pacman -S wireplumber pipewire slurp --noconfirm
+dnf install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing image viewer
-pacman -S viewnior swayimg sxiv --noconfirm
+dnf install sxiv -y
 
 # Theme stuff
-pacman -S xfce4-settings qt5ct qt5-style-plugins lxappearance --noconfirm
+dnf install xfce4-settings qt5ct qt5-style-plugins lxappearance -y
 
 # Installing file stuff 
-pacman -S gvfs thunar-archive-plugin thunar file-roller --noconfirm
+dnf install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome WM
-pacman -S conky awesome picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa --noconfirm
+dnf install conky awesome picom flameshot lxsession xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
 # Installing X11 stuff
-pacman -S arandr xterm xclip xbacklight xwallpaper feh nitrogen --noconfirm
-
-# Installing browser
-pacman -S firefox --noconfirm
-
-# Installing drivers
-pacman -S libva linux-headers ×f86-video-amdgpu mesa-utils mesa lib32-mesa glu lib32-glu mesa-vdpau opencl-mesa vulkan-intel intel-ucode vulkan-mesa-layers vulkan-virtio --noconfirm
+dnf install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
 
 # Installing nvidia stuff
-pacman -S nvidia-settings nvidia-dkms nvidia-utils --noconfirm
+dnf install nvidia-settings nvidia-dkms nvidia-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Installing fonts 
-pacman -S noto-fonts-extra noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-ubuntu-font-family ttf-font-awesome awesome-terminal-fonts adobe-source-code-pro-fonts adobe-source-sans-fonts --noconfirm
+dnf install fontawesome-fonts-web fontawesome-fonts -y
 mkdir -p /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
+unzip FiraCode.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
+unzip Meslo.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
+unzip Ubuntu.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
+unzip SourceCodePro.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
-
-# Installing nerd fonts
-pacman -S otf-firamono-nerd ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-meslo-nerd ttf-sourcecodepro-nerd ttf-firacode-nerd ttf-nerd-fonts-symbols-common --noconfirm
+chown $username:$username /home/$username/.fonts/*
 
 # Reloading cache
 fc-cache -vf
 
+# Removing zip files
+rm ./FiraCode.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip
+
 # Setting up ufw 
-pacman -S ufw --noconfirm
+dnf install ufw -y
 sleep 2.5
 ufw limit 22/tcp
 ufw allow 80/tcp
@@ -102,11 +97,25 @@ ufw enable
 systemctl enable ufw
 
 # Installing SDDM & Theme
-pacman -S sddm --noconfirm
+dnf install sddm -y
 systemctl set-default graphical.target
+systemctl disabble gdm.service
 systemctl enable sddm.service
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv /home/$username/dotfiles/sddm.conf /etc/sddm.conf
+mv $builddir/sddm.conf /etc/sddm.conf
 
 # Neovim Stuff
 npm i -g neovim tree-sitter-cli
+
+# Pfetch
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+chmod a+x pfetch
+mv pfetch /usr/bin/pfetch
+
+# Nerd Fetch
+wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
+chmod a+x nerdfetch
+mv nerdfetch /usr/bin/nerdfetch
+
+# Starship Prompt
+curl -sS https://starship.rs/install.sh | sh
