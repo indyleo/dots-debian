@@ -10,7 +10,7 @@ fi
 pacman -Syu
 
 # Installing CLI programs
-pacman -S perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
+pacman -S perl-file-mimeinfo glow blueman bluez-utils bluez brightnessctl udiskie udisks2 lazygit starship lsd yad fzf locate gh tree xsel base-devel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools ripgrep fd-find luarocks ranger golang-go shellcheck python3-venv git build-essential --noconfirm
 
 # Installing other pkg managers
 pacman -S cargo python3-pip npm flatpak pacman-contrib --noconfirm
@@ -89,8 +89,6 @@ pacman -S otf-firamono-nerd ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-meslo-nerd 
 
 # Reloading cache
 fc-cache -vf
-# Removing zip files
-rm ./FiraCode.zip ./Meslo.zip ./SourceCodePro.zip
 
 # Setting up ufw 
 pacman -S ufw --noconfirm
@@ -104,7 +102,7 @@ ufw enable
 systemctl enable ufw
 
 # Installing SDDM & Theme
-pacman -S sddm
+pacman -S sddm --noconfirm
 systemctl set-defalut graphical.target
 systemctl enable sddm
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
