@@ -14,19 +14,19 @@ apt upgrade -y
 apt install nala
 
 # Installing CLI programs
-dnf install lsd blueman bluez-utils yad fzf locate gh tree xsel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git -y
+dnf install blueman bluez-utils yad fzf locate gh tree xsel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git -y
 
 # Nvim Stuff
 nala install ripgrep fd-find -y
 
 # Installing other pkg managers
-nala install cargo python-pip npm flatpak golang-go -y
+nala install python-pip npm flatpak golang-go -y
 
 # Installing fun stuff
 dnf install neofetch cmatrix tty-clock -y
 
 # Resoureces monitors
-dnf install btop htop -y
+dnf install btop htop bashtop -y
 
 # XDG portals
 dnf install xdg-user-dirs xdg-user-dirs-gtk -y
@@ -62,14 +62,14 @@ nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fa
 nala install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
 
 # Installing glxgears
-nala install mesa-utils
+nala install mesa-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Installing fonts 
-dnf install fontawesome-fonts-web fontawesome-fonts -y
+nala install fonts-font-awesome -y
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
@@ -98,7 +98,7 @@ ufw enable
 systemctl enable ufw
 
 # Installing SDDM & Theme
-dnf install sddm -y
+nala install sddm -y
 systemctl set-default graphical.target
 systemctl diable gdm3.service
 systemctl enable sddm.service
