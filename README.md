@@ -1,9 +1,6 @@
 # My Dotfiles
 
-Distro I Use Is Fedora With AwesomWM
-
-# Disclamer 
-I Distro Hop A Ton And I May Switch To Gentoo/Redcore or Void Linux Because They Fascinate Me
+Distro I Use Is Pop-os With AwesomWM
 
 # Preview : 
 ![awesome-pre](https://user-images.githubusercontent.com/100316787/231321088-8859b63a-339e-401e-a769-6a14dffa26ea.png)
