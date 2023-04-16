@@ -41,6 +41,12 @@ pip install pynvim
 # Installing go stuff
 go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Installing lsd & bob
+cargo install lsd bob-nvim
+
 # Reload X11 Colors
 cd $builddir
 mv .Xresources ~/.Xresources
@@ -94,4 +100,4 @@ chmod a+x setup.sh
 rm setup.sh
 
 # Flatpak Install
-flatpak install flathub com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop net.brinkervii.grapejuice org.prismlauncher.PrismLauncher xyz.xclicker.xclicker com.github.unrud.VideoDownloader 
+flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop net.brinkervii.grapejuice org.prismlauncher.PrismLauncher xyz.xclicker.xclicker com.github.unrud.VideoDownloader 
