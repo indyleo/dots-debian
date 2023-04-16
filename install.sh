@@ -14,7 +14,7 @@ apt upgrade -y
 apt install nala
 
 # Installing CLI programs
-dnf install blueman bluez-utils yad fzf locate gh tree xsel hidapi gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python-setuptools autojump luarocks ranger shellcheck python-venv git -y
+nala install blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake make ninja libhidapi-dev gpg openssl tldr trash-cli neovim g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
 
 # Nvim Stuff
 nala install ripgrep fd-find -y
@@ -22,26 +22,26 @@ nala install ripgrep fd-find -y
 # Installing other pkg managers
 nala install python-pip npm flatpak golang-go -y
 
+# XDG portals
+nala install xdg-user-dirs xdg-user-dirs-gtk -y
+
 # Installing fun stuff
-dnf install neofetch cmatrix tty-clock -y
+nala install neofetch cmatrix tty-clock -y
 
 # Resoureces monitors
-dnf install btop htop bashtop -y
-
-# XDG portals
-dnf install xdg-user-dirs xdg-user-dirs-gtk -y
+nala install btop htop bashtop -y
 
 # Installing shell stuff
 nala install zsh zsh-syntax-highlighting bash-completion -y
 
 # Installing java 
-nala install java-11-openjdk java-17-openjdk java-1.8.0-openjdk -y
+nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
 # Installing GUI programs 
 nala install rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam -y
 
 # Installing a music player
-nala install rhythmbox rhythombox-plugins -y
+nala install rhythmbox rhythmbox-plugins -y
 
 # Installing media stuff
 nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
@@ -50,13 +50,20 @@ nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 nala install sxiv -y
 
 # Theme stuff
-nala install qt5ct lxappearance -y
+nala install qt5ct qt5-style-plugins lxappearance -y
 
 # Installing file stuff 
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome
 nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
+
+# Installing Office
+nala install libreoffice -y 
+
+# Installing browser
+nala purge firefox-esr -y
+nala install firefox -y
 
 # Installing X11 stuff
 nala install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
@@ -96,14 +103,6 @@ ufw default deny incoming
 ufw default allow outgoing
 ufw enable
 systemctl enable ufw
-
-# Installing SDDM & Theme
-nala install sddm -y
-systemctl set-default graphical.target
-systemctl diable gdm3.service
-systemctl enable sddm.service
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv $builddir/sddm.conf /etc/sddm.conf
 
 # Neovim Stuff
 npm i -g neovim tree-sitter-cli
