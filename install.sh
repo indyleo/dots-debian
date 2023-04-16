@@ -107,7 +107,6 @@ systemctl enable ufw
 # Installing SDDM & Theme
 dnf install sddm -y
 systemctl set-default graphical.target
-systemctl disabble gdm.service
 systemctl enable sddm.service
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv $builddir/sddm.conf /etc/sddm.conf
