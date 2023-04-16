@@ -17,7 +17,7 @@ apt install nala
 nala install blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
 
 # Nvim Stuff
-nala install ripgrep fd-find neovim -y
+nala install ripgrep fd-find neovim nano  -y
 
 # Installing other pkg managers
 nala install python-pip npm flatpak golang-go -y
