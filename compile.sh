@@ -97,6 +97,12 @@ wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
 
+# Rofi Power Menu
+cd ~/Github
+https://github.com/jluttine/rofi-power-menu.git
+cp rofi-power-menu ~/.local/bin/
+cd ~
+
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
 chmod a+x setup.sh
