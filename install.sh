@@ -6,19 +6,17 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-# Changing Out Dnf.conf
-mv /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
-mv dnf.conf /etc/dnf/dnf.conf
+# Adding New Soureces.list
 
-# Update packages list and update system
-dnf update -y
-dnf upgrade -y
+# Updating system
+apt update -y
+apt upgrade -y
+
+# Intalling Nala
+apt install nala
 
 # Making Sure Chache Is Gone
 dnf clean all
-
-# Installing Rmpfusion repos
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Installing CLI programs
 dnf install lsd blueman bluez-utils yad fzf locate gh tree xsel hidapi-devel gpg openssl tldr trash-cli neovim cmake g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-pytest-venv git -y
