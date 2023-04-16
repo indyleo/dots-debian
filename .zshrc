@@ -151,7 +151,7 @@ fi
 
 IFS=$SAVEIFS
 
-# Better Way To Navigat The Files With Ranger
+# Better Way To Navigate The Files With Ranger
 rangercd () {
     tmp="$(mktemp)"
     ranger --choosedir="$tmp" "$@"
@@ -163,7 +163,7 @@ rangercd () {
 }
 bindkey -s '^z' 'rangercd\n'
 
-# PIP Completion
+# PIP Completions
 function _pip_completion {
   local words cword
   read -Ac words
@@ -173,6 +173,19 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip
+
+# Nala Completions
+_nala_completion() {
+    local IFS=$'
+'
+    COMPREPLY=( $( env COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   _NALA_COMPLETE=complete_bash $1 ) )
+    return 0
+}
+
+complete -o default -F _nala_completion nala
+
 
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
