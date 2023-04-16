@@ -52,7 +52,6 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim"}
   use { "nvim-lualine/lualine.nvim"}
   use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end,})
-  use { "ellisonleao/glow.nvim"}
 
   -- Nice colors
   use { "ap/vim-css-color"}
