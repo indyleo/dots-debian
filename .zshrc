@@ -183,9 +183,7 @@ _nala_completion() {
                    _NALA_COMPLETE=complete_bash $1 ) )
     return 0
 }
-
-complete -o default -F _nala_completion nala
-
+compctl -K _nala_completion nala
 
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
