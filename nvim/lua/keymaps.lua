@@ -59,10 +59,6 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
--- Glow (Terminal Preview)
-keymap("n", "<C-m>", ":Glow<CR>", opts)
-keymap("n", "<C-n>", ":Glow!<CR>", opts)
-
 -- Markdown (Graphical Preview)
 keymap("n", "<C-p>", ":MarkdownPreviewToggle<CR>", opts)
 
