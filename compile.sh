@@ -100,6 +100,7 @@ git clone https://github.com/EliverLara/Nordic.git
 # Rofi Power Menu
 cd ~/Github
 git clone https://github.com/jluttine/rofi-power-menu.git
+cd rofi-power-menu
 cp rofi-power-menu ~/.local/bin/
 cd ~
 
