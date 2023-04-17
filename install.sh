@@ -10,23 +10,26 @@ fi
 apt update -y
 apt upgrade -y
 
-# Intalling Nala
-apt install nala
-
 # Installing CLI programs
-nala install blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
+apt install yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev tldr trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
+
+# Encytion tools
+apt install gpg openssl -y
+
+# Terminal mutiplexer
+apt install tmux -y
 
 # Nvim Stuff
-nala install ripgrep fd-find neovim nano  -y
+apt install ripgrep fd-find neovim nano  -y
 
 # Installing other pkg managers
-nala install python-pip npm flatpak golang-go -y
+apt install python-pip npm golang-go -y
 
 # XDG portals
-nala install xdg-user-dirs xdg-user-dirs-gtk -y
+apt install xdg-user-dirs -y
 
 # Installing fun stuff
-nala install neofetch cmatrix tty-clock -y
+apt install neofetch cmatrix tty-clock -y
 
 # Resoureces monitors
 nala install btop htop bashtop -y
@@ -35,72 +38,14 @@ nala install btop htop bashtop -y
 nala install zsh zsh-syntax-highlighting bash-completion -y
 
 # Installing java 
-nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
-
-# Installing GUI programs 
-nala install rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
-
-# Installing a music player
-nala install rhythmbox rhythmbox-plugins -y
+apt install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
 # Installing media stuff
-nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
-
-# Installing image viewer
-nala install sxiv -y
-
-# Theme stuff
-nala install qt5ct qt5-style-plugins lxappearance -y
-
-# Installing file stuff 
-nala install gvfs thunar-archive-plugin thunar file-roller -y
-
-# Installing Awesome
-nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
-
-# Installing Office
-nala install libreoffice -y 
-
-# Installing browser
-nala purge firefox-esr -y
-nala install firefox -y
-
-# Installing X11 stuff
-nala install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
-
-# Installing glxgears
-nala install mesa-utils -y
-
-# Installing SDDM & Theme
-#nala install sddm -y
-#systemctl set-default graphical.target
-#systemctl disabble gdm.service
-#systemctl enable sddm.service
-#mkdir -p /usr/share/sddm/themes
-#tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-#mv $builddir/sddm.conf /etc/sddm.conf
+apt install yt-dlp -y
 
 # Script Variables
 username=$(id -u -n 1000)
 builddir=$(pwd)
-
-# Installing fonts 
-nala install fonts-font-awesome -y
-mkdir -p /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
-unzip Meslo.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
-unzip SourceCodePro.zip -d /home/$username/.fonts
-chown $username:$username /home/$username/.fonts/
-chown $username:$username /home/$username/.fonts/*
-
-# Reloading cache
-fc-cache -vf
-
-# Removing zip files
-rm ./FiraCode.zip ./Meslo.zip ./SourceCodePro.zip 
 
 # Setting up ufw 
 nala install ufw -y
@@ -125,6 +70,9 @@ mv pfetch /usr/bin/pfetch
 wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
 chmod a+x nerdfetch
 mv nerdfetch /usr/bin/nerdfetch
+
+# Removing MOTD
+rm /etc/motd
 
 # Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
