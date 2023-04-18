@@ -45,3 +45,4 @@ export CODEEDITOR="neovide"
 export READER="zathura"
 
 # Rustup
+. "$HOME/.cargo/env"
