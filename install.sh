@@ -33,7 +33,7 @@ apt upgrade -y
 apt install nala
 
 # Installing CLI programs
-nala install blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
+nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
 
 # Text Editor Stuff
 nala install ripgrep fd-find neovim nano vim codium -y
