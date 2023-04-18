@@ -41,7 +41,7 @@ export TERMINAL="alacritty"
 export COLORTERM="truecolor"
 export WM="AwesomeWM"
 export BROWSER="firefox"
-export CODEEDITOR="neovide"
+export CODEEDITOR="vscodium"
 export READER="zathura"
 
 # Rustup
