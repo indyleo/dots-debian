@@ -154,6 +154,10 @@ alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
+# Switch Between Shells (User Shell)
+alias tobash="chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
 # APT To Nala
 apt() { 
   command nala "$@"
