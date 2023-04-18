@@ -73,6 +73,9 @@ nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fa
 # Installing Office
 nala install libreoffice -y 
 
+# Installing pdf reader
+nala install zathura -y
+
 # Installing browser
 nala purge firefox-esr -y
 nala install firefox -y
