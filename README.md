@@ -2,7 +2,7 @@
 Distro I Use Is Pop-os With AwesomWM
 
 # Why Is Their Rando Configs
-The reason why the "sddm.conf, pacman.conf, dnf,conf, sorces.list" is still their because its just allows me to more easily switch to a diffrent distro i want or need to
+The reason why the "sddm.conf, pacman.conf, dnf.conf, and sorces.list" is still their because its just allows me to more easily switch to a diffrent distro i want or need to
 
 # Preview : 
 ![awesome-pre](https://user-images.githubusercontent.com/100316787/231321088-8859b63a-339e-401e-a769-6a14dffa26ea.png)
