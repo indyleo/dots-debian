@@ -26,4 +26,5 @@ Put this into your '/etc/environment' file
 Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
 # Resources (Websites)
-- [AwesomeWM](https://awesomewm.org/) My Choice Of X11 Window Manager And Picom As My Compositer
+- [AwesomeWM](https://awesomewm.org/) My Choice Of X11 Window Manager
+- [Picom](https://github.com/yshui/picom) My Choice Of My X11 Compositer
