@@ -43,4 +43,5 @@ export WM="AwesomeWM"
 export BROWSER="firefox"
 export CODEEDITOR="neovide"
 export READER="zathura"
-export
+
+# Rustup
