@@ -18,6 +18,13 @@ fi
 #mv /etc/aptsources.list /etc/apt/sources.list.bak
 #mv sources.list /etc/apt/sources.list
 
+# Adding Repo For Vscodium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | tee /etc/apt/sources.list.d/vscodium.list
+
 # Updating system
 apt update -y
 apt upgrade -y
@@ -29,7 +36,7 @@ apt install nala
 nala install blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
 
 # Text Editor Stuff
-nala install ripgrep fd-find neovim nano vim -y
+nala install ripgrep fd-find neovim nano vim codium -y
 
 # Installing other pkg managers
 nala install python-pip npm flatpak golang-go -y
