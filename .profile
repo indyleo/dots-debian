@@ -38,10 +38,8 @@ export VISUAL="nvim"
 export PAGER="moar"
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
-export COLORTERM="truecolor"
 export WM="AwesomeWM"
 export BROWSER="firefox"
-export CODEEDITOR="vscodium"
 export READER="zathura"
 
 # Rustup
