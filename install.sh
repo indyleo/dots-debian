@@ -56,7 +56,7 @@ nala install rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-edi
 nala install rhythmbox rhythmbox-plugins -y
 
 # Installing media stuff
-nala install yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
+nala install pavucontrol yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
 
 # Installing image viewer
 nala install sxiv -y
