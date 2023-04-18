@@ -50,7 +50,7 @@ nala install zsh zsh-syntax-highlighting bash-completion -y
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
 # Installing GUI programs 
-nala install rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+nala install galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y
