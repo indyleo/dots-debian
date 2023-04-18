@@ -6,6 +6,18 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+# Moving dnf.conf
+#mv /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
+#mv dnf.conf /etc/dnf/dnf.conf
+
+# Moving pacman.conf
+#mv /etc/pacman.conf /etc/pacman.conf.bak
+#mv pacman.conf /etc/pacman.conf
+
+# Moving sources.list
+#mv /etc/aptsources.list /etc/apt/sources.list.bak
+#mv sources.list /etc/apt/sources.list
+
 # Updating system
 apt update -y
 apt upgrade -y
