@@ -115,6 +115,9 @@ return packer.startup(function(use)
   -- Trouble
   use { "folke/trouble.nvim", config = function() require("trouble").setup {} end}
 
+  -- TODO
+  use { "folke/todo-comments.nvim", config = function()require("todo-comments").setup {} end}
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
