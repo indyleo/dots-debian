@@ -72,7 +72,7 @@ cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc
-mv .bashrc .zshrc .aliasrc .xsession ~/
+mv .bashrc .zshrc .aliasrc .xsession .profile ~/
 
 # Zsh Autopairs
 cd ~/Zsh/Plugins
