@@ -114,7 +114,6 @@ _nala_completion() {
                    _NALA_COMPLETE=complete_bash $1 ) )
     return 0
 }
-
 complete -o default -F _nala_completion nala
 
 # Aliases
