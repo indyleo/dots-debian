@@ -26,7 +26,9 @@ apt upgrade -y
 apt install nala
 
 # Installing CLI programs
-nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks ranger shellcheck python3-venv -y
+nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev \
+  gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks \
+  ranger shellcheck python3-venv -y
 
 # Text Editor Stuff
 nala install ripgrep fd-find neovim nano vim -y
@@ -48,6 +50,14 @@ nala install zsh zsh-syntax-highlighting bash-completion -y
 
 # Installing java 
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
+
+# Helpful Cmd To Gui Stuff
+nala install gnupg \
+    ca-certificates \
+    gcc-multilib g++-multilib cmake libssl-dev pkg-config \
+    libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
+    libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
+    libxcursor-dev -y
 
 # Installing GUI programs 
 nala install galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
