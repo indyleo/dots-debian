@@ -602,13 +602,6 @@ beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
--- Rounded boarders
-client.connect_signal("manage", function (c)
-    c.shape = function(cr,w,h)
-        gears.shape.rounded_rect(cr,w,h,8)
-    end
-end)
-
 -- Borders of windows
 client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
 client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
@@ -619,6 +612,7 @@ awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("flameshot")
 -- awful.spawn.with_shell("xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png")
+-- awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
 awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
 -- awful.spawn.with_shell("~/.fehbg")
 -- awful.spawn.with_shell("nitrogen --random ~/Pictures/Wallpapers/")
