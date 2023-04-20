@@ -102,6 +102,7 @@ ${color1}[S]+j/k${alignr}${color2}move win focus${color}
 ${color1}[S]+[SHIFT]+hjkl${alignr}${color2}move window${color}
 ${color1}[S]+[1-9]${alignr}${color2}switch workspace${color}
 ${color1}[S]+[SHIFT]+[1-9]${alignr}${color2}send window${color}
+${color1}[S]+[1-9]${alignr}${color2}move tags${color}
 ${color1}[S]+h/l${alignr}${color2}shrink/expand${color}
 ${color1}[S]+[SHIFT]+r${alignr}${color2}restart awesome${color}
 ${color1}[S]+[SHIFT]+q${alignr}${color2}quit awesome${color}
