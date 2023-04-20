@@ -419,28 +419,38 @@ clientkeys = gears.table.join(
             c:raise()
         end ,
         {description = "(un)maximize horizontally", group = "client"}),
+    
 
     -- Brightness
     awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
       {description = "+10% In Brightness", group = "Brightness"}),
     awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
       {description = "-10% In Brightness", group = "Brightness"}),
-        
+       
+    -- Sound Keys
+    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end,
+      {description = "+5% In Volume", group = "Sound"}),
+    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end,
+      {description = "-5% In Volume", group = "Sound"}),
+    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end,
+      {description = "Mute Volume", group = "Sound"}),
+
     -- Music Keys
     awful.key({}, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end,
-    {description = "Go To Next Song", group = "Music"}),
+      {description = "Go To Next Song", group = "Music"}),
     awful.key({}, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end,
-    {description = "Go To Previous Song", group = "Music"}),
+      {description = "Go To Previous Song", group = "Music"}),
     awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("rhythmbox-client --play-pause") end,
-    {description = "Start/Stop Music", group = "Music"}),
+      {description = "Start/Stop Music", group = "Music"}),
 
     -- Screenshot Keys
-    awful.key({  }, "Print", function ()
-      awful.util.spawn("flameshot gui") end),
-    awful.key({ modkey, }, "Print", function ()
-      awful.util.spawn("flameshot screen") end),
-    awful.key({ modkey, "Shift" }, "Print", function ()
-      awful.util.spawn("flameshot launcher") end)
+    awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end,
+     {description = "Start/Stop Music", group = "Screenshots"}),
+    awful.key({ modkey, }, "Print", function () awful.util.spawn("flameshot screen") end,
+      {description = "Start/Stop Music", group = "Screenshots"}),
+    awful.key({ modkey, "Shift" }, "Print", function () awful.util.spawn("flameshot launcher") end,
+      {description = "Start/Stop Music", group = "Screenshots"})
+
 )
 
 -- Bind all key numbers to tags.
