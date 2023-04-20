@@ -1,0 +1,80 @@
+# Make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Wm keybinds
+
+# Terminal
+super + Return
+	alacritty
+
+# Drun launcher
+super + r
+	rofi -show drun
+
+# Run launcher
+super + d
+	rofi -show run
+
+# Window Switch
+super + o
+  rofi -show window
+
+# Power Menu
+super + p
+  rofi -show power-menu -modi power-menu:rofi-power-menu \
+  -theme 'nord' \
+  -font 'FiraCode Nerd Font 16
+
+# Locking Computer
+super + s
+  i3lock-fancy -g
+
+# Gui File Manager
+super + f
+  thunar
+
+# Tui File Manager
+super + x
+  alacritty -e ranger
+
+# Browser 
+super + b
+  firefox
+
+# Brightness
+XF86MonBrightnessUp
+  xbacklight -inc 10
+
+XF86MonBrightnessDown
+  xbacklight -dec 10
+
+# Media
+XF86AudioRaiseVolume
+  pactl set-sink-volume 0 +5%
+
+XF86AudioLowerVolume
+  pactl set-sink-volume 0 -5%
+
+XF86AudioMute
+  pactl set-sink-mute 0 toggle
+
+# Music
+XF86AudioNext
+  rhythmbox-client --next
+
+XF86AudioPrev
+  rhythmbox-client --previous
+
+XF86AudioPlay
+  rhythmbox-client --play-pause
+
+# Screenshot 
+Print
+  flameshot gui
+
+super + Print
+  flameshot screen
+
+super + shift + Print
+  flameshot launcher
