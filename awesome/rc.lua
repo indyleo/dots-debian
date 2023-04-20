@@ -426,13 +426,7 @@ clientkeys = gears.table.join(
     awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
       {description = "-10% In Brightness", group = "Brightness"}),
         
-    -- Media Keys
-    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end,
-    {description = "+5% In Volume", group = "Sound"}),
-    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end,
-    {description = "-5% In Volume", group = "Sound"}),
-    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end,
-    {description = "Mute Volume", group = "Sound"}),
+    -- Music Keys
     awful.key({}, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end,
     {description = "Go To Next Song", group = "Music"}),
     awful.key({}, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end,
@@ -448,6 +442,13 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "Print", function ()
       awful.util.spawn("flameshot launcher") end)
 
+    -- Screenshot Keys
+    awful.key({  }, "Print", function ()
+      awful.util.spawn("flameshot gui") end),
+    awful.key({ modkey, }, "Print", function ()
+      awful.util.spawn("flameshot screen") end),
+    awful.key({ modkey, "Shift" }, "Print", function ()
+      awful.util.spawn("flameshot launcher") end)
 )
 
 -- Bind all key numbers to tags.
