@@ -40,7 +40,7 @@ nala install python-pip npm flatpak golang-go -y
 nala install xdg-user-dirs xdg-user-dirs-gtk -y
 
 # Installing fun stuff
-nala install neofetch cmatrix tty-clock holloywood -y
+nala install neofetch cowsay cmatrix tty-clock holloywood -y
 
 # Resoureces monitors
 nala install btop htop bashtop -y
@@ -80,6 +80,9 @@ nala install gvfs thunar-archive-plugin thunar file-roller -y
 # Installing Awesome
 nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
+# Installing Wallpaper Setters
+nala install variety xwallpaper feh nitrogen -y 
+
 # Installing Office
 nala install libreoffice -y 
 
@@ -91,7 +94,7 @@ nala purge firefox-esr -y
 nala install firefox -y
 
 # Installing X11 stuff
-nala install arandr xterm xclip xbacklight xwallpaper feh nitrogen -y
+nala install xcowsay arandr xterm xclip xbacklight -y
 
 # Installing glxgears
 nala install mesa-utils -y
