@@ -610,8 +610,6 @@ awful.spawn.with_shell("killall -q solaar")
 awful.spawn.with_shell("sleep 3 && solaar -w hide")
 awful.spawn.with_shell("killall -q xfce4-clipman")
 awful.spawn.with_shell("sleep 3 && xfce4-clipman")
-awful.spawn.with_shell("killall -q variety")
-awful.spawn.with_shell("sleep 3 && variety")
 
 -- Wallpapers
 -- awful.spawn.with_shell("xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png")
