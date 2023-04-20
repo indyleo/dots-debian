@@ -14,8 +14,6 @@ killall -q solaar &
 sleep 3 && solaar -w hide &
 killall -q xfce4-clipman &
 sleep 3 && xfce4-clipman &
-killall -q variety &
-sleep 3 && variety &
 
 # Wallpapers
 # xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png &
