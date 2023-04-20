@@ -106,8 +106,9 @@ alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
 alias atconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias piconf='nvim $HOME/.config/picom/picom.conf'
-alias wconf='nvim $HOME/.config/awesome/rc.lua'
-alias vconf='nvim $HOME/.config/nvim/init.lua'
+alias wmconf='nvim $HOME/.config/awesome/rc.lua'
+alias viconf='nvim $HOME/.config/nvim/init.lua'
+alias poconf='nvim $HOME/.config/polybar/config'
 
 # Trash Aliases
 alias trash='trash -iv'
