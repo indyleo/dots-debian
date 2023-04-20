@@ -419,6 +419,16 @@ client.connect_signal("manage", function (c)
     end
 end)
 
+-- No border for maximized clients
+function border_adjust(c)
+    if c.maximized then -- no borders if only 1 client visible
+        c.border_width = 0
+    elseif #awful.screen.focused().clients > 1 then
+        c.border_width = beautiful.border_width
+        c.border_color = beautiful.border_focus
+    end
+end
+
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
