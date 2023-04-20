@@ -59,7 +59,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/them
 local modkey      = "Mod4"
 local altkey      = "Mod1"
 local ctrlkey     = "Control"
-local terminal = "alacritty"
+local terminal    = "alacritty"
 local editor      = os.getenv("EDITOR") or "vim"
 local videoplayer = "vlc"
 local audioplayer = "rhythmbox"
@@ -119,9 +119,60 @@ else
     })
 end
 
+
+mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
+                                     menu = mymainmenu })
+
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
+
+-- Keyboard map indicator and switcher
+mykeyboardlayout = awful.widget.keyboardlayout()
+
+-- {{{ Wibar
+-- Create a textclock widget
+mytextclock = wibox.widget.textclock(" %b %d, %I:%M %p ")
+
+-- Create a wibox for each screen and add it
+local taglist_buttons = gears.table.join(
+                    awful.button({ }, 1, function(t) t:view_only() end),
+                    awful.button({ modkey }, 1, function(t)
+                                              if client.focus then
+                                                  client.focus:move_to_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 3, awful.tag.viewtoggle),
+                    awful.button({ modkey }, 3, function(t)
+                                              if client.focus then
+                                                  client.focus:toggle_tag(t)
+                                              end
+                                          end),
+                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
+                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
+                )
+
+local tasklist_buttons = gears.table.join(
+                     awful.button({ }, 1, function (c)
+                                              if c == client.focus then
+                                                  c.minimized = true
+                                              else
+                                                  c:emit_signal(
+                                                      "request::activate",
+                                                      "tasklist",
+                                                      {raise = true}
+                                                  )
+                                              end
+                                          end),
+                     awful.button({ }, 3, function()
+                                              awful.menu.client_list({ theme = { width = 250 } })
+                                          end),
+                     awful.button({ }, 4, function ()
+                                              awful.client.focus.byidx(1)
+                                          end),
+                     awful.button({ }, 5, function ()
+                                              awful.client.focus.byidx(-1)
+                                          end))
 
 local function set_wallpaper(s)
     -- Wallpaper
@@ -144,6 +195,52 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
+
+    -- Create a promptbox for each screen
+    s.mypromptbox = awful.widget.prompt()
+    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
+    -- We need one layoutbox per screen.
+    s.mylayoutbox = awful.widget.layoutbox(s)
+    s.mylayoutbox:buttons(gears.table.join(
+                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
+                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
+                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
+                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+    -- Create a taglist widget
+    s.mytaglist = awful.widget.taglist {
+        screen  = s,
+        filter  = awful.widget.taglist.filter.all,
+        buttons = taglist_buttons
+    }
+
+    -- Create a tasklist widget
+    s.mytasklist = awful.widget.tasklist {
+        screen  = s,
+        filter  = awful.widget.tasklist.filter.currenttags,
+        buttons = tasklist_buttons
+    }
+
+    -- Create the wibox
+    s.mywibox = awful.wibar({ position = "top", screen = s })
+
+    -- Add widgets to the wibox
+    s.mywibox:setup {
+        layout = wibox.layout.align.horizontal,
+        { -- Left widgets
+            layout = wibox.layout.fixed.horizontal,
+            mylauncher,
+            s.mytaglist,
+            s.mypromptbox,
+        },
+        s.mytasklist, -- Middle widget
+        { -- Right widgets
+            layout = wibox.layout.fixed.horizontal,
+            mykeyboardlayout,
+            wibox.widget.systray(),
+            mytextclock,
+            s.mylayoutbox,
+        },
+    }
 end)
 -- }}}
 
@@ -203,6 +300,8 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
+    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+              {description = "open terminal", group = "Terminal"}),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -235,7 +334,47 @@ globalkeys = gears.table.join(
                     )
                   end
               end,
-              {description = "restore minimized", group = "client"})
+              {description = "restore minimized", group = "client"}),
+
+    -- Drun Prompt
+    awful.key({ modkey },            "r",     function () 
+     awful.spawn("rofi -show drun") end,
+      {description = "Launch drun prompt", group = "Launcher"}),
+
+    -- Run Prompt
+    awful.key({ modkey },            "d",     function () 
+     awful.spawn("rofi -show run") end,
+      {description = "Launch run prompt", group = "Launcher"}),
+
+    -- Window Switch
+    awful.key({ modkey },            "o",     function () 
+     awful.spawn("rofi -show window") end,
+      {description = "Change focous of window", group = "Launcher"}),
+
+    -- Power Menu
+    awful.key({ modkey },            "p",     function () 
+     awful.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu -theme 'nord' -font 'FiraCode Nerd Font 16'") end,
+      {description = "Launch power menu", group = "Launcher"}),
+
+    -- Browser
+    awful.key({ modkey,         }, "b", function () 
+     awful.spawn("firefox") end,
+      {description = "Launch browser", group = "Launcher"}),
+
+    -- GUI File Manager
+    awful.key({ modkey },            "f",     function () 
+     awful.spawn("thunar") end,
+       {description = "Launch gui file manager", group = "Launcher"}),
+
+    -- Tui File Manager
+    awful.key({ modkey },            "x",     function () 
+     awful.spawn(terminal .. " -e ranger") end,
+      {description = "Launch tui file manager", group = "Terminal"}),
+
+    -- Locking Computer
+     awful.key({ modkey },            "s",     function () 
+      awful.spawn("i3lock-fancy -g") end,
+        {description = "Lock your computer", group = "Launcher"})
 )
 
 clientkeys = gears.table.join(
@@ -279,7 +418,37 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+
+    -- Brightness
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
+      {description = "+10% In Brightness", group = "Brightness"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
+      {description = "-10% In Brightness", group = "Brightness"}),
+        
+    -- Music Keys
+    awful.key({}, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end,
+    {description = "Go To Next Song", group = "Music"}),
+    awful.key({}, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end,
+    {description = "Go To Previous Song", group = "Music"}),
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("rhythmbox-client --play-pause") end,
+    {description = "Start/Stop Music", group = "Music"}),
+
+    -- Screenshot Keys
+    awful.key({  }, "Print", function ()
+      awful.util.spawn("flameshot gui") end),
+    awful.key({ modkey, }, "Print", function ()
+      awful.util.spawn("flameshot screen") end),
+    awful.key({ modkey, "Shift" }, "Print", function ()
+      awful.util.spawn("flameshot launcher") end)
+
+    -- Screenshot Keys
+    awful.key({  }, "Print", function ()
+      awful.util.spawn("flameshot gui") end),
+    awful.key({ modkey, }, "Print", function ()
+      awful.util.spawn("flameshot screen") end),
+    awful.key({ modkey, "Shift" }, "Print", function ()
+      awful.util.spawn("flameshot launcher") end)
 )
 
 -- Bind all key numbers to tags.
@@ -429,9 +598,6 @@ function border_adjust(c)
     end
 end
 
--- Changing Padding Of Notifications
-naughty.config.padding = beautiful.xresources.apply_dpi(10)
-
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
@@ -443,5 +609,23 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 
 -- Startup Programs
-awful.spawn.with_shell("~/.config/autostart-scripts/awesome-autostart.sh")
-awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")
+awful.spawn.with_shell("picom --experimental-backends")
+awful.spawn.with_shell("lxpolkit")
+awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("killall -q conky")
+awful.spawn.with_shell("sleep 3 && conky -c ~/.config/conky/conky.conkyrc")
+awful.spawn.with_shell("killall -q volumeicon")
+awful.spawn.with_shell("sleep 3 && volumeicon")
+awful.spawn.with_shell("killall -q solaar")
+awful.spawn.with_shell("sleep 3 && solaar -w hide")
+awful.spawn.with_shell("killall -q xfce4-clipman")
+awful.spawn.with_shell("sleep 3 && xfce4-clipman")
+
+-- Wallpapers
+-- awful.spawn.with_shell("xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png")
+awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
+-- awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
+-- awful.spawn.with_shell("~/.fehbg")
+-- awful.spawn.with_shell("nitrogen --set-zoom --random ~/Pictures/Wallpapers/")
+-- awful.spawn.with_shell("nitrogen --restore")

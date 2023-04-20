@@ -78,7 +78,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome
-nala install sxhkd polybar conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
+nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
 # Installing Office
 nala install libreoffice -y 
