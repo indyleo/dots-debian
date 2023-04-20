@@ -9,66 +9,65 @@
 ;
 ;==========================================================
 
+; Including Some Files
 include-file = ~/.config/polybar/modules.ini
 include-file = ~/.config/polybar/colors.ini
 
 [bar/awesome]
+; Basic Settings For The Bar
+monitor = ${env:MONITOR:}
+cursor-click = pointer
+cursor-scroll = ns-resize
+bottom = false
+separator = |
+
+; Shape Of The Bar
 width = 100%
 height = 27
 radius = 0.0
 fixed-center = true
-
-background = ${colors.bg}
-foreground = ${colors.fg}
-
+background = ${colors.background}
+foreground = ${colors.foreground}
 line-size = 0
-line-color = #bf616a
-
 border-size = 0
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
+padding-left = 5
+padding-right = 5
+module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Ubuntu:weight=SemiBold:size=10;2
-font-1 = FiraCode Nerd Font:size=12;2
-font-2 = Ubuntu:weight=Medium:size=10;2
+; Fonts
+font-0 = "Ubuntu:weight=SemiBold:size=10;2"
+font-1 = "UbuntuMono Nerd Font:size=12;2"
+font-2 = "Ubuntu:weight=Medium:size=10;2"
 
-modules-left = bspwm i3 workspaces
-modules-center = mpd xwindow
+; Modules
+modules-left = workspaces 
+modules-center = xwindow 
 modules-right =  date
 
+; Tray Settings
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 2
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
+tray-padding = 4
+tray-maxsize = 20
+tray-scale = 1.0
+tray-background = ${colors.background}
 
 [settings]
+throttle-output = 5
+throttle-output-for = 10
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
-; vim:ft=dosini
+; For Vim Users
+# vim:ft=dosini
