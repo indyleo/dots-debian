@@ -429,6 +429,9 @@ function border_adjust(c)
     end
 end
 
+-- Changing Padding Of Notifications
+naughty.config.padding = beautiful.xresources.apply_dpi(10)
+
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
@@ -436,6 +439,7 @@ beautiful.notification_icon_size = 80
 
 -- Borders of windows
 client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
+client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 
 -- Startup Programs
