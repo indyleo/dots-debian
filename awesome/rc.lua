@@ -445,11 +445,11 @@ clientkeys = gears.table.join(
 
     -- Screenshot Keys
     awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end,
-     {description = "Start/Stop Music", group = "Screenshots"}),
+     {description = "Take A Pick Of A Certain Area On Screen", group = "Screenshots"}),
     awful.key({ modkey, }, "Print", function () awful.util.spawn("flameshot screen") end,
-      {description = "Start/Stop Music", group = "Screenshots"}),
+      {description = "Take A Pick Of The Screen", group = "Screenshots"}),
     awful.key({ modkey, "Shift" }, "Print", function () awful.util.spawn("flameshot launcher") end,
-      {description = "Start/Stop Music", group = "Screenshots"})
+      {description = "Launch Flameshot Launcher", group = "Screenshots"})
 
 )
 
