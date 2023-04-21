@@ -338,42 +338,42 @@ globalkeys = gears.table.join(
 
     -- Drun Prompt
     awful.key({ modkey },            "r",     function () 
-     awful.spawn("rofi -show drun") end,
+     awful.util.spawn("rofi -show drun") end,
       {description = "Launch drun prompt", group = "Launcher"}),
 
     -- Run Prompt
     awful.key({ modkey },            "d",     function () 
-     awful.spawn("rofi -show run") end,
+     awful.util.spawn("rofi -show run") end,
       {description = "Launch run prompt", group = "Launcher"}),
 
     -- Window Switch
     awful.key({ modkey },            "o",     function () 
-     awful.spawn("rofi -show window") end,
+     awful.util.spawn("rofi -show window") end,
       {description = "Change focous of window", group = "Launcher"}),
 
     -- Power Menu
     awful.key({ modkey },            "p",     function () 
-     awful.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu -theme 'nord' -font 'FiraCode Nerd Font 16'") end,
+     awful.util.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu -theme 'nord' -font 'FiraCode Nerd Font 16'") end,
       {description = "Launch power menu", group = "Launcher"}),
 
     -- Browser
     awful.key({ modkey,         }, "b", function () 
-     awful.spawn("firefox") end,
+     awful.util.spawn("firefox") end,
       {description = "Launch browser", group = "Launcher"}),
 
     -- GUI File Manager
     awful.key({ modkey },            "f",     function () 
-     awful.spawn("thunar") end,
+     awful.util.spawn("thunar") end,
        {description = "Launch gui file manager", group = "Launcher"}),
 
     -- Tui File Manager
     awful.key({ modkey },            "x",     function () 
-     awful.spawn(terminal .. " -e ranger") end,
+     awful.util.spawn(terminal .. " -e ranger") end,
       {description = "Launch tui file manager", group = "Terminal"}),
 
     -- Locking Computer
      awful.key({ modkey },            "s",     function () 
-      awful.spawn("i3lock-fancy -g") end,
+      awful.util.spawn("i3lock-fancy -g") end,
         {description = "Lock your computer", group = "Launcher"})
 )
 
