@@ -1,10 +1,15 @@
-# Startup Programs
+# Backround Programs
 picom --experimental-backends &
 lxpolkit &
-nm-applet &
-flameshot &
+sxhkd &
+
+# Conky
 killall -q conky &
 sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc &
+
+# Aplleets
+nm-applet &
+flameshot &
 killall -q volumeicon &
 sleep 3 && volumeicon &
 killall -q solaar &
