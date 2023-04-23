@@ -40,10 +40,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias wal='xwallpaper --stretch'
 alias xwal='xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png'
 alias xwall='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
-alias fwal='~/.fehbg'
-alias fehw='feh --randomize --bg-fill ~/Pictures/Wallpapers/'
-alias nitr='nitrogen --restore'
-alias nran='nitrogen --random ~/Pictures/Wallpapers/'
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
