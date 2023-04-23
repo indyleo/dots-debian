@@ -1,20 +1,20 @@
 # Make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd
 
 # Wm keybinds
 
 # Terminal
 super + Return
-	alacritty
+  alacritty
 
 # Drun launcher
 super + r
-	rofi -show drun
+  rofi -show drun
 
 # Run launcher
 super + d
-	rofi -show run
+  rofi -show run
 
 # Window Switch
 super + o
