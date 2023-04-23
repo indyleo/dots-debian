@@ -94,7 +94,7 @@ nala purge firefox-esr -y
 nala install firefox -y
 
 # Installing X11 stuff
-nala install sxhkd polybar xcowsay arandr xterm xclip xbacklight -y
+nala install sxhkd xcowsay arandr xterm xclip xbacklight -y
 
 # Installing glxgears
 nala install mesa-utils -y
