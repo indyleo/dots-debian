@@ -294,8 +294,6 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open terminal", group = "Terminal"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
@@ -332,47 +330,7 @@ globalkeys = gears.table.join(
                     )
                   end
               end,
-              {description = "restore minimized", group = "client"}),
-
-    -- Drun Prompt
-    awful.key({ modkey },            "r",     function () 
-     awful.util.spawn("rofi -show drun") end,
-      {description = "Launch drun prompt", group = "Launcher"}),
-
-    -- Run Prompt
-    awful.key({ modkey },            "d",     function () 
-     awful.util.spawn("rofi -show run") end,
-      {description = "Launch run prompt", group = "Launcher"}),
-
-    -- Window Switch
-    awful.key({ modkey },            "o",     function () 
-     awful.util.spawn("rofi -show window") end,
-      {description = "Change focous of window", group = "Launcher"}),
-
-    -- Power Menu
-    awful.key({ modkey },            "p",     function () 
-     awful.util.spawn("rofi -show power-menu -modi power-menu:rofi-power-menu -theme 'nord' -font 'FiraCode Nerd Font 16'") end,
-      {description = "Launch power menu", group = "Launcher"}),
-
-    -- Browser
-    awful.key({ modkey,         }, "b", function () 
-     awful.util.spawn("firefox") end,
-      {description = "Launch browser", group = "Launcher"}),
-
-    -- GUI File Manager
-    awful.key({ modkey },            "f",     function () 
-     awful.util.spawn("thunar") end,
-       {description = "Launch gui file manager", group = "Launcher"}),
-
-    -- Tui File Manager
-    awful.key({ modkey },            "x",     function () 
-     awful.util.spawn(terminal .. " -e ranger") end,
-      {description = "Launch tui file manager", group = "Terminal"}),
-
-    -- Locking Computer
-     awful.key({ modkey },            "s",     function () 
-      awful.util.spawn("i3lock-fancy -g") end,
-        {description = "Lock your computer", group = "Launcher"})
+              {description = "restore minimized", group = "client"})
 )
 
 clientkeys = gears.table.join(
@@ -416,37 +374,7 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"}),
-
-    -- Brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
-      {description = "+10% In Brightness", group = "Brightness"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
-      {description = "-10% In Brightness", group = "Brightness"}),
-
-    -- Sound Keys
-    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("pactl set-sink-volume 0 +5%") end,
-      {description = "+5% In Volume", group = "Sound"}),
-    awful.key({}, "XF86AudioLowerVolume", function() os.execute("pactl set-sink-volume 0 -5%") end,
-      {description = "-5% In Volume", group = "Sound"}),
-    awful.key({}, "XF86AudioMute", function() os.execute("pactl set-sink-mute 0 toggle") end,
-      {description = "Mute Volume", group = "Sound"}),
-
-    -- Music Keys
-    awful.key({}, "XF86AudioNext", function () os.execute("rhythmbox-client --next") end,
-      {description = "Go To Next Song", group = "Music"}),
-    awful.key({}, "XF86AudioPrev", function () os.execute("rhythmbox-client --previous") end,
-      {description = "Go To Previous Song", group = "Music"}),
-    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("rhythmbox-client --play-pause") end,
-      {description = "Start/Stop Music", group = "Music"}),
-
-    -- Screenshot Keys
-    awful.key({ }, "Print", function () awful.util.spawn("flameshot gui") end,
-     {description = "Take A Pick Of A Certain Area On Screen", group = "Screenshots"}),
-    awful.key({ modkey, }, "Print", function () awful.util.spawn("flameshot screen") end,
-      {description = "Take A Pick Of The Screen", group = "Screenshots"}),
-    awful.key({ modkey, "Shift" }, "Print", function () awful.util.spawn("flameshot launcher") end,
-      {description = "Launch Flameshot Launcher", group = "Screenshots"})
+        {description = "(un)maximize horizontally", group = "client"})
 )
 
 -- Bind all key numbers to tags.
@@ -609,6 +537,7 @@ client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 -- Startup Programs
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("lxpolkit")
+awful.spawn.with_shell("sxhkd")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("killall -q conky")
