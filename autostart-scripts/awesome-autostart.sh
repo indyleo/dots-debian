@@ -20,11 +20,3 @@ sleep 3 && xfce4-clipman &
 # Wallpapers
 # xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png
 find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
-# feh --randomize --bg-fill ~/Pictures/Wallpapers/ &
-# ~/.fehbg &
-# nitrogen --set-zoom --random ~/Pictures/Wallpapers/ &
-# nitrogen --restore &
-
-# Variety
-killall -q variety &
-sleep 3 && variety &

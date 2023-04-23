@@ -81,7 +81,7 @@ nala install gvfs thunar-archive-plugin thunar file-roller -y
 nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
 # Installing Wallpaper Setters
-nala install xwallpaper feh nitrogen -y 
+nala install xwallpaper -y 
 
 # Installing Office
 nala install libreoffice -y 
