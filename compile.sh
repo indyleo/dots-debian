@@ -35,6 +35,12 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
+# Firefox Nord Theme
+cd ~/Github
+git clone https://github.com/EliverLara/firefox-nordic-theme 
+cd firefox-nordic-theme/scripts
+cd ~
+
 # Pynvim
 pip install pynvim
 
