@@ -37,9 +37,11 @@ alias df='df -h'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Wallpaper Aliases
-alias wal='xwallpaper --stretch'
-alias xwal='xwallpaper --stretch ~/Pictures/Wallpapers/nord_mountains.png'
-alias xwall='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
+alias wal='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
+alias fehr='~/.fehbg'
+alias fehw='feh --randomize --bg-fill ~/Pictures/Wallpapers/'
+alias nitr='nitrogen --restore'
+alias nran='nitrogen --random ~/Pictures/Wallpapers/'
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
@@ -104,6 +106,7 @@ alias atconf='nvim $HOME/.config/alacritty/alacritty.yml'
 alias piconf='nvim $HOME/.config/picom/picom.conf'
 alias wmconf='nvim $HOME/.config/awesome/rc.lua'
 alias viconf='nvim $HOME/.config/nvim/init.lua'
+alias poconf='nvim $HOME/.config/polybar/config'
 
 # Trash Aliases
 alias trash='trash -iv'
