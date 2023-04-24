@@ -550,8 +550,8 @@ awful.spawn.with_shell("killall -q xfce4-clipman")
 awful.spawn.with_shell("sleep 3 && xfce4-clipman")
 
 -- Wallpapers
-awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
+-- awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
 -- awful.spawn.with_shell("~/.fehbg")
--- awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
+awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
 -- awful.spawn.with_shell("nitrogen --restore")
 -- awful.spawn.with_shell("nitrogen --random ~/Pictures/Wallpapers/")
