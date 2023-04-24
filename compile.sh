@@ -38,7 +38,7 @@ cd ~
 # Firefox Nord Theme
 cd ~/Github
 git clone https://github.com/EliverLara/firefox-nordic-theme 
-cd firefox-nordic-theme/scripts
+cd firefox-nordic-theme
 cd ~
 
 # Pynvim
