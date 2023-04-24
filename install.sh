@@ -53,14 +53,14 @@ nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk
 
 # Helpful Cmd To Gui Stuff
 nala install gnupg \
-    ca-certificates \
-    gcc-multilib g++-multilib cmake libssl-dev pkg-config \
-    libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
-    libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
-    libxcursor-dev -y
+  ca-certificates \
+  gcc-multilib g++-multilib cmake libssl-dev pkg-config \
+  libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
+  libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
+  libxcursor-dev -y
 
 # Installing GUI programs 
-nala install galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+nala install polybar galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y
@@ -81,7 +81,7 @@ nala install gvfs thunar-archive-plugin thunar file-roller -y
 nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
 
 # Installing Wallpaper Setters
-nala install xwallpaper -y 
+nala install xwallpaper nitrogen feh -y 
 
 # Installing Office
 nala install libreoffice -y 
