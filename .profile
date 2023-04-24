@@ -41,6 +41,10 @@ export TERMINAL="alacritty"
 export WM="AwesomeWM"
 export BROWSER="firefox"
 export READER="zathura"
+export VIDEO="mpv"
+export IMAGE="sxiv"
+export COLORTERM="truecolor"
+export OPENER="xdg-open"
 
 # Rustup
 . "$HOME/.cargo/env"
