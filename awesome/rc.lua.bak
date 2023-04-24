@@ -119,60 +119,9 @@ else
     })
 end
 
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
-
--- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock(" %b %d, %I:%M %p ")
-
--- Create a wibox for each screen and add it
-local taglist_buttons = gears.table.join(
-                    awful.button({ }, 1, function(t) t:view_only() end),
-                    awful.button({ modkey }, 1, function(t)
-                                              if client.focus then
-                                                  client.focus:move_to_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 3, awful.tag.viewtoggle),
-                    awful.button({ modkey }, 3, function(t)
-                                              if client.focus then
-                                                  client.focus:toggle_tag(t)
-                                              end
-                                          end),
-                    awful.button({ }, 4, function(t) awful.tag.viewnext(t.screen) end),
-                    awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
-                )
-
-local tasklist_buttons = gears.table.join(
-                     awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  c:emit_signal(
-                                                      "request::activate",
-                                                      "tasklist",
-                                                      {raise = true}
-                                                  )
-                                              end
-                                          end),
-                     awful.button({ }, 3, function()
-                                              awful.menu.client_list({ theme = { width = 250 } })
-                                          end),
-                     awful.button({ }, 4, function ()
-                                              awful.client.focus.byidx(1)
-                                          end),
-                     awful.button({ }, 5, function ()
-                                              awful.client.focus.byidx(-1)
-                                          end))
 
 local function set_wallpaper(s)
     -- Wallpaper
@@ -195,52 +144,6 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
-
-    -- Create a promptbox for each screen
-    s.mypromptbox = awful.widget.prompt()
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox(s)
-    s.mylayoutbox:buttons(gears.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
-    -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
-    }
-
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
-    }
-
-    -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
-
-    -- Add widgets to the wibox
-    s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
-        { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            mylauncher,
-            s.mytaglist,
-            s.mypromptbox,
-        },
-        s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
-        },
-    }
 end)
 -- }}}
 
@@ -450,7 +353,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
+      properties = { border_width = 0,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -514,44 +417,11 @@ client.connect_signal("manage", function (c)
     end
 end)
 
--- No border for maximized clients
-function border_adjust(c)
-    if c.maximized then -- no borders if only 1 client visible
-        c.border_width = 0
-    elseif #awful.screen.focused().clients > 1 then
-        c.border_width = beautiful.border_width
-        c.border_color = beautiful.border_focus
-    end
-end
-
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
--- Borders of windows
-client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
-client.connect_signal("property::maximized", border_adjust)
-client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
-
 -- Startup Programs
-awful.spawn.with_shell("picom --experimental-backends")
-awful.spawn.with_shell("lxpolkit")
-awful.spawn.with_shell("sxhkd")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("killall -q conky")
-awful.spawn.with_shell("sleep 3 && conky -c ~/.config/conky/awesome/conky-wibar.conkyrc")
-awful.spawn.with_shell("killall -q volumeicon")
-awful.spawn.with_shell("sleep 3 && volumeicon")
-awful.spawn.with_shell("killall -q solaar")
-awful.spawn.with_shell("sleep 3 && solaar -w hide")
-awful.spawn.with_shell("killall -q xfce4-clipman")
-awful.spawn.with_shell("sleep 3 && xfce4-clipman")
-
--- Wallpapers
--- awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
--- awful.spawn.with_shell("~/.fehbg")
-awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
--- awful.spawn.with_shell("nitrogen --restore")
--- awful.spawn.with_shell("nitrogen --random ~/Pictures/Wallpapers/")
+awful.spawn.with_shell("~/.config/autostart-scripts/awesome-autostart.sh")
+awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")

@@ -1,23 +1,21 @@
-# Backround Programs
+# Killing Of Programs
+killall -q picom &
+killall -q sxhkd & 
+killall -q conky &
+killall -q volumeicon &
+killall -q xfce4-clipman &
+killall -q solaar &
+
+# Starting Programs
 picom --experimental-backends --config ~/.config/picom/picom-polyawe.conf &
 lxpolkit &
 sxhkd &
-
-# Conky
-killall -q conky &
 sleep 3 && conky -c ~/.config/conky/awesome/conky-polybar.conkyrc &
-
-# Aplleets
 nm-applet &
 flameshot &
-killall -q volumeicon &
-sleep 3 && volumeicon &
-killall -q xfce4-clipman &
-sleep 3 && xfce4-clipman &
-
-# Solaar 
-killall -q solaar &
-sleep 3 && solaar -w hide &
+volumeicon &
+xfce4-clipman &
+solaar -w hide &
 
 # Wallpapers
 # find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
