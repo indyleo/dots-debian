@@ -1,5 +1,5 @@
 # Backround Programs
-picom --experimental-backends &
+picom --experimental-backends --config ~/.config/picom/picom-polyawe.conf &
 lxpolkit &
 sxhkd &
 
