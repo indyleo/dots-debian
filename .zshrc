@@ -1,42 +1,7 @@
 # My .Zshrc Config
 
-# Path Variables
-if [ -d "$HOME/go/bin/" ] ;
-  then PATH="$HOME/go/bin:$PATH"
-fi
-
-if [ -d "$HOME/.cargo/bin" ] ;
-  then PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/Applications" ] ;
-  then PATH="$HOME/Applications:$PATH"
-fi
-
-if [ -d "$HOME/.local/share/bob/nvim-bin" ] ;
-  then PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-fi
-
-# Other Exports
-export EDITOR="nvim"
-export VISUAL="nvim"
-export PAGER="moar"
-export TERM="xterm-256color"
-if [ -z "$XDG_CONFIG_HOME" ] ; then
-    export XDG_CONFIG_HOME="$HOME/.config"
-fi
-
-if [ -z "$XDG_DATA_HOME" ] ; then
-    export XDG_DATA_HOME="$HOME/.local/share"
-fi
-
-if [ -z "$XDG_CACHE_HOME" ] ; then
-    export XDG_CACHE_HOME="$HOME/.cache"
-fi
+# Exports
+export HISTORY_IGNORE="(ls|la|l.|l||cd|pwd|exit|reboot|poweroff|history|cd -|cd ..|wq|)"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
