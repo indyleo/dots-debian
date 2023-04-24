@@ -91,6 +91,7 @@ nala install zathura -y
 
 # Installing browser
 nala purge firefox-esr -y
+rm -rf ~/.mozilla/
 nala install firefox -y
 
 # Installing X11 stuff
