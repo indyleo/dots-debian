@@ -20,8 +20,8 @@ killall -q solaar &
 sleep 3 && solaar -w hide &
 
 # Wallpapers
-# find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
+find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch &
 # ~/.fehbg &
-feh --randomize --bg-fill ~/Pictures/Wallpapers/ &
+# feh --randomize --bg-fill ~/Pictures/Wallpapers/ &
 # nitrogen --restore &
 # nitrogen --random ~/Pictures/Wallpapers/ &
