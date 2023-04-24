@@ -134,9 +134,6 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias lg='lazygit'
 
-# Bare Git Repo Alias For Dotfiles
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-
 # Shell Aliases
 alias srcz='source ~/.zshrc'
 alias srcb='source ~/.bashrc'
