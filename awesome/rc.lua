@@ -450,7 +450,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
+      properties = { border_width = 0,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -514,25 +514,10 @@ client.connect_signal("manage", function (c)
     end
 end)
 
--- No border for maximized clients
-function border_adjust(c)
-    if c.maximized then -- no borders if only 1 client visible
-        c.border_width = 0
-    elseif #awful.screen.focused().clients > 1 then
-        c.border_width = beautiful.border_width
-        c.border_color = beautiful.border_focus
-    end
-end
-
 -- Appearance Stuff
 beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
-
--- Borders of windows
-client.connect_signal("focus", function(c) c.border_color = "#4c566a" end)
-client.connect_signal("property::maximized", border_adjust)
-client.connect_signal("unfocus", function(c) c.border_color = "#3b4252" end)
 
 -- Startup Programs
 awful.spawn.with_shell("~/.config/autostart-scripts/awesome-autostart.sh")
