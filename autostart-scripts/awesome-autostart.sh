@@ -5,7 +5,7 @@ sxhkd &
 
 # Conky
 killall -q conky &
-sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc &
+sleep 3 && conky -c ~/.config/conky/awesome/conky-polybar.conkyrc &
 
 # Aplleets
 nm-applet &
