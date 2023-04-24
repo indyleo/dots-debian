@@ -49,7 +49,7 @@ modules-right =  date
 ; Tray Settings
 tray-detached = false
 tray-offset-x = 0
-tray-offset-y = 2
+tray-offset-y = 0
 tray-position = right
 tray-padding = 4
 tray-maxsize = 20
