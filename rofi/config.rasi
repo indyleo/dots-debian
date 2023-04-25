@@ -4,5 +4,10 @@ configuration {
     line-margin: 10;
     modi: "window,drun,run,combi";
     combi-modi: "window,drun,run";
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
 }
 @theme "nord"
