@@ -8,17 +8,13 @@ super + Escape
 super + Return
   alacritty
 
-# Drun launcher
+# Terminal
+super + t
+  alacritty
+
+# Drun, Run, And Window Switch
 super + r
-  rofi -show drun
-
-# Run launcher
-super + d
-  rofi -show run
-
-# Window Switch
-super + o
-  rofi -show window
+  rofi -show combi
 
 # Power Menu
 super + p
