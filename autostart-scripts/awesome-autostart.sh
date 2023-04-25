@@ -7,7 +7,7 @@ killall -q xfce4-clipman &
 killall -q solaar &
 
 # Starting Programs
-picom --experimental-backends --config ~/.config/picom/picom-polyawe.conf &
+sleep 1 && picom --config ~/.config/picom/picom-polyawe.conf --experimental-backends &
 lxpolkit &
 sxhkd &
 sleep 3 && conky -c ~/.config/conky/awesome/conky-polybar.conkyrc &
