@@ -107,6 +107,8 @@ alias piconf='nvim $HOME/.config/picom/picom.conf'
 alias wmconf='nvim $HOME/.config/awesome/rc.lua'
 alias viconf='nvim $HOME/.config/nvim/init.lua'
 alias poconf='nvim $HOME/.config/polybar/config'
+alias sxconf='nvim $HOME/.config/sxhkd/sxhkdrc'
+
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -206,3 +208,4 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+

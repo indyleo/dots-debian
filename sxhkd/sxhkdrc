@@ -8,10 +8,6 @@ super + Escape
 super + Return
   alacritty
 
-# Terminal
-super + t
-  alacritty
-
 # Drun, Run, And Window Switch
 super + r
   rofi -show combi
