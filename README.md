@@ -19,6 +19,9 @@ QT_QPA_PLATFORMTHEME=qt5ct
 ```
 Put this into your '/etc/environment' file
 
+# Wlan Interface
+To find your wlan interface for polybar do 'nmcli' and the interface tou are connected to is the one to use
+
 # Resources (Dotfiles)
 - [Titus-Awesome](https://github.com/ChrisTitusTech/titus-awesome) Hosted On Github
 - [DWT1-Awesome](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome) Hosted On Gitlab
