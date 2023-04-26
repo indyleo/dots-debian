@@ -1,12 +1,12 @@
 --[[
-###########################
-##  conky-wibar.conkyrc  ##
-###########################
+########################
+##  conky-01.conkyrc  ##
+########################
 ]]
 
 conky.config = {
 
-	--Various settings
+	-- Various settings
 	background = true, 							-- forked to background
 	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
 	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
@@ -14,22 +14,22 @@ conky.config = {
 	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
 	net_avg_samples = 2,						-- The number of samples to average for net data
 	no_buffers = true,							-- Subtract (file system) buffers from used memory?
-	temperature_unit = 'fahrenheit',			-- fahrenheit or celsius
+	temperature_unit = 'celsius',			-- fahrenheit or celsius
 	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
 	update_interval = 1,						-- update interval
 	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
 
-    -- Placement (For SINGLE monitor users!)
+  -- Placement (For SINGLE monitor users!)
 	alignment = 'top_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 	gap_x = 20,								-- pixels between right or left border
-	gap_y = 43,								-- pixels between bottom or left border
+	gap_y = 50,								-- pixels between bottom or left border
 
-    -- Size
+  -- Size
   minimum_height = 200,						-- minimum height of window
 	minimum_width = 260,						-- minimum width of window
 	maximum_width = 260,						-- maximum width of window
 
-	--Graphical
+	-- Graphical
 	border_inner_margin = 5, 					-- margin between border and text
 	border_outer_margin = 5, 					-- margin between border and edge of window
 	border_width = 0, 							-- border width in pixels
@@ -47,7 +47,7 @@ conky.config = {
 	draw_outline = false,						-- draw outline
 	stippled_borders = 0,						-- dashing the border
 
-	--Textual
+	-- Textual
 	format_human_readable = true,				-- KiB, MiB rather then number of bytes
 	font  = 'Fira Code:bold:size=10',  	-- the default font used
 	font2 = 'Ubuntu:bold:size=30',         	-- font for the time
@@ -64,7 +64,7 @@ conky.config = {
 	use_xft = true,								-- xft font - anti-aliased font
 	xftalpha = 1,								-- alpha of the xft font - between 0-1
 
-	--Windows
+	-- Windows
 	own_window = true,							-- create your own window to draw
 	own_window_argb_value = 235,			    -- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,				-- use ARGB - composite manager required
@@ -75,7 +75,7 @@ conky.config = {
 	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 
-	--Colors (Nord)
+	-- Colors (Nord)
 	color0 = '#B48EAD',
 	color1 = '#D8DEE9',
 	color2 = '#88C0D0',
