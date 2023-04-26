@@ -428,21 +428,14 @@ beautiful.notification_icon_size = 80
 awful.spawn.with_shell("killall -q picom")
 awful.spawn.with_shell("killall -q sxhkd")
 awful.spawn.with_shell("killall -q conky")
-awful.spawn.with_shell("killall -q xfce4-clipman")
-awful.spawn.with_shell("killall -q polybar")
-awful.spawn.with_shell("killall -q volumeicon")
 awful.spawn.with_shell("killall -q solaar")
 
 -- Starting Programs
 awful.spawn.with_shell("sleep 1 && picom --experimental-backends")
 awful.spawn.with_shell("lxpolkit")
 awful.spawn.with_shell("sxhkd")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc")
-awful.spawn.with_shell("volumeicon")
 awful.spawn.with_shell("solaar -w hide")
-awful.spawn.with_shell("xfce4-clipman")
 
 -- Wallpapers
 -- awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")

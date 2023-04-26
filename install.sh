@@ -52,10 +52,8 @@ nala install zsh zsh-syntax-highlighting bash-completion -y
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
 # Helpful Cmd To Gui Stuff
-nala install gnupg \
-  ca-certificates \
-  gcc-multilib g++-multilib cmake libssl-dev pkg-config \
-  libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
+nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
+  pkg-config libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
   libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
   libxcursor-dev -y
 
@@ -78,7 +76,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome
-nala install conky awesome picom flameshot lxpolkit xfce4-clipman rofi i3lock-fancy volumeicon-alsa -y
+nala install conky awesome picom flameshot lxpolkit rofi i3lock-fancy -y
 
 # Installing Wallpaper Setters
 nala install xwallpaper nitrogen feh -y 
