@@ -44,7 +44,7 @@ font-2 = "Ubuntu:weight=Medium:size=10;2"
 ; Modules
 modules-left = term workspaces 
 modules-center = xwindow mpd  
-modules-right = wallpaper battery wlan audio logi shot date
+modules-right = wallpaper battery wlan audio clip logi shot date
 
 ; Tray Settings
 ; tray-detached = false
