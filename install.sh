@@ -98,6 +98,10 @@ nala install sxhkd xcowsay arandr xterm xclip xbacklight -y
 # Installing glxgears
 nala install mesa-utils -y
 
+# Script Variables
+username=$(id -u -n 1000)
+builddir=$(pwd)
+
 # Installing SDDM & Theme
 #nala install sddm -y
 #systemctl set-default graphical.target
@@ -107,15 +111,13 @@ nala install mesa-utils -y
 #tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 #mv $builddir/sddm.conf /etc/sddm.conf
 
-# Script Variables
-username=$(id -u -n 1000)
-builddir=$(pwd)
-
 # Installing fonts 
 nala install fonts-font-awesome fontconfig -y
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraMono.zip
+unzip FiraMono.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
@@ -135,7 +137,7 @@ chown $username:$username /home/$username/.fonts/*
 fc-cache -vf
 
 # Removing zip files
-rm ./FiraCode.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./NerdFontsSymbolsOnly.zip
+rm ./FiraCode.zip ./FiraMono.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./NerdFontsSymbolsOnly.zip
 
 # Setting up ufw 
 nala install ufw -y
