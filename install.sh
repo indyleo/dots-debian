@@ -116,8 +116,6 @@ nala install fonts-font-awesome fontconfig -y
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraMono.zip
-unzip FiraMono.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
@@ -126,6 +124,10 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
 unzip Ubuntu.zip -d /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/UbuntuMono.zip
 unzip UbuntuMono.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/NerdFontsSymbolsOnly.zip
+unzip NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
 
@@ -133,7 +135,7 @@ chown $username:$username /home/$username/.fonts/*
 fc-cache -vf
 
 # Removing zip files
-rm ./FiraCode.zip /FiraMono.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip
+rm ./FiraCode.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./NerdFontsSymbolsOnly.zip
 
 # Setting up ufw 
 nala install ufw -y
