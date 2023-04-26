@@ -4,7 +4,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 theme                                           = {}
 
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome"
-theme.font                                      = "Ubuntu Light 9"
+theme.font                                      = "Ubuntu Nerd Font Light 9"
 theme.fg_normal                                 = "#ffffff"
 theme.fg_focus                                  = "#ffffff"
 theme.bg_normal                                 = "#373c4e"

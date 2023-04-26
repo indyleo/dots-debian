@@ -42,9 +42,9 @@ font-1 = "UbuntuMono Nerd Font:size=12;2"
 font-2 = "Ubuntu:weight=Medium:size=10;2"
 
 ; Modules
-modules-left = workspaces 
-modules-center = xwindow mpd
-modules-right =  date
+modules-left = term workspaces
+modules-center = xwindow 
+modules-right = wallpaper date
 
 ; Tray Settings
 tray-detached = false
