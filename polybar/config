@@ -37,13 +37,16 @@ module-margin-left = 2
 module-margin-right = 2
 
 ; Fonts
-font-0 = "Ubuntu:weight=SemiBold:size=10;2"
-font-1 = "Ubuntu Nerd Font:size=12;2"
+font-0 = "Ubuntu:weight=Bold:size=10;2"
+font-1 = "Ubuntu:weight=SemiBold:size=10;2"
 font-2 = "Ubuntu:weight=Medium:size=10;2"
+font-3 = "Ubuntu:weight=Light:size=10;2"
+font-4 = "Ubuntu:size=10;2"
+font-5 = "Symbols Nerd Font:size=12;2"
 
 ; Modules
-modules-left = term workspaces 
-modules-center = xwindow mpd  
+modules-left = term xwindow 
+modules-center = workspaces
 modules-right = wallpaper battery wlan audio clip logi shot date
 
 ; Tray Settings
