@@ -61,7 +61,7 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd autostart-scripts polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv  sxhkd polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
 rm ~/.bashrc ~/.profile
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
