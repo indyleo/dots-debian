@@ -18,6 +18,11 @@ super + p
   -theme 'nord' \
   -font 'FiraCode Nerd Font 16'
 
+# Greenclip
+super + d
+  rofi -modi "clipboard:greenclip print" \
+  -show clipboard -run-command '{cmd}'
+
 # Locking Computer
 super + s
   i3lock-fancy -g

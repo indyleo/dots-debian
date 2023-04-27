@@ -35,6 +35,11 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
+# Greenclip
+cd ~/.local/bin
+wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
+cd ~
+
 # Pynvim
 pip install pynvim
 
@@ -61,7 +66,7 @@ cd ~
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs ~/.config/
+mv  sxhkd polybar neofetch nvim ranger picom awesome conky alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
