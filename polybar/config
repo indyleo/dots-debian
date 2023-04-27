@@ -16,6 +16,8 @@ incluse-file = ~/.config/polybar/settings.ini
 
 [bar/awesome]
 ; Basic Settings For The Bar
+; override-redirect = true
+; wm-restack = awesome-client
 monitor = ${env:MONITOR:}
 cursor-click = pointer
 cursor-scroll = ns-resize
