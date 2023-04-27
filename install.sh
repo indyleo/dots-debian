@@ -58,7 +58,7 @@ nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
   libxcursor-dev -y
 
 # Installing GUI programs 
-nala install polybar galculator rpi-imager alacritty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+nala install polybar galculator rpi-imager alacritty kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
 nala install rhythmbox rhythmbox-plugins -y
