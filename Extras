@@ -1,6 +1,5 @@
-# Rofi Scripts (You Add Your Own Keybindings To Awesome Config)
+# Rofi Scripts (You Add Your Own Keybindings To Sxhkd Config)
 https://github.com/Mange/rofi-emoji
-https://github.com/cdown/clipmenu
 https://github.com/svenstaro/rofi-calc
 https://github.com/windwp/rofi-color-picker
 
@@ -11,6 +10,3 @@ https://github.com/ventoy/Ventoy/releases/latest (ventoy-*-linux.tar.gz is the o
 https://github.com/walles/moar/releases/latest (Download the moar-VER-linux-386 )
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
-
-# Screen tearing fix
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
