@@ -26,7 +26,7 @@ require("awful.hotkeys_popup.keys")
 local lain = require("lain")
 local freedesktop = require("freedesktop")
 
--- {{{ Error handling
+-- Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -49,9 +49,8 @@ do
         in_error = false
     end)
 end
--- }}}
 
--- {{{ Variable definitions
+-- Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/theme.lua")
 
@@ -90,70 +89,37 @@ awful.layout.layouts = {
     --lain.layout.termfair,
     --lain.layout.termfair.center,
 }
--- }}}
-
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "Manual", terminal .. " -e man awesome" },
-   { "Edit Config", editor_cmd .. " " .. awesome.conffile },
-   { "Restart", awesome.restart },
-   { "Quit", function() awesome.quit() end },
-}
-
-local menu_awesome = { "Awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { "Open Terminal", terminal }
-
-if freedesktop then
-    mymainmenu = freedesktop.menu.build({
-        before = { menu_awesome },
-        after =  { menu_terminal }
-    })
-else
-    mymainmenu = awful.menu({
-        items = {
-                  menu_awesome,
-                  menu_terminal,
-                }
-    })
-end
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
 
-local function set_wallpaper(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
-end
+  local function set_wallpaper(s)
+      -- Wallpaper
+      if beautiful.wallpaper then
+          local wallpaper = beautiful.wallpaper
+          -- If wallpaper is a function, call it with the screen
+          if type(wallpaper) == "function" then
+              wallpaper = wallpaper(s)
+          end
+          gears.wallpaper.maximized(wallpaper, s, true)
+      end
+  end
 
--- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", set_wallpaper)
+  -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
+  screen.connect_signal("property::geometry", set_wallpaper)
 
-awful.screen.connect_for_each_screen(function(s)
-    -- Wallpaper
-    set_wallpaper(s)
+ awful.screen.connect_for_each_screen(function(s)
+     -- Wallpaper
+     set_wallpaper(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
 end)
--- }}}
 
--- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end)
-))
--- }}}
+-- Mouse bindings
+root.buttons(gears.table.join())
 
--- {{{ Key bindings
+-- Key bindings
 globalkeys = gears.table.join(
     awful.key({ modkey,  "Shift"  }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
@@ -346,12 +312,9 @@ clientbuttons = gears.table.join(
 
 -- Set keys
 root.keys(globalkeys)
--- }}}
 
--- {{{ Rules
--- Rules to apply to new clients (through the "manage" signal).
+-- Rules
 awful.rules.rules = {
-    -- All clients will match this rule.
     { rule = { },
       properties = { border_width = 0,
                      border_color = beautiful.border_normal,
@@ -367,8 +330,8 @@ awful.rules.rules = {
     -- Floating clients.
     { rule_any = {
         instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
+          "DTA",
+          "copyq",
           "pinentry",
         },
         class = {
@@ -376,13 +339,13 @@ awful.rules.rules = {
           "Blueman-manager",
           "Gpick",
           "Kruler",
-          "MessageWin",  -- kalarm.
+          "MessageWin",
           "Sxiv",
           "Peek",
           "Galculator",
           "Gnome-font-viewer",
           "Font-manager",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+          "Tor Browser",
           "Wpa_gui",
           "veromix",
           "xtightvncviewer"
@@ -400,19 +363,12 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 }
--- }}}
 
--- {{{ Signals
--- Signal function to execute when a new client appears.
+-- Signals
 client.connect_signal("manage", function (c)
-    -- Set the windows at the slave,
-    -- i.e. put it at the end of others instead of setting it master.
-    -- if not awesome.startup then awful.client.setslave(c) end
-
     if awesome.startup
       and not c.size_hints.user_position
       and not c.size_hints.program_position then
-        -- Prevent clients from being unreachable after screen count changes.
         awful.placement.no_offscreen(c)
     end
 end)
@@ -422,27 +378,6 @@ beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
--- Startup Programs -- 
-
--- Killing Of Programs
-awful.spawn.with_shell("killall -q picom")
-awful.spawn.with_shell("killall -q sxhkd")
-awful.spawn.with_shell("killall -q conky")
-awful.spawn.with_shell("killall -q solaar")
-
--- Starting Programs
-awful.spawn.with_shell("sleep 1 && picom --experimental-backends")
-awful.spawn.with_shell("lxpolkit")
-awful.spawn.with_shell("sxhkd")
-awful.spawn.with_shell("sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc")
-awful.spawn.with_shell("solaar -w hide")
-
--- Wallpapers
--- awful.spawn.with_shell("find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch")
--- awful.spawn.with_shell("~/.fehbg")
-awful.spawn.with_shell("feh --randomize --bg-fill ~/Pictures/Wallpapers/")
--- awful.spawn.with_shell("nitrogen --restore")
--- awful.spawn.with_shell("nitrogen --random ~/Pictures/Wallpapers/")
-
--- Polybar
+-- Startup Programs 
+awful.spawn.with_shell("~/.config/autostart-scripts/awesome.sh")
 awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")
