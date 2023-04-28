@@ -5,7 +5,8 @@ Distro I Use Is Pop-os With AwesomWM
 The reason why the "sddm.conf, pacman.conf, dnf.conf, and sorces.list" is still their because its just allows me to more easily switch to a diffrent distro i want or need to
 
 # Preview : 
-![awesome-pre](https://user-images.githubusercontent.com/100316787/231321088-8859b63a-339e-401e-a769-6a14dffa26ea.png)
+![2023-04-27_23-23](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
+
 
 # Awesome loading ~/.xsession
 In /usr/share/xsessions/awesome.desktop change the exec line to
