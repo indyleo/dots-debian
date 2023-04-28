@@ -22,13 +22,14 @@ monitor = ${env:MONITOR:}
 cursor-click = pointer
 cursor-scroll = ns-resize
 bottom = false
+enable-ipc = true
+fixed-center = true
 separator = |
 
 ; Shape Of The Bar
 width = 100%
 height = 27
 radius = 0.0
-fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 0
