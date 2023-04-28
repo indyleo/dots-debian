@@ -1,8 +1,5 @@
 # My .Zshrc Config
 
-# Exports
-export HISTORY_IGNORE="(ls|la|l.|l||cd|pwd|exit|reboot|poweroff|history|cd -|cd ..|wq|)"
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -124,7 +121,7 @@ rangercd () {
 }
 bindkey -s '^z' 'rangercd\n'
 
-# PIP Completions
+# PIP Completion
 function _pip_completion {
   local words cword
   read -Ac words
@@ -150,11 +147,17 @@ compctl -K _nala_completion nala
 source $HOME/.aliasrc 2>/dev/null
 
 # Autojump
-source /usr/share/autojump/autojump.zsh 2>/dev/null
+if [ -f "/usr/share/autojump/autojump.sh" ]; then
+	. /usr/share/autojump/autojump.sh
+elif [ -f "/usr/share/autojump/autojump.zsh" ]; then
+	. /usr/share/autojump/autojump.zsh
+else
+	echo "can't found the autojump script"
+fi
 
 # Startup Stuff
 # neofetch
- pfetch
+pfetch
 # colorscript -r
 # nerdfetch
 # nitch

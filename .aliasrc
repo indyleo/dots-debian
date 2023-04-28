@@ -86,6 +86,51 @@ up () {
   fi
 }
 
+# Copy and go to the directory
+cpg ()
+{
+	if [ -d "$2" ];then
+		cp "$1" "$2" && cd "$2"
+	else
+		cp "$1" "$2"
+	fi
+}
+
+# Move and go to the directory
+mvg ()
+{
+	if [ -d "$2" ];then
+		mv "$1" "$2" && cd "$2"
+	else
+		mv "$1" "$2"
+	fi
+}
+
+# Create and go to the directory
+mkdirg ()
+{
+	mkdir -p "$1"
+	cd "$1"
+}
+
+# Automatically do an ls after each cd
+# cd ()
+# {
+# 	if [ -n "$1" ]; then
+# 		builtin cd "$@" && ls
+# 	else
+# 		builtin cd ~ && ls
+# 	fi
+# }
+
+# CD Aliases
+alias home='cd ~'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
 # Audio Aliases
 alias playwav='rythmbox *.wav'
 alias playogg='rythmbox *.ogg'
@@ -109,7 +154,6 @@ alias viconf='nvim $HOME/.config/nvim/init.lua'
 alias poconf='nvim $HOME/.config/polybar/config'
 alias sxconf='nvim $HOME/.config/sxhkd/sxhkdrc'
 
-
 # Trash Aliases
 alias trash='trash -iv'
 alias trashl='trash-list'
@@ -120,6 +164,9 @@ alias trashe='trash-empty'
 # GPG encryption
 alias gpg-check='gpg --keyserver-options auto-key-retrieve --verify'
 alias gpg-retrieve='gpg --keyserver-options auto-key-retrieve --receive-keys'
+
+# Add a alert for long running commands 
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Git Aliases
 alias addup='git add -u'

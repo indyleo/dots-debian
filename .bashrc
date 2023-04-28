@@ -1,6 +1,6 @@
 # My .Bashrc Config
 
-# Exports
+# Other Exports
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries
 
 # If not running interactively, don't do anything
@@ -71,7 +71,7 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 
-# Nala completions
+# Nala completion
 _nala_completion() {
     local IFS=$'
 '
@@ -89,4 +89,10 @@ source $HOME/.aliasrc 2>/dev/null
 eval "$(starship init bash)"
 
 # Autojump
-source /usr/share/autojump/autojump.bash 2>/dev/null
+if [ -f "/usr/share/autojump/autojump.sh" ]; then
+	. /usr/share/autojump/autojump.sh
+elif [ -f "/usr/share/autojump/autojump.bash" ]; then
+	. /usr/share/autojump/autojump.bash
+else
+	echo "can't found the autojump script"
+fi
