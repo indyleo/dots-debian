@@ -157,6 +157,30 @@ alias 777='chmod -R 777'
 alias tobash="chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
+# Switch Between Shells (System Shell)
+alias tobashsu="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozshsu="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+# Cargo Aliases
+alias cargoin='cargo install'
+alias cargoun='cargo uninstall'
+alias cargorm='cargo remove'
+alias cargoup='cargo update'
+alias cargocl='cargo clean'
+
+# PIP Aliases
+alias pipin='pip install'
+alias pipun='pip uninstall'
+alias pipdo='pip download'
+
+# Flatpak Aliases
+alias flatin='flatpak install'
+alias flatun='flatpak uninstall'
+alias flatup='flatpak update'
+alias flatse='flatpak search'
+alias flatru='flatpak run'
+alias flatki='flatpak kill'
+
 # APT To Nala
 apt() { 
   command nala "$@"
