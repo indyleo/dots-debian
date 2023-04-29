@@ -67,7 +67,7 @@ cd ~
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv  sxhkd polybar neofetch nvim ranger picom awesome conky kitty alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
-rm ~/.bashrc ~/.profile
+rm ~/.bashrc ~/.profile ~/.zshenv
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
 
 # Zsh Autopairs
