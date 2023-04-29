@@ -64,7 +64,7 @@ nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
 nala install polybar galculator rpi-imager alacritty kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
 
 # Installing a music player
-nala install mpd mpc ncmpcpp -y
+nala install rhythmbox rhythmbox-plugins rhythmbox-data -y
 
 # Installing media stuff
 nala install pavucontrol yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
