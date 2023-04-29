@@ -40,27 +40,14 @@ module-margin-left = 2
 module-margin-right = 2
 
 ; Fonts
-font-0 = "Ubuntu:weight=Bold:size=10;2"
-font-1 = "Ubuntu:weight=SemiBold:size=10;2"
-font-2 = "Ubuntu:weight=Medium:size=10;2"
-font-3 = "Ubuntu:weight=Light:size=10;2"
-font-4 = "Ubuntu:size=10;2"
-font-5 = "Symbols Nerd Font:size=12;2"
+font-0 = "Ubuntu:weight=SemiBold:size=10;2"
+font-1 = "Ubuntu:weight=Medium:size=10;2"
+font-2 = "Symbols Nerd Font:size=12;2"
 
 ; Modules
 modules-left = term xwindow 
-modules-center = workspaces mpd
+modules-center = workspaces
 modules-right = wallpaper battery wlan audio clip logi shot date
-
-; Tray Settings
-; tray-detached = false
-; tray-offset-x = 0
-; tray-offset-y = 0
-; tray-position = right
-; tray-padding = 4
-; tray-maxsize = 20
-; tray-scale = 1.0
-; tray-background = ${colors.background}
 
 ; For Vim Users
 # vim:ft=dosini
