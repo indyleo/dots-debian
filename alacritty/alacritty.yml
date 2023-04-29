@@ -47,31 +47,43 @@ tabspaces: 4
 font:
   normal:
     # family: FiraCode Nerd Font
+    # family: FiraMono Nerd Font
     family: SauceCodePro Nerd Font
     # family: MesloLGLDZ Nerd Font
+    # family: JetBrainsMono Nerd Font
+    # family: CaskaydiaCove Nerd Font
     style: Regular
 
   # Bold font face
   bold:
     # Font family
     # family: FiraCode Nerd Font
+    # family: FiraMono Nerd Font
     family: SauceCodePro Nerd Font
     # family: MesloLGLDZ Nerd Font
+    # family: JetBrainsMono Nerd Font
+    # family: CaskaydiaCove Nerd Font
     style: Bold
 
   # Italic font face
   italic:
     # family: FiraCode Nerd Font
+    # family: FiraMono Nerd Font
     family: SauceCodePro Nerd Font
     # family: MesloLGLDZ Nerd Font
+    # family: JetBrainsMono Nerd Font
+    # family: CaskaydiaCove Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
     # Font family
     # family: FiraCode Nerd Font
+    # family: FiraMono Nerd Font
     family: SauceCodePro Nerd Font
     # family: MesloLGLDZ Nerd Font
+    # family: JetBrainsMono Nerd Font
+    # family: CaskaydiaCove Nerd Font
     style: Bold Italic
 
   # Point size

@@ -113,6 +113,7 @@ cd ~
 # Greenclip
 cd ~/.local/bin
 wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
+chmod a+x greenclip 
 cd ~
 
 # Nix pkg manager 
