@@ -42,6 +42,9 @@ nala install xdg-user-dirs xdg-user-dirs-gtk -y
 # Installing fun stuff
 nala install sl neofetch cowsay cmatrix tty-clock hollywood -y
 
+# Mounting usb utils
+nala install udiskie udisks2 -y
+
 # Resoureces monitors
 nala install btop htop bashtop -y
 
