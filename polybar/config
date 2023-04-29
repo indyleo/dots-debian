@@ -49,7 +49,7 @@ font-5 = "Symbols Nerd Font:size=12;2"
 
 ; Modules
 modules-left = term xwindow 
-modules-center = workspaces
+modules-center = workspaces mpd
 modules-right = wallpaper battery wlan audio clip logi shot date
 
 ; Tray Settings
