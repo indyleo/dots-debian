@@ -40,7 +40,7 @@ nala install python-pip npm flatpak golang-go -y
 nala install xdg-user-dirs xdg-user-dirs-gtk -y
 
 # Installing fun stuff
-nala install sl neofetch cowsay cmatrix tty-clock holloywood -y
+nala install sl neofetch cowsay cmatrix tty-clock hollywood -y
 
 # Resoureces monitors
 nala install btop htop bashtop -y
