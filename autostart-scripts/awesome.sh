@@ -11,7 +11,7 @@ killall -q greenclip &
 sleep 1 && picom --experimental-backends &
 lxpolkit &
 sxhkd &
-greenclip daemon &
+sleep 1 && greenclip daemon &
 sleep 3 && conky -c ~/.config/conky/awesome/conky-01.conkyrc &
 solaar -w hide &
 
