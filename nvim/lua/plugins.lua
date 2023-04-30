@@ -67,6 +67,8 @@ return packer.startup(function(use)
   -- File Explorer Stuff
   use { "kyazdani42/nvim-web-devicons"}
   use { "kyazdani42/nvim-tree.lua"}
+  use { "akinsho/bufferline.nvim"}
+  use { "famiu/bufdelete.nvim"}
   use { "moll/vim-bbye"}
 
   -- Cmp 
