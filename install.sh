@@ -79,7 +79,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
 # Installing Awesome
-nala install conky awesome picom flameshot lxpolkit rofi i3lock-fancy -y
+nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
 
 # Installing Wallpaper Setters
 nala install xwallpaper nitrogen feh -y 
