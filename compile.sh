@@ -54,8 +54,7 @@ cargo install lsd bob-nvim
 
 # Installing & Using Bobs Neovim
 bob install stable
-bob install 0.8.3
-bob use 0.8.3
+bob use stable
 
 # Reload X11 Colors
 cd $builddir

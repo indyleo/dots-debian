@@ -68,6 +68,7 @@ return packer.startup(function(use)
   use { "kyazdani42/nvim-web-devicons"}
   use { "kyazdani42/nvim-tree.lua"}
   use { "akinsho/bufferline.nvim"}
+  use { "famiu/bufdelete.nvim"}
   use { "moll/vim-bbye"}
 
   -- Cmp 
@@ -98,6 +99,9 @@ return packer.startup(function(use)
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim"}
+
+  -- Harpoon
+  use { "ThePrimeagen/harpoon"}
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter"}
