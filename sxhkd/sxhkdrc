@@ -54,13 +54,13 @@ XF86AudioMute
 
 # Music
 XF86AudioNext
-  rhythmbox-client --next
+  playerctl next --player=rhythmbox
 
 XF86AudioPrev
-  rhythmbox-client --previous
+  playerctl previous --player=rhythmbox
 
 XF86AudioPlay
-  rhythmbox-client --play-pause
+  playerctl play-pause --player=rhythmbox
 
 # Screenshot 
 Print
