@@ -53,8 +53,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install lsd bob-nvim
 
 # Installing & Using Bobs Neovim
-bob install stable
-bob use stable
+bob install 0.8.3
+bob use 0.8.3
 
 # Reload X11 Colors
 cd $builddir
