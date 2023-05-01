@@ -2,7 +2,7 @@
 
 # Terminal
 super + Return
-  alacritty
+ kitty 
 
 # Drun, Run, And Window Switch
 super + r
@@ -29,7 +29,7 @@ super + f
 
 # Tui File Manager
 super + x
-  alacritty -e ranger
+  kitty -e ranger
 
 # Browser 
 super + b
