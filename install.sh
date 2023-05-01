@@ -23,7 +23,7 @@ apt update -y
 apt upgrade -y
 
 # Intalling Nala
-apt install nala
+apt install nala -y
 
 # Installing CLI programs
 nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev \
