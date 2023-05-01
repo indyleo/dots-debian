@@ -28,7 +28,7 @@ apt install nala -y
 # Installing CLI programs
 nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev \
   gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks \
-  ranger shellcheck python3-venv stow apt-transport-https -y
+  ranger shellcheck python3-venv stow apt-transport-https exa -y
 
 # Text Editor Stuff
 nala install ripgrep fd-find neovim nano vim -y
@@ -145,9 +145,6 @@ ufw default deny incoming
 ufw default allow outgoing
 ufw enable
 systemctl enable ufw
-
-# Neovim Stuff
-npm i -g neovim tree-sitter-cli
 
 # Pfetch
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch

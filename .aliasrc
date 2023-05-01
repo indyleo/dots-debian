@@ -1,9 +1,10 @@
-# Changing ls To lsd
-alias ls='lsd --group-directories-first --color auto' # Basic Lsd But with Some Nice Flags
-alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
-alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
-alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
-alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
+# Changing ls To exa
+alias l='exa -al --icons --color=always --group-directories-first' # My Favourite
+alias ls='exa --icons --color=always --group-directories-first' # Basic exa But with Some Nice Flags & Icons
+alias la='exa -a --icons --color=always --group-directories-first'  # Show Hidden Files
+alias ll='exa -l --icons --color=always --group-directories-first' # Show In Listing Form  
+alias lt='exa -aT --icons --color=always --group-directories-first' # Tree Listing
+alias l.='exa -a | egrep "^\."' # Show Only Hidden File
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -206,11 +207,11 @@ alias tobashsu="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozshsu="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 # Cargo Aliases
-alias carin='cargo install'
-alias carun='cargo uninstall'
-alias carrm='cargo remove'
-alias carup='cargo update'
-alias carcl='cargo clean'
+alias cargoin='cargo install'
+alias cargoun='cargo uninstall'
+alias cargorm='cargo remove'
+alias cargoup='cargo update'
+alias cargocl='cargo clean'
 
 # PIP Aliases
 alias pipin='pip install'

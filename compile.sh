@@ -40,17 +40,14 @@ wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux
 chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar 
 
-# Pynvim
-pip install pynvim
-
 # Installing go stuff
 go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Installing lsd & bob
-cargo install lsd bob-nvim
+# Installing bob-nvim
+cargo install bob-nvim
 
 # Installing & Using Bobs Neovim
 bob install 0.8.3
@@ -67,7 +64,7 @@ cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv  sxhkd polybar neofetch nvim ranger picom awesome conky kitty alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
-mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile ~/
+mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc ~/
 
 # Zsh Autopairs
 cd ~/Zsh/Plugins
