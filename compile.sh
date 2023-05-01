@@ -115,9 +115,6 @@ wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 chmod a+x greenclip 
 cd ~
 
-# Nix pkg manager 
-sh <(curl -L https://nixos.org/nix/install) --daemon
-
 # Nitch
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
 chmod a+x setup.sh
