@@ -11,6 +11,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# HeadsetControl Aliases
+alias h1='headsetcontrol -l 0'
+alias hb='headsetcontrol -b'
+alias hc='headsetcontrol'
+
 # PS Aliases
 alias psa="ps auxf"
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
@@ -52,9 +57,6 @@ alias yta-opus='yt-dlp --extract-audio --audio-format opus '
 alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
-
-# The Terminal Rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Load Xresources
 alias load='xrdb -load ~/.Xresources'
