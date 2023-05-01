@@ -207,11 +207,11 @@ alias tobashsu="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozshsu="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 # Cargo Aliases
-alias cargoin='cargo install'
-alias cargoun='cargo uninstall'
-alias cargorm='cargo remove'
-alias cargoup='cargo update'
-alias cargocl='cargo clean'
+alias carin='cargo install'
+alias carun='cargo uninstall'
+alias carrm='cargo remove'
+alias carup='cargo update'
+alias carcl='cargo clean'
 
 # PIP Aliases
 alias pipin='pip install'
