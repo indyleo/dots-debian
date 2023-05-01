@@ -1,20 +1,15 @@
-# Changing ls To exa
-alias l='exa -al --icons --color=always --group-directories-first' # My Favourite
-alias ls='exa --icons --color=always --group-directories-first' # Basic exa But with Some Nice Flags & Icons
-alias la='exa -a --icons --color=always --group-directories-first'  # Show Hidden Files
-alias ll='exa -l --icons --color=always --group-directories-first' # Show In Listing Form  
-alias lt='exa -aT --icons --color=always --group-directories-first' # Tree Listing
-alias l.='exa -a | egrep "^\."' # Show Only Hidden File
+# Changing ls To lsd
+alias ls='lsd --group-directories-first --color auto' # Basic Lsd But with Some Nice Flags
+alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
+alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
+alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
+alias lt='lsd -A --tree  --icons --color=always --group-directories-first' # Tree Listing
+alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-# HeadsetControl Aliases
-alias h1='headsetcontrol -l 0'
-alias hb='headsetcontrol -b'
-alias hc='headsetcontrol'
 
 # PS Aliases
 alias psa="ps auxf"
@@ -57,6 +52,9 @@ alias yta-opus='yt-dlp --extract-audio --audio-format opus '
 alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
+
+# The Terminal Rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # Load Xresources
 alias load='xrdb -load ~/.Xresources'
