@@ -46,25 +46,12 @@ go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Installing bob-nvim
-cargo install bob-nvim
-
-# Installing & Using Bobs Neovim
-bob install 0.8.3
-bob use 0.8.3
-
-# Reload X11 Colors
-cd $builddir
-mv .Xresources ~/.Xresources
-xrdb -load ~/.Xresources
-cd ~
-
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  sxhkd polybar neofetch nvim ranger picom awesome conky kitty alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv  autostart-scripts sxhkd polybar neofetch nvim ranger picom awesome conky kitty alacritty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
-mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc ~/
+mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc .Xresources ~/
 
 # Zsh Autopairs
 cd ~/Zsh/Plugins
