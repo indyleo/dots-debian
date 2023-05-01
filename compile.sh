@@ -35,14 +35,19 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
+# Installing moar pager
+wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
+chmod a+x moar-*-*-*
+mv moar-*-*-* ~/.local/bin/moar
+
 # Installing go stuff
 go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Installing bob-nvim & bat
-cargo install bob-nvim bat
+# Installing bob-nvim
+cargo install bob-nvim
 
 # Installing & Using Bobs Neovim
 bob install 0.8.3

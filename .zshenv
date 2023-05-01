@@ -35,7 +35,7 @@ fi
 # Some Nice Exports
 export EDITOR="nvim"
 export VISUAL="nvim"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PAGER="moar"
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
 export COLORTERM="truecolor"
