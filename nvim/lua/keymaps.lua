@@ -60,7 +60,7 @@ keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.curren
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- Markdown (Graphical Preview)
-keymap("n", "<C-p>", "<cmd>MarkdownPreviewToggle<CR>", opts)
+keymap("n", "<C-p>", "<cmd>Glow<CR>", opts)
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)

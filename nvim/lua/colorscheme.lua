@@ -1,5 +1,5 @@
 -- Colorscheme
-vim.cmd('colorscheme nord')
+vim.cmd.colorscheme('nord')
 
 -- Nordic Theme Setup
 vim.g.nord_contrast = true

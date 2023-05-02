@@ -1,8 +1,7 @@
 -- Requiring Some Stuff
-require "plugins-options.impatient"
 require "options"
 require "keymaps"
-require "plugins"
+require "Lazy"
 require "autocommands"
 require "colorscheme"
 require "plugins-options.cmp-nvim"
