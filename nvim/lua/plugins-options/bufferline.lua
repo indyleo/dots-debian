@@ -13,7 +13,7 @@ bufferline.setup {
     },
     highlights = {
       fill = {
-        fg = { attribute = "fg", highlight = "#ff0000" },
+        fg = { attribute = "fg", highlight = "TabLine" },
         bg = { attribute = "bg", highlight = "TabLine" },
       },
       background = {
@@ -41,7 +41,6 @@ bufferline.setup {
         bg = { attribute = "bg", highlight = "TabLine" },
       },
       tab_close = {
-        -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
         fg = { attribute = "fg", highlight = "TabLineSel" },
         bg = { attribute = "bg", highlight = "Normal" },
       },
