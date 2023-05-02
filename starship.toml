@@ -90,7 +90,7 @@ symbol = " "
 symbol = " "
 
 [python]
-symbol = "🐍 "
+symbol = " "
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
@@ -112,6 +112,9 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
+[lua]
+symbol = "󰢱 "
 
 [nodejs]
 format = "via [ Node.js $version](bold green) "
