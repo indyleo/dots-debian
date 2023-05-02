@@ -108,23 +108,23 @@ builddir=$(pwd)
 # Installing fonts 
 nala install fonts-font-awesome fontconfig -y
 mkdir -p /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraMono.zip
 unzip FiraMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Meslo.zip
 unzip Meslo.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/SourceCodePro.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/SourceCodePro.zip
 unzip SourceCodePro.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
 unzip Ubuntu.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/UbuntuMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
 unzip UbuntuMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/JetBrainsMono.zip
 unzip JetBrainsMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/CascadiaCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
 unzip CascadiaCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/NerdFontsSymbolsOnly.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
 unzip NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
