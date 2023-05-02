@@ -42,7 +42,6 @@ return packer.startup(function(use)
   use { "wbthomason/packer.nvim"} -- have packer manage itself
   use { "nvim-lua/plenary.nvim"} -- useful lua functions used by lots of plugins
   use { "folke/which-key.nvim"}
-  use { "JoosepAlviste/nvim-ts-context-commentstring"}
   use { "ahmedkhalf/project.nvim"}
   use { "lewis6991/impatient.nvim"} -- faster startup
   use { "lukas-reineke/indent-blankline.nvim"} -- smarter indent
