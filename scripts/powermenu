@@ -1,0 +1,9 @@
+#!/bin/env bash
+chosen=$(printf "  Shudown\n  Restart\n  Log Out\n  Lock" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 8em;} listview {lines: 6;}")
+case "$chosen" in
+	"  Shudown") poweroff ;;
+	"  Restart") reboot ;;
+	"  Log Out") bspc quit ;;
+	"  Lock") i3lock-fancy -g ;;
+	*) exit 1 ;;
+esac

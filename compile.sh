@@ -35,6 +35,30 @@ sudo make install
 sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
+# Rofi Calc
+cd ~/Github
+git clone https://github.com/Mange/rofi-emoji.git
+cd rofi-emoji
+autoreconf -i
+mkdir build
+cd build/
+../configure
+make
+sudo make install
+cd ~
+
+# Rofi Emoji
+cd ~/Github
+git clone https://github.com/svenstaro/rofi-calc.git
+cd rofi-calc
+autoreconf -i
+mkdir build
+cd build/
+../configure
+make
+make install
+cd ~
+
 # Installing moar pager
 wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
 chmod a+x moar-*-*-*
@@ -52,6 +76,7 @@ git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv  autostart-scripts sxhkd polybar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc .Xresources ~/
+mv $builddir/scripts/wifimenu $builddir/scripts/powermenu ~/.local/bin/
 
 # Zsh Autopairs
 cd ~/Zsh/Plugins

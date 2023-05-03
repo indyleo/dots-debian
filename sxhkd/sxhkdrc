@@ -8,11 +8,17 @@ super + Return
 super + r
   rofi -show combi
 
+# Rofi Emoji
+super + e
+  rofi -show emoji
+
+# Rofi Calc
+super + shift + c
+  rofi -show calc -calc-command 'xdotool type --clearmodifiers "{result}"'
+
 # Power Menu
 super + p
-  rofi -show power-menu -modi power-menu:rofi-power-menu \
-  -theme 'nord' \
-  -font 'FiraCode Nerd Font 16'
+  powermenu
 
 # Greenclip
 super + d
