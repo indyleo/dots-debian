@@ -41,7 +41,7 @@ chmod a+x moar-*-*-*
 mv moar-*-*-* ~/.local/bin/moar
 
 # Installing go stuff
-go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
+go install github.com/charmbracelet/glow@latest github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 # Rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
