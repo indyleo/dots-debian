@@ -31,8 +31,14 @@ lazy.setup({
   {"numToStr/Comment.nvim"},
   {"akinsho/toggleterm.nvim"},
   {"nvim-lualine/lualine.nvim"},
-  {"ellisonleao/glow.nvim", config = function() require("glow").setup() end},
-  
+
+  -- Searching
+  {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
+  {"tpope/vim-repeat"},
+ 
+  -- Markdown Viewer
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+
   -- Colorschemes
   {"shaunsingh/nord.nvim"},
   {"folke/tokyonight.nvim"},
@@ -45,9 +51,6 @@ lazy.setup({
   -- Essential plugins
   {"tpope/vim-surround"}, -- add, delete, change surroundings (it's awesome)
   {"inkarkat/vim-ReplaceWithRegister"}, -- replace with register contents usi>
-  
-  -- Grammar
-  {"brymer-meneses/grammar-guard.nvim"},
   
   -- File Explorer Stuff
   {"kyazdani42/nvim-web-devicons"},
