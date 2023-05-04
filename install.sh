@@ -106,7 +106,7 @@ username=$(id -u -n 1000)
 builddir=$(pwd)
 
 # Installing fonts 
-nala install fonts-font-awesome fontconfig -y
+nala install fonts-font-awesome fontconfig fonts-noto -y
 mkdir -p /home/$username/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.fonts
