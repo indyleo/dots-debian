@@ -73,7 +73,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Moving And Deletig And Adding Files
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv  autostart-scripts sxhkd polybar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv  autostart-scripts sxhkd polybar Thunar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm ~/.bashrc ~/.profile ~/.zshenv
 mv .bashrc .zshrc .zshenv .aliasrc .xsession .profile .xinitrc .Xresources ~/
 mv $builddir/scripts/wifimenu $builddir/scripts/powermenu ~/.local/bin/
