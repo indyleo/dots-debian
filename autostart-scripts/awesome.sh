@@ -1,13 +1,11 @@
 #!/bin/env bash
 
 # Killing Of Programs
-killall -q picom & 
-killall -q sxhkd &
 killall -q solaar &
 killall -q greenclip &
 
 # Starting Programs
-sleep 1 && picom --experimental-backends &
+picom --experimental-backends &
 lxpolkit &
 sxhkd &
 sleep 1 && greenclip daemon &
