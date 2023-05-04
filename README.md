@@ -32,3 +32,5 @@ Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 # Resources (Websites)
 - [AwesomeWM](https://awesomewm.org/) My Choice Of X11 Window Manager
 - [Picom](https://github.com/yshui/picom) My Choice Of My X11 Compositer
+- [Sxhkd](https://github.com/baskerville/sxhkd) My Choice Of My X11 Hotkey Daemon
+- [Polybar](https://polybar.github.io/) My Choice Of My X11 Bar 
