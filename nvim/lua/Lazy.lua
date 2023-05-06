@@ -107,8 +107,4 @@ lazy.setup({
 
   -- Vim Wiki
   {"vimwiki/vimwiki"},
-
-  -- Goyo 
-  {"junegunn/goyo.vim"},
-  {"junegunn/limelight.vim"},
 })
