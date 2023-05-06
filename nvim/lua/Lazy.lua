@@ -104,4 +104,11 @@ lazy.setup({
 
   -- TODO
   {"folke/todo-comments.nvim", config = function()require("todo-comments").setup {} end},
+
+  -- Vim Wiki
+  {"vimwiki/vimwiki"},
+
+  -- Goyo 
+  {"junegunn/goyo.vim"},
+  {"junegunn/limelight.vim"},
 })
