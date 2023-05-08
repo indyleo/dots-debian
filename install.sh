@@ -6,136 +6,193 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-# Moving dnf.conf
-#mv /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
-#mv dnf.conf /etc/dnf/dnf.conf
+#echo "########################"
+#echo "## Making DNF Better ##"
+#echo "########################"
+#mv -v /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
+#mv -v dnf.conf /etc/dnf/dnf.conf
 
-# Moving pacman.conf
-#mv /etc/pacman.conf /etc/pacman.conf.bak
-#mv pacman.conf /etc/pacman.conf
+#echo "##########################"
+#echo "## Making Pacman Better ##"
+#echo "##########################"
+#mv -v /etc/pacman.conf /etc/pacman.conf.bak
+#mv -v pacman.conf /etc/pacman.conf
 
-# Moving sources.list
-#mv /etc/apt/sources.list /etc/apt/sources.list.bak
-#mv sources.list /etc/apt/sources.list
+#echo "##########################"
+#echo "## Making It Debian Sid ##"
+#echo "##########################"
+#mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
+#mv -v sources.list /etc/apt/sources.list
 
-# Updating system
+echo "#########################"
+echo "## Updating The System ##"
+echo "#########################"
 apt update -y
 apt upgrade -y
 
-# Intalling Nala
+echo "#####################"
+echo "## Installing Nala ##"
+echo "#####################"
 apt install nala -y
 
-# Installing CLI programs
-nala install direnv blueman bluez-tools yad fzf locate gh tree xsel build-essential git cmake libhidapi-dev \
-  gpg openssl tldr trash-cli g++ gcc wget curl python3 xdotool unzip tar python3-setuptools autojump luarocks \
-  ranger shellcheck python3-venv stow apt-transport-https qalc libtool network-manager -y
+echo "#######################"
+echo "## CLI Nice To Haves ##"
+echo "#######################"
+nala install direnv yad fzf locate gh tree \
+  build-essential git cmake libhidapi-dev gpg openssl tldr \
+  trash-cli g++ gcc wget curl python3  unzip tar \
+  python3-setuptools autojump luarocks ranger shellcheck python3-venv \
+  stow apt-transport-https qalc libtool cmdtest -y
 
-# Text Editor Stuff
-nala install ripgrep fd-find neovim nano vim -y
+echo "######################"
+echo "## Bluetooth & Wifi ##"
+echo "######################"
+nala install blueman bluez-tools network-manager -y
 
-# Installing other pkg managers
+echo "##################"
+echo "## Text Editors ##"
+echo "##################"
+nala install ripgrep fd-find neovim -y
+
+echo "##################"
+echo "## Pkg Managers ##"
+echo "##################"
 nala install python-pip npm flatpak golang-go -y
 
-# XDG portals
+echo "###############"
+echo "## XDG Stuff ##"
+echo "###############"
 nala install xdg-user-dirs xdg-user-dirs-gtk -y
 
-# Installing fun stuff
+echo "###############"
+echo "## Fun Stuff ##"
+echo "###############"
 nala install sl neofetch cowsay cmatrix tty-clock hollywood -y
 
-# Mounting usb utils
+echo "###############"
+echo "## USB Utils ##"
+echo "###############"
 nala install udiskie udisks2 -y
 
-# Resoureces monitors
+echo "######################"
+echo "## Resource Monitor ##"
+echo "######################"
 nala install btop htop bashtop -y
 
-# Installing shell stuff
+echo "############################"
+echo "## Installing Shell Stuff ##"
+echo "############################"
 nala install zsh zsh-syntax-highlighting bash-completion -y
 
-# Installing java 
+echo "#####################"
+echo "## Installing Java ##"
+echo "#####################"
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
-# Helpful Cmd To Gui Stuff
+echo "#################################"
+echo "## Installing CLI-GUI Programs ##"
+echo "#################################"
 nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
   pkg-config libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
   libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
   libxcursor-dev -y
 
-# Installing GUI programs 
-nala install polybar galculator rpi-imager kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager steam:i386 -y
+echo "#############################"
+echo "## Installing GUI Programs ##"
+echo "#############################"
+nala install polybar galculator rpi-imager kitty bleachbit timeshift \
+  transmission-gtk dconf-editor solaar virt-manager xinit sxhkd xcowsay \
+  arandr xterm xclip rofi-dev xbacklight steam:i386 xsel xdotool -y
 
-# Installing a music player
-nala install rhythmbox rhythmbox-plugins rhythmbox-data -y
+echo "############################"
+echo "## Installing Media Stuff ##"
+echo "############################"
+nala install rhythmbox rhythmbox-plugins rhythmbox-data \
+  playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive \
+  audacity gimp inkscape vlc sxiv -y
 
-# Installing media stuff
-nala install playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive audacity gimp inkscape vlc -y
-
-# Installing image viewer
-nala install sxiv -y
-
-# Theme stuff
+echo "############################"
+echo "## Installing Theme Stuff ##"
+echo "############################"
 nala install qt5ct qt5-style-plugins lxappearance -y
 
-# Installing file stuff 
+echo "###########################"
+echo "## Installing File Stuff ##"
+echo "###########################"
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
-# Installing Awesome
+echo "###################################"
+echo "## Installing Things For Awesome ##"
+echo "###################################"
 nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
 
-# Installing Wallpaper Setters
+echo "###################################"
+echo "## Installing Wallpaper Settings ##"
+echo "###################################"
 nala install xwallpaper nitrogen feh -y 
 
-# Installing Office
-nala install libreoffice -y 
+echo "#############################"
+echo "## Installing Office Stuff ##"
+echo "#############################"
+nala install libreoffice zathura -y
 
-# Installing pdf reader
-nala install zathura -y
-
-# Installing browser
+echo "########################"
+echo "## Installing FireFox ##"
+echo "########################"
 nala purge firefox-esr -y
 rm -rf ~/.mozilla/
 nala install firefox -y
 
-# Installing X11 stuff
-nala install xinit sxhkd xcowsay arandr xterm xclip rofi-dev xbacklight -y
-
-# Installing glxgears
+echo "########################"
+echo "## Installing Drivers ##"
+echo "########################"
 nala install mesa-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
-# Installing fonts 
+echo "######################"
+echo "## Installing Fonts ##"
+echo "######################"
 nala install fonts-font-awesome fontconfig fonts-noto -y
-mkdir -p /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraMono.zip
-unzip FiraMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Meslo.zip
-unzip Meslo.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/SourceCodePro.zip
-unzip SourceCodePro.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
-unzip Ubuntu.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
-unzip UbuntuMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/JetBrainsMono.zip
-unzip JetBrainsMono.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
-unzip CascadiaCode.zip -d /home/$username/.fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
-unzip NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
-chown $username:$username /home/$username/.fonts/
-chown $username:$username /home/$username/.fonts/*
 
-# Reloading cache
+echo "###########################"
+echo "## Installing Nerd Fonts ##"
+echo "###########################"
+mkdir -pv /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
+unzip -n FiraCode.zip -d /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/SourceCodePro.zip
+unzip -n SourceCodePro.zip -d /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
+unzip -n Ubuntu.zip -d /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
+unzip -n UbuntuMono.zip -d /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
+unzip -n CascadiaCode.zip -d /home/$username/.fonts
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
+unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
+
+echo "#####################################"
+echo "## Changin Permissions Of ~/.fonts ##"
+echo "#####################################"
+chown -v $username:$username /home/$username/.fonts/
+chown -v $username:$username /home/$username/.fonts/*
+
+echo "##########################"
+echo "## Reloading Font Cache ##"
+echo "##########################"
 fc-cache -vf
 
-# Removing zip files
-rm ./FiraCode.zip ./FiraMono.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
+echo "###################################"
+echo "## Removing Zip Files From Fonts ##"
+echo "###################################"
+rm -v ./FiraCode.zip ./FiraMono.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
 
-# Setting up ufw 
+echo "###############################"
+echo "## Installing UFW (Firewall) ##"
+echo "###############################"
 nala install ufw -y
 sleep 2.5
 ufw limit 22/tcp
@@ -146,15 +203,15 @@ ufw default allow outgoing
 ufw enable
 systemctl enable ufw
 
-# Pfetch
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-chmod a+x pfetch
-mv pfetch /usr/bin/pfetch
+echo "########################"
+echo "## Pfetch & NerdFetch ##"
+echo "########################"
+wget -q https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+wget -q https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
+chmod -v a+x nerdfetch pfetch
+mv -v nerdfetch pfetch /usr/bin/
 
-# Nerd Fetch
-wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod a+x nerdfetch
-mv nerdfetch /usr/bin/nerdfetch
-
-# Starship Prompt
+echo "#####################"
+echo "## Starship Prompt ##"
+echo "#####################"
 curl -sS https://starship.rs/install.sh | sh
