@@ -163,8 +163,6 @@ echo "###########################"
 mkdir -pv /home/$username/.fonts
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
 unzip -n FiraCode.zip -d /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/SourceCodePro.zip
-unzip -n SourceCodePro.zip -d /home/$username/.fonts
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
 unzip -n Ubuntu.zip -d /home/$username/.fonts
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
@@ -173,12 +171,8 @@ wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Cascadi
 unzip -n CascadiaCode.zip -d /home/$username/.fonts
 wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
 unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
-
-echo "#####################################"
-echo "## Changin Permissions Of ~/.fonts ##"
-echo "#####################################"
-chown -v $username:$username /home/$username/.fonts/
-chown -v $username:$username /home/$username/.fonts/*
+chown $username:$username /home/$username/.fonts/
+chown $username:$username /home/$username/.fonts/*
 
 echo "##########################"
 echo "## Reloading Font Cache ##"
@@ -188,7 +182,7 @@ fc-cache -vf
 echo "###################################"
 echo "## Removing Zip Files From Fonts ##"
 echo "###################################"
-rm -v ./FiraCode.zip ./FiraMono.zip ./Meslo.zip ./SourceCodePro.zip ./Ubuntu.zip ./UbuntuMono.zip ./JetBrainsMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
+rm -v ./FiraCode.zip ./Ubuntu.zip ./UbuntuMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
 
 echo "###############################"
 echo "## Installing UFW (Firewall) ##"
@@ -206,8 +200,8 @@ systemctl enable ufw
 echo "########################"
 echo "## Pfetch & NerdFetch ##"
 echo "########################"
-wget -q https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-wget -q https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
 chmod -v a+x nerdfetch pfetch
 mv -v nerdfetch pfetch /usr/bin/
 
