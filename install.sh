@@ -161,15 +161,15 @@ echo "###########################"
 echo "## Installing Nerd Fonts ##"
 echo "###########################"
 mkdir -pv /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
 unzip -n FiraCode.zip -d /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
 unzip -n Ubuntu.zip -d /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
 unzip -n UbuntuMono.zip -d /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
 unzip -n CascadiaCode.zip -d /home/$username/.fonts
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
 unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
 chown $username:$username /home/$username/.fonts/
 chown $username:$username /home/$username/.fonts/*
