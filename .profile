@@ -37,7 +37,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export PAGER="moar"
 export TERM="xterm-256color"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export COLORTERM="truecolor"
 export WM="AwesomeWM"
 export BROWSER="firefox"
@@ -54,3 +54,8 @@ eval "$(gh completion -s bash)"
 
 # Rustup
 . "$HOME/.cargo/env"
+
+# StartX
+#if [[ "$(tty)" = "/dev/tty1" ]]; then
+#	pgrep awesome || startx
+#fi
