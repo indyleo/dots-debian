@@ -2,10 +2,12 @@
 
 # Killing Of Programs
 killall -q solaar &
+killall -q sxhkd &
 killall -q greenclip &
 
 # Starting Programs
-picom --experimental-backends &
+picom &
+sxhkd &
 lxpolkit &
 sleep 1 && greenclip daemon &
 solaar -w hide &

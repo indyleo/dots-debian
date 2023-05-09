@@ -1,5 +1,9 @@
 # Wm keybinds
 
+# Reload the config
+super + Escape
+	pkill -USR1 -x sxhkd
+
 # Terminal
 super + Return
  kitty 
