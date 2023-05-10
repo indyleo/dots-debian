@@ -137,15 +137,6 @@ echo "###############"
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
 
-echo "################"
-echo "## Power Menu ##"
-echo "################"
-cd ~/Github
-git clone https://github.com/jluttine/rofi-power-menu.git
-cd rofi-power-menu
-cp rofi-power-menu ~/.local/bin/
-cd ~
-
 echo "###############"
 echo "## Greenclip ##"
 echo "###############"
