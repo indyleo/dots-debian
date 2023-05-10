@@ -57,7 +57,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install python-pip npm flatpak golang-go -y
+nala install npm flatpak golang-go -y
 
 echo "###############"
 echo "## XDG Stuff ##"
