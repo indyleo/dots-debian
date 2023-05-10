@@ -74,9 +74,9 @@ cd ~
 echo "################"
 echo "## Moar Pager ##"
 echo "################" 
-wget -q https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
-chmod -v a+x moar-*-*-*
-mv moar-*-*-* ~/.local/bin/moar
+wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux-386 
+chmod a+x moar-*-*-*
+mv -v moar-*-*-* ~/.local/bin/moar
 
 echo "###########"
 echo "## GetNF ##"
@@ -99,7 +99,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "########################################"
 echo "## Moving, Deleting, And Adding Files ##"
-echo "########################################" 
+echo "########################################"
+mkdir -v ~/.config
 cd $builddir
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 autostart-scripts sxhkd polybar Thunar neofetch nvim ranger picom awesome conky kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
