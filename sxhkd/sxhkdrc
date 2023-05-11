@@ -20,6 +20,10 @@ super + e
 super + shift + c
   rofi -show calc -calc-command 'xdotool type --clearmodifiers "{result}"'
 
+# Color Picker 
+super + ctrl + c
+  colorpicker
+
 # Power Menu
 super + p
   powermenu
