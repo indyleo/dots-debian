@@ -16,33 +16,33 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
---   פּ ﯟ   some other good icons
+-- good icons
 local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
+  Text = "",
+  Method = "",
+  Function = "󰊕",
   Constructor = "",
   Field = "",
-  Variable = "",
-  Class = "",
+  Variable = "",
+  Class = "",
   Interface = "",
   Module = "",
   Property = "",
   Unit = "",
-  Value = "",
-  Enum = "",
-  Keyword = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
   Snippet = "",
-  Color = "",
-  File = "",
+  Color = "",
+  File = "",
   Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
   Struct = "",
   Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Operator = "",
+  TypeParameter = "",
 }
 
 cmp.setup {
