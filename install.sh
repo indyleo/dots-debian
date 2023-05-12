@@ -6,11 +6,11 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-#echo "##########################"
-#echo "## Making It Debian Sid ##"
-#echo "##########################"
-#mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
-#mv -v sources.list /etc/apt/sources.list
+echo "##########################"
+echo "## Making It Debian Sid ##"
+echo "##########################"
+mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
+mv -v sources.list /etc/apt/sources.list
 
 echo "#########################"
 echo "## Updating The System ##"
