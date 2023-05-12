@@ -18,7 +18,7 @@ success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
 
 [directory]
-read_only = " "
+read_only = " "
 truncation_length = 10
 truncate_to_repo = true # truncates directory to root folder if in github repo
 style = "bold italic blue"
@@ -30,16 +30,16 @@ disabled = false
 style = "bold italic red"
 
 [aws]
-symbol = "  "
+symbol = "󰸏 "
 
 [conda]
-symbol = " "
+symbol = " "
 
 [dart]
-symbol = " "
+symbol = " "
 
 [docker_context]
-symbol = " "
+symbol = " "
 format = "via [$symbol$context]($style) "
 style = "blue bold"
 only_with_files = true
@@ -48,7 +48,7 @@ detect_folders = []
 disabled = false
 
 [elixir]
-symbol = " "
+symbol = "󰸊 "
 
 [elm]
 symbol = " "
@@ -57,7 +57,7 @@ symbol = " "
 symbol = " "
 
 [golang]
-symbol = " "
+symbol = " "
 
 [hg_branch]
 symbol = " "
@@ -69,19 +69,16 @@ symbol = " "
 symbol = " "
 
 [haskell]
-symbol = "λ "
-
-[memory_usage]
-symbol = " "
+symbol = " "
 
 [nim]
 symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = "󱄅 "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 
 [perl]
 symbol = " "
@@ -99,7 +96,7 @@ detect_extensions = ["py"]
 version_format = "v${raw}"
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
 symbol = " "
@@ -108,15 +105,16 @@ symbol = " "
 symbol = " "
 
 [shlvl]
-symbol = " "
+symbol = " "
 
 [swift]
-symbol = "ﯣ "
+symbol = " "
 
 [lua]
 symbol = "󰢱 "
 
 [nodejs]
+symbol = "󰎙 "
 format = "via [ Node.js $version](bold green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]

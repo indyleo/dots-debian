@@ -121,15 +121,15 @@ echo "## Installing File Stuff ##"
 echo "###########################"
 nala install gvfs thunar-archive-plugin thunar file-roller -y
 
-echo "###################################"
-echo "## Installing Things For Awesome ##"
-echo "###################################"
-nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
+echo "##################################"
+echo "## Installing Things For Any WM ##"
+echo "##################################"
+nala install xwallpaper picom flameshot lxpolkit rofi i3lock-fancy -y
 
-echo "###################################"
-echo "## Installing A Wallpaper Setter ##"
-echo "###################################"
-nala install xwallpaper -y 
+echo "################################"
+echo "## Installing Window Managers ##"
+echo "################################"
+nala install awesome -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"
@@ -202,7 +202,7 @@ echo "## Pfetch & NerdFetch ##"
 echo "########################"
 wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod -v a+x nerdfetch pfetch
+chmod a+x nerdfetch pfetch
 mv -v nerdfetch pfetch /usr/bin/
 
 echo "#####################"
