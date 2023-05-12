@@ -56,6 +56,6 @@ eval "$(gh completion -s bash)"
 . "$HOME/.cargo/env"
 
 # StartX
-#if [[ "$(tty)" = "/dev/tty1" ]]; then
-#	pgrep awesome || startx
-#fi
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep awesome || startx
+fi
