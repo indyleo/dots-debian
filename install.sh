@@ -6,18 +6,6 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-#echo "########################"
-#echo "## Making DNF Better ##"
-#echo "########################"
-#mv -v /etc/dnf/dnf.conf /etc/dnf/dnf.conf.bak
-#mv -v dnf.conf /etc/dnf/dnf.conf
-
-#echo "##########################"
-#echo "## Making Pacman Better ##"
-#echo "##########################"
-#mv -v /etc/pacman.conf /etc/pacman.conf.bak
-#mv -v pacman.conf /etc/pacman.conf
-
 #echo "##########################"
 #echo "## Making It Debian Sid ##"
 #echo "##########################"
