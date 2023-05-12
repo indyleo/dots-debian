@@ -45,7 +45,7 @@ font-1 = "Ubuntu:weight=Medium:size=10;2"
 font-2 = "Symbols Nerd Font:size=12;2"
 
 ; Modules
-modules-left = term xwindow 
+modules-left = logo xwindow 
 modules-center = workspaces 
 modules-right = wallpaper battery wlan audio clip logi shot date
 
