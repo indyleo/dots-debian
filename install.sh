@@ -127,9 +127,9 @@ echo "###################################"
 nala install awesome picom flameshot lxpolkit rofi i3lock-fancy -y
 
 echo "###################################"
-echo "## Installing Wallpaper Settings ##"
+echo "## Installing A Wallpaper Setter ##"
 echo "###################################"
-nala install xwallpaper nitrogen feh -y 
+nala install xwallpaper -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"
