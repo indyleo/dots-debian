@@ -35,29 +35,27 @@ lazy.setup({
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
   {"tpope/vim-repeat"},
- 
-  -- Markdown Viewer
-  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
-  -- Colorschemes
+  -- Markdown
+  {"lukas-reineke/headlines.nvim"},
+
+  -- Colors 
   {"shaunsingh/nord.nvim"},
-  {"folke/tokyonight.nvim"},
-  {"lunarvim/darkplus.nvim"},
-
-  -- Nice Colors
   {"ap/vim-css-color"},
   {"frazrepo/vim-rainbow"},
 
   -- Essential plugins
   {"tpope/vim-surround"}, -- add, delete, change surroundings (it's awesome)
   {"inkarkat/vim-ReplaceWithRegister"}, -- replace with register contents usi>
-  
+
   -- File Explorer Stuff
   {"kyazdani42/nvim-web-devicons"},
   {"kyazdani42/nvim-tree.lua"},
   {"akinsho/bufferline.nvim"},
   {"famiu/bufdelete.nvim"},
   {"moll/vim-bbye"},
+  {"ThePrimeagen/harpoon"},
+  {"nvim-telescope/telescope.nvim"},
 
   -- Cmp
   {"hrsh7th/nvim-cmp"}, -- The completion plugin
@@ -80,12 +78,6 @@ lazy.setup({
   {"jose-elias-alvarez/null-ls.nvim"}, -- for formatters and linters
   {"RRethy/vim-illuminate"},
 
-  -- Telescope
-  {"nvim-telescope/telescope.nvim"},
-
-  -- Harpoon
-  {"ThePrimeagen/harpoon"},
-
   -- Treesitter
   {"nvim-treesitter/nvim-treesitter"},
   {"windwp/nvim-autopairs"},
@@ -103,7 +95,7 @@ lazy.setup({
   {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
 
   -- TODO
-  {"folke/todo-comments.nvim", config = function()require("todo-comments").setup {} end},
+  {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
 
   -- Vim Wiki
   {"vimwiki/vimwiki"},
