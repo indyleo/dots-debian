@@ -31,13 +31,14 @@ lazy.setup({
   {"numToStr/Comment.nvim"},
   {"akinsho/toggleterm.nvim"},
   {"nvim-lualine/lualine.nvim"},
+  {"vimwiki/vimwiki"},
+  {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
+  {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
+  {"lukas-reineke/headlines.nvim"},
 
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
   {"tpope/vim-repeat"},
-
-  -- Markdown
-  {"lukas-reineke/headlines.nvim"},
 
   -- Colors 
   {"shaunsingh/nord.nvim"},
@@ -64,6 +65,7 @@ lazy.setup({
   {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
   {"hrsh7th/cmp-nvim-lsp"},
   {"hrsh7th/cmp-nvim-lua"},
+  {"hrsh7th/cmp-cmdline"},
 
   -- Snippets
   {"L3MON4D3/LuaSnip"}, --snippet engine
@@ -90,13 +92,4 @@ lazy.setup({
   -- Git
   {"lewis6991/gitsigns.nvim"},
   {"kdheepak/lazygit.nvim"},
-
-  -- Trouble
-  {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
-
-  -- TODO
-  {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
-
-  -- Vim Wiki
-  {"vimwiki/vimwiki"},
 })
