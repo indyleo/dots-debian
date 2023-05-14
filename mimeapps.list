@@ -9,6 +9,6 @@ x-directory/normal=thunar.desktop
 [Added Associations]
 x-scheme-handler/magnet=transmission-gtk.desktop;
 application/x.bittorrent=transmission-gtk.desktop;
-application/svg+webp+xml=brave-browser.desktop;gimp.desktop;
+application/svg+webp=brave-browser.desktop;
 
 [Removed Associations]

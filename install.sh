@@ -89,7 +89,7 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator rpi-imager kitty bleachbit timeshift \
-  transmission-gtk dconf-editor solaar virt-manager xinit sxhkd xcowsay \
+  transmission-gtk dconf-editor solaar virt-manager xinit sxhkd \
   arandr xterm xclip rofi-dev xbacklight steam:i386 xsel xdotool -y
 
 echo "############################"
@@ -97,7 +97,7 @@ echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
   playerctl pavucontrol yt-dlp mpv peek obs-studio kdenlive \
-  audacity gimp inkscape vlc sxiv -y
+  audacity gimp vlc sxiv -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
