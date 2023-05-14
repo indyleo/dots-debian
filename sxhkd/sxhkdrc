@@ -13,7 +13,7 @@ super + r
   rofi -show combi
 
 # Rofi Emoji
-super + e
+super + ctrl + e
   rofi -show emoji
 
 # Rofi Calc
@@ -29,12 +29,12 @@ super + p
   powermenu
 
 # Greenclip
-super + d
+super + c
   rofi -modi "clipboard:greenclip print" \
   -show clipboard -run-command '{cmd}'
 
 # Locking Computer
-super + s
+super + shift + Escape
   i3lock-fancy -g
 
 # Gui File Manager
@@ -47,7 +47,29 @@ super + x
 
 # Browser 
 super + b
-  firefox
+  brave-browser
+
+# Relanching Picom 
+super + shift + e
+  pkill -USR1 -x picom && notify-send "Relanching Picom..."
+
+# Killing Picom
+super + shift + p
+  pkill picom && notify-send "Killed Picom..."
+
+# Starting Picom
+super + ctrl + p
+  picom --experimental-backends -b && notify-send "Starting Picom..."
+
+# Screenshot 
+Print
+  flameshot gui
+
+super + Print
+  flameshot screen
+
+super + shift + Print
+  flameshot launcher
 
 # Brightness
 XF86MonBrightnessUp
@@ -75,13 +97,3 @@ XF86AudioPrev
 
 XF86AudioPlay
   playerctl play-pause --player=rhythmbox
-
-# Screenshot 
-Print
-  flameshot gui
-
-super + Print
-  flameshot screen
-
-super + shift + Print
-  flameshot launcher

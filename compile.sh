@@ -161,4 +161,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install com.github.tchx84.Flatseal com.brave.Browser com.bitwarden.desktop net.brinkervii.grapejuice org.prismlauncher.PrismLauncher xyz.xclicker.xclicker com.github.unrud.VideoDownloader 
+flatpak install com.github.tchx84.Flatseal com.bitwarden.desktop org.prismlauncher.PrismLauncher xyz.xclicker.xclicker com.github.unrud.VideoDownloader 
