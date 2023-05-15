@@ -2,7 +2,7 @@
 
 # Reload the config
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && notify-send "Reloading the keybinds..."
 
 # Terminal
 super + Return
