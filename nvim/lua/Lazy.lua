@@ -62,7 +62,6 @@ lazy.setup({
   {"hrsh7th/nvim-cmp"}, -- The completion plugin
   {"hrsh7th/cmp-buffer"}, -- buffer completions
   {"hrsh7th/cmp-path"}, -- path completions
-  {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
   {"hrsh7th/cmp-nvim-lsp"},
   {"hrsh7th/cmp-nvim-lua"},
   {"hrsh7th/cmp-cmdline"},
@@ -70,6 +69,7 @@ lazy.setup({
   -- Snippets
   {"L3MON4D3/LuaSnip"}, --snippet engine
   {"rafamadriz/friendly-snippets"}, -- a bunch of snippets to use
+  {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
 
   -- LSP
   {"williamboman/nvim-lsp-installer"},
@@ -92,4 +92,5 @@ lazy.setup({
   -- Git
   {"lewis6991/gitsigns.nvim"},
   {"kdheepak/lazygit.nvim"},
+  {"ahmedkhalf/project.nvim"}
 })
