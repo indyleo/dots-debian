@@ -1,9 +1,9 @@
 -- Mason
 local servers = {
-	"lua_ls",
-	"pyright",
-	"bashls",
-	"jsonls",
+  "lua_ls",
+  "pyright",
+  "bashls",
+  "jsonls",
   "yamlls",
   "marksman",
   "vimls",

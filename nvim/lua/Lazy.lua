@@ -76,7 +76,6 @@ lazy.setup({
   {"neovim/nvim-lspconfig"}, -- enable LSP
   {"williamboman/mason.nvim"}, -- simple to use language server installer
   {"williamboman/mason-lspconfig.nvim"},
-  {"VonHeikemen/lsp-zero.nvim"},
   {"jose-elias-alvarez/null-ls.nvim"}, -- for formatters and linters
   {"RRethy/vim-illuminate"},
 
@@ -92,5 +91,5 @@ lazy.setup({
   -- Git
   {"lewis6991/gitsigns.nvim"},
   {"kdheepak/lazygit.nvim"},
-  {"ahmedkhalf/project.nvim"}
+  {"ahmedkhalf/project.nvim"},
 })

@@ -61,8 +61,5 @@ keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<CR>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()CR>", opts)
 
--- Lsp
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", opts)
-
 -- Git
 keymap("n", "<leader>gg", "<cmd>LazyGit<CR>", opts)
