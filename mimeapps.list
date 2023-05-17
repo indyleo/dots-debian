@@ -5,6 +5,14 @@ image/jpeg=sxiv.desktop
 image/gif=sxiv.desktop
 inode/directory=thunar.desktop
 x-directory/normal=thunar.desktop
+video/mp4=mpv.desktop
+video/mov=mpv.desktop
+video/avi=mpv.desktop
+video/x-matroska=mpv.desktop
+audio/ogg=rhythmbox.desktop
+audio/mp3=rhythmbox.desktop
+audio/wav=rhythmbox.desktop
+
 
 [Added Associations]
 x-scheme-handler/magnet=transmission-gtk.desktop;
