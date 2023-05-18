@@ -18,13 +18,13 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
-
 -- Custom libraries
 local lain = require("lain")
 local freedesktop = require("freedesktop")
+
+-- Enable hotkeys help widget for VIM and other apps
+-- when client with a matching name is opened:
+require("awful.hotkeys_popup.keys")
 
 -- Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -67,12 +67,7 @@ local editor_cmd = terminal .. " -e " .. editor
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    --awful.layout.suit.tile.left,
-    --awful.layout.suit.tile.bottom,
-    --awful.layout.suit.tile.top,
-    awful.layout.suit.max.fullscreen,
 }
-
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -97,7 +92,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
      set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "WWW", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", }, s, awful.layout.layouts[1])
+    awful.tag({ "WWW", "MSG", "MUS", "GAME", "DEV", "VIRT", "DOC", "SYS", "REC", }, s, awful.layout.layouts[1])
 end)
 
 -- Mouse bindings
@@ -353,6 +348,6 @@ beautiful.useless_gap = 5
 beautiful.notification_opacity = '100'
 beautiful.notification_icon_size = 80
 
--- Startup Programs 
+-- Startup Stuff 
 awful.spawn.with_shell("~/.config/autostart-scripts/awesome.sh")
 awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")
