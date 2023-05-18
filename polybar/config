@@ -1,13 +1,4 @@
-;==========================================================
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;==========================================================
+; My Polybar Config
 
 ; Including Some Files
 include-file = ~/.config/polybar/modules.ini
@@ -48,6 +39,16 @@ font-2 = "Symbols Nerd Font:size=12;2"
 modules-left = logo xwindow 
 modules-center = workspaces 
 modules-right = wallpaper battery wlan audio clip logi shot date
+
+; Tray
+tray-detached = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-position = none
+tray-padding = 4
+tray-maxsize = 20
+tray-scale = 1.0
+tray-background = ${colors.background}
 
 ; For Vim Users
 # vim:ft=dosini
