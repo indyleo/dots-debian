@@ -245,34 +245,3 @@ alias aptud='sudo apt update'
 alias aptug='sudo apt upgrade'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
-
-# Making DNF Better
-alias sudnf='sudo dnf'
-alias dnfin='sudo dnf install'
-alias dnfup='sudo dnf update && sudo apt upgrade'
-alias dnfud='sudo dnf update'
-alias dnfug='sudo dnf upgrade'
-alias dnfrm='sudo dnf remove'
-
-# Making Pacman & Yay Better
-alias pac='pacman'
-alias spac='sudo pacman'
-alias psyu='sudo pacman -Syu'
-alias pS='sudo pacman -S'
-alias psy='sudo pacman -Sy'
-alias pss='pacman -Ss'
-alias ysyu='yay -Syu'
-alias ysua='yay -Sua'
-alias ysy='yay -Sy'
-alias yss='yay -Ss'
-alias ys='yay -S'
-alias unlock='sudo rm /var/lib/pacman/db.lck'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-alias pacsk='pacseek'
-
-# Get Fastest Mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-
