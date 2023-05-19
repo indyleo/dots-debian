@@ -4,6 +4,12 @@ Distro I Use Is Popos With AwesomWM
 # Preview : 
 ![2023-04-27_23-23](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
 
+# Awesome loading ~/.xsession
+Change the exec line in your awesome.desktop file in /usr/share/xsessions to
+```
+Exec=/etc/X11/Xsession
+```
+
 # Qt And GTK Themes
 ```
 QT_QPA_PLATFORMTHEME=qt5ct 
