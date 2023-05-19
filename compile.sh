@@ -66,8 +66,8 @@ autoreconf -i
 mkdir build
 cd build/
 ../configure
-sudo make
-sudo make install
+make
+make install
 cd ~
 
 echo "################"
