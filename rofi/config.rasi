@@ -3,7 +3,7 @@ configuration {
     font: "FiraCode Nerd Font 12";
     icon-theme: "Papirus";
     line-margin: 10;
-    modi: "window,drun,run,combi";
+    modi: "window,drun,run,combi,emoji,calc";
     combi-modi: "window,drun,run";
     display-ssh:    "";
     display-run:    "";

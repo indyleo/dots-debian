@@ -61,12 +61,13 @@ echo "###############"
 cd ~/Github
 git clone https://github.com/svenstaro/rofi-calc.git
 cd rofi-calc
+mkdir m4
 autoreconf -i
 mkdir build
 cd build/
 ../configure
-make
-make install
+sudo make
+sudo make install
 cd ~
 
 echo "################"
