@@ -21,10 +21,10 @@ echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree \
-  build-essential git cmake libhidapi-dev gpg openssl tldr \
+  build-essential git cmake make libhidapi-dev gpg openssl tldr \
   trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks ranger shellcheck python3-venv \
-  stow apt-transport-https qalc cmdtest lsd qalc libtool libtool-bin -y
+  stow apt-transport-https qalc cmdtest qalc libtool -y
 
 echo "##################"
 echo "## Wifi Manager ##"
@@ -39,7 +39,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install npm flatpak golang -y
+nala install npm flatpak golang-go -y
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -49,7 +49,7 @@ nala install xdg-user-dirs xdg-user-dirs-gtk -y
 echo "###############"
 echo "## Fun Stuff ##"
 echo "###############"
-nala install sl neofetch cowsay cmatrix tty-clock hollywood -y
+nala install neofetch cowsay cmatrix tty-clock -y
 
 echo "###############"
 echo "## USB Utils ##"
@@ -70,14 +70,6 @@ echo "#####################"
 echo "## Installing Java ##"
 echo "#####################"
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
-
-echo "#################################"
-echo "## Installing CLI-GUI Programs ##"
-echo "#################################"
-nala install gnupg ca-certificates gcc-multilib g++-multilib cmake libssl-dev  \
-  pkg-config libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
-  libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
-  libxcursor-dev -y
 
 echo "#############################"
 echo "## Installing GUI Programs ##"
@@ -121,6 +113,7 @@ nala install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
+nala purge firefox-esr -y
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update -y
@@ -129,7 +122,7 @@ nala install brave-browser -y
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
-nala install mesa-utils nvidia-driver -y
+nala install mesa-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
