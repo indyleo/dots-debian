@@ -28,14 +28,14 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree \
   build-essential git cmake libhidapi-dev gpg openssl tldr \
-  trash-cli g++ gcc wget curl python3  unzip tar \
+  trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks ranger shellcheck python3-venv \
-  stow apt-transport-https qalc libtool cmdtest -y
+  stow apt-transport-https qalc cmdtest lsd qalc libtool libtool-bin -y
 
-echo "######################"
-echo "## Bluetooth & Wifi ##"
-echo "######################"
-nala install blueman bluez-tools network-manager -y
+echo "##################"
+echo "## Wifi Manager ##"
+echo "##################"
+nala install network-manager -y
 
 echo "##################"
 echo "## Text Editors ##"
@@ -45,7 +45,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install npm flatpak golang-go -y
+nala install npm flatpak golang -y
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -127,8 +127,6 @@ nala install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
-nala purge firefox-esr -y
-rm -rf ~/.mozilla/
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update -y

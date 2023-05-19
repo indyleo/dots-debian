@@ -78,15 +78,6 @@ wget https://github.com/walles/moar/releases/download/v1.13.0/moar-v1.13.0-linux
 chmod a+x moar-*-*-*
 mv -v moar-*-*-* ~/.local/bin/moar
 
-echo "###########"
-echo "## GetNF ##"
-echo "###########" 
-cd ~/Github
-git clone https://github.com/ronniedroid/getnf.git
-cd getnf
-./install.sh
-cd ~
-
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
@@ -96,6 +87,13 @@ echo "##################"
 echo "## Rust Install ##"
 echo "##################" 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo "##################"
+echo "## Neovim Setup ##"
+echo "##################"
+~/.cargo/bin/cargo install bob-nvim
+~/.cargo/bin/bob install stable
+~/.cargo/bin/bob use stable
 
 echo "########################################"
 echo "## Moving, Deleting, And Adding Files ##"
