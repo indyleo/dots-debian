@@ -89,7 +89,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "##################"
 echo "## Neovim Setup ##"
 echo "##################"
-~/.cargo/bin/cargo install bob-nvim
+~/.cargo/bin/cargo install bob-nvim lsd
 ~/.cargo/bin/bob install stable
 ~/.cargo/bin/bob use stable
 
