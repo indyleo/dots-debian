@@ -1,5 +1,5 @@
 # My Dotfiles
-Distro I Use Is Debian SID With AwesomWM
+Distro I Use Is Popos With AwesomWM
 
 # Preview : 
 ![2023-04-27_23-23](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
