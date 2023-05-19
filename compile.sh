@@ -29,8 +29,6 @@ echo "## Envycontrol ##"
 echo "#################"
 cd ~/Github
 git clone https://github.com/bayasdev/envycontrol.git
-cd envycontrol
-sudo pip install .
 cd ~
 
 echo "#########################"
