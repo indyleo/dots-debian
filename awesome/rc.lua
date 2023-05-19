@@ -21,9 +21,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Custom libraries
 local lain = require("lain")
 local freedesktop = require("freedesktop")
-
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
 -- Error handling
@@ -50,45 +47,31 @@ do
     end)
 end
 
--- Variable definitions
--- Themes define colours, icons, font and wallpapers.
+-- The Theme I Use
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/nordic-awesome/theme.lua")
 
 -- Local stuff
 local modkey      = "Mod4"
 local altkey      = "Mod1"
 local ctrlkey     = "Control"
-local terminal    = "kitty"
-local editor      = os.getenv("EDITOR") or "vim"
-local videoplayer = "vlc"
-local audioplayer = "rhythmbox"
-local editor_cmd = terminal .. " -e " .. editor
 
--- Table of layouts to cover with awful.layout.inc, order matters.
+-- The Layouts
 awful.layout.layouts = {
     awful.layout.suit.tile,
 }
 
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
-
-  local function set_wallpaper(s)
       -- Wallpaper
+  local function set_wallpaper(s)
       if beautiful.wallpaper then
           local wallpaper = beautiful.wallpaper
-          -- If wallpaper is a function, call it with the screen
           if type(wallpaper) == "function" then
               wallpaper = wallpaper(s)
           end
           gears.wallpaper.maximized(wallpaper, s, true)
       end
   end
-
-  -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
   screen.connect_signal("property::geometry", set_wallpaper)
-
  awful.screen.connect_for_each_screen(function(s)
-     -- Wallpaper
      set_wallpaper(s)
 
     -- Each screen has its own tag table.
@@ -100,9 +83,6 @@ root.buttons(gears.table.join())
 
 -- Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,  "Shift"  }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
-
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)

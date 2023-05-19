@@ -61,6 +61,14 @@ super + shift + p
 super + ctrl + p
   picom --experimental-backends -b && notify-send "Starting Picom..."
 
+# Starting Screenkey
+super + shift + s
+  screenkey --no-systray --opacity 0.9 --bg-color "#4C566A" --font-color "#ECEFF4" -p fixed -g 627x140+1283+35 & notify-send "Starting Screenkey..."
+
+# Killing Screenkey
+super + s
+  pkill screenkey && notify-send "Killing Screenkey..."
+
 # Screenshot 
 Print
   flameshot gui
