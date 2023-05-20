@@ -24,7 +24,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 # Confirm Before Doing Something Or The Output Being Verbose Or Both
 alias rm='rm -iv'
-alias cp='cp -iv'
+alias cp='cp -irv'
 alias mv='mv -iv'
 alias ln='ln -i'
 alias rmdir='rmdir -v'
@@ -53,7 +53,7 @@ alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
-# Xresources
+# Xresources Aliases
 alias load='xrdb -load ~/.Xresources'
 alias merge='xrdb -merge ~/.Xresources'
 
@@ -78,8 +78,7 @@ up () {
 }
 
 # Copy and go to the directory
-cpg ()
-{
+cpg () {
 	if [ -d "$2" ];then
 		cp "$1" "$2" && cd "$2"
 	else
@@ -88,8 +87,7 @@ cpg ()
 }
 
 # Move and go to the directory
-mvg ()
-{
+mvg () {
 	if [ -d "$2" ];then
 		mv "$1" "$2" && cd "$2"
 	else
@@ -98,15 +96,13 @@ mvg ()
 }
 
 # Create and go to the directory
-mkdirg ()
-{
+mkdirg () {
 	mkdir -p "$1"
 	cd "$1"
 }
 
 # Automatically do an ls after each cd
-# cd ()
-# {
+# cd () {
 # 	if [ -n "$1" ]; then
 # 		builtin cd "$@" && ls
 # 	else
