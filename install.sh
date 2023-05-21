@@ -15,7 +15,7 @@ mv -v sources.list /etc/apt/
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
-apt update -y
+apt update
 apt upgrade -y
 
 echo "#####################"
