@@ -6,6 +6,12 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+echo "###################################"
+echo "## Changing Debian To Debian SID ##"
+echo "###################################"
+rm -fv /etc/apt/sources.listt
+mv -v sources.list /etc/apt/
+
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
@@ -22,7 +28,7 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree \
   build-essential git cmake make libhidapi-dev gpg openssl tldr \
-  trash-cli g++ gcc wget curl python3 unzip tar \
+  trash-cli g++ gcc wget curl python3 unzip tar lsd \
   python3-setuptools autojump luarocks ranger shellcheck python3-venv \
   stow apt-transport-https qalc cmdtest qalc libtool -y
 
