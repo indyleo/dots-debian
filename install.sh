@@ -80,10 +80,9 @@ nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator rpi-imager kitty bleachbit timeshift \
+nala install polybar galculator kitty bleachbit timeshift \
   transmission-gtk dconf-editor solaar virt-manager xinit sxhkd \
-  arandr xterm xclip rofi-dev xbacklight steam:i386 xsel xdotool \
-  screenkey -y
+  arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
