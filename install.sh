@@ -129,7 +129,7 @@ nala install brave-browser -y
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
-nala install mesa-utils -y
+nala install mesa-utils nvidia-driver firmware-misc-nonfree -y
 
 # Script Variables
 username=$(id -u -n 1000)
