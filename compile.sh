@@ -80,7 +80,7 @@ mv -v moar-*-*-* ~/.local/bin/moar
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/charmbracelet/glow@latest github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
+go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 echo "##################"
 echo "## Rust Install ##"
@@ -90,7 +90,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "##################"
 echo "## Neovim Setup ##"
 echo "##################"
-~/.cargo/bin/cargo install bob-nvim lsd
+~/.cargo/bin/cargo install bob-nvim
 ~/.cargo/bin/bob install stable
 ~/.cargo/bin/bob use stable
 
