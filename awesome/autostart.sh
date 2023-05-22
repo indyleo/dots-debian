@@ -6,7 +6,7 @@ killall -q sxhkd &
 killall -q greenclip &
 
 # Starting Programs
-picom &
+picom --experimental-backends &
 sxhkd &
 lxpolkit &
 sleep 1 && greenclip daemon &
