@@ -87,13 +87,6 @@ echo "## Rust Install ##"
 echo "##################" 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-echo "##################"
-echo "## Neovim Setup ##"
-echo "##################"
-~/.cargo/bin/cargo install bob-nvim
-~/.cargo/bin/bob install stable
-~/.cargo/bin/bob use stable
-
 echo "########################################"
 echo "## Moving, Deleting, And Adding Files ##"
 echo "########################################"
