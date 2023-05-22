@@ -59,7 +59,7 @@ super + shift + p
 
 # Starting Picom
 super + ctrl + p
-  picom -b && notify-send "Starting Picom..."
+  picom --experimental-backends -b && notify-send "Starting Picom..."
 
 # Starting Screenkey
 super + shift + s
