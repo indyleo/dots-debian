@@ -101,15 +101,6 @@ mkdirg () {
 	cd "$1"
 }
 
-# Automatically do an ls after each cd
-# cd () {
-# 	if [ -n "$1" ]; then
-# 		builtin cd "$@" && ls
-# 	else
-# 		builtin cd ~ && ls
-# 	fi
-# }
-
 # CD Aliases
 alias home='cd ~'
 alias conf='cd ~/.config'
@@ -152,9 +143,6 @@ alias trashe='trash-empty'
 alias gpg-check='gpg --keyserver-options auto-key-retrieve --verify'
 alias gpg-retrieve='gpg --keyserver-options auto-key-retrieve --receive-keys'
 
-# Add a alert for long running commands 
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Git Aliases
 alias addup='git add -u'
 alias addall='git add .'
@@ -174,8 +162,6 @@ alias lg='lazygit'
 alias srcz='source ~/.zshrc'
 alias srcb='source ~/.bashrc'
 alias srca='source ~/.aliasrc'
-alias rebash='reset && bash'
-alias rezsh='reset && zsh'
 alias rs='reset'
 alias cl='clear'
 
@@ -186,14 +172,6 @@ alias 644='chmod -R 644'
 alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
-
-# Switch Between Shells (User Shell)
-alias tobash="chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-# Switch Between Shells (System Shell)
-alias tobashsu="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozshsu="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
 # Cargo Aliases
 alias carin='cargo install'
@@ -220,24 +198,9 @@ alias flatse='flatpak search'
 alias flatru='flatpak run'
 alias flatki='flatpak kill'
 
-# APT To Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
-
-# Making APT Better
-alias suapt='sudo apt'
-alias aptin='sudo apt install'
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptug='sudo apt upgrade'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
+# Making DNF Better
+alias dnfin='sudo dnf install'
+alias dndup='sudo dnf update && sudo dnf upgrade'
+alias dnfud='sudo dnf update'
+alias dnfuf='sudo dnf upgrade'
+alias dnfrm='sudo dnf remove'
