@@ -142,14 +142,6 @@ wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 chmod a+x greenclip 
 cd ~
 
-echo "###########"
-echo "## Nitch ##"
-echo "###########"
-wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh
-chmod a+x setup.sh
-./setup.sh
-rm setup.sh
-
 echo "##################"
 echo "## Flatpak Repo ##"
 echo "##################"
