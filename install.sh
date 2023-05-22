@@ -6,22 +6,11 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-echo "###################################"
-echo "## Changing Debian To Debian SID ##"
-echo "###################################"
-rm -fv /etc/apt/sources.listt
-mv -v sources.list /etc/apt/
-
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
-apt update
-apt upgrade -y
-
-echo "#####################"
-echo "## Installing Nala ##"
-echo "#####################"
-apt install nala -y
+dnf update
+dnf upgrade -y
 
 echo "#######################"
 echo "## CLI Nice To Haves ##"
@@ -45,7 +34,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install npm flatpak golang-go -y
+nala install npm flatpak golang python-pip -y
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -70,7 +59,7 @@ nala install btop htop bashtop -y
 echo "############################"
 echo "## Installing Shell Stuff ##"
 echo "############################"
-nala install zsh zsh-syntax-highlighting bash-completion -y
+nala install zsh zsh-syntax-highlighting bash-completion autojump-zsh -y
 
 echo "#####################"
 echo "## Installing Java ##"
