@@ -178,13 +178,12 @@ ufw default allow outgoing
 ufw enable
 systemctl enable ufw
 
-echo "########################"
-echo "## Pfetch & NerdFetch ##"
-echo "########################"
-wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-wget https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch 
-chmod a+x nerdfetch pfetch
-mv -v nerdfetch pfetch /usr/bin/
+echo "############"
+echo "## Pfetch ##"
+echo "############"
+wget https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch 
+chmod a+x pfetch
+mv -v pfetch /usr/bin/
 
 echo "#####################"
 echo "## Starship Prompt ##"
