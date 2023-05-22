@@ -76,7 +76,8 @@ echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift \
   transmission-gtk dconf-editor solaar virt-manager xinit sxhkd \
-  arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey -y
+  arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey \
+  rpi-imager steam:i386 -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
@@ -113,6 +114,7 @@ nala install libreoffice zathura -y
 echo "##########################"
 echo "## Installing A Browser ##"
 echo "##########################"
+nala purge firefox -y
 curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
@@ -121,7 +123,7 @@ nala install brave-browser -y
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
-nala install mesa-utils nvidia-driver firmware-misc-nonfree -y
+nala install mesa-utils -y
 
 # Script Variables
 username=$(id -u -n 1000)
