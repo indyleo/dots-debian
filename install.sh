@@ -55,7 +55,7 @@ nala install xdg-user-dirs xdg-user-dirs-gtk -y
 echo "###############"
 echo "## Fun Stuff ##"
 echo "###############"
-nala install neofetch cowsay cmatrix tty-clock -y
+nala install neofetch cowsay cmatrix tty-clock lolcat -y
 
 echo "###############"
 echo "## USB Utils ##"
