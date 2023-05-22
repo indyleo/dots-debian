@@ -3,7 +3,7 @@ alias ls='lsd --group-directories-first --color auto' # Basic Lsd But with Some 
 alias la='lsd -A --group-directories-first --color auto' # Show Hidden Files
 alias ll='lsd -lhF --group-directories-first --color auto' # Show In Listing Form 
 alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
-alias lt='lsd -A --tree  --icons --color=always --group-directories-first' # Tree Listing
+alias lt='lsd -A --tree --color=always --group-directories-first' # Tree Listing
 alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
 
 # Colorize grep output (good for log files)
@@ -198,9 +198,23 @@ alias flatse='flatpak search'
 alias flatru='flatpak run'
 alias flatki='flatpak kill'
 
-# Making DNF Better
-alias dnfin='sudo dnf install'
-alias dndup='sudo dnf update && sudo dnf upgrade'
-alias dnfud='sudo dnf update'
-alias dnfuf='sudo dnf upgrade'
-alias dnfrm='sudo dnf remove'
+# APT To Nala
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
+
+# Making APT Better
+alias aptin='sudo apt install'
+alias aptup='sudo apt update && sudo apt upgrade'
+alias aptud='sudo apt update'
+alias aptug='sudo apt upgrade'
+alias aptrm='sudo apt remove'
+alias aptpu='sudo apt purge'
