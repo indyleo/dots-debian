@@ -64,7 +64,7 @@ nala install btop htop bashtop -y
 echo "############################"
 echo "## Installing Shell Stuff ##"
 echo "############################"
-nala install zsh zsh-syntax-highlighting bash-completion autojump-zsh -y
+nala install zsh zsh-syntax-highlighting bash-completion -y
 
 echo "#####################"
 echo "## Installing Java ##"
