@@ -23,8 +23,8 @@ echo "#######################"
 nala install direnv yad fzf locate gh tree \
   build-essential git cmake make libhidapi-dev gpg openssl tldr \
   trash-cli g++ gcc wget curl python3 unzip tar python3-setuptools \
-  autojump luarocks ranger shellcheck python3-venv \
-  stow apt-transport-https qalc cmdtest qalc libtool -y
+  autojump luarocks ranger shellcheck python3-venv meson \
+  stow apt-transport-https qalc cmdtest qalc libtool ninja-build -y
 
 echo "##################"
 echo "## Wifi Manager ##"
