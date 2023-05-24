@@ -99,7 +99,15 @@ nala install gvfs thunar-archive-plugin thunar file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install xwallpaper picom flameshot lxpolkit rofi i3lock-fancy -y
+nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+
+echo "#################################"
+echo "## Installing Things For Picom ##"
+echo "#################################"
+nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev \
+  libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
+  libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev \
+  libev-dev libx11-xcb-dev -y 
 
 echo "################################"
 echo "## Installing Window Managers ##"

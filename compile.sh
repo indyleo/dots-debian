@@ -70,6 +70,18 @@ make
 sudo make install
 cd ~
 
+echo "######################"
+echo "## Picom Animations ##"
+echo "######################"
+cd ~/Github
+git clone https://github.com/FT-Labs/picom.git
+cd picom
+git submodule update --init --recursive
+meson setup --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
+cd ~
+
 echo "################"
 echo "## Moar Pager ##"
 echo "################" 
