@@ -106,6 +106,31 @@ echo "########################"
 ~/.cargo/bin/bob install stable
 ~/.cargo/bin/bob use stable
 
+echo "###########################"
+echo "## Installing Nerd Fonts ##"
+echo "###########################"
+mkdir -pv /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
+unzip -n FiraCode.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
+unzip -n Ubuntu.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
+unzip -n UbuntuMono.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
+unzip -n CascadiaCode.zip -d /home/$username/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
+unzip -n NerdFontsSymbolsOnly.zip -d /home/$username/.fonts
+
+echo "##########################"
+echo "## Reloading Font Cache ##"
+echo "##########################"
+fc-cache -vf
+
+echo "###################################"
+echo "## Removing Zip Files From Fonts ##"
+echo "###################################"
+rm -v ./FiraCode.zip ./Ubuntu.zip ./UbuntuMono.zip ./CascadiaCode.zip ./NerdFontsSymbolsOnly.zip
+
 echo "########################################"
 echo "## Moving, Deleting, And Adding Files ##"
 echo "########################################"
