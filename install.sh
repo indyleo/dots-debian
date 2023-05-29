@@ -100,7 +100,7 @@ nala install qt5ct qt5-style-plugins lxappearance -y
 echo "###########################"
 echo "## Installing File Stuff ##"
 echo "###########################"
-nala install gvfs thunar-archive-plugin thunar file-roller -y
+nala install pcmanfm file-roller -y
 
 echo "##################################"
 echo "## Installing Things For Any WM ##"

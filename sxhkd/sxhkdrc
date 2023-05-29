@@ -39,7 +39,7 @@ super + shift + Escape
 
 # Gui File Manager
 super + f
-  thunar
+  pcmanfm
 
 # Tui File Manager
 super + x
