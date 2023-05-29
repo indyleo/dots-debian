@@ -26,8 +26,6 @@ bind "set completion-ignore-case on"
 # neofetch
 # pfetch
 # colorscript -r
-# nerdfetch
-# nitch
 
 # Turn On Bash Completion
 if [ -f /usr/share/bash-completion/bash_completion ]; then
