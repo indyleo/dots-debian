@@ -148,8 +148,6 @@ fi
 # neofetch
 pfetch
 # colorscript -r
-# nerdfetch
-# nitch
 
 # Zsh Completions
 fpath=(~/Zsh/Plugins/zsh-completions/src $fpath)
