@@ -10,7 +10,7 @@ echo "##########################"
 echo "## Making It Debian SID ##"
 echo "##########################"
 mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
-mv v sources.list /etc/apt/sources.list
+mv -v sources.list /etc/apt/sources.list
 
 echo "#########################"
 echo "## Updating The System ##"
