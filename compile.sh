@@ -187,4 +187,5 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher xyz.xclicker.xclicker org.nickvision.tubeconverter flathub com.discordapp.Discord
+flatpak install com.github.tchx84.Flatseal org.prismlauncher.PrismLauncher xyz.xclicker.xclicker com.github.unrud.VideoDownloader com.discordapp.Discord
+
