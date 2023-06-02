@@ -16,7 +16,6 @@ To find your wlan interface for polybar do 'nmcli' and the interface tou are con
 # Resources (Dotfiles)
 - [Titus-Awesome](https://github.com/ChrisTitusTech/titus-awesome) Hosted On Github
 - [DWT1-Awesome](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/awesome) Hosted On Gitlab
-Thanks To These People Who Inspired Me To Use A Tilling Window Manager
 
 # Resources (Websites)
 - [AwesomeWM](https://awesomewm.org/) My Choice Of X11 Window Manager
