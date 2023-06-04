@@ -88,13 +88,13 @@ XF86MonBrightnessDown
 
 # Media
 XF86AudioRaiseVolume
-  pactl set-sink-volume 0 +5%
+  pamixer -i 5
 
 XF86AudioLowerVolume
-  pactl set-sink-volume 0 -5%
+  pamixer -d 5
 
 XF86AudioMute
-  pactl set-sink-mute 0 toggle
+  pamixer --toggle-mute
 
 # Music
 XF86AudioNext
