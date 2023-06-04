@@ -134,14 +134,20 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 nala update
 nala install brave-browser -y
 
+echo "#####################"
+echo "## Installing SDDM ##"
+echo "#####################"
+nala install sddm libqt5svg5 qml-module-qtquick-controls \
+  qml-module-qtquick-controls2 -y
+tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+mv sddm.conf /etc/sddm.conf
+systemctl enable sddm
+systemctl set-default graphical.target
+
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
 nala install mesa-utils nvidia-driver firmware-misc-nonfree -y
-
-# Script Variables
-username=$(id -u -n 1000)
-builddir=$(pwd)
 
 echo "######################"
 echo "## Installing Fonts ##"
