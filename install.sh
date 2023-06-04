@@ -152,7 +152,7 @@ nala install mesa-utils nvidia-driver firmware-misc-nonfree -y
 echo "######################"
 echo "## Installing Fonts ##"
 echo "######################"
-nala install fonts-font-awesome fontconfig fonts-noto -y
+nala install fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono -y
 
 echo "####################"
 echo "## Installing UFW ##"
