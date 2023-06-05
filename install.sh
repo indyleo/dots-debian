@@ -83,7 +83,7 @@ echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift \
   transmission-gtk dconf-editor solaar virt-manager xinit sxhkd \
   arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey \
-  rpi-imager -y
+  gedit gedit-plugins -y
 
 echo "############################"
 echo "## Installing Media Stuff ##"
