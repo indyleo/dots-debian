@@ -129,7 +129,7 @@ alias kiconf='nvim $HOME/.config/kitty/kitty.conf'
 alias piconf='nvim $HOME/.config/picom/picom.conf'
 alias wmconf='nvim $HOME/.config/awesome/rc.lua'
 alias viconf='nvim $HOME/.config/nvim/init.lua'
-alias poconf='nvim $HOME/.config/polybar/config'
+alias poconf='nvim $HOME/.config/polybar/config.ini'
 alias sxconf='nvim $HOME/.config/sxhkd/sxhkdrc'
 
 # Trash Aliases
