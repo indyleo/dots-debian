@@ -1,0 +1,117 @@
+# Easier Navigation
+up () {
+  local d=""
+  local limit="$1"
+
+  # Default to limit of 1
+  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+    limit=1
+  fi
+
+  for ((i=1;i<=limit;i++)); do
+    d="../$d"
+  done
+
+  # perform cd. Show error if cd fails
+  if ! cd "$d"; then
+    echo "Couldn't go up $limit dirs.";
+  fi
+}
+
+# Copy and go to the directory
+cpg () {
+	if [ -d "$2" ];then
+		cp "$1" "$2" && cd "$2"
+	else
+		cp "$1" "$2"
+	fi
+}
+
+# Move and go to the directory
+mvg () {
+	if [ -d "$2" ];then
+		mv "$1" "$2" && cd "$2"
+	else
+		mv "$1" "$2"
+	fi
+}
+
+# Create and go to the directory
+mkdirg () {
+	mkdir -p "$1"
+	cd "$1"
+}
+
+# APT To Nala
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
+
+# Archive Extraction
+extract () {
+  if [ -f "$1" ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via extract" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# WM config
+wmconf () {
+  if [ "$DESKTOP_SESSION" = "awesome" ]; then
+    nvim "$HOME/.config/awesome/rc.lua"
+  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
+    nvim "$HOME/.config/bspwm/bspwmrc"
+  else
+    echo "$DESKTOP_SESSION not in function"
+  fi
+}
+
+# Sxhkd config
+sxconf () {
+  if [ "$DESKTOP_SESSION" = "awesome" ]; then
+    nvim "$HOME/.config/awesome/sxhkdrc"
+  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
+    nvim "$HOME/.config/bspwm/sxhkdrc"
+  else
+    echo "sxhkdrc for $DESKTOP_SESSION not in function"
+  fi
+}
+
+# Picom config
+piconf () {
+  if [ "$DESKTOP_SESSION" = "awesome" ]; then
+    nvim "$HOME/.config/awesome/picom.conf"
+  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
+    nvim "$HOME/.config/bspwm/picom.conf"
+  else
+    echo "picom.conf for $DESKTOP_SESSION not in function"
+  fi
+}
+
+# For Vim Users
+# vim:ft=sh

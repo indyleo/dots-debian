@@ -57,50 +57,6 @@ alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 alias load='xrdb -load ~/.Xresources'
 alias merge='xrdb -merge ~/.Xresources'
 
-# Easier Navigation
-up () {
-  local d=""
-  local limit="$1"
-
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
-
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
-
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
-}
-
-# Copy and go to the directory
-cpg () {
-	if [ -d "$2" ];then
-		cp "$1" "$2" && cd "$2"
-	else
-		cp "$1" "$2"
-	fi
-}
-
-# Move and go to the directory
-mvg () {
-	if [ -d "$2" ];then
-		mv "$1" "$2" && cd "$2"
-	else
-		mv "$1" "$2"
-	fi
-}
-
-# Create and go to the directory
-mkdirg () {
-	mkdir -p "$1"
-	cd "$1"
-}
-
 # CD Aliases
 alias home='cd ~'
 alias conf='cd ~/.config'
@@ -125,12 +81,10 @@ alias svim='sudo nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
+alias fconf='nvim $HOME/.functionrc'
 alias kiconf='nvim $HOME/.config/kitty/kitty.conf'
-alias piconf='nvim $HOME/.config/picom/picom.conf'
-alias wmconf='nvim $HOME/.config/awesome/rc.lua'
 alias viconf='nvim $HOME/.config/nvim/init.lua'
 alias poconf='nvim $HOME/.config/polybar/config.ini'
-alias sxconf='nvim $HOME/.config/sxhkd/sxhkdrc'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -162,6 +116,7 @@ alias lg='lazygit'
 alias srcz='source ~/.zshrc'
 alias srcb='source ~/.bashrc'
 alias srca='source ~/.aliasrc'
+alias srcf='source ~/.functionrc'
 alias rs='reset'
 alias cl='clear'
 
@@ -198,19 +153,6 @@ alias flatse='flatpak search'
 alias flatru='flatpak run'
 alias flatki='flatpak kill'
 
-# APT To Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
-
 # Making APT Better
 alias aptin='sudo apt install'
 alias aptup='sudo apt update && sudo apt upgrade'
@@ -218,3 +160,6 @@ alias aptud='sudo apt update'
 alias aptug='sudo apt upgrade'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
+
+# For Vim Users
+# vim:ft=sh
