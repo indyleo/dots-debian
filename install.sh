@@ -90,7 +90,7 @@ echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
   playerctl pamixer pavucontrol yt-dlp mpv peek obs-studio kdenlive \
-  audacity gimp vlc sxiv -y
+  audacity gimp vlc sxiv pulemixer -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
