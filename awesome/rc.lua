@@ -12,6 +12,15 @@ local beautiful = require("beautiful")
 -- Notification libraries
 local naughty = require("naughty")
 
+-- Scratchpad library
+local bling = require("bling")
+
+-- Freedesktop
+local freedesktop = require("freedesktop")
+
+-- Lain
+local lain = require("lain")
+
 -- Error handling
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
@@ -43,6 +52,56 @@ local ctrlkey     = "Control"
 -- The Layouts
 awful.layout.layouts = {
     awful.layout.suit.tile,
+}
+
+-- Scratchpads
+local term_scratch = bling.module.scratchpad {
+    command = "kitty --class term",
+    rule = { instance = "term" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = {x=450, y=150, height=700, width=1000},
+    reapply = true,
+    dont_focus_before_close  = false
+}
+
+local ranger_scratch = bling.module.scratchpad {
+    command = "kitty --class ranger -e ranger",
+    rule = { instance = "ranger" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = {x=450, y=150, height=700, width=1000},
+    reapply = true,
+    dont_focus_before_close  = false
+}
+
+local mixer_scratch = bling.module.scratchpad {
+    command = "kitty --class mixer -e pulsemixer",
+    rule = { instance = "mixer" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = {x=450, y=150, height=700, width=1000},
+    reapply = true,
+    dont_focus_before_close  = false
+}
+
+-- Window Switcher
+bling.widget.window_switcher.enable {
+    type = "thumbnail",
+    hide_window_switcher_key = "Escape",
+    minimize_key = "n",
+    unminimize_key = "N",
+    kill_client_key = "q",
+    cycle_key = "Tab",
+    previous_key = "Left",
+    next_key = "Right",
+    vim_previous_key = "h",
+    vim_next_key = "l",
+    cycleClientsByIdx = awful.client.focus.byidx,
+    filterClients = awful.widget.tasklist.filter.currenttags,
 }
 
       -- Wallpaper
@@ -92,21 +151,12 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey, }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
-    awful.key({ modkey, }, "Tab",
-        function ()
-            awful.client.focus.history.previous()
-            if client.focus then
-                client.focus:raise()
-            end
-        end,
-        {description = "go back", group = "client"}),
 
     -- Standard program
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift" }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-
     awful.key({ modkey, }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey, }, "h",     function () awful.tag.incmwfact(-0.05)          end,
@@ -123,18 +173,32 @@ globalkeys = gears.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift" }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
-
     awful.key({ modkey, ctrlkey }, "n",
               function ()
                   local c = awful.client.restore()
-                  -- Focus restored client
                   if c then
                     c:emit_signal(
                         "request::activate", "key.unminimize", {raise = true}
                     )
                   end
               end,
-              {description = "restore minimized", group = "client"})
+              {description = "restore minimized", group = "client"}),
+
+    -- Scratchpad
+    awful.key({ modkey, ctrlkey }, "t", function ()
+      term_scratch:toggle()
+    end),
+    awful.key({ modkey, ctrlkey }, "r", function ()
+      ranger_scratch:toggle()
+    end),
+    awful.key({ modkey, ctrlkey }, "m", function ()
+      mixer_scratch:toggle()
+    end),
+
+    -- Window Switcher
+    awful.key({ altkey }, "Tab", function()
+      awesome.emit_signal("bling::window_switcher::turn_on")
+    end)
 )
 
 clientkeys = gears.table.join(
@@ -156,8 +220,6 @@ clientkeys = gears.table.join(
               {description = "toggle keep on top", group = "client"}),
     awful.key({ modkey, }, "n",
         function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
             c.minimized = true
         end ,
         {description = "minimize", group = "client"}),
@@ -167,7 +229,7 @@ clientkeys = gears.table.join(
             c:raise()
         end ,
         {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, ctrlkey }, "m",
+    awful.key({ modkey, "Shift", ctrlkey }, "m",
         function (c)
             c.maximized_vertical = not c.maximized_vertical
             c:raise()
@@ -182,8 +244,6 @@ clientkeys = gears.table.join(
 )
 
 -- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
@@ -263,7 +323,7 @@ awful.rules.rules = {
       }
     },
 
-  -- Polybar
+    -- Polybar
     { rule = { instance = "polybar" },
           properties = { focusable = false, border_width = false } },
 

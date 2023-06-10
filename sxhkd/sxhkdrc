@@ -8,9 +8,9 @@ super + Escape
 super + Return
  kitty 
 
-# Drun, Run, And Window Switch
+# Run Prompt
 super + r
-  rofi -show combi
+  rofi -show drun
 
 # Rofi Emoji
 super + ctrl + e
