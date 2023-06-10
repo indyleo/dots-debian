@@ -137,7 +137,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv -v pcmanfm polybar neofetch nvim ranger awesome kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv -v pcmanfm polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv
 mv -v .bashrc .zshrc .zshenv .aliasrc .functionrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts/* ~/.local/bin/

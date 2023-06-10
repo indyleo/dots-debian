@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-# Fix Mouse curoor on startup 
+# Fix Mouse Cursor On Startup 
 xsetroot -cursor_name left_ptr
 
 # Set Keyboard Layout
@@ -12,8 +12,8 @@ killall -q sxhkd
 killall -q greenclip
 
 # Starting Programs
-picom --config "$HOME/.config/awesome/picom.conf" &
-sxhkd -c "$HOME/.config/awesome/sxhkdrc" &
+picom &
+sxhkd &
 lxpolkit &
 greenclip daemon &
 solaar -w hide &

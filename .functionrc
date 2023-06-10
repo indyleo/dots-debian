@@ -91,27 +91,5 @@ wmconf () {
   fi
 }
 
-# Sxhkd config
-sxconf () {
-  if [ "$DESKTOP_SESSION" = "awesome" ]; then
-    nvim "$HOME/.config/awesome/sxhkdrc"
-  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
-    nvim "$HOME/.config/bspwm/sxhkdrc"
-  else
-    echo "sxhkdrc for $DESKTOP_SESSION not in function"
-  fi
-}
-
-# Picom config
-piconf () {
-  if [ "$DESKTOP_SESSION" = "awesome" ]; then
-    nvim "$HOME/.config/awesome/picom.conf"
-  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
-    nvim "$HOME/.config/bspwm/picom.conf"
-  else
-    echo "picom.conf for $DESKTOP_SESSION not in function"
-  fi
-}
-
 # For Vim Users
 # vim:ft=sh
