@@ -30,7 +30,7 @@ nala install direnv yad fzf locate gh tree build-essential git cmake \
   make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
   python3 unzip tar python3-setuptools autojump luarocks ranger \
   shellcheck python3-venv meson lsd stow apt-transport-https qalc cmdtest \
-  qalc libtool libtool-bin ninja-build autoconf automake -y
+  qalc libtool libtool-bin ninja-build autoconf automake python3-pli -y
 
 echo "##################"
 echo "## Wifi Manager ##"
