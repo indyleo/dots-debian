@@ -109,17 +109,17 @@ echo "##################"
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
 echo "###########################"
-mkdir -pv ~/.fonts
+mkdir -pv ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
-unzip -n FiraCode.zip -d ~/.fonts
+unzip -n FiraCode.zip -d ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
-unzip -n Ubuntu.zip -d ~/.fonts
+unzip -n Ubuntu.zip -d ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
-unzip -n UbuntuMono.zip -d ~/.fonts
+unzip -n UbuntuMono.zip -d ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
-unzip -n CascadiaCode.zip -d ~/.fonts
+unzip -n CascadiaCode.zip -d ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
-unzip -n NerdFontsSymbolsOnly.zip -d ~/.fonts
+unzip -n NerdFontsSymbolsOnly.zip -d ~/.local/share/fonts
 
 echo "##########################"
 echo "## Reloading Font Cache ##"
