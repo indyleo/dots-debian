@@ -35,7 +35,7 @@ nala install direnv yad fzf locate gh tree build-essential git cmake \
 echo "##################"
 echo "## Wifi Manager ##"
 echo "##################"
-nala install network-manager -y
+nala install network-manager network-manager-gnome -y
 
 echo "##################"
 echo "## Text Editors ##"
