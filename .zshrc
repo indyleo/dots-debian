@@ -106,8 +106,8 @@ fi
 
 # Startup Stuff
 # neofetch
-pfetch
-# colorscript -r
+# pfetch
+colorscript -r
 
 # Zsh Completions
 fpath=(~/Zsh/Plugins/zsh-completions/src $fpath)
