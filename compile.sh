@@ -6,7 +6,7 @@ builddir=$(pwd)
 echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
-mkdir -pv ~/Github ~/Img ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
+mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
 echo "####################"
