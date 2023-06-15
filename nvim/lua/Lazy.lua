@@ -35,6 +35,7 @@ lazy.setup({
   {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
   {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
   {"lukas-reineke/headlines.nvim"},
+  {"kovetskiy/sxhkd-vim"},
 
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
