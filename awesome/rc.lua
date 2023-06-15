@@ -88,6 +88,17 @@ local mixer_scratch = bling.module.scratchpad {
     dont_focus_before_close  = false
 }
 
+local wiki_scratch = bling.module.scratchpad {
+    command = "kitty --class wiki -e nvim ~/vimwiki/scratch.wiki",
+    rule = { instance = "wiki" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = {x=450, y=150, height=700, width=1000},
+    reapply = true,
+    dont_focus_before_close  = false
+}
+
 -- Window Switcher
 bling.widget.window_switcher.enable {
     type = "thumbnail",
@@ -193,6 +204,9 @@ globalkeys = gears.table.join(
     end),
     awful.key({ modkey, ctrlkey }, "m", function ()
       mixer_scratch:toggle()
+    end),
+    awful.key({ modkey, ctrlkey }, "v", function ()
+      wiki_scratch:toggle()
     end),
 
     -- Window Switcher
@@ -325,7 +339,33 @@ awful.rules.rules = {
 
     -- Polybar
     { rule = { instance = "polybar" },
-          properties = { focusable = false, border_width = false } },
+          properties = { focusable = false, border_width = false }
+    },
+
+    -- Discord
+    { rule = { instance = "discord" },
+      properties = { tag = "MSG" }
+    },
+
+    -- Rhythmbox
+    { rule = { instance = "rhythmbox" },
+      properties = { tag = "MUS" }
+    },
+
+    -- Virt-manager
+    { rule = { instance = "virt-manager" },
+      properties = { tag = "VIRT" }
+    },
+
+    -- OBS
+    { rule = { instance = "obs" },
+      properties = { tag = "REC" }
+    },
+
+    -- Mpv
+    { rule = { instance = "gl" },
+      properties = { fullscreen = true }
+    },
 
     -- Floating clients.
     { rule_any = {

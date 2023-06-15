@@ -13,7 +13,7 @@ killall -q greenclip
 
 # Starting Programs
 picom &
-sxhkd &
+sxhkd  &
 lxpolkit &
 greenclip daemon &
 solaar -w hide &
