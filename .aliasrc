@@ -80,7 +80,7 @@ alias playmp4='vlc *.mp4'
 
 # Neovim Aliases
 alias vim='nvim'
-alias svim='sudo nvim'
+alias svi='sudo nvim'
 alias zconf='nvim $HOME/.zshrc'
 alias bconf='nvim $HOME/.bashrc'
 alias aconf='nvim $HOME/.aliasrc'
