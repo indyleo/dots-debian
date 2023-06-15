@@ -4,11 +4,12 @@ Distro I Use Is Debian SID With AwesomWM
 # Preview
 ![Preview-Image](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
 
-# Awesome loading ~/.xsession
+# WM's loading ~/.xsession
 Change the exec line in your awesome.desktop file in /usr/share/xsessions to
 ```
-Exec=/etc/X11/Xsession
+Exec=/etc/X11/Xsession session 
 ```
+the available sessions are awesome, bspwm, ... 
 
 # Qt And GTK Themes
 Put this into your '/etc/environment' file
