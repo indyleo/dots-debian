@@ -48,6 +48,9 @@ complete -o default -F _nala_completion nala
 # Aliases
 source $HOME/.aliasrc 2>/dev/null
 
+# Functions
+source $HOME/.functionrc 2>/dev/null
+
 # Starship prompt
 eval "$(starship init bash)"
 
