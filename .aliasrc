@@ -6,6 +6,9 @@ alias l='lsd -AlFh --group-directories-first --color auto' # My Favourite
 alias lt='lsd -A --tree --color=always --group-directories-first' # Tree Listing
 alias l.='lsd -A | egrep "^\."' # Show Only Hidden File
 
+# Cat to Bat Alias
+alias cat='batcat -pn --pager=""'
+
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
