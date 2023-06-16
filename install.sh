@@ -95,7 +95,7 @@ nala install rhythmbox rhythmbox-plugins rhythmbox-data \
 echo "############################"
 echo "## Installing Theme Stuff ##"
 echo "############################"
-nala install qt5ct qt5-style-plugins lxappearance -y
+nala install qt5ct qt5-style-plugins lxappearance dunst -y
 
 echo "###########################"
 echo "## Installing File Stuff ##"
