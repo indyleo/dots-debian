@@ -105,7 +105,7 @@ nala install pcmanfm file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy dunst -y
+nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
 
 echo "#################################"
 echo "## Installing Things For Picom ##"
@@ -118,7 +118,7 @@ nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-
 echo "################################"
 echo "## Installing Window Managers ##"
 echo "################################"
-nala install awesome bspwm -y 
+nala install awesome -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"
