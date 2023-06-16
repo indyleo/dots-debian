@@ -95,7 +95,7 @@ nala install rhythmbox rhythmbox-plugins rhythmbox-data \
 echo "############################"
 echo "## Installing Theme Stuff ##"
 echo "############################"
-nala install qt5ct qt5-style-plugins lxappearance dunst -y
+nala install qt5ct qt5-style-plugins lxappearance -y
 
 echo "###########################"
 echo "## Installing File Stuff ##"
@@ -105,7 +105,7 @@ nala install pcmanfm file-roller -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy dunst -y
 
 echo "#################################"
 echo "## Installing Things For Picom ##"
