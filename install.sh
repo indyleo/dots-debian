@@ -85,6 +85,13 @@ nala install polybar galculator kitty bleachbit timeshift \
   arandr xterm xclip rofi-dev xbacklight xsel xdotool screenkey \
   gedit gedit-plugins -y
 
+echo "##############################"
+echo "## Installing VIA (Keycron) ##"
+echo "##############################"
+wget -q https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.deb
+nala install ./via-3.0.0-linux.deb 
+rm ./via-3.0.0-linux.deb
+
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
