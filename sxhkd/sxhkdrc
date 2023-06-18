@@ -1,4 +1,4 @@
-# Awesome keybinds
+# WM keybinds
 
 # Reload the config
 super + Escape
@@ -80,28 +80,31 @@ super + shift + Print
   flameshot launcher
 
 # Brightness
-XF86MonBrightnessUp
-  xbacklight -inc 10
-
-XF86MonBrightnessDown
-  xbacklight -dec 10
+XF86MonBrightness{Up,Down}	
+  xbacklight {-inc,-dec} 10
 
 # Media
-XF86AudioRaiseVolume
-  pamixer -i 5
+super + {Up,Down}
+  pamixer {-i,-d} 5
 
-XF86AudioLowerVolume
-  pamixer -d 5
+super + shift + Down
+  pamixer --toggle-mute
+
+XF86Audio{Raise,Lower}Volume
+  pamixer {-i,-d} 5
 
 XF86AudioMute
   pamixer --toggle-mute
 
 # Music
-XF86AudioNext
-  playerctl next --player=rhythmbox
+super + {Left,Right}
+  playerctl {next,previous} --player=rhythmbox
 
-XF86AudioPrev
-  playerctl previous --player=rhythmbox
+super + Pause
+  playerctl play-pause --player=rhythmbox
+
+XF86Audio{Next,Prev}
+  playerctl {next,previous} --player=rhythmbox
 
 XF86AudioPlay
   playerctl play-pause --player=rhythmbox
