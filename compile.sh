@@ -9,21 +9,6 @@ echo "########################################"
 mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos
 touch ~/.cache/zsh/history 
 
-echo "####################"
-echo "## HeadsetControl ##"
-echo "####################"
-cd ~/Github
-git clone https://github.com/Sapd/HeadsetControl
-cd HeadsetControl
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-cd ~
-
 echo "#################"
 echo "## Envycontrol ##"
 echo "#################"

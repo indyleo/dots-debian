@@ -122,10 +122,10 @@ nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-
   libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev libpcre2-dev libevdev-dev uthash-dev \
   libev-dev libx11-xcb-dev -y 
 
-echo "################################"
-echo "## Installing Window Managers ##"
-echo "################################"
-nala install awesome bspwm i3 -y 
+echo "##########################"
+echo "## Installing AwesomeWN ##"
+echo "##########################"
+nala install awesome -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"

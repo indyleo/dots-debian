@@ -14,11 +14,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# HeadsetControl Aliases
-alias h1='headsetcontrol -l 0'
-alias hb='headsetcontrol -b'
-alias hc='headsetcontrol'
-
 # PS Aliases
 alias psa="ps auxf"
 alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
