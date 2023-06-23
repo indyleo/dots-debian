@@ -164,6 +164,7 @@ echo "## GTK Theme ##"
 echo "###############" 
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 cd ~
 
 echo "#################"
