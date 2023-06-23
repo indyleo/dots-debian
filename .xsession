@@ -5,8 +5,8 @@ xrandr --auto &
 
 if [ "$1" = "awesome" ]; then
   exec awesome
-elif [ "$1" = "bspwm" ]; then
-  exec bspwm
+#elif [ "$1" = "" ]; then
+#  exec 
 else
   exec awesome
 fi

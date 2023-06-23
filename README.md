@@ -9,7 +9,7 @@ Change the exec line in your awesome.desktop file in /usr/share/xsessions to
 ```
 Exec=/etc/X11/Xsession session 
 ```
-the available sessions are awesome, bspwm, i3, ... 
+the available sessions are awesome 
 
 # Qt And GTK Themes
 Put this into your '/etc/environment' file

@@ -41,10 +41,6 @@ super + shift + Escape
 super + f
   pcmanfm
 
-# Tui File Manager
-super + x
-  kitty -e ranger
-
 # Browser 
 super + b
   brave-browser

@@ -85,8 +85,8 @@ extract () {
 wmconf () {
   if [ "$DESKTOP_SESSION" = "awesome" ]; then
     nvim "$HOME/.config/awesome/rc.lua"
-  elif [ "$DESKTOP_SESSION" = "bspwm" ]; then
-    nvim "$HOME/.config/bspwm/bspwmrc"
+  #elif [ "$DESKTOP_SESSION" = "" ]; then
+  #  nvim "$HOME/.config/"
   else
     echo "$DESKTOP_SESSION not in function"
   fi
