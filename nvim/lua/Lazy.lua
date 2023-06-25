@@ -36,6 +36,7 @@ lazy.setup({
   {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
   {"lukas-reineke/headlines.nvim"},
   {"kovetskiy/sxhkd-vim"},
+  {"Fymyte/rasi.vim"},
 
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},

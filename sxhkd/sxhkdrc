@@ -93,7 +93,7 @@ XF86AudioMute
   pamixer --toggle-mute
 
 # Music
-super + {Left,Right}
+super + {Right,Left}
   playerctl {next,previous} --player=rhythmbox
 
 super + Pause
