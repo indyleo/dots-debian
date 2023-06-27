@@ -89,7 +89,7 @@ echo "##############################"
 echo "## Installing VIA (Keycron) ##"
 echo "##############################"
 wget -q https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.deb
-nala install ./via-3.0.0-linux.deb 
+nala install ./via-3.0.0-linux.deb -y
 rm ./via-3.0.0-linux.deb
 
 echo "############################"
@@ -97,7 +97,7 @@ echo "## Installing Media Stuff ##"
 echo "############################"
 nala install rhythmbox rhythmbox-plugins rhythmbox-data \
   playerctl pamixer pavucontrol yt-dlp mpv peek obs-studio kdenlive \
-  audacity gimp vlc sxiv pulemixer -y
+  audacity gimp vlc sxiv pulsemixer -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
