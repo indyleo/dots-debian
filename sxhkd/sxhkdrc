@@ -37,9 +37,9 @@ super + c
 super + shift + Escape
   i3lock-fancy -g
 
-# Gui File Manager
+# File Manager
 super + f
-  pcmanfm
+  thunar
 
 # Browser 
 super + b
