@@ -79,7 +79,7 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xbacklight \
-  xsel xdotool screenkey gedit gedit-plugins xorg -y
+  xsel xdotool screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr -y
 
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"
@@ -134,13 +134,12 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 nala update
 nala install brave-browser -y
 
-echo "#####################"
-echo "## Installing SDDM ##"
-echo "#####################"
-nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv sddm.conf /etc/sddm.conf
-systemctl enable sddm
+echo "########################"
+echo "## Installing LightDM ##"
+echo "########################"
+nala install lightdm lightdm-greeter -y
+systemctl set-default graphical.target
+systemctl enable lightdm.service
 systemctl set-default graphical.target
 
 echo "########################"
