@@ -140,7 +140,6 @@ echo "########################"
 nala install lightdm lightdm-greeter -y
 systemctl set-default graphical.target
 systemctl enable lightdm.service
-systemctl set-default graphical.target
 
 echo "########################"
 echo "## Installing Drivers ##"
