@@ -6,7 +6,7 @@ builddir=$(pwd)
 echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
-mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.icons ~/.themes ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
+mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
 touch ~/.cache/zsh/history 
 
 echo "#################"
@@ -133,6 +133,7 @@ cd ~
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################" 
+mkdir -v ~/.icons
 cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
@@ -142,11 +143,13 @@ cd ~
 echo "#################"
 echo "## Icons Theme ##"
 echo "#################" 
+mkdir -v ~/.icons
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
 echo "###############"
 echo "## GTK Theme ##"
 echo "###############" 
+mkdir -v ~/.themes
 cd ~/.themes
 git clone https://github.com/EliverLara/Nordic.git
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
