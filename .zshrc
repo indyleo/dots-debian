@@ -7,6 +7,7 @@
 autoload -U colors && colors
 
 # Histroy
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|wq|l|ll|la|l.|cd ~|/sbin/reboot)"
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
