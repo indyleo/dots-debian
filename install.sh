@@ -137,7 +137,7 @@ nala install brave-browser -y
 echo "########################"
 echo "## Installing LightDM ##"
 echo "########################"
-nala install lightdm lightdm-greeter -y
+nala install lightdm lightdm-gtk-greeter-settings lightdm-settings -y
 systemctl set-default graphical.target
 systemctl enable lightdm.service
 
