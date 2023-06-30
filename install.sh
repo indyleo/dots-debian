@@ -134,12 +134,15 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 nala update
 nala install brave-browser -y
 
-echo "########################"
-echo "## Installing LightDM ##"
-echo "########################"
-nala install lightdm lightdm-gtk-greeter-settings lightdm-settings -y
+echo "#####################"
+echo "## Installing SDDM ##"
+echo "#####################"
+nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
+nala purge kded5 -y
+systemctl enable sddm.service 
 systemctl set-default graphical.target
-systemctl enable lightdm.service
+tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+mv sddm.conf /etc/sddm.conf
 
 echo "########################"
 echo "## Installing Drivers ##"
