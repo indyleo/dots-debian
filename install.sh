@@ -139,10 +139,11 @@ echo "## Installing SDDM ##"
 echo "#####################"
 nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
 nala purge kded5 -y
-systemctl enable sddm.service 
-systemctl set-default graphical.target
+mkdir /usr/share/sddm/themes
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv sddm.conf /etc/sddm.conf
+systemctl enable sddm.service 
+systemctl set-default graphical.target
 
 echo "########################"
 echo "## Installing Drivers ##"
