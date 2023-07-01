@@ -115,7 +115,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv -v xfce4 Thunar polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list user-dirs.dirs greenclip.toml ~/.config/
+mv -v xfce4 Thunar polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv
 mv -v .gitconfig .bashrc .zshrc .zshenv .aliasrc .functionrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
