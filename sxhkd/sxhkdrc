@@ -18,7 +18,7 @@ super + ctrl + e
 
 # Rofi Calc
 super + shift + c
-  rofi -show calc -calc-command 'xdotool type --clearmodifiers "{result}"'
+  rofi -show calc -calc-command "echo -n '{result}' | xclip"
 
 # Color Picker 
 super + ctrl + c

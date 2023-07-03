@@ -6,8 +6,8 @@ builddir=$(pwd)
 echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
-mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Zsh/Plugins ~/Pictures/Screenshots ~/Scripts ~/.cache/zsh ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
-touch ~/.cache/zsh/history 
+mkdir -pv ~/Github ~/Img ~/Virt ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
+touch ~/.cache/history 
 
 echo "#################"
 echo "## Envycontrol ##"
@@ -23,7 +23,6 @@ cd ~/Github
 git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
-sudo cp completions/_colorscript /usr/share/zsh/site-functions
 cd ~
 
 echo "################"
@@ -70,7 +69,7 @@ cd ~
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/jesseduffield/lazygit@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
+go install github.com/charmbracelet/glow@latest
 
 echo "##################"
 echo "## Rust Install ##"
@@ -116,19 +115,9 @@ mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 Thunar polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
-rm -v ~/.bashrc ~/.profile ~/.zshenv
-mv -v .gitconfig .bashrc .zshrc .zshenv .aliasrc .functionrc .profile .xsession .Xresources ~/
+rm -v ~/.bashrc ~/.profile 
+mv -v .gitconfig .bashrc .aliasrc .functionrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
-
-echo "#################"
-echo "## Zsh Plugins ##"
-echo "#################" 
-cd ~/Zsh/Plugins
-git clone https://github.com/hlissner/zsh-autopair.git
-git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
-git clone https://github.com/zsh-users/zsh-completions.git
-git clone https://github.com/zsh-users/zsh-history-substring-search.git
-cd ~
 
 echo "###################"
 echo "## Cursors Theme ##"
@@ -143,7 +132,6 @@ cd ~
 echo "#################"
 echo "## Icons Theme ##"
 echo "#################" 
-mkdir -v ~/.icons
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 
 echo "###############"

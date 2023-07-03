@@ -25,18 +25,15 @@ lazy.setup({
   --  My plugins here
   {"folke/which-key.nvim"},
   {"nvim-lua/plenary.nvim"},
-  {"lukas-reineke/indent-blankline.nvim"}, -- smarter indent
+  {"lukas-reineke/indent-blankline.nvim"},
   {"nvim-orgmode/orgmode"},
   {"goolord/alpha-nvim"},
-  {"numToStr/Comment.nvim"},
   {"akinsho/toggleterm.nvim"},
   {"nvim-lualine/lualine.nvim"},
   {"vimwiki/vimwiki"},
-  {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
   {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
-  {"lukas-reineke/headlines.nvim"},
   {"kovetskiy/sxhkd-vim"},
-  {"Fymyte/rasi.vim"},
+  {"lambdalisue/suda.vim"},
 
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
@@ -92,6 +89,13 @@ lazy.setup({
 
   -- Git
   {"lewis6991/gitsigns.nvim"},
-  {"kdheepak/lazygit.nvim"},
   {"ahmedkhalf/project.nvim"},
+
+  -- Markdown
+  {"lukas-reineke/headlines.nvim"},
+  {"ellisonleao/glow.nvim"},
+
+  -- Comments
+  {"numToStr/Comment.nvim"},
+  {"folke/todo-comments.nvim", config = function() require("todo-comments").setup {} end},
 })

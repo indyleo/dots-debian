@@ -1,13 +1,14 @@
+# My Starship Prompt Config
+
 format = """
 [](#3B4252)\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
-[](fg:#434C5E bg:#4C566A)\
+[](bg:#4C566A fg:#434C5E)\
 $git_branch\
-$hg_branch\
 $git_status\
-[](fg:#4C566A bg:#86BBD8)\
+[](bg:#86BBD8 fg:#4C566A)\
 $c\
 $elixir\
 $elm\
@@ -15,6 +16,7 @@ $golang\
 $haskell\
 $java\
 $julia\
+$lua\
 $nodejs\
 $nim\
 $nix_shell\
@@ -24,9 +26,10 @@ $php\
 $python\
 $ruby\
 $rust\
-[](fg:#86BBD8 bg:#06969A)\
+$scala\
+[](bg:#06969A fg:#86BBD8)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](bg:#33658A fg:#06969A)\
 $time\
 [ ](fg:#33658A)\
 """
@@ -55,11 +58,6 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-# Keep in mind that the order matters. For example:
-# "Important Documents" = "  "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important  " = "  "
 
 [c]
 symbol = " "
@@ -86,11 +84,6 @@ symbol = " "
 style = "bg:#4C566A"
 format = '[ $symbol $branch ]($style)'
 
-[hg_branch]
-symbol = " "
-style = "bg:#4C566A"
-format = '[ $symbol $branch ]($style)'
-
 [git_status]
 style = "bg:#4C566A"
 format = '[$all_status$ahead_behind ]($style)'
@@ -112,6 +105,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = "󰢱 "
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
@@ -167,16 +165,6 @@ format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[shlvl]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[swift]
-symbol = " "
 style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 

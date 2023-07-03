@@ -7,6 +7,7 @@ local servers = {
   "yamlls",
   "marksman",
   "vimls",
+  "taplo",
 }
 
 local settings = {
