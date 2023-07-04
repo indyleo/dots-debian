@@ -203,6 +203,7 @@ alias viconf='nvim $XDG_CONFIG_HOME/nvim/init.lua'
 alias poconf='nvim $XDG_CONFIG_HOME/polybar/config.ini'
 alias piconf='nvim $XDG_CONFIG_HOME/picom/picom.conf'
 alias sxconf='nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
+alias rnconf='nvim $XDG_CONFIG_HOME/ranger/rc.conf'
 
 # Trash Aliases
 alias trash='trash -iv'
