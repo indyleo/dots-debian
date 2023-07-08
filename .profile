@@ -54,6 +54,3 @@ export OPENER="xdg-open"
 export READER="zathura"
 export VIDEO="mpv"
 export IMAGE="sxiv"
-
-# Ranger Not Loading Default Config
-export RANGER_LOAD_DEFAULT_RC=false
