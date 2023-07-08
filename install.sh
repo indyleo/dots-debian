@@ -27,8 +27,8 @@ echo "#######################"
 echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
-  python3-setuptools autojump luarocks ranger shellcheck python3-venv meson exa stow apt-transport-https qalc cmdtest qalc libtool libtool-bin ninja-build \
-  autoconf automake python3-pil bat flake8 jq -y
+  python3-setuptools autojump luarocks lf shellcheck python3-venv meson exa stow apt-transport-https qalc cmdtest qalc libtool libtool-bin ninja-build \
+  autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 -y
 
 echo "##################"
 echo "## Wifi Manager ##"
@@ -43,7 +43,7 @@ nala install ripgrep fd-find neovim -y
 echo "##################"
 echo "## Pkg Managers ##"
 echo "##################"
-nala install npm flatpak golang-go python3-pip -y
+nala install npm flatpak golang-go cargo -y
 
 echo "###############"
 echo "## XDG Stuff ##"
@@ -75,10 +75,15 @@ echo "## Installing Java ##"
 echo "#####################"
 nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre -y
 
+echo "#################################"
+echo "## Installing Bittorrent Stuff ##"
+echo "#################################"
+nala install transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin -y
+
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator kitty bleachbit timeshift transmission-gtk dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xbacklight \
+nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xbacklight \
   xsel xdotool screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr -y
 
 echo "##############################"

@@ -1,0 +1,23 @@
+#!/bin/env bash
+
+# Preview
+case "$1" in
+  # Media
+  *.png|*.jpg|*.jpeg|*.bmp|*.xpm|*.wepb) mediainfo "$1" ;;
+  *.mkv|*.mp3|*.mp4|*.wav) exiftool "$1" ;;
+
+  # Archives
+  *.tar) tar -tvf "$1" ;;
+  *.tar.gz) tar -ztvf "$1" ;;
+  *.tar.bz2) tar -jtvf "$1" ;;
+  *.zip) zipinfo "$1" ;;
+  *.rar) unrar l "$1" ;;
+  *.7z) 7z l "$1" ;;
+  
+  # Text
+  *.bash*|*.git*) pistol "$1" ;;
+  *.md) glow -s dark "$1" ;;
+  *.pdf) pdftotext "$1" - ;;
+  *) highlight "$1" -O ansi || cat "$1" ;;
+esac
+

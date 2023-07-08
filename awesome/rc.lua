@@ -66,9 +66,9 @@ local term_scratch = bling.module.scratchpad {
     dont_focus_before_close  = false
 }
 
-local ranger_scratch = bling.module.scratchpad {
-    command = "kitty --class ranger -e ranger",
-    rule = { instance = "ranger" },
+local lf_scratch = bling.module.scratchpad {
+    command = "kitty --class lf -e lf",
+    rule = { instance = "lf" },
     sticky = true,
     autoclose = true,
     floating = true,
@@ -199,8 +199,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey, ctrlkey }, "t", function ()
       term_scratch:toggle()
     end),
-    awful.key({ modkey, ctrlkey }, "r", function ()
-      ranger_scratch:toggle()
+    awful.key({ modkey, ctrlkey }, "f", function ()
+      lf_scratch:toggle()
     end),
     awful.key({ modkey, ctrlkey }, "m", function ()
       mixer_scratch:toggle()

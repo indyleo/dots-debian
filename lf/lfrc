@@ -1,0 +1,241 @@
+# Basic Settings
+set previewer ~/.config/lf/preview
+set preview true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+
+### KEYBINDS ###
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# File Openers
+map ee $$EDITOR "$f"
+map u $view "$f"
+
+# File Operations
+map dd trash-put
+map tv trash-view
+map te trash-empty
+map tr trash-restore
+map md mkdir
+map mf mkfile
+map ms mkscript
+map smf sudomkfile
+map me make-executable
+map re remove-executable
+
+# Basic Operations
+map . set hidden!
+map p paste
+map x cut
+map y copy
+map <enter> open
+map r rename
+map H top
+map L bottom
+map R reload
+map C clear
+map U unselect
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Jumping Around The Filesystem
+map gh :cd ~
+map gc :cd ~/.config
+map gd :cd ~/Downloads
+map gD :cd ~/Documents
+map gv :cd ~/Videos
+map gm :cd ~/Music
+map gg :cd ~/Github
+map gw :cd ~/Pictures/Wallpapers
+map gs :cd ~/Pictures/Screenshots
+map fj fzf_jump
+
+# Executing Scripts
+map x $"$f"
+map X !"$f"
+
+### CUSTOM COMMANDS ###
+cmd open ${{
+  clear
+  case $(file --mime-type "$f" -bL) in
+    text/*|application/json) $EDITOR "$f" ;;
+    *) $OPENER "$f" ;;
+  esac
+  clear
+}}
+
+cmd mkdir %{{
+  printf " Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  clear
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+  clear
+}}
+
+cmd sudomkfile ${{
+  clear
+  printf "(Sudo) File Name: "
+  read ans
+  sudo $EDITOR $ans
+  clear
+}}
+
+cmd mkscript %{{
+  printf "File Name: "
+  read -r ans
+  file=$HOME/Scripts/$ans
+  if [ -d "$HOME/Scripts" ]; then
+    if [ -e "$HOME/Scripts/$ans" ]; then
+      $EDITOR "$file"
+    else
+      echo "#!/bin/env bash" >> "$file"
+      chmod a+x "$file"
+      $EDITOR "$file"
+    fi
+  fi
+}}
+
+# Filesystem Operations
+cmd make-executable %{{
+  printf " Want To Make "$f" Excutible? [y/n]: "
+  read ans
+  case "$ans" in
+    y) chmod a+x "$f" && lf -remote 'send reload' ;;
+    n) return ;;
+    *) echo "Not y/n";;
+  esac
+}}
+
+cmd remove-executable %{{
+  printf " Want To Remove "$f" Executiability? [y/n]: "
+  read ans
+  case "$ans" in
+    y) chmod a-x "$f" && lf -remote 'send reload' ;;
+    n) return ;;
+    *) echo "Not y/n";;
+  esac
+}}
+
+# Trashing 
+cmd trash-put %{{
+  printf " You want to put the selected stuff in the trash? [y/n]: "
+  read ans
+    case "$ans" in
+    y) trash-put $fx ;;
+    n) exit ;;
+    *) echo "Not y/n" ;;
+  esac
+}}
+
+cmd trash-view ${{
+  clear
+  printf "Stuff inside your trash\n"
+  trash-list
+  printf "\nDone viewing trash [y/n]: "
+  read ans
+  case "$ans" in
+    y) exit ;;
+    n) until [[ "$ans" == "y" ]]; do
+      clear
+      printf "Stuff inside your trash\n"
+      trash-list
+      printf "\nDone viewing trash [y/n]: "
+      read ans
+    done ;;
+    *) echo "Not y/n" ;;
+  esac
+  clear
+}}
+
+cmd trash-empty ${{
+  clear
+  printf "Would you like to see whats inside of the trash [y/n]: "
+  read ans
+  case "$ans" in
+    y) 
+      clear
+      printf "Stuff inside your trash\n"
+      trash-list
+      printf "\nWant to Empty Your Trash [y/n]: "
+      read ans1
+      case "$ans1" in
+        y) trash-empty -f ;;
+        n) exit ;;
+        *) echo "Not echo Not y/n" ;;
+      esac ;;
+    n) trash-empty -f ;;
+    *) echo "Not y/n" ;;
+  esac
+  clear
+}}
+
+cmd trash-restore ${{
+  clear
+  trash-restore
+  clear
+}}
+
+# Extract Archives
+cmd unarchive ${{
+  clear
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *.rar) unrar x "$f" ;;
+      *.7z) 7z x "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+  clear
+}}
+
+# Compressing Current Selected File 
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+# Fzf Jump
+cmd fzf_jump ${{
+  clear
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+  clear
+}}
+
+# Wallpaper
+cmd setbg %{{
+  cp "$f" ~/.config/wall.png
+  xwallpaper --stretch "$f"
+}}

@@ -69,19 +69,14 @@ cd ~
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/charmbracelet/glow@latest
-
-echo "##################"
-echo "## Rust Install ##"
-echo "##################" 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest
 
 echo "##################"
 echo "## Neovim Setup ##"
 echo "##################" 
-~/.cargo/bin/cargo install bob-nvim
-~/.cargo/bin/bob install stable
-~/.cargo/bin/bob use stable
+cargo install bob-nvim
+bob install stable
+bob use stable
 
 echo "###########################"
 echo "## Installing Nerd Fonts ##"
@@ -114,9 +109,9 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
-mv -v xfce4 Thunar polybar neofetch nvim ranger awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
+mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
 rm -v ~/.bashrc ~/.profile 
-mv -v .gitconfig .bashrc .aliasrc .functionrc .profile .xsession .Xresources ~/
+mv -v .bashrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
 
 echo "###################"

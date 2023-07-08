@@ -97,7 +97,7 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
 # Rangercd Bind
-bind '"\C-x":"rangercd\C-m"'
+bind '"\C-x":"lfcd\C-m"'
 
 # Ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -155,8 +155,7 @@ alias mkdir='mkdir -pv'
 
 # Nice Aliases To Have
 alias wq='exit'
-alias rn='ranger'
-alias rncd='rangercd'
+alias lc='lfcd'
 alias ping='ping -c 10'
 alias src='source'
 alias df='df -h'
@@ -203,7 +202,7 @@ alias viconf='nvim $XDG_CONFIG_HOME/nvim/init.lua'
 alias poconf='nvim $XDG_CONFIG_HOME/polybar/config.ini'
 alias piconf='nvim $XDG_CONFIG_HOME/picom/picom.conf'
 alias sxconf='nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
-alias rnconf='nvim $XDG_CONFIG_HOME/ranger/rc.conf'
+alias lfconf='nvim $XDG_CONFIG_HOME/lf/lfrc'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -368,14 +367,19 @@ lazygup() {
 	git push
 }
 
-# Ramger CD
-rangercd() {
+# Lf CD
+lfcd () {
     tmp="$(mktemp)"
-    ranger --choosedir="$tmp" "$@"
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    command lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         command rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"                                               
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
     fi
 }
 ### End Of Functions ###
