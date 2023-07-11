@@ -158,7 +158,6 @@ alias src='source'
 alias df='df -h'
 alias mimetype='file --mime-type'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias wal='find ~/Pictures/Wallpapers/ -type f | shuf -n 1 | xargs xwallpaper --stretch'
 alias xwal='xwallpaper --stretch'
 
 # Get Error Messages From Journalctl
@@ -176,8 +175,8 @@ alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
 # Xresources Aliases
-alias load='xrdb -load ~/.Xresources'
-alias merge='xrdb -merge ~/.Xresources'
+alias load='xrdb -load $HOME/.Xresources'
+alias merge='xrdb -merge $HOME/.Xresources'
 
 # CD Aliases
 alias home='cd ~'
@@ -200,6 +199,10 @@ alias poconf='nvim $XDG_CONFIG_HOME/polybar/config.ini'
 alias piconf='nvim $XDG_CONFIG_HOME/picom/picom.conf'
 alias sxconf='nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
 alias lfconf='nvim $XDG_CONFIG_HOME/lf/lfrc'
+alias prconf='nvim $XDG_CONFIG_HOME/starship.toml'
+alias maconf='nvim $XDG_CONFIG_HOME/mimeapps.list'
+alias nfconf='nvim $XDG_CONFIG_HOME/neofetch/config.conf'
+alias gcconf='nvim $XDG_CONFIG_HOME/greenclip.toml'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -227,7 +230,7 @@ alias tag='git tag'
 alias newtag='git tag -a'
 
 # Shell Aliases
-alias srb='source ~/.bashrc'
+alias srcsh='source ~/.bashrc'
 alias rs='reset'
 alias cl='clear'
 
@@ -238,18 +241,6 @@ alias 644='chmod -R 644'
 alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
-
-# Cargo Aliases
-alias carin='cargo install'
-alias carun='cargo uninstall'
-alias carrm='cargo remove'
-alias carup='cargo update'
-alias carcl='cargo clean'
-
-# Go Aliases
-alias gin='go install'
-alias gge='go get'
-alias gli='go list'
 
 # Flatpak Aliases
 alias flatin='flatpak install'
