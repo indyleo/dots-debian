@@ -28,7 +28,8 @@ echo "## CLI Nice To Haves ##"
 echo "#######################"
 nala install direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks lf shellcheck python3-venv meson exa stow apt-transport-https qalc cmdtest qalc libtool libtool-bin ninja-build \
-  autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 -y
+  autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 \
+  brightnessctl xbacklight -y
 
 echo "##################"
 echo "## Wifi Manager ##"
@@ -83,8 +84,8 @@ nala install transmission transmission-cli transmission-daemon transmission-gtk 
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xbacklight \
-  xsel xdotool screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr -y
+nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+  xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr -y
 
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"

@@ -1,4 +1,4 @@
-# WM keybinds
+# Keybinds
 
 # Reload the config
 super + Escape
@@ -77,7 +77,7 @@ super + shift + Print
 
 # Brightness
 XF86MonBrightness{Up,Down}	
-  xbacklight {-inc,-dec} 10
+  brightnessctl set 5%{+,-}
 
 # Media
 super + {Up,Down}
