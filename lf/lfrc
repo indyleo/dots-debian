@@ -27,9 +27,6 @@ map u $view "$f"
 
 # File Operations
 map dd trash-put
-map tv trash-view
-map te trash-empty
-map tr trash-restore
 map md mkdir
 map mf mkfile
 map ms mkscript
@@ -105,7 +102,8 @@ cmd sudomkfile ${{
   clear
 }}
 
-cmd mkscript %{{
+cmd mkscript ${{
+  clear
   printf "File Name: "
   read -r ans
   file=$HOME/Scripts/$ans
@@ -118,6 +116,7 @@ cmd mkscript %{{
       $EDITOR "$file"
     fi
   fi
+  clear
 }}
 
 # Filesystem Operations
@@ -143,13 +142,7 @@ cmd remove-executable %{{
 
 # Trashing 
 cmd trash-put %{{
-  printf " You want to put the selected stuff in the trash? [y/n]: "
-  read ans
-    case "$ans" in
-    y) trash-put $fx ;;
-    n) exit ;;
-    *) echo "Not y/n" ;;
-  esac
+  trash-put $fx
 }}
 
 cmd trash-view ${{
