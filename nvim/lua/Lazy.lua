@@ -75,8 +75,11 @@ lazy.setup({
   {"neovim/nvim-lspconfig"}, -- enable LSP
   {"williamboman/mason.nvim"}, -- simple to use language server installer
   {"williamboman/mason-lspconfig.nvim"},
-  {"jose-elias-alvarez/null-ls.nvim"}, -- for formatters and linters
   {"RRethy/vim-illuminate"},
+
+ -- Null LS
+  {"jose-elias-alvarez/null-ls.nvim"}, -- for formatters and linters
+  {"jay-babu/mason-null-ls.nvim", config = function () require("plugins-options.null-ls") end, },
 
   -- Treesitter
   {"nvim-treesitter/nvim-treesitter"},
@@ -86,6 +89,7 @@ lazy.setup({
   {"mfussenegger/nvim-dap"},
   {"rcarriga/nvim-dap-ui"},
   {"ravenxrz/DAPInstall.nvim"},
+  {"jay-babu/mason-nvim-dap.nvim"},
 
   -- Git
   {"lewis6991/gitsigns.nvim"},

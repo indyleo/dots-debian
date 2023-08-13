@@ -1,5 +1,5 @@
 -- Mason
-local servers = {
+local servers_lsp = {
   "lua_ls",
   "pyright",
   "bashls",
@@ -8,6 +8,27 @@ local servers = {
   "marksman",
   "vimls",
   "taplo",
+}
+
+local servers_dap = {
+  "bash-debug-adapter",
+  "debugpy",
+}
+
+local servers_null_ls = {
+  "shellcheck",
+  "yamllint",
+  "flake8",
+  "jsonlint",
+  "vint",
+  "markdownlint",
+  "luacheck",
+
+  "autoflake",
+  "beautysh",
+  "cbfmt",
+  "jq",
+  "luaformatter",
 }
 
 local settings = {
@@ -24,8 +45,19 @@ local settings = {
 }
 
 require("mason").setup(settings)
+
 require("mason-lspconfig").setup({
-	ensure_installed = servers,
+	ensure_installed = servers_lsp,
+	automatic_installation = true,
+})
+
+require("mason-nvim-dap").setup({
+  ensure_installed = servers_dap,
+	automatic_installation = true,
+})
+
+require("mason-null-ls").setup({
+  ensure_installed = servers_null_ls,
 	automatic_installation = true,
 })
 
@@ -36,7 +68,7 @@ end
 
 local opts = {}
 
-for _, server in pairs(servers) do
+for _, server in pairs(servers_lsp) do
 	opts = {
 		on_attach = require("plugins-options.lsp.handlers").on_attach,
 		capabilities = require("plugins-options.lsp.handlers").capabilities,

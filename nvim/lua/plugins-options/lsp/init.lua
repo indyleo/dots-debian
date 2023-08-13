@@ -5,4 +5,3 @@ end
 
 require "plugins-options.lsp.mason"
 require("plugins-options.lsp.handlers").setup()
-require "plugins-options.lsp.null-ls"
