@@ -87,6 +87,11 @@ echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
   xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock -y
 
+echo "###########################"
+echo "## Installing Game Stuff ##"
+echo "###########################"
+nala install lutris -y
+
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"
 echo "##############################"
