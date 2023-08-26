@@ -362,6 +362,27 @@ awful.rules.rules = {
       properties = { tag = "REC" }
     },
 
+    -- Heroic 
+    { rule = { instance = "heroic" },
+      properties = { tag = "GAME" }
+    },
+
+    -- Prism Launcher 
+    { rule = { instance = "prismrun" },
+      properties = { tag = "GAME" }
+    },
+
+    -- Lutris
+    { rule = { instance = "lutris" },
+      properties = { tag = "GAME" }
+    },
+
+    -- Steam
+    { rule = { instance = "steamwebhelper" },
+      properties = { tag = "GAME" }
+    },
+
+
     -- Mpv
     { rule = { instance = "gl" },
       properties = { fullscreen = true }
