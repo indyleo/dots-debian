@@ -20,9 +20,9 @@ super + ctrl + e
 super + shift + c
   rofi -show calc -calc-command "echo -n '{result}' | xclip"
 
-# Color Picker 
+# Config Menu
 super + ctrl + c
-  colorpicker
+  configmenu
 
 # Power Menu
 super + p
