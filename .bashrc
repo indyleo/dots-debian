@@ -93,7 +93,7 @@ set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-# Rangercd Bind
+# Lfcd Bind
 bind '"\C-x":"lfcd\C-m"'
 
 # Ignore upper and lowercase when TAB completion
