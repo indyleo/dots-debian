@@ -382,7 +382,6 @@ awful.rules.rules = {
       properties = { tag = "GAME" }
     },
 
-
     -- Mpv
     { rule = { instance = "gl" },
       properties = { fullscreen = true }

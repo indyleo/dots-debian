@@ -20,7 +20,7 @@ super + ctrl + e
 super + shift + c
   rofi -show calc -calc-command "echo -n '{result}' | xclip"
 
-# Config Menu
+# ConfigMenu
 super + ctrl + c
   configmenu
 
