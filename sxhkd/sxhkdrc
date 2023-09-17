@@ -104,3 +104,33 @@ XF86Audio{Next,Prev}
 
 XF86AudioPlay
   playerctl play-pause --player=rhythmbox
+
+### Mouse Macros (For Starcraft)
+
+## Basic Structures
+
+# Build a supply depo
+button9
+	xdotool key --delay 0.1 --repeat 1 b && xdotool key --delay 0.1 --repeat 1 s
+
+# Build a barracks
+ctrl + button9
+	xdotool key --delay 0.1 --repeat 2 b
+
+# Buld a bunker
+button8
+	xdotool key --delay 0.1 --repeat 1 b && xdotool key --delay 0.1 --repeat 1 u
+
+# Build a academy
+ctrl + button8
+	xdotool key --delay 0.1 --repeat 1 b && xdotool key --delay 0.1 --repeat 1 a
+
+## Advanced Structures
+
+# Build a factory
+alt + button9
+	xdotool key --delay 0.1 --repeat 1 v && xdotool key --delay 0.1 --repeat 1 f
+
+# Build a 
+alt + button8
+	xdotool key --delay 0.1 --repeat 1 v && xdotool key --delay 0.1 --repeat 1 a
