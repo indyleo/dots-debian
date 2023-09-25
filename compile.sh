@@ -163,5 +163,5 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install net.lutris.Lutris com.github.tchx84.Flatseal com.valvesoftware.Steam org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker com.github.unrud.VideoDownloader com.discordapp.Discord
+flatpak install net.lutris.Lutris com.github.tchx84.Flatseal com.valvesoftware.Steam org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker com.github.unrud.VideoDownloader com.discordapp.Discord org.winehq.Wine com.usebottles.bottles net.davidotek.pupgui2
 
