@@ -382,6 +382,11 @@ awful.rules.rules = {
       properties = { tag = "GAME" }
     },
 
+    -- Yuzu
+    { rule = {instance = "yuzu" },
+    properties = { tag = "GAME" }
+    },
+
     -- Mpv
     { rule = { instance = "gl" },
       properties = { fullscreen = true }
