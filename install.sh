@@ -109,6 +109,11 @@ echo "## Installing File Stuff ##"
 echo "###########################"
 nala install thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller -y
 
+echo "###########################"
+echo "## Installing Game Stuff ##"
+echo "###########################"
+nala install mangohud vkbasalt goverlay -y
+
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
