@@ -121,23 +121,11 @@ cmd mkscript ${{
 
 # Filesystem Operations
 cmd make-executable %{{
-  printf " Want To Make "$f" Excutible? [y/n]: "
-  read ans
-  case "$ans" in
-    y) chmod a+x "$f" && lf -remote 'send reload' ;;
-    n) return ;;
-    *) echo "Not y/n";;
-  esac
+  chmod a+x "$f" && lf -remote 'send reload' ;;
 }}
 
 cmd remove-executable %{{
-  printf " Want To Remove "$f" Executiability? [y/n]: "
-  read ans
-  case "$ans" in
-    y) chmod a-x "$f" && lf -remote 'send reload' ;;
-    n) return ;;
-    *) echo "Not y/n";;
-  esac
+  chmod a-x "$f" && lf -remote 'send reload' ;;
 }}
 
 # Trashing 
