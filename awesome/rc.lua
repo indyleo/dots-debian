@@ -382,6 +382,16 @@ awful.rules.rules = {
       properties = { tag = "GAME" }
     },
 
+    -- Roblox
+    { rule = { instance = "robloxplayerbeta.exe" },
+      properties = { tag = "GAME" }
+    },
+
+    -- Battel.net
+    { rule = { instance = "steam_app_0" },
+      properties = { tag = "GAME" }
+    },
+
     -- Yuzu
     { rule = {instance = "yuzu" },
     properties = { tag = "GAME" }
