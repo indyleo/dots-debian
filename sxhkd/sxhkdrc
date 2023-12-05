@@ -21,7 +21,7 @@ super + shift + c
   rofi -show calc -calc-command "echo -n '{result}' | xclip"
 
 # ConfigMenu
-super + ctrl + c
+super + alt + c
   configmenu
 
 # Power Menu

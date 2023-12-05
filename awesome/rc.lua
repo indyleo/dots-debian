@@ -99,6 +99,17 @@ local wiki_scratch = bling.module.scratchpad {
     dont_focus_before_close  = false
 }
 
+local chat_scratch = bling.module.scratchpad {
+    command = "flatpak run com.chatterino.chatterino",
+    rule = { instance = "chatterino" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = {x=450, y=150, height=700, width=1000},
+    reapply = true,
+    dont_focus_before_close  = false
+}
+
 -- Window Switcher
 bling.widget.window_switcher.enable {
     type = "thumbnail",
@@ -207,6 +218,9 @@ globalkeys = gears.table.join(
     end),
     awful.key({ modkey, ctrlkey }, "v", function ()
       wiki_scratch:toggle()
+    end),
+      awful.key({ modkey, ctrlkey }, "c", function ()
+      chat_scratch:toggle()
     end),
 
     -- Window Switcher
