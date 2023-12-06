@@ -71,6 +71,11 @@ echo "## Go Programs ##"
 echo "#################" 
 go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest
 
+echo "############"
+echo "## Rustup ##"
+echo "############" 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 echo "##################"
 echo "## Neovim Setup ##"
 echo "##################" 
