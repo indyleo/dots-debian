@@ -119,6 +119,9 @@ rm -v ~/.bashrc ~/.profile
 mv -v .bashrc .profile .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
 
+# adding ur usr to libvirt group
+sudo usermod -aG libvirt $(whoami)
+
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################" 
