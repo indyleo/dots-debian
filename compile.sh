@@ -115,12 +115,23 @@ mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom sxhkd kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
-rm -v ~/.bashrc ~/.profile 
-mv -v .bashrc .profile .xsession .Xresources ~/
+rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
+mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
 
+echo "#################"
+echo "## Zsh Plugins ##"
+echo "#################"
+mkdir -v ~/Zsh-Plugins
+cd ~/Zsh-Plugins
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
+git clone https://github.com/zsh-users/zsh-completions.git
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git
+git clone https://github.com/hlissner/zsh-autopair.git
+cd ~
+
 # adding ur usr to libvirt group
-sudo usermod -aG libvirt $(whoami)
+sudo usermod -aG libvirt "$(whoami)"
 
 echo "###################"
 echo "## Cursors Theme ##"

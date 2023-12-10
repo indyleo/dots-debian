@@ -1,0 +1,146 @@
+# Making ls Better
+alias ls='exa --group-directories-first --color=auto' # Basic exa But with Some Nice Flags
+alias la='exa -a --group-directories-first --color=auto' # Show Hidden Files
+alias ll='exa -lF --group-directories-first --color=auto' # Show In Listing Form 
+alias l='exa -alF --group-directories-first --color=auto' # My Favourite
+alias lt='exa -a --tree --group-directories-first --color=always ' # Tree Listing
+alias l.='exa -a | egrep "^\."' # Show Only Hidden File
+
+# Cat to Bat Alias
+alias cat='batcat -pn --pager=""'
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# PS Aliases
+alias psa="ps auxf"
+alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# Confirm Before Doing Something Or The Output Being Verbose Or Both
+alias rm='rm -iv'
+alias cp='cp -irv'
+alias mv='mv -iv'
+alias ln='ln -i'
+alias rmdir='rmdir -v'
+alias mkdir='mkdir -pv'
+
+# Nice Aliases To Have
+alias wq='exit'
+alias lc='lfcd'
+alias ping='ping -c 10'
+alias df='df -h'
+alias mimetype='file --mime-type'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias xwal='xwallpaper --stretch'
+
+# Get Error Messages From Journalctl
+alias jctl='journalctl -p 3 -xb'
+
+# Yt-dlp Aliases
+alias yta-aac='yt-dlp --extract-audio --audio-format aac '
+alias yta-best='yt-dlp --extract-audio --audio-format best '
+alias yta-flac='yt-dlp --extract-audio --audio-format flac '
+alias yta-m4a='yt-dlp --extract-audio --audio-format m4a '
+alias yta-mp3='yt-dlp --extract-audio --audio-format mp3 '
+alias yta-opus='yt-dlp --extract-audio --audio-format opus '
+alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
+alias yta-wav='yt-dlp --extract-audio --audio-format wav '
+alias ytv-best='yt-dlp -f bestvideo+bestaudio '
+
+# Xresources Aliases
+alias load='xrdb -load $HOME/.Xresources'
+alias merge='xrdb -merge $HOME/.Xresources'
+
+# CD Aliases
+alias home='cd ~'
+alias conf='cd ~/.config'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias bd='cd "$OLDPWD"'
+
+# Neovim Aliases
+alias vim='nvim'
+alias svi='sudo nvim'
+alias bconf='nvim $HOME/.bashrc'
+alias zconf='nvim $HOME/.zshrc'
+alias zeconf='nvim $HOME/.zshenv'
+alias aconf='nvim $HOME/.aliasrc'
+alias fconf='nvim $HOME/.functionrc'
+alias pfconf='nvim $HOME/.profile'
+alias wmconf='nvim $XDG_CONFIG_HOME/awesome/rc.lua'
+alias kiconf='nvim $XDG_CONFIG_HOME/kitty/kitty.conf'
+alias viconf='nvim $XDG_CONFIG_HOME/nvim/init.lua'
+alias poconf='nvim $XDG_CONFIG_HOME/polybar/config.ini'
+alias piconf='nvim $XDG_CONFIG_HOME/picom/picom.conf'
+alias sxconf='nvim $XDG_CONFIG_HOME/sxhkd/sxhkdrc'
+alias lfconf='nvim $XDG_CONFIG_HOME/lf/lfrc'
+alias prconf='nvim $XDG_CONFIG_HOME/starship.toml'
+alias maconf='nvim $XDG_CONFIG_HOME/mimeapps.list'
+alias nfconf='nvim $XDG_CONFIG_HOME/neofetch/config.conf'
+alias gcconf='nvim $XDG_CONFIG_HOME/greenclip.toml'
+
+# Trash Aliases
+alias trash='trash -iv'
+alias trashl='trash-list'
+alias trashr='trash-restore'
+alias trashrm='trash-rm'
+alias trashe='trash-empty'
+
+# GPG encryption
+alias gpg-check='gpg --keyserver-options auto-key-retrieve --verify'
+alias gpg-retrieve='gpg --keyserver-options auto-key-retrieve --receive-keys'
+
+# Git Aliases
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias stat='git status'
+alias tag='git tag'
+alias newtag='git tag -a'
+
+# Shell Aliases
+alias srcb='source ~/.bashrc'
+alias srcz='source ~/.zshrc'
+alias srcze='source ~/.zshenv'
+alias src='source'
+alias rs='reset'
+alias cl='clear'
+
+# Chmod Aliases
+alias mxp='chmod a+x'
+alias mxm='chmod a-x'
+alias 644='chmod -R 644'
+alias 666='chmod -R 666'
+alias 755='chmod -R 755'
+alias 777='chmod -R 777'
+
+# Flatpak Aliases
+alias flatin='flatpak install'
+alias flatun='flatpak uninstall'
+alias flatup='flatpak update'
+alias flatse='flatpak search'
+alias flatru='flatpak run'
+alias flatki='flatpak kill'
+
+# Making APT Better
+alias aptin='sudo apt install'
+alias aptup='sudo apt update && sudo apt upgrade'
+alias aptud='sudo apt update'
+alias aptug='sudo apt upgrade'
+alias aptrm='sudo apt remove'
+alias aptpu='sudo apt purge'
+
+# For Vim Users
+# vim:ft=sh

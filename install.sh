@@ -28,6 +28,11 @@ nala install direnv yad fzf locate gh tree build-essential git cmake make libhid
   autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 \
   brightnessctl xbacklight -y
 
+echo "#########"
+echo "## Zsh ##"
+echo "#########"
+nala install zsh zsh-syntax-highlighting -y
+
 echo "##################"
 echo "## Wifi Manager ##"
 echo "##################"
