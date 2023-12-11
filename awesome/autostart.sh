@@ -13,16 +13,19 @@ xset s off -dpms
 killall -q solaar
 killall -q sxhkd
 killall -q greenclip
+killall -q xautolock
+killall -q conky
 
 # Starting Programs
 picom &
-sxhkd  &
+sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc &
 lxpolkit &
 greenclip daemon &
 solaar -w hide &
+sleep 1.5 && conky -c $XDG_CONFIG_HOME/awesome/conkyrc &
 
 # Setting Up Autolock
 xautolock -time 15 -locker locker &
 
 # Wallpaper
-xwallpaper --stretch ~/Pictures/Wallpapers/3xsraffkwi1a1.png &
+xwallpaper --stretch ~/Pictures/Wallpapers/3xsraffkwi1a1.png

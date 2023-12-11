@@ -119,7 +119,7 @@ nala install mangohud vkbasalt goverlay -y
 echo "##################################"
 echo "## Installing Things For Any WM ##"
 echo "##################################"
-nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy -y
+nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy conky -y
 
 echo "#################################"
 echo "## Installing Things For Picom ##"

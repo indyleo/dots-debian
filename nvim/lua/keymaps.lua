@@ -54,6 +54,7 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope git_files<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)

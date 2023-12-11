@@ -1,4 +1,4 @@
-# Keybinds
+# Keybinds (Awesome)
 
 # Reload the config
 super + Escape
@@ -28,6 +28,10 @@ super + alt + c
 super + p
   powermenu
 
+# Streaming-audio
+super + shift + a
+	streaming-audio
+
 # Greenclip
 super + c
   rofi -modi "clipboard:greenclip print" \
@@ -44,6 +48,14 @@ super + f
 # Browser 
 super + b
   brave-browser
+
+# Rhythmbox 
+super + ctrl + r
+  rhythmbox
+
+# Discord 
+super + d
+  flatpak run com.discordapp.Discord
 
 # Relanching Picom 
 super + shift + e

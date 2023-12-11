@@ -14,6 +14,7 @@ else
 	echo "can't found the autojump script"
 fi
 
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -23,7 +24,7 @@ autoload -U colors && colors
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=$XDG_CACHE_HOME/zsh/history
 
 # Basic auto/tab complete:
 autoload -U compinit
