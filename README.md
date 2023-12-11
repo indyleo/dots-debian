@@ -2,7 +2,7 @@
 Distro I Use Is Debian 12 With AwesomWM
 
 # Preview
-![Preview-Image](https://user-images.githubusercontent.com/100316787/235046943-977f3a49-f7bd-4ea2-ac33-083dc09080bf.png)
+![image](https://github.com/indyleo/dots-debian/assets/100316787/64576f0f-f330-4d51-ad2f-38358b2bed3e)
 
 # Awesome loading ~/.xsession
 Change the exec line in your awesome.desktop file in /usr/share/xsessions to
