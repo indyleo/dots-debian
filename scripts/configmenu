@@ -2,7 +2,7 @@
 # My rofi config menu to quickly edit some config files
 
 # What's Shown To The User
-chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nAwesomeWM Config\nPolybar Config\nConky Config\nRofi Config\nPicom Config\nSxhkd Config\nGreenclip Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 24;}")
+chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nAwesomeWM Config\nPolybar Config\nRofi Config\nPicom Config\nSxhkd Config\nGreenclip Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 24;}")
 
 # Open What Is Chosen
 case "$chosen" in
@@ -25,7 +25,6 @@ case "$chosen" in
 	"Xresources Config") kitty -e nvim $HOME/.Xresources ;;
 	"AwesomeWM Config") kitty -e nvim $XDG_CONFIG_HOME/awesome/rc.lua ;;
 	"Polybar Config") kitty -e nvim $XDG_CONFIG_HOME/polybar/config.ini ;;
-	"Conky Config") kitty -e nvim $XDG_CONFIG_HOME/awesome/conkyrc ;;
 	"Rofi Config") kitty -e nvim $XDG_CONFIG_HOME/rofi/config.rasi ;;
   "Picom Config") kitty -e nvim $XDG_CONFIG_HOME/picom/picom.conf ;;
   "Sxhkd Config") kitty -e nvim $XDG_CONFIG_HOME/awesome/sxhkdrc ;;
