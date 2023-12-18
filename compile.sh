@@ -67,6 +67,17 @@ sudo ninja -C build install
 cd ~
 
 echo "#################"
+echo "## Nvidia CUDA ##"
+echo "#################"
+cd ~/Downloads
+wget https://developer.download.nvidia.com/compute/cuda/12.3.1/local_installers/cuda-repo-debian12-12-3-local_12.3.1-545.23.08-1_amd64.deb
+sudo dpkg -i cuda-repo-debian12-12-3-local_12.3.1-545.23.08-1_amd64.deb
+sudo cp /var/cuda-repo-debian12-12-3-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo nala update
+sudo nala upgrade -y
+sudo nala install cuda-toolkit-12-3 -y
+
+echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
 go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest
