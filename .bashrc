@@ -73,7 +73,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # Histroy
 export HISTCONTROL=ignoredups:erasedups # no duplicate entries
-export HISTFILE="$XDG_CACHE_HOME"/history
+export HISTFILE="$XDG_CACHE_HOME"/history-bash
 export HISTFILESIZE=10000
 export HISTSIZE=5000
 

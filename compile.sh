@@ -7,7 +7,7 @@ echo "########################################"
 echo "## Adding Some Directories, And Files ##"
 echo "########################################"
 mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Videos/OBS
-touch ~/.cache/history 
+touch ~/.cache/history-bash ~/.cache/history-zsh
 
 echo "#################"
 echo "## Envycontrol ##"

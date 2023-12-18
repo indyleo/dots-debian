@@ -24,7 +24,7 @@ autoload -U colors && colors
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=$XDG_CACHE_HOME/zsh/history
+HISTFILE=$XDG_CACHE_HOME/history-zsh
 
 # Basic auto/tab complete:
 autoload -U compinit
