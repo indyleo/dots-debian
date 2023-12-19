@@ -89,7 +89,13 @@ bindkey -s '^x' 'lfcd\n'
 # Starship prompt
 eval "$(starship init zsh)"
 
-# Loading zsh plugins
+# Search history
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+# Loading zsh plugins (LAST)
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source ~/Zsh-Plugins/zsh-autopair/autopair.zsh 2>/dev/null
 source ~/Zsh-Plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
