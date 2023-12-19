@@ -23,10 +23,6 @@ if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
   PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 fi
 
-if [ -d "/usr/local/cuda/bin" ]; then
-  PATH="/usr/local/cuda/bin:$PATH"
-fi
-
 # XDG Exports
 if [ -z "$XDG_CONFIG_HOME" ]; then
     export XDG_CONFIG_HOME="$HOME/.config"
