@@ -161,7 +161,7 @@ systemctl set-default graphical.target
 echo "########################"
 echo "## Installing Drivers ##"
 echo "########################"
-nala install mesa-utils nvidia-driver firmware-misc-nonfree -y
+nala install mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-samples firmware-misc-nonfree -y
 
 echo "######################"
 echo "## Installing Fonts ##"
