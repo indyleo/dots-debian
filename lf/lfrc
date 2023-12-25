@@ -121,11 +121,11 @@ cmd mkscript ${{
 
 # Filesystem Operations
 cmd make-executable %{{
-  chmod a+x "$f" && lf -remote 'send reload' ;;
+  chmod a+x "$f" && lf -remote 'send reload'
 }}
 
 cmd remove-executable %{{
-  chmod a-x "$f" && lf -remote 'send reload' ;;
+  chmod a-x "$f" && lf -remote 'send reload'
 }}
 
 # Trashing 
