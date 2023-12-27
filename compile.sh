@@ -182,5 +182,4 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "#####################"
 echo "## Flatpak Install ##"
 echo "#####################"
-flatpak install io.github.arunsivaramanneo.GPUViewer org.fedoraproject.MediaWriter com.chatterino.chatterino net.brinkervii.grapejuice net.lutris.Lutris com.github.tchx84.Flatseal com.valvesoftware.Steam org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord org.winehq.Wine com.usebottles.bottles net.davidotek.pupgui2
-
+flatpak install io.github.arunsivaramanneo.GPUViewer org.fedoraproject.MediaWriter com.chatterino.chatterino net.brinkervii.grapejuice net.lutris.Lutris org.yuzu_emu.yuzu com.github.tchx84.Flatseal com.valvesoftware.Steam org.prismlauncher.PrismLauncher com.heroicgameslauncher.hgl xyz.xclicker.xclicker org.nickvision.tubeconverter com.discordapp.Discord org.winehq.Wine com.usebottles.bottles net.davidotek.pupgui2
