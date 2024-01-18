@@ -87,7 +87,7 @@ echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
-  xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock -y
+  xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
 
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"
