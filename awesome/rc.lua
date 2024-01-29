@@ -408,7 +408,7 @@ awful.rules.rules = {
 
     -- Yuzu
     { rule = {instance = "yuzu" },
-    properties = { tag = "GAME" }
+      properties = { tag = "GAME" }
     },
 
     -- Mpv

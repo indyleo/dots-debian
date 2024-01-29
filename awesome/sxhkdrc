@@ -30,7 +30,7 @@ super + p
 
 # Streaming-audio
 super + shift + a
-	streaming-audio
+	streaming-audio; xcowsay "Streaming Audio On"
 
 # Greenclip
 super + c
