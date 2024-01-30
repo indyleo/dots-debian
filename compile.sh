@@ -66,10 +66,19 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
+echo "#############"
+echo "## Bashtop ##"
+echo "#############"
+cd ~/Github
+git clone https://github.com/aristocratos/bashtop.git
+cd bashtop
+sudo make install
+cd ~
+
 echo "#################"
 echo "## Go Programs ##"
 echo "#################" 
-go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest
+go install github.com/charmbracelet/glow@latest github.com/doronbehar/pistol/cmd/pistol@latest github.com/xxxserxxx/gotop/v4/cmd/gotop@latest
 
 echo "############"
 echo "## Rustup ##"

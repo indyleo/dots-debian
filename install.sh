@@ -66,7 +66,7 @@ nala install udiskie udisks2 -y
 echo "######################"
 echo "## Resource Monitor ##"
 echo "######################"
-nala install btop htop -y
+nala install btop bpytop htop -y
 
 echo "############################"
 echo "## Installing Shell Stuff ##"
