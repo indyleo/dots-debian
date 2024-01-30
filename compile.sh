@@ -189,7 +189,7 @@ echo "###########"
 cd ~
 wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh 
 chmod a+x ./setup.sh
-setup.sh
+./setup.sh
 rm -f ./setup.sh
 
 echo "##################"
