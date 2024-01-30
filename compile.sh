@@ -96,15 +96,15 @@ echo "###########################"
 echo "## Installing Nerd Fonts ##"
 echo "###########################"
 mkdir -pv ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
 unzip -n FiraCode.zip -d ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.zip
 unzip -n Ubuntu.zip -d ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/UbuntuMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/UbuntuMono.zip
 unzip -n UbuntuMono.zip -d ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/CascadiaCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaCode.zip
 unzip -n CascadiaCode.zip -d ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/NerdFontsSymbolsOnly.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/NerdFontsSymbolsOnly.zip
 unzip -n NerdFontsSymbolsOnly.zip -d ~/.local/share/fonts
 
 echo "##########################"
@@ -182,6 +182,15 @@ cd ~/.local/bin
 wget https://github.com/erebe/greenclip/releases/download/v4.2/greenclip
 chmod a+x greenclip 
 cd ~
+
+echo "###########"
+echo "## Nitch ##"
+echo "###########"
+cd ~
+wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh 
+chmod a+x ./setup.sh
+setup.sh
+rm -f ./setup.sh
 
 echo "##################"
 echo "## Flatpak Repo ##"
