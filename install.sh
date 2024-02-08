@@ -89,6 +89,17 @@ echo "#############################"
 nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
   xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
 
+echo "#########################"
+echo "## Installing Vscodium ##"
+echo "#########################"
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+nala update
+nala install codium -y
+
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"
 echo "##############################"

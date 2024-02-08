@@ -408,7 +408,22 @@ awful.rules.rules = {
 
     -- Yuzu
     { rule = {instance = "yuzu" },
-      properties = { tag = "GAME" }
+    properties = { tag = "GAME" }
+    },
+
+    -- Vscodium
+    { rule = { instance = "vscodium" },
+      properties = { tag = "DEV" }
+    },
+    
+    -- Brave
+    { rule = { instance = "brave-browser" },
+      properties = { tag = "WWW" }
+    },
+    
+    -- Kitty
+    { rule = { instance = "kitty" },
+      properties = { tag = "DEV" }
     },
 
     -- Mpv
