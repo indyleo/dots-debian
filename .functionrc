@@ -109,6 +109,7 @@ lfcd() {
     fi
 }
 
+# Making scripts
 mkscript() {
   clear
   printf "File Name: "
