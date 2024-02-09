@@ -1,0 +1,23 @@
+#!/bin/env bash
+ss_selection(){
+  flameshot gui
+}
+
+ss_screen(){
+  flameshot screen
+}
+
+ss_chose(){
+  flameshot launcher
+}
+
+case "$1" in
+  --selec)
+    ss_selection ;;
+  --scr)
+    ss_screen ;;
+  --cho)
+    ss_chose ;;
+  *)
+    echo "Unkown Arg" ;;
+esac

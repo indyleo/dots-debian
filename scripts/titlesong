@@ -1,0 +1,16 @@
+#!/bin/env bash
+
+player="$1"
+
+# Get the playback status
+status=$(playerctl status --player="$player")
+
+# Check if the status is "Playing"
+if [ "$status" = "Playing" ]; then
+    # Get the title and cut off after 15 letters
+    title=$(playerctl metadata title --player="$player" | cut -c 1-15)
+    echo "$title"
+else
+    # Set the title to "Not Playing/Paused"
+    echo "Not Playing/Paused"
+fi

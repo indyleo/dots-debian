@@ -1,0 +1,26 @@
+#!/bin/env bash
+
+player="$2"
+
+song_togglepause() {
+  playerctl play-pause --player="$player"
+}
+
+song_skip(){
+  playerctl next --player="$player"
+}
+
+song_backskip(){
+  playerctl previous --player="$player"
+}
+
+case "$1" in
+  --togglepause)
+    song_togglepause ;;
+  --skip)
+    song_skip ;;
+  --backskip)
+    song_backskip ;;
+  *)
+    echo "Unkown Arg" ;;
+esac

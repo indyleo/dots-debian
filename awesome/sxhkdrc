@@ -39,7 +39,7 @@ super + c
 
 # Locking Computer
 super + shift + Escape
-  i3lock-fancy -g
+  locker
 
 # File Manager
 super + f
@@ -79,40 +79,40 @@ super + s
 
 # Screenshot 
 Print
-  flameshot gui
+	sstool --selec
 
 super + Print
-  flameshot screen
+	sstool --scr
 
 super + shift + Print
-  flameshot launcher
+	sstool --cho
 
 # Brightness
 XF86MonBrightness{Up,Down}	
-  brightnessctl set 5%{+,-}
+  brightnessctrl {--inc,--dec} 5
 
 # Media
 super + {Up,Down}
-  pamixer {-i,-d} 5
+  volumectrl {--inc,--dec} 5
 
 super + shift + Down
-  pamixer --toggle-mute
+  volumectrl --togglemut
 
 XF86Audio{Raise,Lower}Volume
-  pamixer {-i,-d} 5
+  volumectrl {--inc,--dec} 5
 
 XF86AudioMute
-  pamixer --toggle-mute
+  volumectrl --togglemute
 
 # Music
 super + {Right,Left}
-  playerctl {next,previous} --player=rhythmbox
+  songctrl {--skip,--backskip} rhythmbox
 
 super + Pause
-  playerctl play-pause --player=rhythmbox
+  songctrl --togglepause rhythmbox
 
 XF86Audio{Next,Prev}
-  playerctl {next,previous} --player=rhythmbox
+  songctrl {--skip,--backskip} rhythmbox
 
 XF86AudioPlay
-  playerctl play-pause --player=rhythmbox
+  songctrl --togglepause rhythmbox

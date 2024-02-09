@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+num="$2"
+volume_inc(){
+  pamixer -i "$num"
+}
+
+volume_dec(){
+  pamixer -d "$num"
+}
+
+volume_togglemute(){
+  pamixer --toggle-mute
+}
+
+case "$1" in
+  --togglemute)
+    volume_togglemute ;;
+  --inc)
+    volume_inc ;;
+  --dec)
+    volume_dec  ;;
+  *)
+    echo "Unkown Arg" ;;
+esac

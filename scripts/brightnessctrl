@@ -1,0 +1,20 @@
+#!/bin/env bash
+
+amount="$2"
+
+brightness_inc(){
+  brightnessctl set "$amount"%+
+}
+
+brightness_dec(){
+  brightnessctl set "$amount"%-
+}
+
+case "$1" in
+  --inc)
+    brightness_inc ;;
+  --dec)
+    brightness_dec ;;
+  *)
+    echo "Unkown Arg" ;;
+esac
