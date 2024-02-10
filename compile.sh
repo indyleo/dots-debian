@@ -123,6 +123,7 @@ echo "########################################"
 mkdir -v ~/.config
 cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
+git clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/

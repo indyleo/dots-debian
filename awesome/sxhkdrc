@@ -116,3 +116,7 @@ XF86Audio{Next,Prev}
 
 XF86AudioPlay
   songctrl --togglepause rhythmbox
+
+# Chanf bg
+super + shift + {b,g}
+	xwalr {~/Pictures/Wallpapers,~/Pictures/wallpapers}
