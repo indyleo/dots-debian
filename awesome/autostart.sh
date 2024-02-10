@@ -26,4 +26,4 @@ solaar -w hide &
 xautolock -time 15 -locker locker &
 
 # Wallpaper
-xwallpaper --stretch ~/Pictures/Wallpapers/3xsraffkwi1a1.png
+xwalr

@@ -86,7 +86,7 @@ nala install transmission transmission-cli transmission-daemon transmission-gtk 
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
   xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
 
 echo "#########################"

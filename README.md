@@ -16,6 +16,12 @@ Put this into your '/etc/environment' file
 QT_QPA_PLATFORMTHEME=qt5ct 
 ```
 
+# Sudo Settings
+Put this into your sudoers file
+```
+Defaults        pwfeedback
+```
+
 # Wlan Interface
 To find your wlan interface for polybar do 'nmcli' and the interface u are connected to is the one to use
 
