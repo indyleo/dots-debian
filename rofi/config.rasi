@@ -3,5 +3,10 @@ configuration {
     font: "FiraCode Nerd Font 12";
     icon-theme: "Papirus";
     modi: "window,drun,run,emoji,calc";
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
 }
 @theme "nord"
