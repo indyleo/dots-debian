@@ -2,6 +2,7 @@
 
 format = """
 [](#3B4252)\
+$os\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
@@ -58,6 +59,18 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
+
+[os]
+disabled = false
+style = "bg:#3B4252"
+
+[os.symbols]
+SUSE = " "
+Raspbian = "󰐿 "
+Linux = "󰌽 "
+Gentoo = "󰣨 "
+Arch = "󰣇 "
+Debian = "󰣚 "
 
 [c]
 symbol = " "
