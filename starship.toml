@@ -5,6 +5,7 @@ format = """
 $os\
 $username\
 [](bg:#434C5E fg:#3B4252)\
+[ ](bg:#434C5E)\
 $directory\
 [](bg:#4C566A fg:#434C5E)\
 $git_branch\
@@ -31,6 +32,7 @@ $scala\
 [](bg:#06969A fg:#86BBD8)\
 $docker_context\
 [](bg:#33658A fg:#06969A)\
+[ 󰥔](bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
 """
