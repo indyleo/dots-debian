@@ -42,3 +42,5 @@ vim.opt.whichwrap:append "<,>,[,],h,l"
 vim.opt.iskeyword:append "-"
 vim.opt.formatoptions:remove { "c", "r", "o" }
 vim.opt.linebreak = true
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = false

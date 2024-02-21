@@ -8,6 +8,7 @@ local servers_lsp = {
   "marksman",
   "vimls",
   "taplo",
+  "ltex-ls",
 }
 
 local servers_dap = {
@@ -29,6 +30,7 @@ local servers_null_ls = {
   "cbfmt",
   "jq",
   "luaformatter",
+  "textlint",
 }
 
 local settings = {

@@ -33,6 +33,24 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Better paste
 keymap("v", "p", "P", opts)
 
+-- Function to toggle spell checker
+function ToggleSpellCheckOff()
+  vim.opt.spell = false
+  print("Spell checker turned off")
+end
+
+function ToggleSpellCheckOn()
+  vim.opt.spell = true
+  print("Spell checker turned on")
+end
+
+-- Turn off and on spellcheck
+keymap("n", "<leader>cf", "<cmd>lua ToggleSpellCheckOff()<CR>", opts)
+keymap("n", "<leader>cn", "<cmd>lua ToggleSpellCheckOn()<CR>", opts)
+
+-- source the main conf file
+keymap("n", "<leader>so", "<cmd>source ~/.config/nvim/init.lua<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<esc>", opts)
