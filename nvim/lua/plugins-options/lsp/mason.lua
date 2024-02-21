@@ -8,7 +8,7 @@ local servers_lsp = {
   "marksman",
   "vimls",
   "taplo",
-  "ltex-ls",
+  "ltex",
 }
 
 local servers_dap = {
