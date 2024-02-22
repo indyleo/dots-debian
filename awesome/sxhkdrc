@@ -8,6 +8,22 @@ super + Escape
 super + Return
  kitty 
 
+# Neovide
+super + shift + n
+	neovide
+
+# Vscodium
+super + shift + v
+	codium
+
+# Gedit
+super + ctrl + g
+	gedit
+
+# Nvim
+super + alt + e
+	kitty -e nvim
+
 # Run Prompt
 super + r
   rofi -show drun
