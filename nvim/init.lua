@@ -1,4 +1,3 @@
--- Requiring Some Stuff
 require "options"
 require "keymaps"
 require "Lazy"

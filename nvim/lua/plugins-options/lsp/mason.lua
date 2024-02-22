@@ -29,7 +29,7 @@ local servers_null_ls = {
   "beautysh",
   "cbfmt",
   "jq",
-  "luaformatter",
+  "stylua",
   "textlint",
 }
 

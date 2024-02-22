@@ -44,12 +44,18 @@ function ToggleSpellCheckOn()
   print("Spell checker turned on")
 end
 
+-- Source Function
+function SourceConf()
+  vim.cmd(":source ~/.config/nvim/init.lua")
+  print("Reloaded Conf")
+end
+
 -- Turn off and on spellcheck
 keymap("n", "<leader>cf", "<cmd>lua ToggleSpellCheckOff()<CR>", opts)
 keymap("n", "<leader>cn", "<cmd>lua ToggleSpellCheckOn()<CR>", opts)
 
 -- source the main conf file
-keymap("n", "<leader>so", "<cmd>source ~/.config/nvim/init.lua<CR>", opts)
+keymap("n", "<leader>so", "<cmd>lua SourceConf()<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
