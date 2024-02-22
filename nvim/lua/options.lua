@@ -44,3 +44,9 @@ vim.opt.formatoptions:remove { "c", "r", "o" }
 vim.opt.linebreak = true
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = false
+if vim.g.neovide then
+  vim.g.neovide_padding_top = 15
+  vim.g.neovide_padding_bottom = 15
+  vim.g.neovide_padding_right = 15
+  vim.g.neovide_padding_left = 15
+end
