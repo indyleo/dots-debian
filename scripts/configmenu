@@ -8,28 +8,28 @@ chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv 
 case "$chosen" in
 
 # Cli Or Tui Configs
-  "Kitty Config") kitty -e nvim $XDG_CONFIG_HOME/kitty/kitty.conf ;;
-	"Bash Config") kitty -e nvim $HOME/.bashrc ;;
-	"Zsh Config") kitty -e nvim $HOME/.zshrc ;;
-	"Env Config") kitty -e nvim $HOME/.zshenv ;;
-	"Alias Config") kitty -e nvim $HOME/.aliasrc ;;
-	"Functions Config") kitty -e nvim $HOME/.functionrc ;;
-	"Profile Config") kitty -e nvim $HOME/.profile ;;
-	"Starship Config") kitty -e nvim $XDG_CONFIG_HOME/starship.toml ;;
-	"Neovim Config") kitty -e nvim $XDG_CONFIG_HOME/nvim/init.lua ;;
-	"Neofetch Config") kitty -e nvim $XDG_CONFIG_HOME/neofetch/config.conf ;;
-	"Lf Config") kitty -e nvim $XDG_CONFIG_HOME/lf/lfrc ;;
+  "Kitty Config") neovide $XDG_CONFIG_HOME/kitty/kitty.conf ;;
+	"Bash Config") neovide $HOME/.bashrc ;;
+	"Zsh Config") neovide $HOME/.zshrc ;;
+	"Env Config") neovide $HOME/.zshenv ;;
+	"Alias Config") neovide $HOME/.aliasrc ;;
+	"Functions Config") neovide $HOME/.functionrc ;;
+	"Profile Config") neovide $HOME/.profile ;;
+	"Starship Config") neovide $XDG_CONFIG_HOME/starship.toml ;;
+	"Neovim Config") neovide $XDG_CONFIG_HOME/nvim/init.lua ;;
+	"Neofetch Config") neovide $XDG_CONFIG_HOME/neofetch/config.conf ;;
+	"Lf Config") neovide $XDG_CONFIG_HOME/lf/lfrc ;;
 
 # GUI Configs
-  "Xsession Config") kitty -e nvim $HOME/.xsession ;;
-	"Xresources Config") kitty -e nvim $HOME/.Xresources ;;
-	"AwesomeWM Config") kitty -e nvim $XDG_CONFIG_HOME/awesome/rc.lua ;;
-	"Polybar Config") kitty -e nvim $XDG_CONFIG_HOME/polybar/config.ini ;;
-	"Rofi Config") kitty -e nvim $XDG_CONFIG_HOME/rofi/config.rasi ;;
-  "Picom Config") kitty -e nvim $XDG_CONFIG_HOME/picom/picom.conf ;;
-  "Sxhkd Config") kitty -e nvim $XDG_CONFIG_HOME/awesome/sxhkdrc ;;
-  "Greenclip Config") kitty -e nvim $XDG_CONFIG_HOME/greenclip.toml ;;
-  "Mimeapps List Config") kitty -e nvim $XDG_CONFIG_HOME/mimeapps.list ;;
+  "Xsession Config") neovide $HOME/.xsession ;;
+	"Xresources Config") neovide $HOME/.Xresources ;;
+	"AwesomeWM Config") neovide $XDG_CONFIG_HOME/awesome/rc.lua ;;
+	"Polybar Config") neovide $XDG_CONFIG_HOME/polybar/config.ini ;;
+	"Rofi Config") neovide $XDG_CONFIG_HOME/rofi/config.rasi ;;
+  "Picom Config") neovide $XDG_CONFIG_HOME/picom/picom.conf ;;
+  "Sxhkd Config") neovide $XDG_CONFIG_HOME/awesome/sxhkdrc ;;
+  "Greenclip Config") neovide $XDG_CONFIG_HOME/greenclip.toml ;;
+  "Mimeapps List Config") neovide $XDG_CONFIG_HOME/mimeapps.list ;;
 
 # If Non Chosen Exit
 	*) exit 1 ;;

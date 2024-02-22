@@ -88,6 +88,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "##################"
 echo "## Neovim Setup ##"
 echo "##################" 
+cargo install --git https://github.com/neovide/neovide.git
 cargo install bob-nvim
 bob install stable
 bob use stable
@@ -125,6 +126,7 @@ cd "$builddir"
 git clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom kitty rofi starship.toml mimeapps.list greenclip.toml ~/.config/
+mv -v desktopfiles/* ~/.local/share/applications
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
@@ -146,7 +148,7 @@ sudo usermod -aG libvirt "$(whoami)"
 echo "###################"
 echo "## Cursors Theme ##"
 echo "###################" 
-mkdir -v ~/.icons
+mkdir -v ~/.local/share/icons
 cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
 cd Nordzy-cursors
@@ -156,13 +158,14 @@ cd ~
 echo "#################"
 echo "## Icons Theme ##"
 echo "#################" 
-wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
+mv -v icons/* ~/.local/share/icons/Papirus-Dark/128x128/apps
 
 echo "###############"
 echo "## GTK Theme ##"
 echo "###############" 
-mkdir -v ~/.themes
-cd ~/.themes
+mkdir -v ~/.local/share/themes
+cd ~/.local/share/themes
 git clone https://github.com/EliverLara/Nordic.git
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 cd ~

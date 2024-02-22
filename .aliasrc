@@ -66,11 +66,8 @@ alias bd='cd "$OLDPWD"'
 
 # Neovim Aliases
 alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
 alias sv='sudo nvim'
-alias svi='sudo nvim'
-alias svim='sudo nvim'
+alias nv='neovide'
 alias bconf='nvim $HOME/.bashrc'
 alias zconf='nvim $HOME/.zshrc'
 alias zeconf='nvim $HOME/.zshenv'
