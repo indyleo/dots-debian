@@ -82,7 +82,7 @@ lazy.setup({
   {"jay-babu/mason-null-ls.nvim", config = function () require("plugins-options.null-ls") end, },
 
   -- Treesitter
-  {"nvim-treesitter/nvim-treesitter"},
+  {"nvim-treesitter/nvim-treesitter", cmd = "TSUpdate"},
   {"windwp/nvim-autopairs"},
 
   -- DAP
