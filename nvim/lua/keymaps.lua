@@ -68,7 +68,7 @@ keymap("v", ">", ">gv", opts)
 
 -- Plugins --
 keymap("n", "<C-a>", "<cmd>Alpha<CR>", opts)
-keymap("n", "<C-x>", "<cmd>ToggleTerm<CR>", opts)
+keymap("n", "<C-q>", "<cmd>ToggleTerm<CR>", opts)
 keymap("n", "<leader>bn", "<cmd>BuffergineCycleNext<CR>", opts)
 keymap("n", "<leader>bp", "<cmd>BuffergineCyclePrev<CR>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
