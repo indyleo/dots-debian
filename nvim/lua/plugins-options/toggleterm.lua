@@ -6,7 +6,6 @@ local status_ok, toggleterm = pcall(require, "toggleterm")
 
 toggleterm.setup {
     size = 20,
-    open_mapping = [[<c-\>]],
     hide_numbers = true,
     shade_terminals = true,
     shading_factor = 2,
