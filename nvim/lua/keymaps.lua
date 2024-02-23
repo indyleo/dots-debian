@@ -94,4 +94,3 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<CR>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<CR>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<CR>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()CR>", opts)
-

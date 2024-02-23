@@ -78,7 +78,7 @@ lazy.setup({
   {"RRethy/vim-illuminate"},
 
  -- Null LS
-  {"jose-elias-alvarez/null-ls.nvim"}, -- for formatters and linters
+  {"nvimtools/none-ls.nvim"}, -- for formatters and linters
   {"jay-babu/mason-null-ls.nvim", config = function () require("plugins-options.null-ls") end, },
 
   -- Treesitter
