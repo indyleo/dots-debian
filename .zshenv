@@ -42,7 +42,7 @@ fi
 
 # Some Nice Exports
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL="neovide"
 export PAGER="less"
 export MANPAGER="less"
 export TERM="xterm-256color"
