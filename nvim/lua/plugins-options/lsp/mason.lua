@@ -12,8 +12,8 @@ local servers_lsp = {
 }
 
 local servers_dap = {
-  "bash-debug-adapter",
-  "debugpy",
+  "bash",
+  "python",
 }
 
 local servers_null_ls = {
