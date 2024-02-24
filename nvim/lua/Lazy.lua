@@ -23,7 +23,6 @@ end
 
 lazy.setup({
   --  My plugins here
-  {"folke/which-key.nvim"},
   {"nvim-lua/plenary.nvim"},
   {"lukas-reineke/indent-blankline.nvim", tag = "v2.20.8" },
   {"nvim-orgmode/orgmode"},
