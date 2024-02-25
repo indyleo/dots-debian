@@ -7,4 +7,4 @@ WALLPAPER_DIR="$1"
 selected_wallpaper=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | shuf -n 1)
 
 # Set the selected wallpaper using xwallpaper
-xwallpaper --stretch "$selected_wallpaper"
+xwallpaper --stretch "$selected_wallpaper"; notify-send "The wallpaper selected was: $selected_wallpaper"
