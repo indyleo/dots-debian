@@ -151,8 +151,8 @@ echo "###################"
 mkdir -v ~/.local/share/icons
 cd ~/Github
 git clone https://github.com/alvatip/Nordzy-cursors.git
-cd Nordzy-cursors
-./install.sh
+cd Nordzy-cursors/themes
+mv -v * ~/.local/share/icons
 cd ~
 
 echo "#################"
