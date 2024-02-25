@@ -426,6 +426,11 @@ awful.rules.rules = {
       properties = { tag = "DEV" }
     },
 
+    -- Neovide
+    { rule = { instance = "neovide" },
+      properties = { tag = "DEV" }
+    },
+
     -- Mpv
     { rule = { instance = "gl" },
       properties = { fullscreen = true }

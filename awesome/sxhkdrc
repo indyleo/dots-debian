@@ -44,10 +44,6 @@ super + alt + c
 super + p
   powermenu
 
-# Streaming-audio
-super + shift + a
-	streaming-audio; xcowsay "Streaming Audio On"
-
 # Greenclip
 super + c
   rofi -modi "clipboard:greenclip print" \
@@ -119,6 +115,9 @@ XF86Audio{Raise,Lower}Volume
 
 XF86AudioMute
   volumectrl --togglemute
+
+super + shift + a
+	volumectrl --stream
 
 # Music
 super + {Right,Left}
