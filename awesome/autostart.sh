@@ -26,5 +26,5 @@ solaar -w hide &
 xautolock -time 15 -locker locker &
 
 # Wallpaper
-xwalr ~/Pictures/Wallpaper
-# xwalr ~/Pictures/wallpaper
+xwalr ~/Pictures/Wallpapers
+# xwalr ~/Pictures/wallpapers
