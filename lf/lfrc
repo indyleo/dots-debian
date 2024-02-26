@@ -63,6 +63,7 @@ map gv :cd ~/Videos
 map gm :cd ~/Music
 map gg :cd ~/Github
 map gw :cd ~/Pictures/Wallpapers
+map gW :cd ~/Pictures/wallpapers
 map gs :cd ~/Pictures/Screenshots
 map fj fzf_jump
 
