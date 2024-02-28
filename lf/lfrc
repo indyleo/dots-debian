@@ -54,6 +54,11 @@ map ag targz
 map ab targz
 map au unarchive
 
+# Trash
+map bv trash-view
+map be trash-empty
+map br trash-restore
+
 # Jumping Around The Filesystem
 map gh :cd ~
 map gc :cd ~/.config
@@ -70,6 +75,9 @@ map fj fzf_jump
 # Executing Scripts
 map x $"$f"
 map X !"$f"
+
+# Wallpaper
+map bg setbg
 
 ### CUSTOM COMMANDS ###
 cmd open ${{
