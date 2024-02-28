@@ -57,6 +57,11 @@ sudo() {
 
 # Archive Extraction
 extract() {
+  if [ "$#" -lt 1 ]; then
+    echo "Usage: extract <archive_file>"
+    return 1
+  fi
+
   if [ -f "$1" ]; then
     case $1 in
       *.tar.bz2) tar xjf "$1"    ;;
@@ -77,6 +82,28 @@ extract() {
     esac
   else
     echo "'$1' is not a valid file"
+  fi
+}
+
+# Archiving
+archive() {
+  if [ -f "$1" ]; then
+      if [ "$#" -lt 3 ]; then
+          echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> <file2> ... <fileN>"
+          return 1
+      fi
+      archive_name="$1"
+      shift
+      case "$archive_name" in
+          *.tar.gz) tar -czf "$archive_name" "$@" ;;
+          *.zip) zip -r "$archive_name" "$@" ;;
+          *.rar) rar a "$archive_name" "$@" ;;
+          *) echo "Error: Unsupported archive format. Supported formats are tar.gz, zip, and rar."
+              return 1 ;;
+      esac
+      echo "Archive created: $archive_name"
+  else
+      echo "'$1' archive already exists"
   fi
 }
 
@@ -109,7 +136,6 @@ lfcd() {
     fi
 }
 
-# Making scripts
 mkscript() {
   clear
   printf "File Name: "
