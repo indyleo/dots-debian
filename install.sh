@@ -110,7 +110,7 @@ rm -v ./via-3.0.0-linux.deb
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
-nala install rhythmbox rhythmbox-plugins rhythmbox-data playerctl pamixer pavucontrol yt-dlp mpv peek kdenlive audacity gimp vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg -y
+nala install rhythmbox rhythmbox-plugins rhythmbox-data cava playerctl pamixer pavucontrol yt-dlp mpv peek kdenlive audacity gimp vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
