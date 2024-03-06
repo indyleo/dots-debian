@@ -22,8 +22,8 @@ map e
 map f
 
 # File Openers
-map ee $$EDITOR "$f"
-map u $view "$f"
+map ee edit
+map u view
 
 # File Operations
 map dd trash-put
@@ -91,6 +91,19 @@ cmd open ${{
     text/*|application/json) $EDITOR "$f" ;;
     *) $OPENER "$f" ;;
   esac
+  clear
+}}
+
+cmd view ${{
+  clear
+  bat "$f"
+  clear
+}}
+
+cmd edit ${{
+  clear
+  EDITOR="nvim"
+  $EDITOR "$f"
   clear
 }}
 
