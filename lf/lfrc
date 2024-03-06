@@ -88,7 +88,7 @@ map bg setbg
 cmd open ${{
   clear
   case $(file --mime-type "$f" -bL) in
-    text/*|application/json) $EDITOR "$f" ;;
+    text/*|application/json) EDITOR="nvim" $EDITOR "$f" ;;
     *) $OPENER "$f" ;;
   esac
   clear
