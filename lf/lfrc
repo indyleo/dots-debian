@@ -67,9 +67,14 @@ map gD :cd ~/Documents
 map gv :cd ~/Videos
 map gm :cd ~/Music
 map gg :cd ~/Github
+map ga :cd ~/Github/dots-arch
+map ge :cd ~/Github/dots-debian
 map gw :cd ~/Pictures/Wallpapers
 map gW :cd ~/Pictures/wallpapers
 map gs :cd ~/Pictures/Screenshots
+map gp :cd ~/Pictures
+map gS :cd ~/Scripts
+map gP :cd ~/Projects
 map fj fzf_jump
 
 # Executing Scripts
