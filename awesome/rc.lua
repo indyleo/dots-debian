@@ -406,11 +406,6 @@ awful.rules.rules = {
       properties = { tag = "GAME" }
     },
 
-    -- Yuzu
-    { rule = {instance = "yuzu" },
-    properties = { tag = "GAME" }
-    },
-
     -- Vscodium
     { rule = { instance = "vscodium" },
       properties = { tag = "DEV" }
