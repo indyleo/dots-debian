@@ -39,7 +39,6 @@ alias xwal='xwallpaper --stretch'
 
 # find dirs and files
 alias ff="find . | grep "
-alias fd="find . -type -d | grep "
 
 # Get Error Messages From Journalctl
 alias jctl='journalctl -p 3 -xb'
