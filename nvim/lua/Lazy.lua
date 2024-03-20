@@ -85,6 +85,7 @@ lazy.setup({
   {"windwp/nvim-autopairs"},
 
   -- DAP
+  {"nvim-neotest/nvim-nio"},
   {"mfussenegger/nvim-dap"},
   {"rcarriga/nvim-dap-ui"},
   {"ravenxrz/DAPInstall.nvim"},
