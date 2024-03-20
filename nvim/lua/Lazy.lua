@@ -33,6 +33,7 @@ lazy.setup({
   {"folke/trouble.nvim", config = function() require("trouble").setup {} end},
   {"kovetskiy/sxhkd-vim"},
   {"lambdalisue/suda.vim"},
+  {"theRealCarneiro/hyprland-vim-syntax"},
 
   -- Searching
   {"ggandor/leap.nvim", config = function() require('leap').add_default_mappings() end},
