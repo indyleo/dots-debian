@@ -1,11 +1,5 @@
 #!/bin/env bash
 
-# Making sure it runs as a regular user
-if [[ $EUID -qe 0 ]]; then
-  echo "The regular user can only run this script please do ./compile.sh" 2>&1
-  exit 1
-fi
-
 # Script Variables
 builddir=$(pwd)
 
