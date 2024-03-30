@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Dwm
-Comment=Dwm Session
-Exec=/etc/X11/Xsession dwm
-TryExec=dwm
-Type=Application
-Icon=/usr/share/pixmaps/debian-logo.png
-Keywords=wm;tiling
