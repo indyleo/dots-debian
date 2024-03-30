@@ -21,7 +21,7 @@ case "$chosen" in
 	"Lf Config") neovide $XDG_CONFIG_HOME/lf/lfrc ;;
 
 # GUI Configs
-  "Xsession Config") neovide $HOME/.xsession $HOME/.xinitrc ;;
+  "Xsession Config") neovide $HOME/.xsession ;;
 	"Xresources Config") neovide $HOME/.Xresources ;;
 	"AwesomeWM Config") neovide $XDG_CONFIG_HOME/awesome/rc.lua ;;
 	"Polybar Config") neovide $XDG_CONFIG_HOME/polybar/config.ini ;;

@@ -139,10 +139,10 @@ nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-
   libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev \
   libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libx11-xcb1 libxcb-util-dev libxcb-util0-dev libxcb-util1 -y 
 
-echo "################################"
-echo "## Installing Window Managers ##"
-echo "################################"
-nala install awesome xmonad libghc-xmonad-contrib-dev -y 
+echo "##########################"
+echo "## Installing AwesomeWM ##"
+echo "##########################"
+nala install awesome -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"
@@ -157,6 +157,17 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
   | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
 nala install brave-browser -y
+
+echo "#####################"
+echo "## Installing SDDM ##"
+echo "#####################"
+nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
+nala purge kded5 -y
+mkdir /usr/share/sddm/themes
+tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+mv sddm.conf /etc/sddm.conf
+systemctl enable sddm.service 
+systemctl set-default graphical.target
 
 echo "########################"
 echo "## Installing Drivers ##"

@@ -66,18 +66,6 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
-echo "########################"
-echo "## LY Display Manager ##"
-echo "########################"
-cd ~/Github
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-sudo make install installsystemd
-sudo systemctl enable ly.service
-systemctl disable getty@tty2.service
-cd ~
-
 echo "###################"
 echo "## My Custom DWM ##"
 echo "###################"
@@ -149,7 +137,7 @@ git clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v xfce4 Thunar polybar neofetch git nvim lf awesome picom kitty rofi starship.toml mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
 mv -v desktopfiles/* ~/.local/share/applications
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
-mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .xinitrc .Xresources ~/
+mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
 sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
 
