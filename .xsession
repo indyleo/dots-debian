@@ -1,6 +1,7 @@
 #!/bin/env bash
 
 WMC="$1"
+ACC=$(whoami)
 
 udiskie &
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
@@ -17,9 +18,9 @@ case $WMC in
   Dwm)
     exec dwm ;;
   XMonad)
-    exec xmonad ;;
+    exec xmonad-session ;;
   Qtile)
-    "/home/$USER/.local/bin/qtile" start ;;
+    "/home/$ACC/.local/bin/qtile" start ;;
   *)
     echo "$WMC is not an option" ;;
 esac

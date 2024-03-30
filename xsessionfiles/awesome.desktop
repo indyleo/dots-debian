@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=AwesomeWM
 Comment=Highly configurable framework window manager
+Exec=/etc/X11/Xsession awesome
 TryExec=awesome
-Exec=/etc/X11/Xsession AwesomeWM
 Type=Application
 Icon=/usr/share/pixmaps/awesome.xpm
 Keywords=Window manager
