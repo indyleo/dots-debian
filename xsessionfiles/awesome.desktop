@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=awesome
+Name=AwesomeWM
 Comment=Highly configurable framework window manager
 TryExec=awesome
 Exec=/etc/X11/Xsession AwesomeWM
