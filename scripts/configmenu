@@ -2,7 +2,7 @@
 # My rofi config menu to quickly edit some config files
 
 # What's Shown To The User
-chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Config\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nHyprland Config\nWaybar Config\nWaybar Style\nRofi Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 21;}")
+chosen=$(printf "# Cli/TUI Configs\nKitty Config\nBash Confign\nZsh Config\nEnv Config\nAlias Config\nFunctions Config\nProfile Config\nStarship Config\nNeovim Config\nNeofetch Config\nLf Config\n \n# GUI Configs\nXsession Config\nXresources Config\nAwesomeWM Config\nPolybar Config\nRofi Config\nPicom Config\nSxhkd Config\nGreenclip Config\nMimeapps List Config" | rofi -dmenu -i -theme "nord" -theme-str "window {width: 14em;} listview {lines: 23;}")
 
 # Open What Is Chosen
 case "$chosen" in
@@ -21,10 +21,14 @@ case "$chosen" in
 	"Lf Config") neovide $XDG_CONFIG_HOME/lf/lfrc ;;
 
 # GUI Configs
-	"Hyprland Config") neovide $XDG_CONFIG_HOME/hypr/hyprland.conf ;;
-	"Waybar Config") neovide $XDG_CONFIG_HOME/waybar/config ;;
-	"Waybar Style") neovide $XDG_CONFIG_HOME/waybar/style.css ;;
+  "Xsession Config") neovide $HOME/.xsession $HOME/.xinitrc ;;
+	"Xresources Config") neovide $HOME/.Xresources ;;
+	"AwesomeWM Config") neovide $XDG_CONFIG_HOME/awesome/rc.lua ;;
+	"Polybar Config") neovide $XDG_CONFIG_HOME/polybar/config.ini ;;
 	"Rofi Config") neovide $XDG_CONFIG_HOME/rofi/config.rasi ;;
+  "Picom Config") neovide $XDG_CONFIG_HOME/picom/picom.conf ;;
+  "Sxhkd Config") neovide $XDG_CONFIG_HOME/awesome/sxhkdrc ;;
+  "Greenclip Config") neovide $XDG_CONFIG_HOME/greenclip.toml ;;
   "Mimeapps List Config") neovide $XDG_CONFIG_HOME/mimeapps.list ;;
 
 # If Non Chosen Exit

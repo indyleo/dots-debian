@@ -3,5 +3,5 @@ Name=Dwm
 Comment=Dwm Session
 Type=Application
 Keywords=wm;tiling
-Exec=/etc/X11/Xsession dwm
+Exec=startx dwm
 TryExec=dwm

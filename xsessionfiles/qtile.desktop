@@ -3,5 +3,5 @@ Name=Qtile
 Comment=Qtile Session
 Type=Application
 Keywords=wm;tiling
-Exec=/etc/X11/Xsession qtile
+Exec=startx qtile
 TryExec=/home/$USER/.local/bin/qtile start
