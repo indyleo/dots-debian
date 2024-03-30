@@ -66,15 +66,6 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
-echo "###################"
-echo "## My Custom DWM ##"
-echo "###################"
-cd ~/Github
-git clone https://github.com/indyleo/mydwm.git
-cd mydwm
-sudo make clean install
-cd ~
-
 echo "#############"
 echo "## Bashtop ##"
 echo "#############"

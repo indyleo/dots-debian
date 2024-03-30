@@ -9,10 +9,4 @@ else
  xrandr --auto
 fi
 
-if [[ $1 == awesome ]]; then
-  exec awesome
-elif [[ $1 == dwm ]]; then
-  exec dwm
-else
-  exec awesome
-fi
+exec awesome
