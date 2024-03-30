@@ -16,7 +16,7 @@ end
 
 dap_install.setup {}
 
-dap_install.config("python", "bash", {})
+dap_install.config("python", "bash", "codelldb", "js-debug-adapter", {})
 -- add other configs here
 
 dapui.setup {

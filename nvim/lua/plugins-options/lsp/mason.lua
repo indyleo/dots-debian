@@ -9,11 +9,17 @@ local servers_lsp = {
   "vimls",
   "taplo",
   "ltex",
+  "clangd",
+  "cmake",
+  "html",
+  "htmx",
 }
 
 local servers_dap = {
   "bash",
   "python",
+  "codelldb",
+  "js-debug-adapter",
 }
 
 local servers_null_ls = {
@@ -24,6 +30,8 @@ local servers_null_ls = {
   "vint",
   "markdownlint",
   "luacheck",
+  "cpplint",
+  "htmlhint",
 
   "autoflake",
   "beautysh",
@@ -31,6 +39,8 @@ local servers_null_ls = {
   "jq",
   "stylua",
   "textlint",
+  "clang-format",
+  "cmakelang",
 }
 
 local settings = {
