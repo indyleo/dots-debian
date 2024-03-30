@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Type=Application
+Keywords=wm;tiling
+Exec=/etc/X11/Xsession Qtile

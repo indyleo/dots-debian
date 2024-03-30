@@ -4,12 +4,6 @@ Distro I Use Is Debian 12 With AwesomWM
 # Preview
 ![image](https://github.com/indyleo/dots-debian/assets/100316787/64576f0f-f330-4d51-ad2f-38358b2bed3e)
 
-# Awesome loading ~/.xsession
-Change the exec line in your awesome.desktop file in /usr/share/xsessions to
-```
-Exec=/etc/X11/Xsession 
-```
-
 # Qt And GTK Themes
 Put this into your '/etc/environment' file
 ```

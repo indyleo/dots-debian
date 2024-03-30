@@ -66,6 +66,15 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
+echo "###################"
+echo "## My Custom DWM ##"
+echo "###################"
+cd ~/Github
+git clone https://github.com/indyleo/mydwm.git
+cd mydwm
+sudo make clean install
+cd ~
+
 echo "#############"
 echo "## Bashtop ##"
 echo "#############"
@@ -130,6 +139,7 @@ mv -v desktopfiles/* ~/.local/share/applications
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .bashrc .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
+sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
 
 echo "#################"
 echo "## Zsh Plugins ##"

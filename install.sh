@@ -139,10 +139,10 @@ nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-
   libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev \
   libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libx11-xcb1 libxcb-util-dev libxcb-util0-dev libxcb-util1 -y 
 
-echo "##########################"
-echo "## Installing AwesomeWN ##"
-echo "##########################"
-nala install awesome -y 
+echo "################################"
+echo "## Installing Window Managers ##"
+echo "################################"
+nala install awesome xmonad libghc-xmonad-contrib-dev -y 
 
 echo "#############################"
 echo "## Installing Office Stuff ##"

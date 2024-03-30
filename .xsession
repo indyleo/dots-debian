@@ -1,4 +1,7 @@
 #!/bin/env bash
+
+WMC="$1"
+
 udiskie &
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 
@@ -8,4 +11,15 @@ else
  xrandr --auto
 fi
 
-exec awesome
+case $WMC in
+  AwesomeWM)
+    exec awesome ;;
+  Dwm)
+    exec dwm ;;
+  XMonad)
+    exec xmonad ;;
+  Qtile)
+    "/home/$USER/.local/bin/qtile" start ;;
+  *)
+    echo "$WMC is not an option" ;;
+esac
