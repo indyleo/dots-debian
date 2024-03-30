@@ -26,7 +26,7 @@ echo "#######################"
 nala install direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
   python3-setuptools autojump luarocks lf shellcheck python3-venv meson exa stow apt-transport-https cmdtest qalc libtool libtool-bin ninja-build \
   autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 \
-  brightnessctl xbacklight -y
+  brightnessctl xbacklight libpam0g-dev -y
 
 echo "#########"
 echo "## Zsh ##"
@@ -157,17 +157,6 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
   | tee /etc/apt/sources.list.d/brave-browser-release.list
 nala update
 nala install brave-browser -y
-
-echo "#####################"
-echo "## Installing SDDM ##"
-echo "#####################"
-nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
-nala purge kded5 -y
-mkdir /usr/share/sddm/themes
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv sddm.conf /etc/sddm.conf
-systemctl enable sddm.service 
-systemctl set-default graphical.target
 
 echo "########################"
 echo "## Installing Drivers ##"

@@ -66,6 +66,18 @@ ninja -C build
 sudo ninja -C build install
 cd ~
 
+echo "########################"
+echo "## LY Display Manager ##"
+echo "########################"
+cd ~/Github
+git clone --recurse-submodules https://github.com/fairyglade/ly
+cd ly
+make
+sudo make install installsystemd
+sudo systemctl enable ly.service
+systemctl disable getty@tty2.service
+cd ~
+
 echo "###################"
 echo "## My Custom DWM ##"
 echo "###################"
