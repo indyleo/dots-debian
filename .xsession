@@ -13,13 +13,13 @@ else
 fi
 
 case $WMC in
-  AwesomeWM)
+  awesome)
     exec awesome ;;
-  Dwm)
+  dwm)
     exec dwm ;;
-  XMonad)
+  xmonad)
     exec xmonad-session ;;
-  Qtile)
+  qtile)
     "/home/$ACC/.local/bin/qtile" start ;;
   *)
     echo "$WMC is not an option" ;;
