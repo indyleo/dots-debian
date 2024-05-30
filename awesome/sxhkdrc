@@ -107,8 +107,8 @@ XF86MonBrightness{Up,Down}
 super + {Up,Down}
   volumectrl {--inc,--dec} 5
 
-super + shift + Down
-  volumectrl --togglemut
+super + alt + Down
+  volumectrl --togglemute
 
 XF86Audio{Raise,Lower}Volume
   volumectrl {--inc,--dec} 5
@@ -132,6 +132,18 @@ XF86Audio{Next,Prev}
 XF86AudioPlay
   songctrl --togglepause rhythmbox
 
-# Chanf bg
+## Video
+# Youtube
+super + shift + {Right,Left}
+   vidctrl youtube {--skip,--backskip}
+
+super + shift + Pause
+  vidctrl youtube --togglepause
+
+# Twitch
+super + ctrl + Pause
+  vidctrl twitch --togglepause
+
+# Change bg
 super + shift + {b,g}
 	xwalr {~/Pictures/Wallpapers,~/Pictures/wallpapers}
