@@ -42,4 +42,3 @@ elif [ "$1" = "twitch" ]; then
 else
     echo "Unknown arg: $1"
 fi
-
