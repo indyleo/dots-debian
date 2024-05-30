@@ -14,10 +14,6 @@ youtube_previous() {
     playerctl -p "$(pgrep -f "YouTube - Brave")" previous
 }
 
-youtube_togglemute() {
-    playerctl -p "$(pgrep -f "YouTube - Brave")" volume mute
-}
-
 ### Twitch ###
 
 twitch_togglepause() {
