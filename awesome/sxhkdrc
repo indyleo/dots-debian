@@ -28,6 +28,10 @@ super + alt + e
 super + r
   rofi -show drun
 
+# Window Prompt
+super + Tab
+	rofi -show window
+
 # Rofi Emoji
 super + ctrl + e
   rofi -show emoji
