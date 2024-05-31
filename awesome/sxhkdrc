@@ -132,17 +132,15 @@ XF86Audio{Next,Prev}
 XF86AudioPlay
   songctrl --togglepause rhythmbox
 
-## Video
-# Youtube
+# Video
 super + shift + {Right,Left}
-   vidctrl youtube {--skip,--backskip}
+   vidctrl {--skip,--backskip}
+
+super + shift + {Up,Down}
+   vidctrl {--forward,--backward}
 
 super + shift + Pause
-  vidctrl youtube --togglepause
-
-# Twitch
-super + ctrl + Pause
-  vidctrl twitch --togglepause
+  vidctrl --togglepause
 
 # Change bg
 super + shift + {b,g}

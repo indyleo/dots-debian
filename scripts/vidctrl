@@ -1,44 +1,37 @@
 #!/bin/env bash
 
-### Youtube ###
-
-youtube_togglepause() {
+togglepause() {
     playerctl -p "$(pgrep -f "YouTube - Brave")" play-pause
 }
 
-youtube_next() {
+next() {
     playerctl -p "$(pgrep -f "YouTube - Brave")" next
 }
 
-youtube_previous() {
+previous() {
     playerctl -p "$(pgrep -f "YouTube - Brave")" previous
 }
 
-### Twitch ###
-
-twitch_togglepause() {
-    playerctl -p "$(pgrep -f "Twitch - Brave")" play-pause
+forward() {
+    playerctl -p "$(pgrep -f "YouTube - Brave")" position 5+
 }
 
-# Check the first argument to decide whether it's for YouTube or Twitch
-if [ "$1" = "youtube" ]; then
-    case "$2" in
-        --togglepause)
-          youtube_togglepause ;;
-        --skip)
-          youtube_next ;;
-        --backskip)
-          youtube_previous ;;
-        *)
-            echo "Unknown arg: $2" ;;
-    esac
-elif [ "$1" = "twitch" ]; then
-    case "$2" in
-        --togglepause)
-          twitch_togglepause ;;
-        *)
-          echo "Unknown arg: $2" ;;
-    esac
-else
-    echo "Unknown arg: $1"
-fi
+backward() {
+    playerctl -p "$(pgrep -f " YouTube - Brave")" position 5-
+}
+
+# Check the first argument to decide what to do
+case "$1" in
+    --togglepause)
+        togglepause ;;
+    --skip)
+        next ;;
+    --backskip)
+        previous ;;
+    --forward)
+        forward ;;
+    --backward)
+        backward ;;
+    *)
+        echo "Unknown arg: $1" ;;
+esac
