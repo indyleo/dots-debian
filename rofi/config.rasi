@@ -2,7 +2,7 @@ configuration {
     show-icons: true; 
     font: "FiraCode Nerd Font 12";
     icon-theme: "Papirus";
-    modi: "window,drun,run,emoji,calc";
+    modi: "window,drun,run";
     display-ssh:    "";
     display-run:    "";
     display-drun:   "";

@@ -25,35 +25,6 @@ cd shell-color-scripts
 sudo make install
 cd ~
 
-echo "################"
-echo "## Rofi Emoji ##"
-echo "################" 
-cd ~/Github
-git clone https://github.com/Mange/rofi-emoji.git
-cd rofi-emoji
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
-
-echo "###############"
-echo "## Rofi Calc ##"
-echo "###############" 
-cd ~/Github
-git clone https://github.com/svenstaro/rofi-calc.git
-cd rofi-calc
-mkdir m4
-autoreconf -i
-mkdir build
-cd build/
-../configure
-make
-sudo make install
-cd ~
-
 echo "######################"
 echo "## Picom Animations ##"
 echo "######################"
