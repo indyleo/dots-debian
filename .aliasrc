@@ -122,13 +122,27 @@ alias flatse='flatpak search'
 alias flatru='flatpak run'
 alias flatki='flatpak kill'
 
-# Making APT Better
-alias aptin='sudo apt install'
-alias aptup='sudo apt update && sudo apt upgrade'
-alias aptud='sudo apt update'
-alias aptug='sudo apt upgrade'
-alias aptrm='sudo apt remove'
-alias aptpu='sudo apt purge'
+# Pkg Manager Aliases
+if [ -f /usr/bin/apt ]; then
+  alias aptin='sudo apt install'
+  alias aptup='sudo apt update && sudo apt upgrade'
+  alias aptud='sudo apt update'
+  alias aptug='sudo apt upgrade'
+  alias aptrm='sudo apt remove'
+  alias aptpu='sudo apt purge'
+elif [ -f /usr/bin/pacman ]; then
+  alias pacin='pac -S'
+  alias pacup='pac -Syu'
+  alias pacrm='pac -Rns'
+  alias pacunl='sudo rm /var/lib/pacman/db.lck'
+  alias pacor='sudo pac -Rns $(pacman -Qtdq)'
+elif [ -f /usr/bin/dnf ]; then
+  alias dnfin='sudo dnf install'
+  alias dnfup='sudo dnf update'
+  alias dnfrm='sudo dnf remove'
+else
+    echo "No known package manager found"
+fi
 
 # For Vim Users
 # vim:ft=sh
