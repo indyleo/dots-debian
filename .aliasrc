@@ -141,7 +141,7 @@ elif [ -f /usr/bin/dnf ]; then
   alias dnfup='sudo dnf update'
   alias dnfrm='sudo dnf remove'
 else
-    echo "No known package manager found"
+  echo "No known package manager found"
 fi
 
 # For Vim Users

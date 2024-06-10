@@ -42,18 +42,30 @@ mkdirg() {
 	cd "$1"
 }
 
-# APT To Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+# Better Pkg Manager 
+if [ -f /usr/bin/apt ]; then
+  apt() { 
+    command nala "$@"
+  }
+  sudo() {
+    if [ "$1" = "apt" ]; then
+      shift
+      command sudo nala "$@"
+    else
+      command sudo "$@"
+    fi
+  }
+elif [ -f /usr/bin/pacman ]; then
+  pac() {
+    case "$1" in
+      -S|-Syu|-Rns) command sudo pacman "$@" ;;
+      "") command pacman -h ;;
+      *) command pacman "$@" ;;
+    esac
+  }
+else
+  echo "No known package manager found"
+fi
 
 # Archive Extraction
 extract() {
