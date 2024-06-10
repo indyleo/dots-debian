@@ -149,7 +149,6 @@ lfcd() {
 }
 
 mkscript() {
-  clear
   printf "File Name: "
   read -r ans
   file=$HOME/Scripts/$ans
@@ -162,7 +161,6 @@ mkscript() {
       $EDITOR "$file"
     fi
   fi
-  clear
 }
 
 # For Vim Users
