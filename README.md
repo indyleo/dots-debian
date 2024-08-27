@@ -28,3 +28,8 @@ To find your wlan interface for polybar do 'nmcli' and the interface u are conne
 - [Picom](https://github.com/yshui/picom) My Choice Of My X11 Compositer
 - [Sxhkd](https://github.com/baskerville/sxhkd) My Choice Of My X11 Hotkey Daemon
 - [Polybar](https://polybar.github.io/) My Choice Of My X11 Bar 
+
+# How To Install
+1. Run install.sh as root "sudo ./install.sh"
+2. After install.sh is done run complie.sh (make sure to not have it as root)
+3. should be done then
