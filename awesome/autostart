@@ -1,0 +1,38 @@
+#!/bin/env bash
+
+# Fix Mouse Cursor On Startup 
+xsetroot -cursor_name left_ptr
+
+# Set Keyboard Layout
+setxkbmap -layout us
+
+# Monitor Stop Turning Off
+xset s off -dpms
+
+# List of programs to restart
+programs=(
+    "solaar -w hide"
+    "sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc"
+	  "picom -c $XDG_CONFIG_HOME/awesome/picom.conf"
+    "lxpolkit"
+    "greenclip daemon"
+    "xautolock -time 15 -locker locker"
+)
+
+# Kill existing processes
+for prog in "${programs[@]}"; do
+    proc_name=$(echo "$prog" | awk '{print $1}')  # Extract first word as process name
+    killall -q "$proc_name"
+done
+
+# Start programs
+for prog in "${programs[@]}"; do
+    if command -v $(echo "$prog" | awk '{print $1}') &> /dev/null; then
+        $prog & disown
+    else
+        echo "Warning: $(echo "$prog" | awk '{print $1}') not found!"
+    fi
+done
+
+# Wallpaper
+xwalr ~/Pictures/Wallpapers

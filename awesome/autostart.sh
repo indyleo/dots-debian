@@ -11,12 +11,13 @@ xset s off -dpms
 
 # Killing Of Programs
 killall -q solaar
+killall -q picom
 killall -q sxhkd
 killall -q greenclip
 killall -q xautolock
 
 # Starting Programs
-picom &
+picom -c $XDG_CONFIG_HOME/awesome/picom.conf &
 sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc &
 lxpolkit &
 greenclip daemon &
