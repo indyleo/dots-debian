@@ -1,6 +1,8 @@
-require "options"
-require "keymaps"
-require "Lazy"
-require "autocommands"
-require "colorscheme"
-require "plugins-options"
+-- Files
+require("options")
+require("keymaps")
+require("autocommand")
+require("config.Lazy")
+
+-- Directories
+require("function")

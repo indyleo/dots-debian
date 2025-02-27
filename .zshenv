@@ -3,20 +3,20 @@ if [ -d "$HOME/go/bin/" ]; then
   PATH="$HOME/go/bin:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/bin" ]; then
-  PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "/usr/local/go/bin" ]; then
+  PATH="/usr/local/go/bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ]; then
+  PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/scripts" ]; then
   PATH="$HOME/.local/scripts:$PATH"
 fi
 
-if [ -d "$HOME/Applications" ]; then
-  PATH="$HOME/Applications:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
@@ -42,18 +42,11 @@ fi
 
 # Some Nice Exports
 export EDITOR="nvim"
-export VISUAL="neovide"
 export PAGER="less"
 export MANPAGER="less"
 export TERM="xterm-256color"
-export TERMINAL="kitty"
 export COLORTERM="truecolor"
-export WM="AwesomeWM"
-export BROWSER="brave-browser"
 export OPENER="xdg-open"
-export READER="zathura"
-export VIDEO="mpv"
-export IMAGE="sxiv"
 
 # Disable files
 export LESSHISTFILE=-
@@ -67,5 +60,8 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-# Cargo
+# Make Sure In Home
+cd ~
+
+# RustUp
 . "$HOME/.cargo/env"

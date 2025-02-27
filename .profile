@@ -3,20 +3,20 @@ if [ -d "$HOME/go/bin/" ]; then
   PATH="$HOME/go/bin:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/bin" ]; then
-  PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "/usr/local/go" ]; then
+  PATH="/usr/local/go/bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ]; then
+  PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/scripts" ]; then
   PATH="$HOME/.local/scripts:$PATH"
 fi
 
-if [ -d "$HOME/Applications" ]; then
-  PATH="$HOME/Applications:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
@@ -25,35 +25,28 @@ fi
 
 # XDG Exports
 if [ -z "$XDG_CONFIG_HOME" ]; then
-    export XDG_CONFIG_HOME="$HOME/.config"
+  export XDG_CONFIG_HOME="$HOME/.config"
 fi
 
 if [ -z "$XDG_DATA_HOME" ]; then
-    export XDG_DATA_HOME="$HOME/.local/share"
+  export XDG_DATA_HOME="$HOME/.local/share"
 fi
 
 if [ -z "$XDG_STATE_HOME" ]; then
-    export XDG_STATE_HOME="$HOME/.local/state"
+  export XDG_STATE_HOME="$HOME/.local/state"
 fi
 
 if [ -z "$XDG_CACHE_HOME" ]; then
-    export XDG_CACHE_HOME="$HOME/.cache"
+  export XDG_CACHE_HOME="$HOME/.cache"
 fi
 
 # Some Nice Exports
 export EDITOR="nvim"
-export VISUAL="neovide"
 export PAGER="less"
 export MANPAGER="less"
 export TERM="xterm-256color"
-export TERMINAL="kitty"
 export COLORTERM="truecolor"
-export WM="AwesomeWM"
-export BROWSER="brave-browser"
 export OPENER="xdg-open"
-export READER="zathura"
-export VIDEO="mpv"
-export IMAGE="sxiv"
 
-# Cargo
+# RustUp
 . "$HOME/.cargo/env"
