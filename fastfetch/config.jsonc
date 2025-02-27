@@ -1,0 +1,92 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "cyan",
+      "title": "magenta",
+      "output": "default"
+    },
+    "key": {
+      "width": 0,
+      "type": "icon",
+      "paddingLeft": 1
+    },
+    "brightColor": true,
+    "constants": [
+      "╭──────────── Software ────────────",
+      "├──────────── Hardware ────────────",
+      "├───────────── Uptime ─────────────",
+      "╰──────────────────────────────────"
+    ]
+  },
+  "modules": [
+    {
+      "type": "title",
+      "type": "separator"
+    },
+    {
+      "type": "custom",
+      "format": "╭──────────── Software ────────────"
+    },
+    {
+      "type": "os",
+      "keyIcon": " "
+    },
+    {
+      "type": "kernel",
+      "keyIcon": " "
+    },
+    {
+      "type": "packages",
+      "keyIcon": " "
+    },
+    {
+      "type": "shell",
+      "keyIcon": " "
+    },
+    {
+      "type": "terminal",
+      "keyIcon": " "
+    },
+    {
+      "type": "custom",
+      "format": "├──────────── Hardware ────────────"
+    },
+    {
+      "type": "host",
+      "keyIcon": " "
+    },
+    {
+      "type": "cpu",
+      "keyIcon": " "
+    },
+    {
+      "type": "gpu",
+      "keyIcon": " "
+    },
+    {
+      "type": "memory",
+      "keyIcon": " "
+    },
+    {
+      "type": "disk",
+      "keyIcon": " "
+    },
+    {
+      "type": "custom",
+      "format": "├───────────── Uptime ─────────────"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": "󰥔 "
+    },
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────────"
+    }
+  ]
+}
