@@ -1,37 +1,48 @@
 #!/bin/env bash
 
+# Ensure playerctl is installed
+if ! command -v playerctl &> /dev/null; then
+    notify-send "Error: playerctl is not installed."
+    exit 1
+fi
+
+# Detect YouTube player process (adjust this if needed)
+YT_PLAYER=$(playerctl -l | grep "youtube" | head -n 1)
+
+# Use a fallback if no YouTube player is found
+if [[ -z "$YT_PLAYER" ]]; then
+    YT_PLAYER="playerctld"
+fi
+
 togglepause() {
-    playerctl -p "$(pgrep -f "YouTube - Brave")" play-pause
+    playerctl -p "$YT_PLAYER" play-pause
 }
 
 next() {
-    playerctl -p "$(pgrep -f "YouTube - Brave")" next
+    playerctl -p "$YT_PLAYER" next
 }
 
 previous() {
-    playerctl -p "$(pgrep -f "YouTube - Brave")" previous
+    playerctl -p "$YT_PLAYER" previous
 }
 
 forward() {
-    playerctl -p "$(pgrep -f "YouTube - Brave")" position 5+
+    playerctl -p "$YT_PLAYER" position 5+
 }
 
 backward() {
-    playerctl -p "$(pgrep -f " YouTube - Brave")" position 5-
+    playerctl -p "$YT_PLAYER" position 5-
 }
 
-# Check the first argument to decide what to do
+# Handle user input
 case "$1" in
-    --togglepause)
-        togglepause ;;
-    --skip)
-        next ;;
-    --backskip)
-        previous ;;
-    --forward)
-        forward ;;
-    --backward)
-        backward ;;
+    --togglepause) togglepause ;;
+    --skip) next ;;
+    --backskip) previous ;;
+    --forward) forward ;;
+    --backward) backward ;;
     *)
-        echo "Unknown arg: $1" ;;
+        notify-send "Error: Unknown argument '$1'. Use --togglepause, --skip, --backskip, --forward, or --backward."
+        exit 1
+        ;;
 esac

@@ -1,13 +1,25 @@
 #!/bin/env bash
 
+# Ensure brightnessctl is installed
+if ! command -v brightnessctl &>/dev/null; then
+  echo "Error: brightnessctl not found. Please install it first."
+  exit 1
+fi
+
+# Validate arguments
+if [[ -z "$2" || ! "$2" =~ ^[0-9]+$ ]]; then
+  echo "Usage: $0 --inc|--dec <amount>"
+  exit 1
+fi
+
 amount="$2"
 
-brightness_inc(){
-  brightnessctl set "$amount"%+
+brightness_inc() {
+  brightnessctl set "${amount}%+"
 }
 
-brightness_dec(){
-  brightnessctl set "$amount"%-
+brightness_dec() {
+  brightnessctl set "${amount}%-"
 }
 
 case "$1" in
@@ -16,5 +28,8 @@ case "$1" in
   --dec)
     brightness_dec ;;
   *)
-    echo "Unkown Arg" ;;
+    echo "Unknown argument: $1"
+    echo "Usage: $0 --inc|--dec <amount>"
+    exit 1
+    ;;
 esac

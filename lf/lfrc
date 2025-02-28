@@ -30,7 +30,6 @@ map dd trash-put
 map md mkdir
 map mf mkfile
 map ms mkscript
-map smf sudomkfile
 map me make-executable
 map re remove-executable
 
@@ -55,7 +54,6 @@ map ab targz
 map au unarchive
 
 # Trash
-map bv trash-view
 map be trash-empty
 map br trash-restore
 
@@ -87,9 +85,19 @@ map bg setbg
 ### CUSTOM COMMANDS ###
 cmd open ${{
   clear
-  case $(file --mime-type "$f" -bL) in
-    text/*|application/json) EDITOR="nvim"; $EDITOR "$f" ;;
-    *) $OPENER "$f" ;;
+  # Get the MIME type of the file
+  mime_type=$(file --mime-type "$f" -bL)
+
+  # Determine the appropriate application to open the file
+  case "$mime_type" in
+    text/*|application/json)
+      EDITOR="${EDITOR:-nvim}"
+      "$EDITOR" "$f"
+      ;;
+    *)
+      OPENER="${OPENER:-xdg-open}"
+      "$OPENER" "$f"
+      ;;
   esac
   clear
 }}
@@ -118,14 +126,6 @@ cmd mkfile ${{
   printf "File Name: "
   read ans
   $EDITOR $ans
-  clear
-}}
-
-cmd sudomkfile ${{
-  clear
-  printf "(Sudo) File Name: "
-  read ans
-  sudo $EDITOR $ans
   clear
 }}
 
@@ -158,26 +158,6 @@ cmd remove-executable %{{
 # Trashing 
 cmd trash-put %{{
   trash-put $fx
-}}
-
-cmd trash-view ${{
-  clear
-  printf "Stuff inside your trash\n"
-  trash-list
-  printf "\nDone viewing trash [y/n]: "
-  read ans
-  case "$ans" in
-    y) exit ;;
-    n) until [[ "$ans" == "y" ]]; do
-      clear
-      printf "Stuff inside your trash\n"
-      trash-list
-      printf "\nDone viewing trash [y/n]: "
-      read ans
-    done ;;
-    *) echo "Not y/n" ;;
-  esac
-  clear
 }}
 
 cmd trash-empty ${{
@@ -245,5 +225,5 @@ cmd fzf_jump ${{
 # Wallpaper
 cmd setbg %{{
   cp "$f" ~/.config/wall.png
-  xwallpaper --stretch "$f"
+  xwallpaper --stretch ~/.config/wall.png
 }}

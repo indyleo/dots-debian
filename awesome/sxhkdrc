@@ -96,9 +96,6 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
   volumectrl --togglemute
 
-super + shift + a
-	volumectrl --stream
-
 # Music
 super + {Right,Left}
   songctrl {--skip,--backskip} rhythmbox

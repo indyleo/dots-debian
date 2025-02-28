@@ -9,13 +9,7 @@ video/mp4=mpv.desktop
 video/mov=mpv.desktop
 video/avi=mpv.desktop
 video/x-matroska=mpv.desktop
-audio/ogg=rhythmbox.desktop
-audio/mp3=rhythmbox.desktop
-audio/wav=rhythmbox.desktop
 
 [Added Associations]
-x-scheme-handler/magnet=transmission-gtk.desktop;
-application/x.bittorrent=transmission-gtk.desktop;
-application/svg+webp=brave-browser.desktop;
 
 [Removed Associations]

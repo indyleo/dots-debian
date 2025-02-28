@@ -1,23 +1,32 @@
 #!/bin/env bash
-ss_selection(){
-  flameshot gui
+
+# Ensure flameshot is installed
+if ! command -v flameshot &> /dev/null; then
+    notify-send "Error: flameshot is not installed."
+    exit 1
+fi
+
+# Screenshot functions
+ss_selection() {
+    flameshot gui
 }
 
-ss_screen(){
-  flameshot screen
+ss_screen() {
+    flameshot screen
 }
 
-ss_chose(){
-  flameshot launcher
+ss_launcher() {
+    flameshot launcher
 }
 
+# Handle user input
 case "$1" in
-  --selec)
-    ss_selection ;;
-  --scr)
-    ss_screen ;;
-  --cho)
-    ss_chose ;;
-  *)
-    echo "Unkown Arg" ;;
+    --select) ss_selection ;;
+    --screen) ss_screen ;;
+    --launcher) ss_launcher ;;
+    *)
+        notify-send "Error: Unknown argument '$1'. Use --select, --screen, or --launcher."
+        exit 1
+        ;;
 esac
+
