@@ -25,8 +25,11 @@ return {
 			dashboard.button("SPC wr", "  > Restore Session", ":SessionRestore<CR>"),
 			dashboard.button("SPC wf", "  > Search Sessions", ":SessionSearch<CR>"),
 			dashboard.button("ce", "  > Config Nvim", ":OilDir $XDG_CONFIG_HOME/nvim<CR>"),
+			dashboard.button("ct", "  > Config WezTerm", ":EditFile $XDG_CONFIG_HOME/wezterm/ wezterm.lua<CR>"),
+			dashboard.button("cs", "  > Config Powershell", ":OilDir $HOME/Documents/PowerShell<CR>"),
 			dashboard.button("cp", "  > Config Starship", ":EditFile $XDG_CONFIG_HOME starship.toml<CR>"),
 			dashboard.button("cf", "  > Config FastFetch", ":EditFile $XDG_CONFIG_HOME/fastfetch/ config.jsonc<CR>"),
+			dashboard.button("md", "  > Opens My Markdown Folder", ":OilDir $HOME/Documents/Markdown<CR>"),
 			dashboard.button("q", "  > Quit Nvim", ":qa!<CR>"),
 		}
 

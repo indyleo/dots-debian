@@ -6,23 +6,11 @@ super + Escape
 
 # Terminal
 super + Return
- kitty 
-
-# Neovide
-super + shift + n
-	neovide
-
-# Vscodium
-super + shift + v
-	codium
-
-# Gedit
-super + ctrl + g
-	gedit
+ wezterm start 
 
 # Nvim
 super + alt + e
-	kitty -e nvim
+	wezterm start nvim
 
 # Run Prompt
 super + r
@@ -39,10 +27,6 @@ super + ctrl + e
 # Rofi Calc
 super + shift + c
   rofi -show calc -calc-command "echo -n '{result}' | xclip"
-
-# ConfigMenu
-super + alt + c
-  configmenu
 
 # Power Menu
 super + p
@@ -63,7 +47,7 @@ super + f
 
 # Browser 
 super + b
-  brave-browser
+  floorp
 
 # Rhythmbox 
 super + ctrl + r
@@ -71,7 +55,7 @@ super + ctrl + r
 
 # Discord 
 super + d
-  flatpak run com.discordapp.Discord
+  flatpak run dev.vencord.Vesktop
 
 # Relanching Picom 
 super + shift + e
@@ -84,14 +68,6 @@ super + shift + p
 # Starting Picom
 super + ctrl + p
   picom -b && notify-send "Starting Picom..."
-
-# Starting Screenkey
-super + shift + s
-  screenkey --no-systray --opacity 0.9 --bg-color "#4C566A" --font-color "#ECEFF4" -p fixed -g 627x140+1283+35 & notify-send "Starting Screenkey..."
-
-# Killing Screenkey
-super + s
-  pkill screenkey && notify-send "Killing Screenkey..."
 
 # Screenshot 
 Print

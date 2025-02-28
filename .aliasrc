@@ -1,10 +1,10 @@
 # Making ls Better
-alias ls='exa --group-directories-first --color=auto' # Basic exa But with Some Nice Flags
-alias la='exa -a --group-directories-first --color=auto' # Show Hidden Files
-alias ll='exa -lF --group-directories-first --color=auto' # Show In Listing Form 
-alias l='exa -alF --group-directories-first --color=auto' # My Favourite
-alias lt='exa -a --tree --group-directories-first --color=always ' # Tree Listing
-alias l.='exa -a | egrep "^\."' # Show Only Hidden File
+alias ls='eza --group-directories-first --color=auto' # Basic exa But with Some Nice Flags
+alias la='eza -a --group-directories-first --color=auto' # Show Hidden Files
+alias ll='eza -lF --group-directories-first --color=auto' # Show In Listing Form 
+alias l='eza -alF --group-directories-first --color=auto' # My Favourite
+alias lt='eza -a --tree --group-directories-first --color=always ' # Tree Listing
+alias l.='eza -a | egrep "^\."' # Show Only Hidden File
 
 # Cat to Bat Alias
 alias cat='batcat -pn --pager=""'
@@ -35,7 +35,6 @@ alias ping='ping -c 10'
 alias df='df -h'
 alias mimetype='file --mime-type'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias xwal='xwallpaper --stretch'
 alias userx='pkill -u $USER'
 
 # find dirs and files
@@ -55,12 +54,11 @@ alias yta-vorbis='yt-dlp --extract-audio --audio-format vorbis '
 alias yta-wav='yt-dlp --extract-audio --audio-format wav '
 alias ytv-best='yt-dlp -f bestvideo+bestaudio '
 
-# Xresources Aliases
-alias load='xrdb -load $HOME/.Xresources'
-alias merge='xrdb -merge $HOME/.Xresources'
-
 # CD Aliases
 alias home='cd ~'
+alias down='cd ~/Downloads'
+alias docs='cd ~/Documents'
+alias desk='cd ~/Desktop'
 alias conf='cd ~/.config'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -71,7 +69,6 @@ alias bd='cd "$OLDPWD"'
 # Neovim Aliases
 alias v='nvim'
 alias sv='sudo nvim'
-alias nv='neovide'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -99,7 +96,6 @@ alias tag='git tag'
 alias newtag='git tag -a'
 
 # Shell Aliases
-alias srcb='source ~/.bashrc'
 alias srcz='source ~/.zshrc'
 alias srcze='source ~/.zshenv'
 alias src='source'
@@ -114,35 +110,13 @@ alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
-# Flatpak Aliases
-alias flatin='flatpak install'
-alias flatun='flatpak uninstall'
-alias flatup='flatpak update'
-alias flatse='flatpak search'
-alias flatru='flatpak run'
-alias flatki='flatpak kill'
-
 # Pkg Manager Aliases
-if [ -f /usr/bin/apt ]; then
-  alias aptin='sudo apt install'
-  alias aptup='sudo apt update && sudo apt upgrade'
-  alias aptud='sudo apt update'
-  alias aptug='sudo apt upgrade'
-  alias aptrm='sudo apt remove'
-  alias aptpu='sudo apt purge'
-elif [ -f /usr/bin/pacman ]; then
-  alias pacin='pac -S'
-  alias pacup='pac -Syu'
-  alias pacrm='pac -Rns'
-  alias pacunl='sudo rm /var/lib/pacman/db.lck'
-  alias pacor='sudo pac -Rns $(pacman -Qtdq)'
-elif [ -f /usr/bin/dnf ]; then
-  alias dnfin='sudo dnf install'
-  alias dnfup='sudo dnf update'
-  alias dnfrm='sudo dnf remove'
-else
-  echo "No known package manager found"
-fi
+alias aptin='sudo apt install'
+alias aptup='sudo apt update && sudo apt upgrade'
+alias aptud='sudo apt update'
+alias aptug='sudo apt upgrade'
+alias aptrm='sudo apt remove'
+alias aptpu='sudo apt purge'
 
 # For Vim Users
 # vim:ft=sh

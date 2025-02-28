@@ -99,25 +99,48 @@ extract() {
 
 # Archiving
 archive() {
-  if [ -f "$1" ]; then
-      if [ "$#" -lt 3 ]; then
-          echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> <file2> ... <fileN>"
-          return 1
+  if [ "$#" -lt 2 ]; then
+    echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> [file2 ... fileN]"
+    return 1
+  fi
+
+  archive_name="$1"
+  shift
+
+  if [ -e "$archive_name" ]; then
+    echo "Error: Archive '$archive_name' already exists."
+    return 1
+  fi
+
+  case "$archive_name" in
+    *.tar.gz)
+      tar -czf "$archive_name" "$@"
+      ;;
+    *.zip)
+      zip -r "$archive_name" "$@"
+      ;;
+    *.rar)
+      if command -v rar > /dev/null; then
+        rar a "$archive_name" "$@"
+      else
+        echo "Error: 'rar' command not found. Please install RAR to create .rar archives."
+        return 1
       fi
-      archive_name="$1"
-      shift
-      case "$archive_name" in
-          *.tar.gz) tar -czf "$archive_name" "$@" ;;
-          *.zip) zip -r "$archive_name" "$@" ;;
-          *.rar) rar a "$archive_name" "$@" ;;
-          *) echo "Error: Unsupported archive format. Supported formats are tar.gz, zip, and rar."
-              return 1 ;;
-      esac
-      echo "Archive created: $archive_name"
+      ;;
+    *)
+      echo "Error: Unsupported archive format. Supported formats are .tar.gz, .zip, and .rar."
+      return 1
+      ;;
+  esac
+
+  if [ $? -eq 0 ]; then
+    echo "Success: Archive created: $archive_name"
   else
-      echo "'$1' archive already exists"
+    echo "Error: Failed to create archive."
+    return 1
   fi
 }
+
 
 # Be Lazy With Git
 lazygall() {
@@ -161,6 +184,84 @@ mkscript() {
       $EDITOR "$file"
     fi
   fi
+}
+
+# Documentation
+chtsh ()
+{
+  # Default topic constraint
+  TOPIC_CONSTRAINT="none"
+
+# Parse command-line arguments
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    l|lang)
+      TOPIC_CONSTRAINT="lang"
+      ;;
+  esac
+  shift
+done
+
+# Select topic based on constraint
+if [[ "$TOPIC_CONSTRAINT" == "lang" ]]; then
+  TOPIC=$(printf "go\nrust\nc" | fzf)
+else
+  TOPIC=$(curl -s cht.sh/:list | fzf)
+fi
+
+# Exit if no topic is selected
+if [[ -z "$TOPIC" ]]; then
+  exit 0
+fi
+
+# Fetch and select cheat sheet options
+SHEET=$(curl -s cht.sh/$TOPIC/:list | fzf)
+
+# Display selected sheet or the main topic
+if [[ -z "$SHEET" ]]; then
+  curl -s "cht.sh/$TOPIC?style=rrt" | less -R
+else
+  curl -s "cht.sh/$TOPIC/$SHEET?style=rrt" | less -R
+fi
+
+}
+# YT Downloading
+
+get_youtube_content() {
+    local url="$1"
+    local type="$2"
+    local output_folder="$HOME/Downloads"
+
+    # Validate input
+    if [[ -z "$url" || -z "$type" ]]; then
+        echo "Usage: get_youtube_content <url> <type: aud|vid|bth>"
+        return 1
+    fi
+
+    # Check if yt-dlp is installed
+    if ! command -v yt-dlp &>/dev/null; then
+        echo "yt-dlp is not installed. Please install yt-dlp and try again."
+        return 1
+    fi
+
+    case "$type" in
+        aud)
+            yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata --audio-quality 0 "$url" -o "$output_folder/%(title)s.%(ext)s"
+            echo "Audio download completed. File saved in $output_folder."
+            ;;
+        vid)
+            yt-dlp -f "bestvideo+bestaudio" --merge-output-format mp4 --embed-thumbnail --add-metadata "$url" -o "$output_folder/%(title)s.%(ext)s"
+            echo "Video download completed. File saved in $output_folder."
+            ;;
+        bth)
+            yt-dlp -f "bestvideo+bestaudio" --merge-output-format mp4 --embed-thumbnail --add-metadata "$url" -o "$output_folder/%(title)s.%(ext)s"
+            echo "Combined audio and video download completed as an MP4. File saved in $output_folder."
+            ;;
+        *)
+            echo "Invalid type specified. Use aud, vid, or bth."
+            return 1
+            ;;
+    esac
 }
 
 # For Vim Users

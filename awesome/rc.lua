@@ -62,7 +62,7 @@ awful.layout.layouts = {
 
 -- Scratchpads
 local term_scratch = bling.module.scratchpad({
-	command = "kitty --class term",
+	command = "wezterm cli --class term start",
 	rule = { instance = "term" },
 	sticky = true,
 	autoclose = true,
@@ -73,7 +73,7 @@ local term_scratch = bling.module.scratchpad({
 })
 
 local lf_scratch = bling.module.scratchpad({
-	command = "kitty --class lf -e lf",
+	command = "wezterm cli --class lf start lf",
 	rule = { instance = "lf" },
 	sticky = true,
 	autoclose = true,
@@ -84,30 +84,8 @@ local lf_scratch = bling.module.scratchpad({
 })
 
 local mixer_scratch = bling.module.scratchpad({
-	command = "kitty --class mixer -e pulsemixer",
+	command = "wezterm cli --class mixer start pulsemixer",
 	rule = { instance = "mixer" },
-	sticky = true,
-	autoclose = true,
-	floating = true,
-	geometry = { x = 450, y = 150, height = 700, width = 1000 },
-	reapply = true,
-	dont_focus_before_close = false,
-})
-
-local wiki_scratch = bling.module.scratchpad({
-	command = "kitty --class wiki -e nvim ~/vimwiki/index.wiki",
-	rule = { instance = "wiki" },
-	sticky = true,
-	autoclose = true,
-	floating = true,
-	geometry = { x = 450, y = 150, height = 700, width = 1000 },
-	reapply = true,
-	dont_focus_before_close = false,
-})
-
-local chat_scratch = bling.module.scratchpad({
-	command = "flatpak run com.chatterino.chatterino",
-	rule = { instance = "chatterino" },
 	sticky = true,
 	autoclose = true,
 	floating = true,
@@ -220,12 +198,6 @@ globalkeys = gears.table.join(
 	end),
 	awful.key({ modkey, ctrlkey }, "m", function()
 		mixer_scratch:toggle()
-	end),
-	awful.key({ modkey, ctrlkey }, "v", function()
-		wiki_scratch:toggle()
-	end),
-	awful.key({ modkey, ctrlkey }, "c", function()
-		chat_scratch:toggle()
 	end),
 
 	-- Window Switcher
@@ -352,10 +324,10 @@ awful.rules.rules = {
 	{ rule = { instance = "polybar" }, properties = { focusable = false, border_width = false } },
 
 	-- Discord
-	{ rule = { instance = "discord" }, properties = { tag = "MSG" } },
+	{ rule = { instance = "vesktop" }, properties = { tag = "MSG" } },
 
 	-- Rhythmbox
-	{ rule = { instance = "rhythmbox" }, properties = { tag = "MUS" } },
+	{ rule = { instance = "" }, properties = { tag = "MUS" } },
 
 	-- Virt-manager
 	{ rule = { instance = "virt-manager" }, properties = { tag = "VIRT" } },
@@ -378,17 +350,11 @@ awful.rules.rules = {
 	-- Battel.net
 	{ rule = { instance = "steam_app_0" }, properties = { tag = "GAME" } },
 
-	-- Vscodium
-	{ rule = { instance = "vscodium" }, properties = { tag = "DEV" } },
-
 	-- Brave
-	{ rule = { instance = "brave-browser" }, properties = { tag = "WWW" } },
+	{ rule = { instance = "floorp" }, properties = { tag = "WWW" } },
 
 	-- Kitty
-	{ rule = { instance = "kitty" }, properties = { tag = "DEV" } },
-
-	-- Neovide
-	{ rule = { instance = "neovide" }, properties = { tag = "DEV" } },
+	{ rule = { instance = "wezterm" }, properties = { tag = "DEV" } },
 
 	-- Mpv
 	{ rule = { instance = "gl" }, properties = { fullscreen = true } },

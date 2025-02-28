@@ -86,8 +86,8 @@ nala install transmission transmission-cli transmission-daemon transmission-gtk 
 echo "#############################"
 echo "## Installing GUI Programs ##"
 echo "#############################"
-nala install polybar galculator kitty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
-  xdotool xdo screenkey gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
+nala install polybar galculator wezterm bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+  xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
 
 echo "##############################"
 echo "## Installing VIA (Keycron) ##"
@@ -99,7 +99,7 @@ rm -v ./via-3.0.0-linux.deb
 echo "############################"
 echo "## Installing Media Stuff ##"
 echo "############################"
-nala install rhythmbox rhythmbox-plugins rhythmbox-data cava playerctl pamixer pavucontrol yt-dlp mpv peek kdenlive audacity gimp vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg -y
+nala install cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg -y
 
 echo "############################"
 echo "## Installing Theme Stuff ##"
