@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+set -euo pipefail
+trap 'echo "Error occurred at line $LINENO"' ERR
+
 # Checking if script is run with root
 if [[ $EUID -ne 0 ]]; then
   echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
@@ -12,166 +15,50 @@ mv -v sources.list /etc/apt/sources.list
 echo "#########################"
 echo "## Updating The System ##"
 echo "#########################"
-apt update
-apt upgrade -y
+apt update && apt upgrade -y
 
 echo "#####################"
 echo "## Installing Nala ##"
 echo "#####################"
-apt install nala -y
+apt install -y nala
 
 echo "#######################"
-echo "## CLI Nice To Haves ##"
+echo "## Installing Packages ##"
 echo "#######################"
-nala install direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl python3 unzip tar \
-  python3-setuptools zoxide luarocks lf shellcheck python3-venv meson eza stow apt-transport-https cmdtest qalc libtool libtool-bin ninja-build \
-  autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 \
-  brightnessctl xbacklight libpam0g-dev -y
+nala install -y \
+  direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
+  python3 unzip tar python3-setuptools zoxide luarocks lf shellcheck python3-venv meson eza stow apt-transport-https cmdtest \
+  qalc libtool libtool-bin ninja-build autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc \
+  docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 brightnessctl xbacklight libpam0g-dev \
+  zsh zsh-syntax-highlighting zsh-autosuggestions \
+  network-manager network-manager-gnome network-manager-config-connectivity-debian \
+  ripgrep fd-find neovim \
+  npm flatpak golang-go python3-pip pipx \
+  xdg-user-dirs xdg-user-dirs-gtk \
+  fastfetch cowsay cmatrix tty-clock lolcat \
+  udiskie udisks2 \
+  htop \
+  bash bash-completion \
+  openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-19-jdk openjdk-19-jre \
+  openjdk-20-jdk openjdk-20-jre gradle \
+  transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin \
+  polybar galculator wezterm bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+  xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted \
+  cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg \
+  qt5ct qt5-style-plugins lxappearance \
+  thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller \
+  mangohud vkbasalt goverlay \
+  xwallpaper flameshot lxpolkit rofi i3lock-fancy xcowsay \
+  awesome \
+  libreoffice zathura \
+  mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-samples firmware-misc-nonfree \
+  fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono \
+  ufw
 
-echo "#########"
-echo "## Zsh ##"
-echo "#########"
-nala install zsh zsh-syntax-highlighting zsh-autosuggestions -y
-
-echo "##################"
-echo "## Wifi Manager ##"
-echo "##################"
-nala install network-manager network-manager-gnome network-manager-config-connectivity-debian -y
-
-echo "##################"
-echo "## Text Editors ##"
-echo "##################"
-nala install ripgrep fd-find neovim -y
-
-echo "##################"
-echo "## Pkg Managers ##"
-echo "##################"
-nala install npm flatpak golang-go python3-pip pipx -y
-
-echo "###############"
-echo "## XDG Stuff ##"
-echo "###############"
-nala install xdg-user-dirs xdg-user-dirs-gtk -y
-
-echo "###############"
-echo "## Fun Stuff ##"
-echo "###############"
-nala install fastfetch cowsay cmatrix tty-clock lolcat -y
-
-echo "###############"
-echo "## USB Utils ##"
-echo "###############"
-nala install udiskie udisks2 -y
-
-echo "######################"
-echo "## Resource Monitor ##"
-echo "######################"
-nala install btop bpytop htop -y
-
-echo "############################"
-echo "## Installing Shell Stuff ##"
-echo "############################"
-nala install bash bash-completion -y
-
-echo "#####################"
-echo "## Installing Java ##"
-echo "#####################"
-nala install openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-8-jdk openjdk-8-jre openjdk-19-jdk openjdk-19-jre openjdk-20-jdk openjdk-20-jre gradle -y
-
-echo "#################################"
-echo "## Installing Bittorrent Stuff ##"
-echo "#################################"
-nala install transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin -y
-
-echo "#############################"
-echo "## Installing GUI Programs ##"
-echo "#############################"
-nala install polybar galculator wezterm bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
-  xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted -y
-
-echo "##############################"
-echo "## Installing VIA (Keycron) ##"
-echo "##############################"
-wget -q https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.deb
-nala install ./via-3.0.0-linux.deb -y
-rm -v ./via-3.0.0-linux.deb
-
-echo "############################"
-echo "## Installing Media Stuff ##"
-echo "############################"
-nala install cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg -y
-
-echo "############################"
-echo "## Installing Theme Stuff ##"
-echo "############################"
-nala install qt5ct qt5-style-plugins lxappearance -y
-
-echo "###########################"
-echo "## Installing File Stuff ##"
-echo "###########################"
-nala install thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller -y
-
-echo "###########################"
-echo "## Installing Game Stuff ##"
-echo "###########################"
-nala install mangohud vkbasalt goverlay -y
-
-echo "##################################"
-echo "## Installing Things For Any WM ##"
-echo "##################################"
-nala install xwallpaper flameshot lxpolkit rofi i3lock-fancy xcowsay-y
-
-echo "#################################"
-echo "## Installing Things For Picom ##"
-echo "#################################"
-nala install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev \
-  libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl-dev libegl-dev \
-  libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev libx11-xcb1 libxcb-util-dev libxcb-util0-dev libxcb-util1 -y 
-
-echo "##########################"
-echo "## Installing AwesomeWM ##"
-echo "##########################"
-nala install awesome -y 
-
-echo "#############################"
-echo "## Installing Office Stuff ##"
-echo "#############################"
-nala install libreoffice zathura -y
-
-echo "##########################"
-echo "## Installing A Browser ##"
-echo "##########################"
-curl -fsSL https://ppa.floorp.app/KEY.gpg | gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
-curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.floorp.app/Floorp.list'
-nala update
-nala install floorp
-
-echo "#####################"
-echo "## Installing SDDM ##"
-echo "#####################"
-nala install sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2 -y
-nala purge kded5 -y
-mkdir /usr/share/sddm/themes
-tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
-mv sddm.conf /etc/sddm.conf
-systemctl enable sddm.service 
-systemctl set-default graphical.target
-
-echo "########################"
-echo "## Installing Drivers ##"
-echo "########################"
-nala install mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-samples firmware-misc-nonfree -y
-
-echo "######################"
-echo "## Installing Fonts ##"
-echo "######################"
-nala install fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono -y
-
+# Configure Firewall
 echo "####################"
-echo "## Installing UFW ##"
+echo "## Configuring UFW ##"
 echo "####################"
-nala install ufw -y
-sleep 2.5
 ufw limit 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
@@ -180,7 +67,24 @@ ufw default allow outgoing
 ufw enable
 systemctl enable ufw
 
+# Install Floorp Browser
+echo "##########################"
+echo "## Installing Floorp ##"
+echo "##########################"
+curl -fsSL https://ppa.floorp.app/KEY.gpg | gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
+curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.floorp.app/Floorp.list'
+nala update && nala install -y floorp
+
+# Install SDDM
 echo "#####################"
-echo "## Starship Prompt ##"
+echo "## Installing SDDM ##"
 echo "#####################"
-curl -sS https://starship.rs/install.sh | sh
+nala install -y sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
+nala purge -y kded5
+mkdir -p /usr/share/sddm/themes
+tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
+mv sddm.conf /etc/sddm.conf
+systemctl enable sddm.service 
+systemctl set-default graphical.target
+
+echo "Done With Install"
