@@ -431,36 +431,4 @@ beautiful.notification_opacity = "100"
 beautiful.notification_icon_size = 80
 
 -- Startup Stuff
--- awful.spawn.with_shell("~/.config/awesome/autostart.sh")
--- awful.spawn.with_shell("~/.config/awesome/autostart")
--- awful.spawn.with_shell("~/.config/awesome/autostart.py")
-
--- Function to kill and restart programs
-local function restart_programs()
-	local programs = {
-		"solaar -w hide",
-		"sxhkd -c " .. os.getenv("XDG_CONFIG_HOME") .. "/awesome/sxhkdrc",
-		"picom -c " .. os.getenv("XDG_CONFIG_HOME") .. "/awesome/picom.conf",
-		"lxpolkit",
-		"greenclip daemon",
-		"xautolock -time 15 -locker locker",
-	}
-
-	-- Kill existing instances
-	for _, prog in ipairs(programs) do
-		local proc_name = prog:match("^[^ ]+") -- Extract process name
-		awful.spawn.with_shell("killall -q " .. proc_name)
-	end
-
-	-- Start new instances
-	for _, prog in ipairs(programs) do
-		local proc_name = prog:match("^[^ ]+")
-		-- Check if command exists
-		awful.spawn.with_shell("command -v " .. proc_name .. " >/dev/null 2>&1 && " .. prog .. " &")
-	end
-end
-
--- Run the function on startup
-restart_programs()
-
-awful.spawn.with_shell("~/.config/polybar/polybar-startup-scripts/awesome-polybar.sh")
+awful.spawn.with_shell("~/.config/awesome/autostart.sh")

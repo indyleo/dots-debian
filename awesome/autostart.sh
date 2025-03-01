@@ -1,31 +1,39 @@
 #!/bin/env bash
 
-# Fix Mouse Cursor On Startup 
-xsetroot -cursor_name left_ptr
+# Check if HDMI-0 is connected
+if xrandr -q | grep -q 'HDMI-0 connected'; then
+  programs=(
+    "solaar -w hide"
+    "sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc"
+    "picom -c $XDG_CONFIG_HOME/awesome/picom.conf"
+    "lxpolkit"
+    "greenclip daemon"
+    "xautolock -time 15 -locker locker"
+    "polybar awesome_bar"
+    "polybar awesome_bar_laptop"
+  )
+else
+  programs=(
+    "solaar -w hide"
+    "sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc"
+    "picom -c $XDG_CONFIG_HOME/awesome/picom.conf"
+    "lxpolkit"
+    "greenclip daemon"
+    "xautolock -time 15 -locker locker"
+    "polybar awesome_bar_laptop"
+  )
+fi
 
-# Set Keyboard Layout
-setxkbmap -layout us
+# Kill existing instances
+for prog in "${programs[@]}"; do
+  proc_name=$(echo "$prog" | awk '{print $1}')
+  killall -q "$proc_name"
+done
 
-# Monitor Stop Turning Off
-xset s off -dpms
-
-# Killing Of Programs
-killall -q solaar
-killall -q picom
-killall -q sxhkd
-killall -q greenclip
-killall -q xautolock
-
-# Starting Programs
-picom -c $XDG_CONFIG_HOME/awesome/picom.conf &
-sxhkd -c $XDG_CONFIG_HOME/awesome/sxhkdrc &
-lxpolkit &
-greenclip daemon &
-solaar -w hide &
-
-# Setting Up Autolock
-xautolock -time 15 -locker locker &
-
-# Wallpaper
-xwalr ~/Pictures/Wallpapers
-# xwalr ~/Pictures/wallpapers
+# Start new instances
+for prog in "${programs[@]}"; do
+  proc_name=$(echo "$prog" | awk '{print $1}')
+  if command -v "$proc_name" &>/dev/null; then
+    $prog &
+  fi
+done

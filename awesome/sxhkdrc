@@ -6,11 +6,7 @@ super + Escape
 
 # Terminal
 super + Return
- wezterm start 
-
-# Nvim
-super + alt + e
-	wezterm start nvim
+  wezterm start 
 
 # Run Prompt
 super + r
@@ -19,14 +15,6 @@ super + r
 # Window Prompt
 super + Tab
 	rofi -show window
-
-# Rofi Emoji
-super + ctrl + e
-  rofi -show emoji
-
-# Rofi Calc
-super + shift + c
-  rofi -show calc -calc-command "echo -n '{result}' | xclip"
 
 # Power Menu
 super + p
@@ -49,25 +37,13 @@ super + f
 super + b
   floorp
 
-# Rhythmbox 
-super + ctrl + r
-  rhythmbox
+# Music 
+super + m
+  flatpak run io.github.dweymouth.supersonic
 
 # Discord 
 super + d
   flatpak run dev.vencord.Vesktop
-
-# Relanching Picom 
-super + shift + e
-  pkill -USR1 -x picom && notify-send "Relanching Picom..."
-
-# Killing Picom
-super + shift + p
-  pkill picom && notify-send "Killed Picom..."
-
-# Starting Picom
-super + ctrl + p
-  picom -b && notify-send "Starting Picom..."
 
 # Screenshot 
 Print
