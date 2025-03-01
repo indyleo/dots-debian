@@ -7,21 +7,21 @@ builddir=$(pwd)
 
 # Function to create directories
 create_dirs() {
-    echo "########################################"
-    echo "## Adding Some Directories, And Files ##"
-    echo "########################################"
-    mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
-             ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
-             ~/Documents ~/Documents/Markdown ~/Downloads ~/Music \
-             ~/Pictures ~/Public ~/Videos/OBS
-    touch ~/.cache/history-zsh
-}
+  echo "########################################"
+  echo "## Adding Some Directories, And Files ##"
+  echo "########################################"
+  mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
+    ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
+    ~/Documents ~/Documents/Markdown ~/Downloads ~/Music \
+    ~/Pictures ~/Public ~/Videos/OBS
+      touch ~/.cache/history-zsh
+    }
 
 # Function to clone repositories
 git_clone() {
-    local repo="$1"
-    local dest="$2"
-    [ -d "$dest" ] || git clone --depth=1 "$repo" "$dest"
+  local repo="$1"
+  local dest="$2"
+  [ -d "$dest" ] || git clone --depth=1 "$repo" "$dest"
 }
 
 # Clone repositories
@@ -66,11 +66,11 @@ bob use stable
 
 # Function to download and extract fonts
 download_font() {
-    local font_name="$1"
-    wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/${font_name}.zip"
-    unzip -n "${font_name}.zip" -d ~/.local/share/fonts
-    rm -v "${font_name}.zip"
-    echo "Donw with ${font_name}"
+  local font_name="$1"
+  wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/${font_name}.zip"
+  unzip -n "${font_name}.zip" -d ~/.local/share/fonts
+  rm -v "${font_name}.zip"
+  echo "Donw with ${font_name}"
 }
 
 echo "###########################"

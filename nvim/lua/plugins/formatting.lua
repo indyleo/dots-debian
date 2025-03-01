@@ -19,6 +19,11 @@ return {
 				-- Langs
 				lua = { "stylua" },
 				python = { "isort", "black" },
+
+				-- Script
+				zsh = { "beautysh" },
+				bash = { "shellharden", "beautysh" },
+				sh = { "beautysh" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
