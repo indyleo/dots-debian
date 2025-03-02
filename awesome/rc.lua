@@ -323,10 +323,10 @@ awful.rules.rules = {
 	-- Polybar
 	{ rule = { instance = "polybar" }, properties = { focusable = false, border_width = false } },
 
-	-- Discord
+	-- Vesktop
 	{ rule = { instance = "vesktop" }, properties = { tag = "MSG" } },
 
-	-- Rhythmbox
+	--
 	{ rule = { instance = "" }, properties = { tag = "MUS" } },
 
 	-- Virt-manager
@@ -350,10 +350,10 @@ awful.rules.rules = {
 	-- Battel.net
 	{ rule = { instance = "steam_app_0" }, properties = { tag = "GAME" } },
 
-	-- Brave
+	-- Floorp
 	{ rule = { instance = "floorp" }, properties = { tag = "WWW" } },
 
-	-- Kitty
+	-- Wezterm
 	{ rule = { instance = "wezterm" }, properties = { tag = "DEV" } },
 
 	-- Mpv
