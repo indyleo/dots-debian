@@ -1,0 +1,63 @@
+#!/bin/env bash
+#!/bin/bash
+
+# Enable error handling
+set -e
+
+# Define cache directory
+CACHE_DIR="$HOME/.cache/chtsh"
+mkdir -p "$CACHE_DIR"
+
+# Function to fetch list with caching
+fetch_list() {
+    local url=$1
+    local cache_file="$CACHE_DIR/$(echo "$url" | md5sum | cut -d' ' -f1)"
+
+    # If cache exists and is recent (less than 1 day old), use it
+    if [[ -f "$cache_file" && $(find "$cache_file" -mtime -1 2>/dev/null) ]]; then
+        cat "$cache_file"
+    else
+        curl -s "$url" | tee "$cache_file"
+    fi
+}
+
+# Default topic constraint (none)
+topic_constraint="none"
+
+# Parse command-line arguments
+while [[ "$#" -gt 0 ]]; do
+    case "$1" in
+        l|lang)
+            topic_constraint="lang"
+            shift
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+done
+
+# Select topic based on constraint
+if [[ "$topic_constraint" == "lang" ]]; then
+    # Fetch programming languages dynamically
+    topic=$(fetch_list "https://cheat.sh/:list" | grep -E "^(c|cpp|python|go|rust|java|javascript|typescript)$" | fzf)
+else
+    # Fetch all available topics
+    topic=$(fetch_list "https://cheat.sh/:list" | fzf)
+fi
+
+# Exit if no topic was selected
+if [[ -z "$topic" ]]; then
+    exit 0
+fi
+
+# Fetch available sheets for the selected topic
+sheet=$(fetch_list "https://cheat.sh/$topic/:list" | fzf)
+
+# Display the selected cheat sheet
+if [[ -z "$sheet" ]]; then
+    curl -s "https://cheat.sh/$topic?style=rrt" | less -R
+else
+    curl -s "https://cheat.sh/$topic/$sheet?style=rrt" | less -R
+fi

@@ -1,0 +1,14 @@
+#!/bin/env bash
+
+printf "File Name: "
+read -r ans
+file=$HOME/Scripts/$ans
+if [ -d "$HOME/Scripts" ]; then
+    if [ -e "$HOME/Scripts/$ans" ]; then
+        $EDITOR "$file"
+    else
+        echo "#!/bin/env bash" >> "$file"
+        chmod a+x "$file"
+        $EDITOR "$file"
+    fi
+fi

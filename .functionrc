@@ -171,60 +171,6 @@ lfcd() {
     fi
 }
 
-mkscript() {
-    printf "File Name: "
-    read -r ans
-    file=$HOME/Scripts/$ans
-    if [ -d "$HOME/Scripts" ]; then
-        if [ -e "$HOME/Scripts/$ans" ]; then
-            $EDITOR "$file"
-        else
-            echo "#!/bin/env bash" >> "$file"
-            chmod a+x "$file"
-            $EDITOR "$file"
-        fi
-    fi
-}
-
-# Documentation
-chtsh ()
-{
-    # Default topic constraint
-    TOPIC_CONSTRAINT="none"
-
-    # Parse command-line arguments
-    while [[ $# -gt 0 ]]; do
-        case $1 in
-            l|lang)
-                TOPIC_CONSTRAINT="lang"
-                ;;
-        esac
-        shift
-    done
-
-    # Select topic based on constraint
-    if [[ "$TOPIC_CONSTRAINT" == "lang" ]]; then
-        TOPIC=$(printf "go\nrust\nc" | fzf)
-    else
-        TOPIC=$(curl -s cht.sh/:list | fzf)
-    fi
-
-    # Exit if no topic is selected
-    if [[ -z "$TOPIC" ]]; then
-        exit 0
-    fi
-
-    # Fetch and select cheat sheet options
-    SHEET=$(curl -s cht.sh/$TOPIC/:list | fzf)
-
-    # Display selected sheet or the main topic
-    if [[ -z "$SHEET" ]]; then
-        curl -s "cht.sh/$TOPIC?style=rrt" | less -R
-    else
-        curl -s "cht.sh/$TOPIC/$SHEET?style=rrt" | less -R
-    fi
-
-}
 # YT Downloading
 Get-YoutubeContent() {
     local url="$1"
