@@ -127,8 +127,5 @@ alias aptug='sudo apt upgrade'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
 
-# Ssh Stuff
-alias mcserver='ssh -i ~/.ssh/id_rsa ubuntu@155.248.223.126'
-
 # For Vim Users
 # vim:ft=sh
