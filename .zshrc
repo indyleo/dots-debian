@@ -72,12 +72,12 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases and functions if exists.
-[ -f "$HOME/.aliasrc" ] && source "$HOME/.aliasrc"
-[ -f "$HOME/.functionrc" ] && source "$HOME/.functionrc"
+[[ -f "$HOME/.aliasrc" ]] && source "$HOME/.aliasrc"
+[[ -f "$HOME/.functionrc" ]] && source "$HOME/.functionrc"
 
 # Bindkeys
 bindkey -s '^x' 'lc\n'
-bindkey -s '^z' 'tmuxhelper\n'
+bindkey -s '^a' 'tmuxhelper\n'
 
 # Starship prompt
 eval "$(starship init zsh)"

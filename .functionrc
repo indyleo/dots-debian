@@ -4,7 +4,7 @@ up() {
     local limit="$1"
 
     # Default to limit of 1
-    if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+    if [[ -z "$limit" ]] || [[ "$limit" -le 0 ]]; then
         limit=1
     fi
 
@@ -20,7 +20,7 @@ up() {
 
 # Copy and go to the directory
 cpg() {
-    if [ -d "$2" ]; then
+    if [[ -d "$2" ]]; then
         cp "$1" "$2" && cd "$2"
     else
         cp "$1" "$2"
@@ -29,7 +29,7 @@ cpg() {
 
 # Move and go to the directory
 mvg() {
-    if [ -d "$2" ]; then
+    if [[ -d "$2" ]]; then
         mv "$1" "$2" && cd "$2"
     else
         mv "$1" "$2"
@@ -43,7 +43,7 @@ mkdirg() {
 }
 
 # Better Pkg Manager
-if [ -f /usr/bin/apt ]; then
+if [[ -f /usr/bin/apt ]]; then
     apt() {
         command nala "$@"
     }
@@ -55,12 +55,20 @@ if [ -f /usr/bin/apt ]; then
             command sudo "$@"
         fi
     }
-elif [ -f /usr/bin/pacman ]; then
+elif [[ -f /usr/bin/pacman ]]; then
     pac() {
+        if [[ -z "$1" ]]; then
+            command pacman -h
+            return
+        fi
+
         case "$1" in
-            -S|-Syu|-Rns) command sudo pacman "$@" ;;
-            "") command pacman -h ;;
-            *) command pacman "$@" ;;
+            -S|-Sy|-Syu|-R|-Rns|-U|-D|--clean)
+                command sudo pacman "$@"
+                ;;
+            *)
+                command pacman "$@"
+                ;;
         esac
     }
 else
@@ -69,12 +77,12 @@ fi
 
 # Archive Extraction
 extract() {
-    if [ "$#" -lt 1 ]; then
+    if [[ "$#" -lt 1 ]]; then
         echo "Usage: extract <archive_file>"
         return 1
     fi
 
-    if [ -f "$1" ]; then
+    if [[ -f "$1" ]]; then
         case $1 in
             *.tar.bz2) tar xjf "$1"    ;;
             *.tar.gz)  tar xzf "$1"    ;;
@@ -99,7 +107,7 @@ extract() {
 
 # Archiving
 archive() {
-    if [ "$#" -lt 2 ]; then
+    if [[ "$#" -lt 2 ]]; then
         echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> [file2 ... fileN]"
         return 1
     fi
@@ -107,7 +115,7 @@ archive() {
     archive_name="$1"
     shift
 
-    if [ -e "$archive_name" ]; then
+    if [[ -e "$archive_name" ]]; then
         echo "Error: Archive '$archive_name' already exists."
         return 1
     fi
@@ -133,7 +141,7 @@ archive() {
             ;;
     esac
 
-    if [ $? -eq 0 ]; then
+    if [[ $? -eq 0 ]]; then
         echo "Success: Archive created: $archive_name"
     else
         echo "Error: Failed to create archive."
@@ -160,10 +168,10 @@ lfcd() {
     tmp="$(mktemp)"
     # `command` is needed in case `lfcd` is aliased to `lf`
     command lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
+    if [[ -f "$tmp" ]]; then
         dir="$(cat "$tmp")"
         command rm -f "$tmp"
-        if [ -d "$dir" ]; then
+        if [[ -d "$dir" ]]; then
             if [ "$dir" != "$(pwd)" ]; then
                 cd "$dir"
             fi
