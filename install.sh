@@ -42,7 +42,7 @@ nala install -y \
     openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-19-jdk openjdk-19-jre \
     openjdk-20-jdk openjdk-20-jre gradle \
     transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin \
-    polybar galculator wezterm bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+    polybar galculator alacritty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
     xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted \
     cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg \
     qt5ct qt5-style-plugins lxappearance \

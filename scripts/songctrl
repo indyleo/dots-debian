@@ -4,41 +4,41 @@ player="$2"
 cutpoint="$3"
 
 song_togglepause(){
-  playerctl play-pause --player="$player"
+    playerctl play-pause --player="$player"
 }
 
 song_skip(){
-  playerctl next --player="$player"
+    playerctl next --player="$player"
 }
 
-song_backskip(){
-  playerctl previous --player="$player"
+song_previous(){
+    playerctl previous --player="$player"
 }
 
 song_title(){
-  # Get the playback status
-  status=$(playerctl status --player="$player")
+    # Get the playback status
+    status=$(playerctl status --player="$player")
 
-  # Check if the status is "Playing"
-  if [ "$status" = "Playing" ]; then
-      # Get the title and cut off after 15 letters
-      title=$(playerctl metadata title --player="$player" | cut -c 1-"$cutpoint")
-      echo "$title"
-  else
-      # Set the title to "Not Playing/Paused"
-      echo "Not Playing/Paused"
-  fi
+    # Check if the status is "Playing"
+    if [ "$status" = "Playing" ]; then
+        # Get the title and cut off after 15 letters
+        title=$(playerctl metadata title --player="$player" | cut -c 1-"$cutpoint")
+        echo "$title"
+    else
+        # Set the title to "Not Playing/Paused"
+        echo "Not Playing/Paused"
+    fi
 }
 
 case "$1" in
-  --togglepause)
-    song_togglepause ;;
-  --skip)
-    song_skip ;;
-  --backskip)
-    song_backskip ;;
-  --songtitle)
-    song_title ;;
-  *)
-    echo "Unkown Arg" ;;
+    --togglepause)
+        song_togglepause ;;
+    --skip)
+        song_skip ;;
+    --previous)
+        song_previous ;;
+    --songtitle)
+        song_title ;;
+    *)
+        echo "Unkown Arg" ;;
 esac

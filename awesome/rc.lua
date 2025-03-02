@@ -62,7 +62,7 @@ awful.layout.layouts = {
 
 -- Scratchpads
 local term_scratch = bling.module.scratchpad({
-	command = "wezterm cli --class term start",
+	command = "alacritty --class term",
 	rule = { instance = "term" },
 	sticky = true,
 	autoclose = true,
@@ -73,7 +73,7 @@ local term_scratch = bling.module.scratchpad({
 })
 
 local lf_scratch = bling.module.scratchpad({
-	command = "wezterm cli --class lf start lf",
+	command = "alacritty -e lf --class lf",
 	rule = { instance = "lf" },
 	sticky = true,
 	autoclose = true,
@@ -84,7 +84,7 @@ local lf_scratch = bling.module.scratchpad({
 })
 
 local mixer_scratch = bling.module.scratchpad({
-	command = "wezterm cli --class mixer start pulsemixer",
+	command = "alacritty -e pulsemixer --class mixer",
 	rule = { instance = "mixer" },
 	sticky = true,
 	autoclose = true,
@@ -432,3 +432,4 @@ beautiful.notification_icon_size = 80
 
 -- Startup Stuff
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
+awful.spawn.with_shell("xwalr ~/Pictures/Wallpaper")

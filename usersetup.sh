@@ -92,7 +92,7 @@ echo "########################################"
 mkdir -pv ~/.config
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
-mv -v xfce4 Thunar polybar fastfetch git nvim lf awesome picom wezterm rofi starship.toml mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
+mv -v xfce4 Thunar polybar fastfetch git nvim lf awesome picom alacritty rofi starship.toml mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/

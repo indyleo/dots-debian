@@ -38,7 +38,7 @@ backward() {
 case "$1" in
     --togglepause) togglepause ;;
     --skip) next ;;
-    --backskip) previous ;;
+    --previous) previous ;;
     --forward) forward ;;
     --backward) backward ;;
     *)

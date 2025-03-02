@@ -6,7 +6,7 @@ super + Escape
 
 # Terminal
 super + Return
-  wezterm start 
+  alacritty 
 
 # Run Prompt
 super + r
@@ -74,27 +74,23 @@ XF86AudioMute
 
 # Music
 super + {Right,Left}
-  songctrl {--skip,--backskip} rhythmbox
+  songctrl {--skip,--previous}
 
 super + Pause
-  songctrl --togglepause rhythmbox
+  songctrl --togglepause
 
 XF86Audio{Next,Prev}
-  songctrl {--skip,--backskip} rhythmbox
+  songctrl {--skip,--previous}
 
 XF86AudioPlay
-  songctrl --togglepause rhythmbox
+  songctrl --togglepause
 
 # Video
 super + shift + {Right,Left}
-   vidctrl {--skip,--backskip}
+   vidctrl {--skip,--previous}
 
 super + shift + {Up,Down}
    vidctrl {--forward,--backward}
 
 super + shift + Pause
   vidctrl --togglepause
-
-# Change bg
-super + shift + {b,g}
-	xwalr {~/Pictures/Wallpapers,~/Pictures/wallpapers}
