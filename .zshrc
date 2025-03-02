@@ -79,8 +79,11 @@ bindkey '^e' edit-command-line
 bindkey -s '^x' 'lc\n'
 bindkey -s '^a' 'tmuxhelper\n'
 
-# Starship prompt
-eval "$(starship init zsh)"
+# OMP prompt
+eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME-$HOME/.config}/ohmyposh/base.toml)"
+
+# Fzf
+source <(fzf --zsh)
 
 # Search history
 bindkey '^[[A' history-substring-search-up

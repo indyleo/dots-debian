@@ -66,12 +66,17 @@ echo "############"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.profile
 
-echo "###########################"
-echo "## Neovim & Prompt Setup ##"
-echo "###########################"
-cargo install bob-nvim starship
+echo "##################"
+echo "## Neovim Setup ##"
+echo "##################"
+cargo install bob-nvim
 bob install stable
 bob use stable
+
+echo "##################"
+echo "## Oh My Posh ##"
+echo "##################"
+curl -s https://ohmyposh.dev/install.sh | bash -s
 
 # Function to download and extract fonts
 download_font() {
@@ -100,7 +105,7 @@ echo "########################################"
 mkdir -pv ~/.config
 git_clone https://github.com/indyleo/Wallpapers.git ~/Pictures/Wallpapers/
 git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
-mv -v xfce4 Thunar polybar fastfetch git nvim lf awesome qtile alacritty rofi starship.toml mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
+mv -v xfce4 Thunar polybar fastfetch git nvim lf awesome qtile alacritty rofi ohmyposh mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
 mv -v "$builddir"/scripts ~/.local/
