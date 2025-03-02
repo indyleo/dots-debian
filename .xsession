@@ -8,28 +8,27 @@ nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullComp
 
 # Check for HDMI connection and configure display settings accordingly
 if xrandr -q | grep -q 'HDMI-0 connected'; then
-  xrandr --output HDMI-0 --mode 1920x1080 --rate 75.00 --primary \
-         --output eDP-1-1 --right-of HDMI-0 --mode 1920x1080 --rate 120.00
+    xrandr --output HDMI-0 --mode 1920x1080 --rate 75.00 --primary \
+        --output eDP-1-1 --right-of HDMI-0 --mode 1920x1080 --rate 120.00
 else
-  xrandr --auto
+    xrandr --auto
 fi
 
-# Check for the selected window manager in ~/.wm_session or use a default
-WMC="${XDG_CONFIG_HOME:-$HOME/.config}/wm_session"
-if [[ -f "$WMC" ]]; then
-  WM="$(cat "$WMC")"
-else
-  WM="awesome"  # Default if no session file exists
+# Ensure a window manager argument is provided
+if [[ -z "$1" ]]; then
+    echo "Error: No window manager specified." >&2
+    echo "Usage: /etc/X11/Xsession <window_manager>" >&2
+    exit 1
 fi
 
-# Launch the selected window manager
+WM="$1"
+
+# Launch the specified window manager
 case "$WM" in
-  awesome) exec awesome ;;
-  qtile) exec "$HOME/.local/bin/qtile" start ;;
-  dwm) exec dwm ;;
-  xmonad) exec xmonad-session ;;
-  *)
-    echo "Invalid window manager: $WM. Defaulting to awesome."
-    exec awesome
-    ;;
+    awesome) exec awesome ;;
+    qtile) exec qtile start ;;
+    *)
+        echo "Error: Invalid window manager '$WM'." >&2
+        exit 1
+        ;;
 esac
