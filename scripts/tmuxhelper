@@ -61,7 +61,5 @@ function Tmux_Prompt() {
 # Check if already in a tmux session and call the function accordingly
 if [ -z "$TMUX" ]; then
     Tmux_Prompt
-else
-    printf "You are already in a tmux session. Returning to Shell.\n"
 fi
 
