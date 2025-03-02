@@ -82,9 +82,6 @@ bindkey -s '^a' 'tmuxhelper\n'
 # OMP prompt
 eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME-$HOME/.config}/ohmyposh/base.toml)"
 
-# Fzf
-source <(fzf --zsh)
-
 # Search history
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
