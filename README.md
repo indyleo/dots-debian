@@ -40,6 +40,18 @@ To find your wlan interface for polybar do 'nmcli' and the interface u are conne
 
 # How To Install
 
-1. Run install.sh as root "sudo ./install.sh"
-2. After install.sh is done run complie.sh (make sure to not have it as root)
-3. should be done then
+1. Run install.sh as root
+
+```bash
+sudo ./install.sh
+```
+
+2. After install.sh is done run usersetup.sh (make sure to not have it as root)
+
+```bash
+./usersetup.sh
+```
+
+3. Reboot your computer
+
+# Enjoy
