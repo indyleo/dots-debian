@@ -54,6 +54,12 @@ echo "#################"
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
 
+
+echo "#####################"
+echo "## Python Programs ##"
+echo "#####################"
+pipx installl spotdl
+
 echo "############"
 echo "## Rustup ##"
 echo "############"

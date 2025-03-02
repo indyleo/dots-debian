@@ -1,158 +1,158 @@
 # Easier Navigation
 up() {
-  local d=""
-  local limit="$1"
+    local d=""
+    local limit="$1"
 
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
+    # Default to limit of 1
+    if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+        limit=1
+    fi
 
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
+    for ((i=1;i<=limit;i++)); do
+        d="../$d"
+    done
 
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
+    # perform cd. Show error if cd fails
+    if ! cd "$d"; then
+        echo "Couldn't go up $limit dirs.";
+    fi
 }
 
 # Copy and go to the directory
 cpg() {
-	if [ -d "$2" ]; then
-		cp "$1" "$2" && cd "$2"
-	else
-		cp "$1" "$2"
-	fi
+    if [ -d "$2" ]; then
+        cp "$1" "$2" && cd "$2"
+    else
+        cp "$1" "$2"
+    fi
 }
 
 # Move and go to the directory
 mvg() {
-	if [ -d "$2" ]; then
-		mv "$1" "$2" && cd "$2"
-	else
-		mv "$1" "$2"
-	fi
+    if [ -d "$2" ]; then
+        mv "$1" "$2" && cd "$2"
+    else
+        mv "$1" "$2"
+    fi
 }
 
 # Create and go to the directory
 mkdirg() {
-	mkdir -p "$1"
-	cd "$1"
+    mkdir -p "$1"
+    cd "$1"
 }
 
-# Better Pkg Manager 
+# Better Pkg Manager
 if [ -f /usr/bin/apt ]; then
-  apt() { 
-    command nala "$@"
-  }
-  sudo() {
-    if [ "$1" = "apt" ]; then
-      shift
-      command sudo nala "$@"
-    else
-      command sudo "$@"
-    fi
-  }
+    apt() {
+        command nala "$@"
+    }
+    sudo() {
+        if [ "$1" = "apt" ]; then
+            shift
+            command sudo nala "$@"
+        else
+            command sudo "$@"
+        fi
+    }
 elif [ -f /usr/bin/pacman ]; then
-  pac() {
-    case "$1" in
-      -S|-Syu|-Rns) command sudo pacman "$@" ;;
-      "") command pacman -h ;;
-      *) command pacman "$@" ;;
-    esac
-  }
+    pac() {
+        case "$1" in
+            -S|-Syu|-Rns) command sudo pacman "$@" ;;
+            "") command pacman -h ;;
+            *) command pacman "$@" ;;
+        esac
+    }
 else
-  echo "No known package manager found"
+    echo "No known package manager found"
 fi
 
 # Archive Extraction
 extract() {
-  if [ "$#" -lt 1 ]; then
-    echo "Usage: extract <archive_file>"
-    return 1
-  fi
+    if [ "$#" -lt 1 ]; then
+        echo "Usage: extract <archive_file>"
+        return 1
+    fi
 
-  if [ -f "$1" ]; then
-    case $1 in
-      *.tar.bz2) tar xjf "$1"    ;;
-      *.tar.gz)  tar xzf "$1"    ;;
-      *.bz2)     bunzip2 "$1"    ;;
-      *.rar)     unrar x "$1"    ;;
-      *.gz)      gunzip "$1"     ;;
-      *.tar)     tar xf "$1"     ;;
-      *.tbz2)    tar xjf "$1"    ;;
-      *.tgz)     tar xzf "$1"    ;;
-      *.zip)     unzip "$1"      ;;
-      *.Z)       uncompress "$1" ;;
-      *.7z)      7z x "$1"       ;;
-      *.deb)     ar x "$1"       ;;
-      *.tar.xz)  tar xf "$1"     ;;
-      *.tar.zst) unzstd "$1"     ;;
-      *)         echo "'$1' cannot be extracted via extract" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+    if [ -f "$1" ]; then
+        case $1 in
+            *.tar.bz2) tar xjf "$1"    ;;
+            *.tar.gz)  tar xzf "$1"    ;;
+            *.bz2)     bunzip2 "$1"    ;;
+            *.rar)     unrar x "$1"    ;;
+            *.gz)      gunzip "$1"     ;;
+            *.tar)     tar xf "$1"     ;;
+            *.tbz2)    tar xjf "$1"    ;;
+            *.tgz)     tar xzf "$1"    ;;
+            *.zip)     unzip "$1"      ;;
+            *.Z)       uncompress "$1" ;;
+            *.7z)      7z x "$1"       ;;
+            *.deb)     ar x "$1"       ;;
+            *.tar.xz)  tar xf "$1"     ;;
+            *.tar.zst) unzstd "$1"     ;;
+            *)         echo "'$1' cannot be extracted via extract" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 # Archiving
 archive() {
-  if [ "$#" -lt 2 ]; then
-    echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> [file2 ... fileN]"
-    return 1
-  fi
-
-  archive_name="$1"
-  shift
-
-  if [ -e "$archive_name" ]; then
-    echo "Error: Archive '$archive_name' already exists."
-    return 1
-  fi
-
-  case "$archive_name" in
-    *.tar.gz)
-      tar -czf "$archive_name" "$@"
-      ;;
-    *.zip)
-      zip -r "$archive_name" "$@"
-      ;;
-    *.rar)
-      if command -v rar > /dev/null; then
-        rar a "$archive_name" "$@"
-      else
-        echo "Error: 'rar' command not found. Please install RAR to create .rar archives."
+    if [ "$#" -lt 2 ]; then
+        echo "Usage: archive <archive_name.tar.gz|archive_name.zip|archive_name.rar> <file1> [file2 ... fileN]"
         return 1
-      fi
-      ;;
-    *)
-      echo "Error: Unsupported archive format. Supported formats are .tar.gz, .zip, and .rar."
-      return 1
-      ;;
-  esac
+    fi
 
-  if [ $? -eq 0 ]; then
-    echo "Success: Archive created: $archive_name"
-  else
-    echo "Error: Failed to create archive."
-    return 1
-  fi
+    archive_name="$1"
+    shift
+
+    if [ -e "$archive_name" ]; then
+        echo "Error: Archive '$archive_name' already exists."
+        return 1
+    fi
+
+    case "$archive_name" in
+        *.tar.gz)
+            tar -czf "$archive_name" "$@"
+            ;;
+        *.zip)
+            zip -r "$archive_name" "$@"
+            ;;
+        *.rar)
+            if command -v rar > /dev/null; then
+                rar a "$archive_name" "$@"
+            else
+                echo "Error: 'rar' command not found. Please install RAR to create .rar archives."
+                return 1
+            fi
+            ;;
+        *)
+            echo "Error: Unsupported archive format. Supported formats are .tar.gz, .zip, and .rar."
+            return 1
+            ;;
+    esac
+
+    if [ $? -eq 0 ]; then
+        echo "Success: Archive created: $archive_name"
+    else
+        echo "Error: Failed to create archive."
+        return 1
+    fi
 }
 
 
 # Be Lazy With Git
 lazygall() {
-	git add .
-	git commit -m "$1"
-	git push
+    git add .
+    git commit -m "$1"
+    git push
 }
 
 lazygup() {
-	git add -u
-	git commit -m "$1"
-	git push
+    git add -u
+    git commit -m "$1"
+    git push
 }
 
 # Lf CD
@@ -172,62 +172,61 @@ lfcd() {
 }
 
 mkscript() {
-  printf "File Name: "
-  read -r ans
-  file=$HOME/Scripts/$ans
-  if [ -d "$HOME/Scripts" ]; then
-    if [ -e "$HOME/Scripts/$ans" ]; then
-      $EDITOR "$file"
-    else
-      echo "#!/bin/env bash" >> "$file"
-      chmod a+x "$file"
-      $EDITOR "$file"
+    printf "File Name: "
+    read -r ans
+    file=$HOME/Scripts/$ans
+    if [ -d "$HOME/Scripts" ]; then
+        if [ -e "$HOME/Scripts/$ans" ]; then
+            $EDITOR "$file"
+        else
+            echo "#!/bin/env bash" >> "$file"
+            chmod a+x "$file"
+            $EDITOR "$file"
+        fi
     fi
-  fi
 }
 
 # Documentation
 chtsh ()
 {
-  # Default topic constraint
-  TOPIC_CONSTRAINT="none"
+    # Default topic constraint
+    TOPIC_CONSTRAINT="none"
 
-# Parse command-line arguments
-while [[ $# -gt 0 ]]; do
-  case $1 in
-    l|lang)
-      TOPIC_CONSTRAINT="lang"
-      ;;
-  esac
-  shift
-done
+    # Parse command-line arguments
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            l|lang)
+                TOPIC_CONSTRAINT="lang"
+                ;;
+        esac
+        shift
+    done
 
-# Select topic based on constraint
-if [[ "$TOPIC_CONSTRAINT" == "lang" ]]; then
-  TOPIC=$(printf "go\nrust\nc" | fzf)
-else
-  TOPIC=$(curl -s cht.sh/:list | fzf)
-fi
+    # Select topic based on constraint
+    if [[ "$TOPIC_CONSTRAINT" == "lang" ]]; then
+        TOPIC=$(printf "go\nrust\nc" | fzf)
+    else
+        TOPIC=$(curl -s cht.sh/:list | fzf)
+    fi
 
-# Exit if no topic is selected
-if [[ -z "$TOPIC" ]]; then
-  exit 0
-fi
+    # Exit if no topic is selected
+    if [[ -z "$TOPIC" ]]; then
+        exit 0
+    fi
 
-# Fetch and select cheat sheet options
-SHEET=$(curl -s cht.sh/$TOPIC/:list | fzf)
+    # Fetch and select cheat sheet options
+    SHEET=$(curl -s cht.sh/$TOPIC/:list | fzf)
 
-# Display selected sheet or the main topic
-if [[ -z "$SHEET" ]]; then
-  curl -s "cht.sh/$TOPIC?style=rrt" | less -R
-else
-  curl -s "cht.sh/$TOPIC/$SHEET?style=rrt" | less -R
-fi
+    # Display selected sheet or the main topic
+    if [[ -z "$SHEET" ]]; then
+        curl -s "cht.sh/$TOPIC?style=rrt" | less -R
+    else
+        curl -s "cht.sh/$TOPIC/$SHEET?style=rrt" | less -R
+    fi
 
 }
 # YT Downloading
-
-get_youtube_content() {
+Get-YoutubeContent() {
     local url="$1"
     local type="$2"
     local output_folder="$HOME/Downloads"
@@ -264,5 +263,34 @@ get_youtube_content() {
     esac
 }
 
+# Spotdl Downloading
+function Get-SpotifyContent() {
+    local url="$1"
+    local type="$2"
+    local output_folder="$HOME/Downloads"
+
+    if [[ -z "$url" || -z "$type" ]]; then
+        echo "Usage: get_spotify_content <url> <type>"
+        echo "Type options: -trk (track), -alb (album), -pl (playlist)"
+        return 1
+    fi
+
+    if ! command -v spotdl &> /dev/null; then
+        echo "spotdl is not installed. Please install spotdl and try again."
+        return 1
+    fi
+
+    case "$type" in
+        -trk|-alb|-pl)
+            spotdl "$url" --output "$output_folder"
+            echo "Download completed. Files saved in $output_folder."
+            ;;
+        *)
+            echo "Invalid type. Use -trk for track, -alb for album, or -pl for playlist."
+            return 1
+            ;;
+    esac
+}
+
 # For Vim Users
-# vim:ft=sh
+# vim:ft=zsh
