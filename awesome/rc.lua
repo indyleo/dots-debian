@@ -432,4 +432,19 @@ beautiful.notification_icon_size = 80
 
 -- Startup Stuff
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
-awful.spawn.with_shell("xwalr ~/Pictures/Wallpaper")
+
+-- Function to set a random wallpaper using xwalr
+local function set_random_wallpaper()
+	awful.spawn.with_shell("xwalr ~/Pictures/Wallpaper")
+end
+
+-- Set wallpaper on startup
+set_random_wallpaper()
+
+-- Optionally, change wallpaper every hour
+gears.timer({
+	timeout = 3600, -- 1 hour
+	autostart = true,
+	call_now = false,
+	callback = set_random_wallpaper,
+})

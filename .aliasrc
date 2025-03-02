@@ -1,9 +1,9 @@
 # Making ls Better
-alias ls='eza --group-directories-first --color=auto' # Basic exa But with Some Nice Flags
-alias la='eza -a --group-directories-first --color=auto' # Show Hidden Files
-alias ll='eza -lF --group-directories-first --color=auto' # Show In Listing Form 
-alias l='eza -alF --group-directories-first --color=auto' # My Favourite
-alias lt='eza -a --tree --group-directories-first --color=always ' # Tree Listing
+alias ls='eza --group-directories-first --color=auto --icons' # Basic eza But with Some Nice Flags
+alias la='eza -a --group-directories-first --color=auto --icons' # Show Hidden Files
+alias ll='eza -lF --group-directories-first --color=auto --icons' # Show In Listing Form
+alias l='eza -alF --group-directories-first --color=auto --icons' # My Favourite
+alias lt='eza -a --tree --group-directories-first --color=always --icons' # Tree Listing
 alias l.='eza -a | egrep "^\."' # Show Only Hidden File
 
 # Cat to Bat Alias
@@ -65,10 +65,18 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
+alias winhome='cd /mnt/c/Users/Indy'
+alias windown='cd /mnt/c/Users/Indy/Downloads'
+alias windocs='cd /mnt/c/Users/Indy/Documents'
+alias windesk='cd /mnt/c/Users/Indy/Desktop'
+alias winconf='cd /mnt/c/Users/Indy/.config'
+alias windata='cd /mnt/c/Users/Indy/AppData'
+
 
 # Neovim Aliases
 alias v='nvim'
 alias sv='sudo nvim'
+alias nv='neovide'
 
 # Trash Aliases
 alias trash='trash -iv'
@@ -117,6 +125,9 @@ alias aptud='sudo apt update'
 alias aptug='sudo apt upgrade'
 alias aptrm='sudo apt remove'
 alias aptpu='sudo apt purge'
+
+# Ssh Stuff
+alias mcserver='ssh -i ~/.ssh/id_rsa ubuntu@155.248.223.126'
 
 # For Vim Users
 # vim:ft=sh
