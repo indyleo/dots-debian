@@ -30,6 +30,7 @@ git_clone() {
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/FT-Labs/picom.git ~/Github/picom
 git_clone https://github.com/aristocratos/bashtop.git ~/Github/bashtop
+git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 
 echo "######################"
 echo "## Picom Animations ##"
@@ -53,7 +54,6 @@ echo "## Go Programs ##"
 echo "#################"
 go install github.com/doronbehar/pistol/cmd/pistol@latest
 go install github.com/charmbracelet/glow@latest
-
 
 echo "#####################"
 echo "## Python Programs ##"
@@ -108,7 +108,6 @@ git_clone https://gitlab.com/dwt1/wallpapers.git ~/Pictures/wallpapers/
 mv -v xfce4 Thunar polybar fastfetch git nvim lf awesome qtile alacritty rofi ohmyposh mimeapps.list greenclip.toml user-dirs.locale user-dirs.dirs ~/.config/
 rm -v ~/.bashrc ~/.profile ~/.zshenv ~/.zshrc
 mv -v .profile .zshenv .zshrc .functionrc .aliasrc .xsession .Xresources ~/
-mv -v "$builddir"/scripts ~/.local/
 sudo mv -v "$builddir"/xsessionfiles/* /usr/share/xsessions
 
 # Zsh Plugins
