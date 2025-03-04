@@ -21,10 +21,6 @@ map c
 map e
 map f
 
-# File Openers
-map ee edit
-map u view
-
 # File Operations
 map dd trash-put
 map md mkdir
@@ -84,35 +80,14 @@ map bg setbg
 
 ### CUSTOM COMMANDS ###
 cmd open ${{
-  clear
-  # Get the MIME type of the file
-  mime_type=$(file --mime-type "$f" -bL)
-
-  # Determine the appropriate application to open the file
-  case "$mime_type" in
-    text/*|application/json)
-      EDITOR="${EDITOR:-nvim}"
-      "$EDITOR" "$f"
-      ;;
-    *)
-      OPENER="${OPENER:-xdg-open}"
-      "$OPENER" "$f"
-      ;;
+  case "$(file --mime-type -Lb "$f")" in
+      text/*|application/json) ${EDITOR:-nvim} "$f" ;;
+      image/*) sxiv "$f" ;;
+      video/*) mpv "$f" ;;
+      audio/*) mpv "$f" ;;
+      application/pdf) pdftotext "$f" - | less ;;
+      *) xdg-open "$f" >/dev/null 2>&1 ;;
   esac
-  clear
-}}
-
-cmd view ${{
-  clear
-  bat "$f"
-  clear
-}}
-
-cmd edit ${{
-  clear
-  EDITOR="nvim"
-  $EDITOR "$f"
-  clear
 }}
 
 cmd mkdir %{{
@@ -126,7 +101,6 @@ cmd mkfile ${{
   printf "File Name: "
   read ans
   $EDITOR $ans
-  clear
 }}
 
 cmd mkscript ${{
@@ -167,13 +141,11 @@ cmd trash-empty ${{
     n) trash-empty -f ;;
     *) echo "Not y/n" ;;
   esac
-  clear
 }}
 
 cmd trash-restore ${{
   clear
   trash-restore
-  clear
 }}
 
 # Extract Archives
@@ -188,7 +160,6 @@ cmd unarchive ${{
       *.7z) 7z x "$f" ;;
       *) echo "Unsupported format" ;;
   esac
-  clear
 }}
 
 # Compressing Current Selected File 
@@ -201,13 +172,12 @@ cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
 cmd fzf_jump ${{
   clear
   res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
-  if [ -f "$res" ]; then
+  if [[ -f "$res" ]]; then
     cmd="select"
-  elif [ -d "$res" ]; then
+  elif [[ -d "$res" ]]; then
     cmd="cd"
   fi
   lf -remote "send $id $cmd \"$res\""
-  clear
 }}
 
 # Wallpaper
