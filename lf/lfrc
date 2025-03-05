@@ -81,12 +81,29 @@ map bg setbg
 ### CUSTOM COMMANDS ###
 cmd open ${{
   case "$(file --mime-type -Lb "$f")" in
-      text/*|application/json) ${EDITOR:-nvim} "$f" ;;
-      image/*) sxiv "$f" ;;
-      video/*) mpv "$f" ;;
-      audio/*) mpv "$f" ;;
-      application/pdf) pdftotext "$f" - | less ;;
-      *) xdg-open "$f" >/dev/null 2>&1 ;;
+     text/*|application/json) 
+         ${EDITOR:-nvim} "$f" 
+         ;;
+     image/*) 
+         sxiv "$f" 
+         ;;
+     video/*|audio/*) 
+         mpv "$f" 
+         ;;
+     application/pdf) 
+         pdftotext "$f" - | less 
+         ;;
+     *)
+         # Check file extensions if MIME type is unknown
+         case "${f##*.}" in
+             txt|md|json|js|sh|py|cpp|c|java|html|css|lua) ${EDITOR:-nvim} "$f" ;;
+             jpg|jpeg|png|gif|bmp|webp|svg) sxiv "$f" ;;
+             mp4|mkv|webm|avi|mov) mpv "$f" ;;
+             mp3|flac|wav|ogg) mpv "$f" ;;
+             pdf) pdftotext "$f" - | less ;;
+             *) xdg-open "$f" >/dev/null 2>&1 ;;
+         esac
+         ;;
   esac
 }}
 
