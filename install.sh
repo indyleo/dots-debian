@@ -39,8 +39,7 @@ nala install -y \
     udiskie udisks2 \
     htop \
     bash bash-completion \
-    openjdk-8-jdk openjdk-8-jre openjdk-11-jdk openjdk-11-jre openjdk-17-jdk openjdk-17-jre openjdk-19-jdk openjdk-19-jre \
-    openjdk-20-jdk openjdk-20-jre gradle \
+    openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre openjdk-21-jdk openjdk-21-jre gradle\
     transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin \
     polybar galculator alacritty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
     xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted \
