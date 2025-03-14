@@ -42,20 +42,8 @@ mkdirg() {
     cd "$1"
 }
 
-# Better Pkg Manager
-if [[ -f /usr/bin/apt ]]; then
-    apt() {
-        command nala "$@"
-    }
-    sudo() {
-        if [ "$1" = "apt" ]; then
-            shift
-            command sudo nala "$@"
-        else
-            command sudo "$@"
-        fi
-    }
-elif [[ -f /usr/bin/pacman ]]; then
+# Pacman Manager
+if [[ -f /usr/bin/pacman ]]; then
     pac() {
         if [[ -z "$1" ]]; then
             command pacman -h
@@ -71,8 +59,6 @@ elif [[ -f /usr/bin/pacman ]]; then
                 ;;
         esac
     }
-else
-    echo "No known package manager found"
 fi
 
 # Archive Extraction

@@ -18,15 +18,10 @@ echo "## Updating The System ##"
 echo "#########################"
 apt update && apt upgrade -y
 
-echo "#####################"
-echo "## Installing Nala ##"
-echo "#####################"
-apt install -y nala
-
 echo "#########################"
 echo "## Installing Packages ##"
 echo "#########################"
-nala install -y \
+apt install -y \
     direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
     python3 unzip tar python3-setuptools zoxide luarocks lf shellcheck python3-venv meson stow apt-transport-https eza \
     qalc libtool libtool-bin ninja-build autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc \
@@ -73,14 +68,13 @@ echo "## Installing Floorp ##"
 echo "##########################"
 curl -fsSL https://ppa.floorp.app/KEY.gpg | gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
 curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.floorp.app/Floorp.list'
-nala update && nala install -y floorp
+apt update && apt install -y floorp
 
 # Install SDDM
 echo "#####################"
 echo "## Installing SDDM ##"
 echo "#####################"
-nala install -y sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
-nala purge -y kded5
+apt install -y sddm libqt5svg5 qml-module-qtquick-controls qml-module-qtquick-controls2
 mkdir -p /usr/share/sddm/themes
 tar -xzvf sugar-candy.tar.gz -C /usr/share/sddm/themes
 mv sddm.conf /etc/sddm.conf
