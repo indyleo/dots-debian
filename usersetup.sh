@@ -66,10 +66,10 @@ echo "############"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.profile
 
-echo "##################"
-echo "## Neovim Setup ##"
-echo "##################"
-cargo install bob-nvim
+echo "###################"
+echo "## Rust Programs ##"
+echo "###################"
+cargo install bob-nvim 
 bob install stable
 bob use stable
 

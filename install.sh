@@ -9,8 +9,9 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+[[ -f /etc/apt/sources.list.bak ]] && rm -v /etc/apt/sources.list.bak 
 mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
-mv -v sources.list /etc/apt/sources.list
+cp -v sources.list /etc/apt/sources.list
 
 echo "#########################"
 echo "## Updating The System ##"
@@ -27,7 +28,7 @@ echo "## Installing Packages ##"
 echo "#########################"
 nala install -y \
     direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
-    python3 unzip tar python3-setuptools zoxide luarocks lf shellcheck python3-venv meson eza stow apt-transport-https cmdtest \
+    python3 unzip tar python3-setuptools zoxide luarocks lf shellcheck python3-venv meson stow apt-transport-https eza \
     qalc libtool libtool-bin ninja-build autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc \
     docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 brightnessctl xbacklight libpam0g-dev \
     zsh zsh-syntax-highlighting zsh-autosuggestions \
@@ -35,11 +36,11 @@ nala install -y \
     ripgrep fd-find neovim \
     npm flatpak golang-go python3-pip pipx \
     xdg-user-dirs xdg-user-dirs-gtk \
-    fastfetch cowsay cmatrix tty-clock lolcat \
+    cowsay cmatrix tty-clock lolcat fastfetch \
     udiskie udisks2 \
     htop \
     bash bash-completion \
-    openjdk-8-jdk openjdk-8-jre openjdk-17-jdk openjdk-17-jre openjdk-21-jdk openjdk-21-jre gradle\
+    openjdk-17-jdk openjdk-17-jre gradle\
     transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin \
     polybar galculator alacritty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
     xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted \
