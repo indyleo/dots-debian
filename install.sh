@@ -48,7 +48,7 @@ nala install -y \
     thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller \
     mangohud vkbasalt goverlay \
     xwallpaper flameshot lxpolkit rofi i3lock-fancy xcowsay \
-    awesome qtile \
+    awesome \
     libreoffice zathura \
     mesa-utils nvidia-driver nvidia-cuda-toolkit nvidia-cuda-samples firmware-misc-nonfree \
     fonts-font-awesome fontconfig fonts-noto fonts-ubuntu fonts-jetbrains-mono \

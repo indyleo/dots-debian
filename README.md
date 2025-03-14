@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Distro I Use Is Debian Sid With AwesomWM and Qtile (Soon)
+Distro I Use Is Debian 12 With AwesomWM
 
 # Preview
 
