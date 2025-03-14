@@ -10,8 +10,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 [[ -f /etc/apt/sources.list.bak ]] && rm -v /etc/apt/sources.list.bak 
-mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
-cp -v sources.list /etc/apt/sources.list
+[[ -f /etc/apt/sources.list ]] && mv -v /etc/apt/sources.list /etc/apt/sources.list.bak
+[[ -f sources.list ]] && cp -v sources.list /etc/apt/sources.list
 
 echo "#########################"
 echo "## Updating The System ##"
