@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-set -e  # Exit on error
+set -euo pipefail  # Exit on error
 
 # Script Variables
 builddir=$(pwd)
@@ -11,9 +11,9 @@ create_dirs() {
     echo "## Adding Some Directories, And Files ##"
     echo "########################################"
     mkdir -pv ~/Github ~/Img ~/Virt ~/Projects ~/Applications \
-        ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/Desktop \
+        ~/Pictures/Screenshots ~/Scripts ~/.local/bin ~/.local/scripts ~/Desktop \
         ~/Documents ~/Documents/Markdown ~/Downloads ~/Music \
-        ~/Pictures ~/Public ~/Videos/OBS
+        ~/Pictures ~/Public ~/Videos/OBS ~/.config/autostart ~/.cache
     touch ~/.cache/history-zsh
 }
 
@@ -40,13 +40,6 @@ git submodule update --init --recursive
 meson setup --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
-cd ~
-
-echo "#############"
-echo "## Bashtop ##"
-echo "#############"
-cd ~/Github/bashtop
-sudo make install
 cd ~
 
 echo "#################"

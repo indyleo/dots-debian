@@ -8,7 +8,6 @@ if xrandr -q | grep -q 'HDMI-0 connected'; then
     "picom -c $XDG_CONFIG_HOME/awesome/picom.conf"
     "lxpolkit"
     "greenclip daemon"
-    "xautolock -time 15 -locker locker"
     "polybar awesome_bar"
     "polybar awesome_bar_laptop"
   )
@@ -19,7 +18,6 @@ else
     "picom -c $XDG_CONFIG_HOME/awesome/picom.conf"
     "lxpolkit"
     "greenclip daemon"
-    "xautolock -time 15 -locker locker"
     "polybar awesome_bar_laptop"
   )
 fi
