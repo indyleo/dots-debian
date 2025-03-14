@@ -1,6 +1,6 @@
 # My Dotfiles
 
-Distro I Use Is Debian 12 With AwesomWM
+Distro I Use Is Debian 13 (Trixie) With AwesomWM
 
 # Preview
 
