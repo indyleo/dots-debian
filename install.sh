@@ -42,8 +42,8 @@ nala install -y \
     bash bash-completion \
     openjdk-17-jdk openjdk-17-jre gradle\
     transmission transmission-cli transmission-daemon transmission-gtk transmission-remote-gtk geoip-bin \
-    polybar galculator alacritty bleachbit timeshift dconf-editor solaar piper virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
-    xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr xautolock gparted \
+    polybar galculator alacritty bleachbit timeshift dconf-editor solaar virt-manager xinit sxhkd arandr xterm xclip rofi-dev xsel \
+    xdotool xdo gedit gedit-plugins xorg xserver-xorg xserver-xephyr gparted \
     cava playerctl pamixer pavucontrol yt-dlp mpv peek vlc sxiv paprefs pulsemixer mediainfo ffmpegthumbnailer ffmpeg \
     qt5ct qt5-style-plugins lxappearance \
     thunar thunar-archive-plugin thunar-media-tags-plugin gvfs file-roller \
