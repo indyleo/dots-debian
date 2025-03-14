@@ -25,7 +25,10 @@ apt install -y \
     direnv yad fzf locate gh tree build-essential git cmake make libhidapi-dev gpg openssl tldr trash-cli g++ gcc wget curl \
     python3 unzip tar python3-setuptools zoxide luarocks lf shellcheck python3-venv meson stow apt-transport-https eza \
     qalc libtool libtool-bin ninja-build autoconf automake python3-pil bat flake8 jq poppler-utils odt2txt highlight catdoc \
-    docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 brightnessctl xbacklight libpam0g-dev \
+    docx2txt genisoimage libimage-exiftool-perl libmagic-dev libmagic1 brightnessctl xbacklight libpam0g-dev libev-dev libx11-xcb1 \
+    libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev \
+    libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev \
+    libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev \
     zsh zsh-syntax-highlighting zsh-autosuggestions \
     network-manager network-manager-gnome network-manager-config-connectivity-debian \
     ripgrep fd-find neovim \

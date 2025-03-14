@@ -29,7 +29,6 @@ git_clone() {
 # Clone repositories
 git_clone https://github.com/bayasdev/envycontrol.git ~/Github/envycontrol
 git_clone https://github.com/FT-Labs/picom.git ~/Github/picom
-git_clone https://github.com/aristocratos/bashtop.git ~/Github/bashtop
 git_clone https://github.com/indyleo/scripts.git ~/.local/scripts
 
 echo "######################"
